@@ -314,3 +314,12 @@ from    eval
         where   model_name in ('Llama3-8B','Qwen2.5-7B','DeepSeek-R1-7B')
 group by knowledge
 ,length(knowledge)
+
+
+
+
+
+select * from eval where model_name in ('Llama3-8B','Qwen2.5-7B','DeepSeek-R1-7B')
+
+
+desc eval
