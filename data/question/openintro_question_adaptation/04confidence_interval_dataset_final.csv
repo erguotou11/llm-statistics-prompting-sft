@@ -1,0 +1,1414 @@
+﻿No,Knowledge Area,Scenario,Difficulty,Question Type,Source ID,original_text,raw_latex,Adapted Question,Options,Correct Answer,Solution / Key Steps,prompt_direct,cot_reasoning_scaffold,prompt_cot,student_tutor_strategy,tutor_model,tutor_max_turns
+1,Confidence Interval,Healthcare,Medium,Calculation,ch_inference_for_props_44_2,"Acetaminophen and liver damage
+
+It 
+is believed that large doses of acetaminophen (the active ingredient in over 
+the counter pain relievers like Tylenol) may cause damage to the liver. A 
+researcher wants to conduct a study to estimate the proportion of 
+acetaminophen users who have liver damage. For participating in this study, 
+he will pay each subject $20 and provide a free medical consultation if the 
+patient has liver damage.
+
+The amount you calculated in part (a) is substantially over his budget 
+so he decides to use fewer subjects. How will this affect the width of his 
+confidence interval?","\qt{Acetaminophen and liver damage\label{acetaminophen_CI_sample_size}} It 
+is believed that large doses of acetaminophen (the active ingredient in over 
+the counter pain relievers like Tylenol) may cause damage to the liver. A 
+researcher wants to conduct a study to estimate the proportion of 
+acetaminophen users who have liver damage. For participating in this study, 
+he will pay each subject \$20 and provide a free medical consultation if the 
+patient has liver damage.
+\begin{parts}
+\item If he wants to limit the margin of error of his 98\% confidence 
+interval to 2\%, what is the minimum amount of money he needs to set aside 
+to pay his subjects?
+\item The amount you calculated in part (a) is substantially over his budget 
+so he decides to use fewer subjects. How will this affect the width of his 
+confidence interval?
+\end{parts}",A clinic records systolic blood pressure for a random sample of 64 adult patients. The sample mean is 128.4 mmHg and the sample standard deviation is 12.8 mmHg. Construct a 95% confidence interval for the population mean systolic blood pressure. Assume the conditions for a one-sample t confidence interval are satisfied.,,125.20 to 131.60 mmHg,"Use a one-sample t interval because the population standard deviation is unknown. SE=12.8/sqrt(64)=1.6, df=63, t*=1.998. CI=128.4±1.998×1.6=125.20 to 131.60 mmHg.",A clinic records systolic blood pressure for a random sample of 64 adult patients. The sample mean is 128.4 mmHg and the sample standard deviation is 12.8 mmHg. Construct a 95% confidence interval for the population mean systolic blood pressure. Assume the conditions for a one-sample t confidence interval are satisfied.,"1. Identify the appropriate confidence-interval framework for a population mean when the population standard deviation is unknown.
+2. Compute the standard error from the sample standard deviation and sample size.
+3. Determine the appropriate critical value and degrees of freedom for the stated confidence level.
+4. Form the margin of error and confidence-interval endpoints, keeping intermediate precision until the final rounding.","A clinic records systolic blood pressure for a random sample of 64 adult patients. The sample mean is 128.4 mmHg and the sample standard deviation is 12.8 mmHg. Construct a 95% confidence interval for the population mean systolic blood pressure. Assume the conditions for a one-sample t confidence interval are satisfied.
+
+Follow the reasoning stages below:
+
+1. Identify the appropriate confidence-interval framework for a population mean when the population standard deviation is unknown.
+2. Compute the standard error from the sample standard deviation and sample size.
+3. Determine the appropriate critical value and degrees of freedom for the stated confidence level.
+4. Form the margin of error and confidence-interval endpoints, keeping intermediate precision until the final rounding.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+2,Confidence Interval,Healthcare,Medium,Calculation,ch_inference_for_props_48_2,"2010 Healthcare Law
+
+On June 28, 2012 the 
+U.S. Supreme Court upheld the much debated 2010 healthcare law, declaring it 
+constitutional. A Gallup poll released the day after this decision indicates 
+that 46% of 1,012 Americans agree with this decision. At a 95% confidence 
+level, this sample has a 3% margin of error. Based on this information, 
+determine if the following statements are true or false, and explain your 
+reasoning.[source: data:healthcare2010]
+
+We are 95% confident that between 43% and 49% of Americans support 
+the decision of the U.S. Supreme Court on the 2010 healthcare law.","\qt{2010 Healthcare Law\label{healthcare_CI_concept}} On June 28, 2012 the 
+U.S. Supreme Court upheld the much debated 2010 healthcare law, declaring it 
+constitutional. A Gallup poll released the day after this decision indicates 
+that 46\% of 1,012 Americans agree with this decision. At a 95\% confidence 
+level, this sample has a 3\% margin of error. Based on this information, 
+determine if the following statements are true or false, and explain your 
+reasoning.\footfullcite{data:healthcare2010}
+\begin{parts}
+\item We are 95\% confident that between  43\% and 49\% of Americans in this 
+sample support the decision of the U.S. Supreme Court on the 2010 healthcare 
+law.
+\item We are 95\% confident that between 43\% and 49\% of Americans support 
+the decision of the U.S. Supreme Court on the 2010 healthcare law.
+\item If we considered many random samples of 1,012 Americans, and we 
+calculated the sample proportions of those who support the decision of the 
+U.S. Supreme Court, 95\% of those sample proportions will be between 43\% and 
+49\%.
+\item The margin of error at a 90\% confidence level would be higher than 3\%.
+\end{parts}","In a random sample of 500 patients, 310 said they could book an appointment within one week. Construct a 95% confidence interval for the true proportion of such patients.",,0.5775 to 0.6625,"p̂=310/500=0.62. SE=sqrt[0.62(0.38)/500]=0.021707. Using z*=1.96, CI=0.62±1.96×0.021707=0.5775 to 0.6625.","In a random sample of 500 patients, 310 said they could book an appointment within one week. Construct a 95% confidence interval for the true proportion of such patients.","1. Compute the sample proportion from the reported count and sample size.
+2. Check that a normal approximation for a proportion interval is reasonable.
+3. Compute the standard error using the sample proportion.
+4. Use the appropriate critical value for the stated confidence level and form the two interval endpoints.","In a random sample of 500 patients, 310 said they could book an appointment within one week. Construct a 95% confidence interval for the true proportion of such patients.
+
+Follow the reasoning stages below:
+
+1. Compute the sample proportion from the reported count and sample size.
+2. Check that a normal approximation for a proportion interval is reasonable.
+3. Compute the standard error using the sample proportion.
+4. Use the appropriate critical value for the stated confidence level and form the two interval endpoints.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+3,Confidence Interval,Healthcare,Medium,Calculation,ch_inference_for_props_48_4,"2010 Healthcare Law
+
+On June 28, 2012 the 
+U.S. Supreme Court upheld the much debated 2010 healthcare law, declaring it 
+constitutional. A Gallup poll released the day after this decision indicates 
+that 46% of 1,012 Americans agree with this decision. At a 95% confidence 
+level, this sample has a 3% margin of error. Based on this information, 
+determine if the following statements are true or false, and explain your 
+reasoning.[source: data:healthcare2010]
+
+The margin of error at a 90% confidence level would be higher than 3%.","\qt{2010 Healthcare Law\label{healthcare_CI_concept}} On June 28, 2012 the 
+U.S. Supreme Court upheld the much debated 2010 healthcare law, declaring it 
+constitutional. A Gallup poll released the day after this decision indicates 
+that 46\% of 1,012 Americans agree with this decision. At a 95\% confidence 
+level, this sample has a 3\% margin of error. Based on this information, 
+determine if the following statements are true or false, and explain your 
+reasoning.\footfullcite{data:healthcare2010}
+\begin{parts}
+\item We are 95\% confident that between  43\% and 49\% of Americans in this 
+sample support the decision of the U.S. Supreme Court on the 2010 healthcare 
+law.
+\item We are 95\% confident that between 43\% and 49\% of Americans support 
+the decision of the U.S. Supreme Court on the 2010 healthcare law.
+\item If we considered many random samples of 1,012 Americans, and we 
+calculated the sample proportions of those who support the decision of the 
+U.S. Supreme Court, 95\% of those sample proportions will be between 43\% and 
+49\%.
+\item The margin of error at a 90\% confidence level would be higher than 3\%.
+\end{parts}",A hospital estimates the average emergency-department waiting time from a random sample of 49 visits. The sample mean is 42 minutes and the sample standard deviation is 14 minutes. Construct a 90% confidence interval for the population mean. Assume the conditions for a one-sample t confidence interval are satisfied.,,38.65 to 45.35 minutes,"Use a one-sample t interval because the population standard deviation is unknown. SE=14/sqrt(49)=2, df=48, t*=1.677. CI=42±1.677×2=38.65 to 45.35 minutes.",A hospital estimates the average emergency-department waiting time from a random sample of 49 visits. The sample mean is 42 minutes and the sample standard deviation is 14 minutes. Construct a 90% confidence interval for the population mean. Assume the conditions for a one-sample t confidence interval are satisfied.,"1. Determine the appropriate interval for a population mean when only a sample standard deviation is available.
+2. Compute the standard error and identify the relevant degrees of freedom.
+3. Obtain the critical value corresponding to the stated confidence level.
+4. Calculate the margin of error and then the lower and upper confidence limits.","A hospital estimates the average emergency-department waiting time from a random sample of 49 visits. The sample mean is 42 minutes and the sample standard deviation is 14 minutes. Construct a 90% confidence interval for the population mean. Assume the conditions for a one-sample t confidence interval are satisfied.
+
+Follow the reasoning stages below:
+
+1. Determine the appropriate interval for a population mean when only a sample standard deviation is available.
+2. Compute the standard error and identify the relevant degrees of freedom.
+3. Obtain the critical value corresponding to the stated confidence level.
+4. Calculate the margin of error and then the lower and upper confidence limits.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+4,Confidence Interval,Healthcare,Medium,Calculation,ch_inference_for_props_49_3,"Browsing on the mobile device
+
+A 
+survey of 2,254 American adults indicates that 17% of cell phone owners
+browse the internet exclusively on their phone rather than a computer
+or other device.
+[source: data:mobileBrowse]
+
+Calculate a 95% confidence interval for the proportion of Americans 
+who access the internet on their cell phones, and interpret the interval in 
+this context.","\qt{Browsing on the mobile device\label{mobile_browsing_HT_CI}} A 
+survey of 2,254 American adults indicates that 17\% of cell phone owners
+browse the internet exclusively on their phone rather than a computer
+or other device.
+\footfullcite{data:mobileBrowse}
+\begin{parts}
+\item  According to an online article, a report from a mobile research 
+company indicates that 38 percent of Chinese mobile web users only access 
+the internet through their cell phones.
+\footfullcite{news:mobileBrowseChinese} Conduct a hypothesis test to 
+determine if these data provide strong evidence that the proportion of 
+Americans who only use their cell phones to access the internet is different 
+than the Chinese proportion of 38\%.
+\item Interpret the p-value in this context.
+\item Calculate a 95\% confidence interval for the proportion of Americans 
+who access the internet on their cell phones, and interpret the interval in 
+this context.
+\end{parts}","In a random sample of 800 adults in a health study, 184 report using a sleep-tracking app. Construct a 95% confidence interval for the population proportion.",,0.2008 to 0.2592,"p̂=184/800=0.23. SE=sqrt[0.23(0.77)/800]=0.014879. Using z*=1.96, CI=0.23±1.96×0.014879=0.2008 to 0.2592.","In a random sample of 800 adults in a health study, 184 report using a sleep-tracking app. Construct a 95% confidence interval for the population proportion.","1. Convert the observed count into a sample proportion.
+2. Verify that the usual conditions for a normal-based proportion interval are reasonable.
+3. Compute the standard error without prematurely rounding intermediate values.
+4. Combine the sample proportion, critical value, and margin of error to obtain the interval.","In a random sample of 800 adults in a health study, 184 report using a sleep-tracking app. Construct a 95% confidence interval for the population proportion.
+
+Follow the reasoning stages below:
+
+1. Convert the observed count into a sample proportion.
+2. Verify that the usual conditions for a normal-based proportion interval are reasonable.
+3. Compute the standard error without prematurely rounding intermediate values.
+4. Combine the sample proportion, critical value, and margin of error to obtain the interval.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+5,Confidence Interval,Healthcare,Medium,Calculation,ch_inference_for_means_53_2,"Experiment resizing
+
+At a startup company running a new weather app, an engineering
+team generally runs experiments where a random sample of 1%
+of the app's visitors in the control group and another
+1% were in the treatment group to test each new feature.
+The team's core goal is to increase a metric
+called daily visitors,
+which is essentially the number of visitors to the app
+each day.
+They track this metric in each experiment arm and
+as their core experiment metric.
+In their most recent experiment, the team tested
+including a new animation when the app started,
+and the number of daily visitors in this experiment
+stabilized at +1.2% with a 95% confidence interval
+of (-0.2%, +2.6%).
+This means if this new app start animation was launched,
+the team thinks they might lose as many as 0.2% of daily
+visitors or gain as many as 2.6% more daily visitors.
+Suppose you are consulting as the team's data scientist,
+and after discussing with the team,
+you and they agree that they should run
+another experiment that is bigger.
+You also agree that this new experiment
+should be able to detect a gain in the daily visitors
+metric of 1.0% or more with 80% power.
+Now they turn to you and ask,
+``How big of an experiment do we need to run
+to ensure we can detect this effect?''
+
+Consider the first experiment, where
+ the point estimate was +1.2% and the
+ 95% confidence interval was (-0.2%, +2.6%).
+ If that point estimate followed a normal
+ distribution, what was the standard error
+ of the estimate?","\qt{Experiment resizing\label{tech_exp_resizing}}
+At a startup company running a new weather app, an engineering
+team generally runs experiments where a random sample of 1\%
+of the app's visitors in the control group and another
+1\% were in the treatment group to test each new feature.
+The team's core goal is to increase a metric
+called \emph{daily visitors},
+which is essentially the number of visitors to the app
+each day.
+They track this metric in each experiment arm and
+as their core experiment metric.
+In their most recent experiment, the team tested
+including a new animation when the app started,
+and the number of daily visitors in this experiment
+stabilized at +1.2\% with a 95\% confidence interval
+of (-0.2\%, +2.6\%).
+This means if this new app start animation was launched,
+the team thinks they might lose as many as 0.2\% of daily
+visitors or gain as many as 2.6\% more daily visitors.
+Suppose you are consulting as the team's data scientist,
+and after discussing with the team,
+you and they agree that they should run
+another experiment that is bigger.
+You also agree that this new experiment
+should be able to detect a gain in the daily visitors
+metric of 1.0\% or more with 80\% power.
+Now they turn to you and ask,
+``How big of an experiment do we need to run
+to ensure we can detect this effect?''
+\begin{parts}
+\item\label{tech_exp_resizing_target_se}
+    How small must the standard error be if
+    the team is to be able to detect an effect
+    of 1.0\% with 80\% power and a significance
+    level of $\alpha = 0.05$?
+    You may safely assume the percent change in
+    daily visitors metric follows a normal distribution.
+\item\label{tech_exp_resizing_original_se}
+    Consider the first experiment, where
+    the point estimate was +1.2\% and the
+    95\% confidence interval was (-0.2\%, +2.6\%).
+    If that point estimate followed a normal
+    distribution, what was the standard error
+    of the estimate?
+\item\label{tech_exp_resizing_ratio}
+    The ratio of the standard error from
+    part~(\ref{tech_exp_resizing_target_se})
+    vs the standard error from
+    part~(\ref{tech_exp_resizing_original_se})
+    should be~1.97.
+    How much bigger of an experiment is needed
+    to shrink a standard error by a factor of~1.97?
+\item
+    Using your answer from
+    part~(\ref{tech_exp_resizing_ratio})
+    and that the original experiment was
+    a 1\% vs 1\% experiment to recommend
+    an experiment size to the team.
+\end{parts}",A random sample of 36 patients has a mean recovery time of 8.6 days with a sample standard deviation of 2.4 days. Construct a 95% confidence interval for the population mean recovery time. Assume the conditions for a one-sample t confidence interval are satisfied.,,7.79 to 9.41 days,"Use a one-sample t interval because the population standard deviation is unknown. SE=2.4/sqrt(36)=0.4, df=35, t*=2.030. CI=8.6±2.030×0.4=7.79 to 9.41 days.",A random sample of 36 patients has a mean recovery time of 8.6 days with a sample standard deviation of 2.4 days. Construct a 95% confidence interval for the population mean recovery time. Assume the conditions for a one-sample t confidence interval are satisfied.,"1. Decide which confidence-interval distribution is appropriate because the population standard deviation is not given.
+2. Compute the standard error of the sample mean.
+3. Use the sample size to determine the degrees of freedom and corresponding critical value.
+4. Construct and report the confidence interval from the point estimate and margin of error.","A random sample of 36 patients has a mean recovery time of 8.6 days with a sample standard deviation of 2.4 days. Construct a 95% confidence interval for the population mean recovery time. Assume the conditions for a one-sample t confidence interval are satisfied.
+
+Follow the reasoning stages below:
+
+1. Decide which confidence-interval distribution is appropriate because the population standard deviation is not given.
+2. Compute the standard error of the sample mean.
+3. Use the sample size to determine the degrees of freedom and corresponding critical value.
+4. Construct and report the confidence interval from the point estimate and margin of error.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+6,Confidence Interval,Healthcare,Medium,Calculation,ch_inference_for_props_45_2,"Life after college
+
+We are interested in 
+estimating the proportion of graduates at a mid-sized university who found 
+a job within one year of completing their undergraduate degree. Suppose we 
+conduct a survey and find out that 348 of the 400 randomly sampled graduates 
+found jobs. The graduating class under consideration included over 4500 students.
+
+Check if the conditions for constructing a confidence interval based 
+on these data are met.","\qt{Life after college\label{life_after_college_CI}} We are interested in 
+estimating the proportion of graduates at a mid-sized university who found 
+a job within one year of completing their undergraduate degree. Suppose we 
+conduct a survey and find out that 348 of the 400 randomly sampled graduates 
+found jobs. The graduating class under consideration included over 4500 students.
+\begin{parts}
+\item Describe the population parameter of interest. What is the value of 
+the point estimate of this parameter?
+\item Check if the conditions for constructing a confidence interval based 
+on these data are met.
+\item Calculate a 95\% confidence interval for the proportion of graduates 
+who found a job within one year of completing their undergraduate degree at 
+this university, and interpret it in the context of the data.
+\item What does ``95\% confidence"" mean?
+\item Now calculate a 99\% confidence interval for the same parameter and 
+interpret it in the context of the data.
+\item Compare the widths of the 95\% and 99\% confidence intervals. Which 
+one is wider? Explain.
+\end{parts}","In a random sample of 250 pharmacy customers, 72 say they prefer generic medicine when available. Construct a 90% confidence interval for the true proportion.",,0.2409 to 0.3351,"p̂=72/250=0.288. SE=sqrt[0.288(0.712)/250]=0.028640. Using z*=1.645, CI=0.288±1.645×0.028640=0.2409 to 0.3351.","In a random sample of 250 pharmacy customers, 72 say they prefer generic medicine when available. Construct a 90% confidence interval for the true proportion.","1. Compute the observed sample proportion.
+2. Check whether the sample provides enough successes and failures for a normal approximation.
+3. Calculate the standard error of the sample proportion using full intermediate precision.
+4. Use the critical value for the requested confidence level to calculate both confidence limits.","In a random sample of 250 pharmacy customers, 72 say they prefer generic medicine when available. Construct a 90% confidence interval for the true proportion.
+
+Follow the reasoning stages below:
+
+1. Compute the observed sample proportion.
+2. Check whether the sample provides enough successes and failures for a normal approximation.
+3. Calculate the standard error of the sample proportion using full intermediate precision.
+4. Use the critical value for the requested confidence level to calculate both confidence limits.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+7,Confidence Interval,Education,Medium,Interpretation,ch_foundations_for_inf_33,"Nutrition labels
+
+The nutrition label on a bag of potato chips says
+that a one ounce (28~gram) serving of potato chips
+has 130 calories and contains ten grams of fat,
+with three grams of saturated fat.
+A~random sample of 35 bags yielded
+a confidence interval for the number of calories
+per bag of 128.2 to 139.8 calories.
+Is there evidence that the nutrition label does not 
+provide an accurate measure of calories in the bags
+of potato chips?","\qt{Nutrition labels\label{nutrition_labels}}
+The nutrition label on a bag of potato chips says
+that a one ounce (28~gram) serving of potato chips
+has 130 calories and contains ten grams of fat,
+with three grams of saturated fat.
+A~random sample of 35 bags yielded
+a confidence interval for the number of calories
+per bag of 128.2 to 139.8 calories.
+Is there evidence that the nutrition label does not 
+provide an accurate measure of calories in the bags
+of potato chips?",A university reports a 95% confidence interval of 3.1 to 3.7 hours for the mean daily independent study time of its students. Interpret this interval in context.,,We are 95% confident that the true mean daily independent study time for all students at the university is between 3.1 and 3.7 hours.,"A confidence interval gives a plausible range for the population mean, not a statement about individual students.",A university reports a 95% confidence interval of 3.1 to 3.7 hours for the mean daily independent study time of its students. Interpret this interval in context.,"1. Identify the population parameter estimated by the interval.
+2. State what the confidence level says about the interval-estimation procedure.
+3. Interpret the reported endpoints in the context of mean daily study time.
+4. Avoid interpreting the interval as a range that must contain individual students' study times.","A university reports a 95% confidence interval of 3.1 to 3.7 hours for the mean daily independent study time of its students. Interpret this interval in context.
+
+Follow the reasoning stages below:
+
+1. Identify the population parameter estimated by the interval.
+2. State what the confidence level says about the interval-estimation procedure.
+3. Interpret the reported endpoints in the context of mean daily study time.
+4. Avoid interpreting the interval as a range that must contain individual students' study times.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+8,Confidence Interval,Education,Medium,Interpretation,ch_inference_for_props_43_2,"College smokers
+
+We are interested 
+in estimating the proportion of students at a university who smoke. Out of a 
+random sample of 200 students from this university, 40 students smoke.
+
+If we wanted the margin of error to be no larger than 2% at a 95% 
+confidence level for the proportion of students who smoke, how big of a 
+sample would we need?","\qt{College smokers\label{college_smokers_CI_sample_size}} We are interested 
+in estimating the proportion of students at a university who smoke. Out of a 
+random sample of 200 students from this university, 40 students smoke.
+\begin{parts}
+\item Calculate a 95\% confidence interval for the proportion of students at 
+this university who smoke, and interpret this interval in context. 
+(Reminder: Check conditions.)
+\item If we wanted the margin of error to be no larger than 2\% at a 95\% 
+confidence level for the proportion of students who smoke, how big of a 
+sample would we need? 
+\end{parts}",A 99% confidence interval for the proportion of students who support longer library hours is 0.58 to 0.72. What does the higher confidence level imply compared with a 95% interval based on the same data?,,The 99% interval would be wider because it uses a larger critical value to achieve greater confidence.,"Higher confidence requires covering more possible parameter values, so the interval becomes wider if the sample data are unchanged.",A 99% confidence interval for the proportion of students who support longer library hours is 0.58 to 0.72. What does the higher confidence level imply compared with a 95% interval based on the same data?,"1. Hold the sample data fixed and identify what changes when the confidence level rises.
+2. Relate the confidence level to the size of the critical value.
+3. Relate the critical value to the margin of error.
+4. State the resulting effect on interval width and explain why.","A 99% confidence interval for the proportion of students who support longer library hours is 0.58 to 0.72. What does the higher confidence level imply compared with a 95% interval based on the same data?
+
+Follow the reasoning stages below:
+
+1. Hold the sample data fixed and identify what changes when the confidence level rises.
+2. Relate the confidence level to the size of the critical value.
+3. Relate the critical value to the margin of error.
+4. State the resulting effect on interval width and explain why.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+9,Confidence Interval,Education,Medium,Interpretation,ch_inference_for_props_45_3,"Life after college
+
+We are interested in 
+estimating the proportion of graduates at a mid-sized university who found 
+a job within one year of completing their undergraduate degree. Suppose we 
+conduct a survey and find out that 348 of the 400 randomly sampled graduates 
+found jobs. The graduating class under consideration included over 4500 students.
+
+Calculate a 95% confidence interval for the proportion of graduates 
+who found a job within one year of completing their undergraduate degree at 
+this university, and interpret it in the context of the data.","\qt{Life after college\label{life_after_college_CI}} We are interested in 
+estimating the proportion of graduates at a mid-sized university who found 
+a job within one year of completing their undergraduate degree. Suppose we 
+conduct a survey and find out that 348 of the 400 randomly sampled graduates 
+found jobs. The graduating class under consideration included over 4500 students.
+\begin{parts}
+\item Describe the population parameter of interest. What is the value of 
+the point estimate of this parameter?
+\item Check if the conditions for constructing a confidence interval based 
+on these data are met.
+\item Calculate a 95\% confidence interval for the proportion of graduates 
+who found a job within one year of completing their undergraduate degree at 
+this university, and interpret it in the context of the data.
+\item What does ``95\% confidence"" mean?
+\item Now calculate a 99\% confidence interval for the same parameter and 
+interpret it in the context of the data.
+\item Compare the widths of the 95\% and 99\% confidence intervals. Which 
+one is wider? Explain.
+\end{parts}",A school estimates the average score improvement after tutoring as a 95% confidence interval of -1.5 to 6.8 points. Explain whether this provides clear evidence of improvement.,,"Not clearly. Since the interval includes 0, the true mean improvement could be zero or even slightly negative.","For a mean difference, 0 represents no improvement. An interval containing 0 is not strong evidence of a positive effect.",A school estimates the average score improvement after tutoring as a 95% confidence interval of -1.5 to 6.8 points. Explain whether this provides clear evidence of improvement.,"1. Identify 0 as the benchmark corresponding to no mean improvement.
+2. Compare this benchmark with the reported confidence interval.
+3. Determine whether the interval rules out no improvement or a negative effect.
+4. State an appropriately cautious conclusion about evidence of improvement.","A school estimates the average score improvement after tutoring as a 95% confidence interval of -1.5 to 6.8 points. Explain whether this provides clear evidence of improvement.
+
+Follow the reasoning stages below:
+
+1. Identify 0 as the benchmark corresponding to no mean improvement.
+2. Compare this benchmark with the reported confidence interval.
+3. Determine whether the interval rules out no improvement or a negative effect.
+4. State an appropriately cautious conclusion about evidence of improvement.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+10,Confidence Interval,Education,Medium,Interpretation,ch_inference_for_means_52,"Forest management
+
+Forest rangers wanted to better understand the rate
+of growth for younger trees in the park.
+They took measurements of a random sample of 50 young trees
+in 2009 and again measured those same trees in 2019.
+The data below summarize their measurements,
+where the heights are in feet:
+
+Table:
+| 2009 | 2019 | Differences | |
+| --- | --- | --- | --- |
+| $x$ | 12.0 | 24.5 | 12.5 |
+| $s$ | 3.5 | 9.5 | 7.2 |
+| $n$ | 50 | 50 | 50 |
+
+Construct a 99% confidence interval for the
+average growth of (what had been) younger trees
+in the park over 2009-2019.","\qt{Forest management\label{forest_mgmt_tree_growth}}
+Forest rangers wanted to better understand the rate
+of growth for younger trees in the park.
+They took measurements of a random sample of 50 young trees
+in 2009 and again measured those same trees in 2019.
+The data below summarize their measurements,
+where the heights are in feet:
+\begin{center}
+\begin{tabular}{l c c c}
+\hline
+          & 2009   & 2019  & Differences\\
+\hline  
+$\bar{x}$ & 12.0  & 24.5  & 12.5 \\
+$s$       & 3.5   & 9.5   & 7.2 \\
+$n$       & 50    & 50    & 50 \\
+\hline
+\end{tabular}
+\end{center}
+Construct a 99\% confidence interval for the
+average growth of (what had been) younger trees
+in the park over 2009-2019.",A 95% confidence interval for the proportion of students who use campus buses is 0.41 to 0.49. Explain whether the statement “95% of students have probabilities between 0.41 and 0.49” is correct.,,"No. The interval estimates the population proportion, not individual probabilities.",The correct interpretation is that we are 95% confident the true population proportion lies between 0.41 and 0.49.,A 95% confidence interval for the proportion of students who use campus buses is 0.41 to 0.49. Explain whether the statement “95% of students have probabilities between 0.41 and 0.49” is correct.,"1. Identify the parameter estimated by a confidence interval for a population proportion.
+2. Distinguish a population proportion from individual students or individual-level probabilities.
+3. Explain what the 95% confidence level refers to in repeated sampling.
+4. Correct the proposed interpretation in the context of campus-bus use.","A 95% confidence interval for the proportion of students who use campus buses is 0.41 to 0.49. Explain whether the statement “95% of students have probabilities between 0.41 and 0.49” is correct.
+
+Follow the reasoning stages below:
+
+1. Identify the parameter estimated by a confidence interval for a population proportion.
+2. Distinguish a population proportion from individual students or individual-level probabilities.
+3. Explain what the 95% confidence level refers to in repeated sampling.
+4. Correct the proposed interpretation in the context of campus-bus use.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+11,Confidence Interval,Finance,Hard,Short Answer,ch_foundations_for_inf_27_1,"Relaxing after work
+
+The General Social Survey asked the question:
+``After an average work day, about how many hours do you have to relax or pursue 
+activities that you enjoy?"" to a random sample of 1,155 Americans.[source: data:gss] A 95% confidence interval for the mean number of hours spent 
+relaxing or pursuing activities they enjoy was (1.38, 1.92).
+
+Interpret this interval in context of the data.","\qt{Relaxing after work\label{relax_after_work}} The General Social Survey asked the question:
+``After an average work day, about how many hours do you have to relax or pursue 
+activities that you enjoy?"" to a random sample of 1,155 Americans.\footfullcite{data:gss} A 95\% confidence interval for the mean number of hours spent 
+relaxing or pursuing activities they enjoy was (1.38, 1.92).
+\begin{parts}
+\item Interpret this interval in context of the data.
+\item Suppose another set of researchers reported a confidence interval with a 
+larger margin of error based on the same sample of 1,155 Americans. How does 
+their confidence level compare to the confidence level of the interval stated 
+above?
+\item Suppose next year a new survey asking the same question is conducted, and 
+this time the sample size is 2,500. Assuming that the population 
+characteristics, with respect to how much time people spend relaxing after work, 
+have not changed much within a year. How will the margin of error of the 95\% 
+confidence interval constructed based on data from the new survey compare to the 
+margin of error of the interval stated above?
+\end{parts}",An analyst finds a 95% confidence interval of -0.8% to 2.4% for the mean monthly return of a fund. Give a short explanation of what this says about whether the fund has positive average returns.,,"The evidence is not conclusive because 0% lies inside the interval. The true mean monthly return could be negative, zero, or positive.","For mean return, 0% is the benchmark for no gain. An interval crossing 0 does not establish positive average return.",An analyst finds a 95% confidence interval of -0.8% to 2.4% for the mean monthly return of a fund. Give a short explanation of what this says about whether the fund has positive average returns.,"1. Treat 0% as the benchmark for no positive or negative mean monthly return.
+2. Compare 0% with the confidence interval.
+3. Determine whether the interval establishes that the true mean is positive.
+4. Give a concise interpretation that reflects the uncertainty shown by the interval.","An analyst finds a 95% confidence interval of -0.8% to 2.4% for the mean monthly return of a fund. Give a short explanation of what this says about whether the fund has positive average returns.
+
+Follow the reasoning stages below:
+
+1. Treat 0% as the benchmark for no positive or negative mean monthly return.
+2. Compare 0% with the confidence interval.
+3. Determine whether the interval establishes that the true mean is positive.
+4. Give a concise interpretation that reflects the uncertainty shown by the interval.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+12,Confidence Interval,Finance,Hard,Short Answer,ch_inference_for_props_42_3,"The Civil War
+
+A national survey conducted 
+among a simple random sample of 1,507 adults shows that 56% of
+Americans think the Civil War is still relevant to American politics and 
+political life.
+[source: data:civilWar]
+
+Calculate a 90% confidence interval for the proportion of Americans 
+who think the Civil War is still relevant. Interpret the interval in this 
+context, and comment on whether or not the confidence interval agrees with 
+the conclusion of the hypothesis test.","\qt{The Civil War\label{civil_war_HT_CI_2_sided}}
+A national survey conducted 
+among a simple random sample of 1,507 adults shows that 56\% of
+Americans think the Civil War is still relevant to American politics and 
+political life.%
+\footfullcite{data:civilWar} 
+\begin{parts}
+\item Conduct a hypothesis test to determine if these data provide strong 
+evidence that the majority of the Americans think the Civil War is still 
+relevant.
+\item Interpret the p-value in this context.
+\item Calculate a 90\% confidence interval for the proportion of Americans 
+who think the Civil War is still relevant. Interpret the interval in this 
+context, and comment on whether or not the confidence interval agrees with 
+the conclusion of the hypothesis test.
+\end{parts}","A fintech company wants to estimate the proportion of customers who will adopt a new payment feature with margin of error at most 0.03 at 95% confidence. With no prior estimate of p, what sample size should it use?",,1068 customers,"Use p=0.5 for the most conservative size: n=(1.96²×0.25)/(0.03²)=1067.1, round up to 1068.","A fintech company wants to estimate the proportion of customers who will adopt a new payment feature with margin of error at most 0.03 at 95% confidence. With no prior estimate of p, what sample size should it use?","1. Write the margin-of-error requirement for a confidence interval for a population proportion.
+2. With no prior estimate of the proportion, choose the value that gives the largest required sample size.
+3. Solve the sample-size inequality using the confidence-level critical value and target margin of error.
+4. Round the required sample size in the direction that guarantees the target precision.","A fintech company wants to estimate the proportion of customers who will adopt a new payment feature with margin of error at most 0.03 at 95% confidence. With no prior estimate of p, what sample size should it use?
+
+Follow the reasoning stages below:
+
+1. Write the margin-of-error requirement for a confidence interval for a population proportion.
+2. With no prior estimate of the proportion, choose the value that gives the largest required sample size.
+3. Solve the sample-size inequality using the confidence-level critical value and target margin of error.
+4. Round the required sample size in the direction that guarantees the target precision.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+13,Confidence Interval,Finance,Hard,Short Answer,ch_regr_simple_linear_40_3,"Cats, Part II
+
+Exercise~[ref: cat_body_heart_reg] 
+presents regression output from a model for predicting the heart 
+weight (in g) of cats from their body weight (in kg). The coefficients 
+are estimated using a dataset of 144 domestic cat. The model output 
+is also provided below.
+
+Table:
+| Estimate | Std. Error | t value | Pr($>$$|$t$|$) | |
+| --- | --- | --- | --- | --- |
+| (Intercept) | -0.357 | 0.692 | -0.515 | 0.607 |
+| body wt | 4.034 | 0.250 | 16.119 | 0.000 |
+
+\[ s = 1.452 R^2 = 64.66% R^2_adj = 64.41% \]
+
+Calculate a 95% confidence interval for the slope of body 
+weight, and interpret it in context of the data.","\qt{Cats, Part II\label{cat_body_heart_inf}}
+Exercise~\ref{cat_body_heart_reg} 
+presents regression output from a model for predicting the heart 
+weight (in g) of cats from their body weight (in kg). The coefficients 
+are estimated using a dataset of 144 domestic cat. The model output 
+is also provided below.
+\begin{center}
+\begin{tabular}{rrrrr}
+    \hline
+            & Estimate  & Std. Error    & t value   & Pr($>$$|$t$|$) \\ 
+    \hline
+(Intercept) & -0.357    & 0.692         & -0.515    & 0.607 \\ 
+body wt     & 4.034     & 0.250         & 16.119    & 0.000 \\ 
+    \hline
+\end{tabular}
+\[ s = 1.452 \qquad R^2 = 64.66\% \qquad R^2_{adj} = 64.41\% \]
+\end{center}
+\begin{parts}
+\item We see that the point estimate for the slope is positive.
+    What are the hypotheses for evaluating whether body weight is
+    positively associated with heart weight in cats?
+\item State the conclusion of the hypothesis test from part (a) in 
+context of the data.
+\item Calculate a 95\% confidence interval for the slope of body 
+weight, and interpret it in context of the data.
+\item Do your results from the hypothesis test and the confidence 
+interval agree? Explain.
+\end{parts}",A bank compares average transaction fees before and after a pricing change and obtains a 95% confidence interval for the mean difference after-before of 0.12 to 0.38 pounds. Briefly interpret the result.,,The bank can be 95% confident that the pricing change increased the mean transaction fee by about £0.12 to £0.38.,"Because the entire interval is above 0, it supports a positive increase in the mean fee.",A bank compares average transaction fees before and after a pricing change and obtains a 95% confidence interval for the mean difference after-before of 0.12 to 0.38 pounds. Briefly interpret the result.,"1. Identify the parameter as the mean difference defined by after minus before.
+2. Determine what positive, zero, and negative values of this difference would mean.
+3. Compare the entire confidence interval with zero.
+4. Translate the interval into a contextual statement about the pricing change and mean transaction fees.","A bank compares average transaction fees before and after a pricing change and obtains a 95% confidence interval for the mean difference after-before of 0.12 to 0.38 pounds. Briefly interpret the result.
+
+Follow the reasoning stages below:
+
+1. Identify the parameter as the mean difference defined by after minus before.
+2. Determine what positive, zero, and negative values of this difference would mean.
+3. Compare the entire confidence interval with zero.
+4. Translate the interval into a contextual statement about the pricing change and mean transaction fees.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+14,Confidence Interval,Finance,Hard,Short Answer,ch_foundations_for_inf_27_2,"Relaxing after work
+
+The General Social Survey asked the question:
+``After an average work day, about how many hours do you have to relax or pursue 
+activities that you enjoy?"" to a random sample of 1,155 Americans.[source: data:gss] A 95% confidence interval for the mean number of hours spent 
+relaxing or pursuing activities they enjoy was (1.38, 1.92).
+
+Suppose another set of researchers reported a confidence interval with a 
+larger margin of error based on the same sample of 1,155 Americans. How does 
+their confidence level compare to the confidence level of the interval stated 
+above?","\qt{Relaxing after work\label{relax_after_work}} The General Social Survey asked the question:
+``After an average work day, about how many hours do you have to relax or pursue 
+activities that you enjoy?"" to a random sample of 1,155 Americans.\footfullcite{data:gss} A 95\% confidence interval for the mean number of hours spent 
+relaxing or pursuing activities they enjoy was (1.38, 1.92).
+\begin{parts}
+\item Interpret this interval in context of the data.
+\item Suppose another set of researchers reported a confidence interval with a 
+larger margin of error based on the same sample of 1,155 Americans. How does 
+their confidence level compare to the confidence level of the interval stated 
+above?
+\item Suppose next year a new survey asking the same question is conducted, and 
+this time the sample size is 2,500. Assuming that the population 
+characteristics, with respect to how much time people spend relaxing after work, 
+have not changed much within a year. How will the margin of error of the 95\% 
+confidence interval constructed based on data from the new survey compare to the 
+margin of error of the interval stated above?
+\end{parts}",A 95% confidence interval for the proportion of users missing a credit-card payment is 0.046 to 0.074. The regulator considers rates above 5% concerning. Give a short interpretation.,,"No definitive conclusion that the true missed-payment rate exceeds 5% can be made, because 0.05 lies inside the interval. Values both below and above 5% remain plausible.","Compare 0.05 with the interval 0.046 to 0.074. Because 0.05 is inside the interval, the data do not establish that the population rate is above 5%.",A 95% confidence interval for the proportion of users missing a credit-card payment is 0.046 to 0.074. The regulator considers rates above 5% concerning. Give a short interpretation.,"1. Identify the regulatory benchmark as a population proportion of 0.05.
+2. Compare that benchmark with the reported confidence interval.
+3. Determine whether all plausible parameter values lie above the benchmark.
+4. State what can and cannot be concluded about whether the true missed-payment rate exceeds the threshold.","A 95% confidence interval for the proportion of users missing a credit-card payment is 0.046 to 0.074. The regulator considers rates above 5% concerning. Give a short interpretation.
+
+Follow the reasoning stages below:
+
+1. Identify the regulatory benchmark as a population proportion of 0.05.
+2. Compare that benchmark with the reported confidence interval.
+3. Determine whether all plausible parameter values lie above the benchmark.
+4. State what can and cannot be concluded about whether the true missed-payment rate exceeds the threshold.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+15,Confidence Interval,Social Survey,Medium,Calculation,ch_foundations_for_inf_28,"Minimum wage, Part II
+
+In Exercise~[ref: minimum_wage_prop_1],
+we learned that a Rasmussen Reports survey
+of 1,000 US adults found that 42% believe
+raising the minimum wage will help the economy.
+Construct a 99% confidence interval for the
+true proportion of US adults who believe this.","\qt{Minimum wage, Part II\label{minimum_wage_prop_2}}
+In Exercise~\ref{minimum_wage_prop_1},
+we learned that a Rasmussen Reports survey
+of 1,000 US adults found that 42\% believe
+raising the minimum wage will help the economy.
+Construct a 99\% confidence interval for the
+true proportion of US adults who believe this.","In a random sample of 1,200 adults, 684 say they support a four-day work week. Construct a 95% confidence interval for the true support proportion.",,0.5420 to 0.5980,"p̂=684/1200=0.57. SE=sqrt[0.57(0.43)/1200]=0.014292. Using z*=1.96, CI=0.57±1.96×0.014292=0.5420 to 0.5980.","In a random sample of 1,200 adults, 684 say they support a four-day work week. Construct a 95% confidence interval for the true support proportion.","1. Compute the sample support proportion from the survey count.
+2. Check the usual conditions for a normal-based proportion confidence interval.
+3. Compute the standard error using full precision.
+4. Apply the critical value for the stated confidence level and calculate both interval endpoints.","In a random sample of 1,200 adults, 684 say they support a four-day work week. Construct a 95% confidence interval for the true support proportion.
+
+Follow the reasoning stages below:
+
+1. Compute the sample support proportion from the survey count.
+2. Check the usual conditions for a normal-based proportion confidence interval.
+3. Compute the standard error using full precision.
+4. Apply the critical value for the stated confidence level and calculate both interval endpoints.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+16,Confidence Interval,Social Survey,Medium,Calculation,ch_foundations_for_inf_27_3,"Relaxing after work
+
+The General Social Survey asked the question:
+``After an average work day, about how many hours do you have to relax or pursue 
+activities that you enjoy?"" to a random sample of 1,155 Americans.[source: data:gss] A 95% confidence interval for the mean number of hours spent 
+relaxing or pursuing activities they enjoy was (1.38, 1.92).
+
+Suppose next year a new survey asking the same question is conducted, and 
+this time the sample size is 2,500. Assuming that the population 
+characteristics, with respect to how much time people spend relaxing after work, 
+have not changed much within a year. How will the margin of error of the 95% 
+confidence interval constructed based on data from the new survey compare to the 
+margin of error of the interval stated above?","\qt{Relaxing after work\label{relax_after_work}} The General Social Survey asked the question:
+``After an average work day, about how many hours do you have to relax or pursue 
+activities that you enjoy?"" to a random sample of 1,155 Americans.\footfullcite{data:gss} A 95\% confidence interval for the mean number of hours spent 
+relaxing or pursuing activities they enjoy was (1.38, 1.92).
+\begin{parts}
+\item Interpret this interval in context of the data.
+\item Suppose another set of researchers reported a confidence interval with a 
+larger margin of error based on the same sample of 1,155 Americans. How does 
+their confidence level compare to the confidence level of the interval stated 
+above?
+\item Suppose next year a new survey asking the same question is conducted, and 
+this time the sample size is 2,500. Assuming that the population 
+characteristics, with respect to how much time people spend relaxing after work, 
+have not changed much within a year. How will the margin of error of the 95\% 
+confidence interval constructed based on data from the new survey compare to the 
+margin of error of the interval stated above?
+\end{parts}",A random sample of 400 commuters has a mean daily commute time of 38 minutes with a sample standard deviation of 16 minutes. Construct a 95% confidence interval for the population mean commute time. Assume the conditions for a one-sample t confidence interval are satisfied.,,36.43 to 39.57 minutes,"Use a one-sample t interval because the population standard deviation is unknown. SE=16/sqrt(400)=0.8, df=399, t*=1.966. CI=38±1.966×0.8=36.43 to 39.57 minutes.",A random sample of 400 commuters has a mean daily commute time of 38 minutes with a sample standard deviation of 16 minutes. Construct a 95% confidence interval for the population mean commute time. Assume the conditions for a one-sample t confidence interval are satisfied.,"1. Identify the appropriate confidence interval for a population mean when the population standard deviation is unknown.
+2. Compute the standard error from the sample standard deviation and sample size.
+3. Determine the degrees of freedom and critical value.
+4. Construct the interval and round the final endpoints appropriately.","A random sample of 400 commuters has a mean daily commute time of 38 minutes with a sample standard deviation of 16 minutes. Construct a 95% confidence interval for the population mean commute time. Assume the conditions for a one-sample t confidence interval are satisfied.
+
+Follow the reasoning stages below:
+
+1. Identify the appropriate confidence interval for a population mean when the population standard deviation is unknown.
+2. Compute the standard error from the sample standard deviation and sample size.
+3. Determine the degrees of freedom and critical value.
+4. Construct the interval and round the final endpoints appropriately.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+17,Confidence Interval,Social Survey,Medium,Calculation,ch_inference_for_props_43_1,"College smokers
+
+We are interested 
+in estimating the proportion of students at a university who smoke. Out of a 
+random sample of 200 students from this university, 40 students smoke.
+
+Calculate a 95% confidence interval for the proportion of students at 
+this university who smoke, and interpret this interval in context. 
+(Reminder: Check conditions.)","\qt{College smokers\label{college_smokers_CI_sample_size}} We are interested 
+in estimating the proportion of students at a university who smoke. Out of a 
+random sample of 200 students from this university, 40 students smoke.
+\begin{parts}
+\item Calculate a 95\% confidence interval for the proportion of students at 
+this university who smoke, and interpret this interval in context. 
+(Reminder: Check conditions.)
+\item If we wanted the margin of error to be no larger than 2\% at a 95\% 
+confidence level for the proportion of students who smoke, how big of a 
+sample would we need? 
+\end{parts}","In a random sample of 900 residents, 351 say they trust local news sources. Construct a 90% confidence interval for the population proportion.",,0.3633 to 0.4167,"p̂=351/900=0.39. SE=sqrt[0.39(0.61)/900]=0.016258. Using z*=1.645, CI=0.39±1.645×0.016258=0.3633 to 0.4167.","In a random sample of 900 residents, 351 say they trust local news sources. Construct a 90% confidence interval for the population proportion.","1. Compute the sample proportion that trusts local news.
+2. Verify that the normal approximation for a proportion interval is reasonable.
+3. Compute the standard error without early rounding.
+4. Use the critical value for the stated confidence level to obtain the lower and upper bounds.","In a random sample of 900 residents, 351 say they trust local news sources. Construct a 90% confidence interval for the population proportion.
+
+Follow the reasoning stages below:
+
+1. Compute the sample proportion that trusts local news.
+2. Verify that the normal approximation for a proportion interval is reasonable.
+3. Compute the standard error without early rounding.
+4. Use the critical value for the stated confidence level to obtain the lower and upper bounds.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+18,Confidence Interval,Social Survey,Medium,Calculation,ch_inference_for_props_45_5,"Life after college
+
+We are interested in 
+estimating the proportion of graduates at a mid-sized university who found 
+a job within one year of completing their undergraduate degree. Suppose we 
+conduct a survey and find out that 348 of the 400 randomly sampled graduates 
+found jobs. The graduating class under consideration included over 4500 students.
+
+Now calculate a 99% confidence interval for the same parameter and 
+interpret it in the context of the data.","\qt{Life after college\label{life_after_college_CI}} We are interested in 
+estimating the proportion of graduates at a mid-sized university who found 
+a job within one year of completing their undergraduate degree. Suppose we 
+conduct a survey and find out that 348 of the 400 randomly sampled graduates 
+found jobs. The graduating class under consideration included over 4500 students.
+\begin{parts}
+\item Describe the population parameter of interest. What is the value of 
+the point estimate of this parameter?
+\item Check if the conditions for constructing a confidence interval based 
+on these data are met.
+\item Calculate a 95\% confidence interval for the proportion of graduates 
+who found a job within one year of completing their undergraduate degree at 
+this university, and interpret it in the context of the data.
+\item What does ``95\% confidence"" mean?
+\item Now calculate a 99\% confidence interval for the same parameter and 
+interpret it in the context of the data.
+\item Compare the widths of the 95\% and 99\% confidence intervals. Which 
+one is wider? Explain.
+\end{parts}",A random sample of 256 people reports a mean of 2.8 hours of daily social media use with a sample standard deviation of 1.6 hours. Construct a 95% confidence interval for the population mean. Assume the conditions for a one-sample t confidence interval are satisfied.,,2.603 to 2.997 hours,"Use a one-sample t interval because the population standard deviation is unknown. SE=1.6/sqrt(256)=0.1, df=255, t*=1.969. CI=2.8±1.969×0.1=2.603 to 2.997 hours.",A random sample of 256 people reports a mean of 2.8 hours of daily social media use with a sample standard deviation of 1.6 hours. Construct a 95% confidence interval for the population mean. Assume the conditions for a one-sample t confidence interval are satisfied.,"1. Determine the appropriate confidence-interval method for a mean when the population standard deviation is unknown.
+2. Compute the standard error and degrees of freedom.
+3. Obtain the critical value for the requested confidence level.
+4. Use the point estimate and margin of error to calculate the two confidence limits.","A random sample of 256 people reports a mean of 2.8 hours of daily social media use with a sample standard deviation of 1.6 hours. Construct a 95% confidence interval for the population mean. Assume the conditions for a one-sample t confidence interval are satisfied.
+
+Follow the reasoning stages below:
+
+1. Determine the appropriate confidence-interval method for a mean when the population standard deviation is unknown.
+2. Compute the standard error and degrees of freedom.
+3. Obtain the critical value for the requested confidence level.
+4. Use the point estimate and margin of error to calculate the two confidence limits.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+19,Confidence Interval,Social Survey,Medium,Calculation,ch_foundations_for_inf_30_1,"True or false
+
+Determine if the following statements are true or false, and 
+explain your reasoning. If false, state how it could be corrected.
+
+If a given value (for example, the null hypothesized value of a parameter) 
+is within a 95% confidence interval, it will also be within a 99% confidence 
+interval.","\qt{True or false\label{tf_found_inf_prop_friendly}}
+Determine if the following statements are true or false, and 
+explain your reasoning. If false, state how it could be corrected.
+\begin{parts}
+\item If a given value (for example, the null hypothesized value of a parameter) 
+is within a 95\% confidence interval, it will also be within a 99\% confidence 
+interval.
+\item Decreasing the significance level ($\alpha$) will increase the probability 
+of making a Type~1 Error.
+\item Suppose the null hypothesis is $p = 0.5$ and we fail to reject $H_0$. 
+Under this scenario, the true population proportion is 0.5.
+\item With large sample sizes, even small differences between the null value and 
+the observed point estimate, a difference often called the
+effect size\index{effect size}, will be identified as statistically significant.
+\end{parts}","In a random sample of 625 voters, 275 prefer online voting. Construct a 95% confidence interval for the true proportion.",,0.4011 to 0.4789,"p̂=275/625=0.44. SE=sqrt[0.44(0.56)/625]=0.019855. Using z*=1.96, CI=0.44±1.96×0.019855=0.4011 to 0.4789.","In a random sample of 625 voters, 275 prefer online voting. Construct a 95% confidence interval for the true proportion.","1. Convert the number preferring online voting into a sample proportion.
+2. Check the success-failure and sampling conditions needed for the interval.
+3. Calculate the standard error using the sample proportion.
+4. Form the confidence interval with the appropriate critical value and report its endpoints.","In a random sample of 625 voters, 275 prefer online voting. Construct a 95% confidence interval for the true proportion.
+
+Follow the reasoning stages below:
+
+1. Convert the number preferring online voting into a sample proportion.
+2. Check the success-failure and sampling conditions needed for the interval.
+3. Calculate the standard error using the sample proportion.
+4. Form the confidence interval with the appropriate critical value and report its endpoints.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+20,Confidence Interval,Marketing,Medium,Multiple Choice,ch_inference_for_props_44_1,"Acetaminophen and liver damage
+
+It 
+is believed that large doses of acetaminophen (the active ingredient in over 
+the counter pain relievers like Tylenol) may cause damage to the liver. A 
+researcher wants to conduct a study to estimate the proportion of 
+acetaminophen users who have liver damage. For participating in this study, 
+he will pay each subject $20 and provide a free medical consultation if the 
+patient has liver damage.
+
+If he wants to limit the margin of error of his 98% confidence 
+interval to 2%, what is the minimum amount of money he needs to set aside 
+to pay his subjects?","\qt{Acetaminophen and liver damage\label{acetaminophen_CI_sample_size}} It 
+is believed that large doses of acetaminophen (the active ingredient in over 
+the counter pain relievers like Tylenol) may cause damage to the liver. A 
+researcher wants to conduct a study to estimate the proportion of 
+acetaminophen users who have liver damage. For participating in this study, 
+he will pay each subject \$20 and provide a free medical consultation if the 
+patient has liver damage.
+\begin{parts}
+\item If he wants to limit the margin of error of his 98\% confidence 
+interval to 2\%, what is the minimum amount of money he needs to set aside 
+to pay his subjects?
+\item The amount you calculated in part (a) is substantially over his budget 
+so he decides to use fewer subjects. How will this affect the width of his 
+confidence interval?
+\end{parts}","A company is constructing a confidence interval for the proportion of customers who recognize a new brand slogan. Which changes would reduce the margin of error, all else equal? Select all that apply.","A. Increase the sample size
+B. Use a lower confidence level
+C. Use a smaller sample size
+D. Use a higher confidence level","A, B",Margin of error decreases when the sample size increases and when the confidence level is lowered. A smaller sample size or a higher confidence level increases the margin of error.,"A company is constructing a confidence interval for the proportion of customers who recognize a new brand slogan. Which changes would reduce the margin of error, all else equal? Select all that apply.
+
+Options:
+A. Increase the sample size
+B. Use a lower confidence level
+C. Use a smaller sample size
+D. Use a higher confidence level","1. Recall the components that determine the margin of error for a confidence interval for a proportion.
+2. For each option, determine how it changes the standard error or the critical value.
+3. Decide whether that change makes the margin of error smaller or larger.
+4. Select every option that reduces the margin of error.","A company is constructing a confidence interval for the proportion of customers who recognize a new brand slogan. Which changes would reduce the margin of error, all else equal? Select all that apply.
+
+Options:
+A. Increase the sample size
+B. Use a lower confidence level
+C. Use a smaller sample size
+D. Use a higher confidence level
+
+Follow the reasoning stages below:
+
+1. Recall the components that determine the margin of error for a confidence interval for a proportion.
+2. For each option, determine how it changes the standard error or the critical value.
+3. Decide whether that change makes the margin of error smaller or larger.
+4. Select every option that reduces the margin of error.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+21,Confidence Interval,Marketing,Medium,Multiple Choice,ch_inference_for_props_45_6,"Life after college
+
+We are interested in 
+estimating the proportion of graduates at a mid-sized university who found 
+a job within one year of completing their undergraduate degree. Suppose we 
+conduct a survey and find out that 348 of the 400 randomly sampled graduates 
+found jobs. The graduating class under consideration included over 4500 students.
+
+Compare the widths of the 95% and 99% confidence intervals. Which 
+one is wider? Explain.","\qt{Life after college\label{life_after_college_CI}} We are interested in 
+estimating the proportion of graduates at a mid-sized university who found 
+a job within one year of completing their undergraduate degree. Suppose we 
+conduct a survey and find out that 348 of the 400 randomly sampled graduates 
+found jobs. The graduating class under consideration included over 4500 students.
+\begin{parts}
+\item Describe the population parameter of interest. What is the value of 
+the point estimate of this parameter?
+\item Check if the conditions for constructing a confidence interval based 
+on these data are met.
+\item Calculate a 95\% confidence interval for the proportion of graduates 
+who found a job within one year of completing their undergraduate degree at 
+this university, and interpret it in the context of the data.
+\item What does ``95\% confidence"" mean?
+\item Now calculate a 99\% confidence interval for the same parameter and 
+interpret it in the context of the data.
+\item Compare the widths of the 95\% and 99\% confidence intervals. Which 
+one is wider? Explain.
+\end{parts}",A marketing team reports a 95% confidence interval for the average amount customers spend per visit. Which interpretations are valid? Select all that apply.,"A. The interval estimates the population mean spending amount.
+B. The interval says 95% of individual customers spend inside the interval.
+C. Repeated random samples would produce intervals that capture the true mean about 95% of the time.
+D. The interval gives a plausible range for the true mean.","A, C, D","A CI is about the population parameter and the long-run performance of the method, not the percentage of individual observations inside the interval.","A marketing team reports a 95% confidence interval for the average amount customers spend per visit. Which interpretations are valid? Select all that apply.
+
+Options:
+A. The interval estimates the population mean spending amount.
+B. The interval says 95% of individual customers spend inside the interval.
+C. Repeated random samples would produce intervals that capture the true mean about 95% of the time.
+D. The interval gives a plausible range for the true mean.","1. Identify the parameter targeted by a confidence interval for average customer spending.
+2. Separate statements about the population mean from statements about individual customer spending.
+3. Apply the long-run repeated-sampling interpretation of a 95% confidence procedure.
+4. Evaluate each option and select all interpretations that are statistically valid.","A marketing team reports a 95% confidence interval for the average amount customers spend per visit. Which interpretations are valid? Select all that apply.
+
+Options:
+A. The interval estimates the population mean spending amount.
+B. The interval says 95% of individual customers spend inside the interval.
+C. Repeated random samples would produce intervals that capture the true mean about 95% of the time.
+D. The interval gives a plausible range for the true mean.
+
+Follow the reasoning stages below:
+
+1. Identify the parameter targeted by a confidence interval for average customer spending.
+2. Separate statements about the population mean from statements about individual customer spending.
+3. Apply the long-run repeated-sampling interpretation of a 95% confidence procedure.
+4. Evaluate each option and select all interpretations that are statistically valid.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+22,Confidence Interval,Marketing,Medium,Multiple Choice,ch_inference_for_props_48_3,"2010 Healthcare Law
+
+On June 28, 2012 the 
+U.S. Supreme Court upheld the much debated 2010 healthcare law, declaring it 
+constitutional. A Gallup poll released the day after this decision indicates 
+that 46% of 1,012 Americans agree with this decision. At a 95% confidence 
+level, this sample has a 3% margin of error. Based on this information, 
+determine if the following statements are true or false, and explain your 
+reasoning.[source: data:healthcare2010]
+
+If we considered many random samples of 1,012 Americans, and we 
+calculated the sample proportions of those who support the decision of the 
+U.S. Supreme Court, 95% of those sample proportions will be between 43% and 
+49%.","\qt{2010 Healthcare Law\label{healthcare_CI_concept}} On June 28, 2012 the 
+U.S. Supreme Court upheld the much debated 2010 healthcare law, declaring it 
+constitutional. A Gallup poll released the day after this decision indicates 
+that 46\% of 1,012 Americans agree with this decision. At a 95\% confidence 
+level, this sample has a 3\% margin of error. Based on this information, 
+determine if the following statements are true or false, and explain your 
+reasoning.\footfullcite{data:healthcare2010}
+\begin{parts}
+\item We are 95\% confident that between  43\% and 49\% of Americans in this 
+sample support the decision of the U.S. Supreme Court on the 2010 healthcare 
+law.
+\item We are 95\% confident that between 43\% and 49\% of Americans support 
+the decision of the U.S. Supreme Court on the 2010 healthcare law.
+\item If we considered many random samples of 1,012 Americans, and we 
+calculated the sample proportions of those who support the decision of the 
+U.S. Supreme Court, 95\% of those sample proportions will be between 43\% and 
+49\%.
+\item The margin of error at a 90\% confidence level would be higher than 3\%.
+\end{parts}","For a 95% confidence interval for a population proportion, which conditions are usually checked? Select all that apply.","A. Observations are randomly sampled or otherwise reasonably independent.
+B. The expected number of successes is sufficiently large for the normal approximation.
+C. The sample mean must equal the population mean.
+D. The expected number of failures is sufficiently large for the normal approximation.","A, B, D",A proportion confidence interval requires an appropriate random/independence condition and enough expected successes and failures for the normal approximation.,"For a 95% confidence interval for a population proportion, which conditions are usually checked? Select all that apply.
+
+Options:
+A. Observations are randomly sampled or otherwise reasonably independent.
+B. The expected number of successes is sufficiently large for the normal approximation.
+C. The sample mean must equal the population mean.
+D. The expected number of failures is sufficiently large for the normal approximation.","1. Recall the sampling/independence requirement for a confidence interval for a population proportion.
+2. Consider the expected number of successes required for a normal approximation.
+3. Consider the expected number of failures required for the same approximation.
+4. Evaluate each option and select all conditions that are relevant.","For a 95% confidence interval for a population proportion, which conditions are usually checked? Select all that apply.
+
+Options:
+A. Observations are randomly sampled or otherwise reasonably independent.
+B. The expected number of successes is sufficiently large for the normal approximation.
+C. The sample mean must equal the population mean.
+D. The expected number of failures is sufficiently large for the normal approximation.
+
+Follow the reasoning stages below:
+
+1. Recall the sampling/independence requirement for a confidence interval for a population proportion.
+2. Consider the expected number of successes required for a normal approximation.
+3. Consider the expected number of failures required for the same approximation.
+4. Evaluate each option and select all conditions that are relevant.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+23,Confidence Interval,General Everyday,Easy,Single Choice,ch_inference_for_means_55,"Exclusive relationships
+
+A survey conducted 
+on a reasonably random sample of 203 undergraduates asked, among many other 
+questions, about the number of exclusive relationships these students have been 
+in. The histogram below shows the distribution of the data from this sample. 
+The sample average is 3.2 with a standard deviation of 1.97.
+
+0.6ch_inference_for_means/figures/eoce/exclusive_relationships/exclusive_relationships_rel_hist
+
+Estimate the average number of exclusive relationships Duke students have been 
+in using a 90% confidence interval and interpret this interval in context. 
+Check any conditions required for inference, and note any assumptions you must 
+make as you proceed with your calculations and conclusions.","\qt{Exclusive relationships\label{exclusive_relationships}} A survey conducted 
+on a reasonably random sample of 203 undergraduates asked, among many other 
+questions, about the number of exclusive relationships these students have been 
+in. The histogram below shows the distribution of the data from this sample. 
+The sample average is 3.2 with a standard deviation of 1.97.
+\begin{center}
+\FigureFullPath[A histogram is shown for ""Number of exclusive relationships"". The distribution has a peak between 1 and 2 of about 101, a substantial dip for the 2 to 3 bin at a value of about 2, and the 3 to 4 bin is about 50, 4 to 5 bin a value of about 25, and the data continues to taper off with a maximum value of ""10"" shown.]{0.6}{ch_inference_for_means/figures/eoce/exclusive_relationships/exclusive_relationships_rel_hist}
+\end{center}
+Estimate the average number of exclusive relationships Duke students have been 
+in using a 90\% confidence interval and interpret this interval in context. 
+Check any conditions required for inference, and note any assumptions you must 
+make as you proceed with your calculations and conclusions.",A 95% confidence interval for the average time people spend cooking dinner is 28 to 34 minutes. What is the best interpretation?,"A. The true population mean is plausibly between 28 and 34 minutes.
+B. Every person cooks for 28 to 34 minutes.
+C. 95% of dinners take exactly 31 minutes.
+D. The sample mean must be 95 minutes.",A,"The interval estimates the population mean, not every individual value.","A 95% confidence interval for the average time people spend cooking dinner is 28 to 34 minutes. What is the best interpretation?
+
+Options:
+A. The true population mean is plausibly between 28 and 34 minutes.
+B. Every person cooks for 28 to 34 minutes.
+C. 95% of dinners take exactly 31 minutes.
+D. The sample mean must be 95 minutes.","1. Identify whether the interval refers to a population parameter or to individual observations.
+2. Interpret the two endpoints as plausible values for the population mean.
+3. Compare that interpretation with each answer choice.
+4. Select the option that correctly describes the confidence interval.","A 95% confidence interval for the average time people spend cooking dinner is 28 to 34 minutes. What is the best interpretation?
+
+Options:
+A. The true population mean is plausibly between 28 and 34 minutes.
+B. Every person cooks for 28 to 34 minutes.
+C. 95% of dinners take exactly 31 minutes.
+D. The sample mean must be 95 minutes.
+
+Follow the reasoning stages below:
+
+1. Identify whether the interval refers to a population parameter or to individual observations.
+2. Interpret the two endpoints as plausible values for the population mean.
+3. Compare that interpretation with each answer choice.
+4. Select the option that correctly describes the confidence interval.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+24,Confidence Interval,General Everyday,Easy,Single Choice,ch_inference_for_props_48_1,"2010 Healthcare Law
+
+On June 28, 2012 the 
+U.S. Supreme Court upheld the much debated 2010 healthcare law, declaring it 
+constitutional. A Gallup poll released the day after this decision indicates 
+that 46% of 1,012 Americans agree with this decision. At a 95% confidence 
+level, this sample has a 3% margin of error. Based on this information, 
+determine if the following statements are true or false, and explain your 
+reasoning.[source: data:healthcare2010]
+
+We are 95% confident that between 43% and 49% of Americans in this 
+sample support the decision of the U.S. Supreme Court on the 2010 healthcare 
+law.","\qt{2010 Healthcare Law\label{healthcare_CI_concept}} On June 28, 2012 the 
+U.S. Supreme Court upheld the much debated 2010 healthcare law, declaring it 
+constitutional. A Gallup poll released the day after this decision indicates 
+that 46\% of 1,012 Americans agree with this decision. At a 95\% confidence 
+level, this sample has a 3\% margin of error. Based on this information, 
+determine if the following statements are true or false, and explain your 
+reasoning.\footfullcite{data:healthcare2010}
+\begin{parts}
+\item We are 95\% confident that between  43\% and 49\% of Americans in this 
+sample support the decision of the U.S. Supreme Court on the 2010 healthcare 
+law.
+\item We are 95\% confident that between 43\% and 49\% of Americans support 
+the decision of the U.S. Supreme Court on the 2010 healthcare law.
+\item If we considered many random samples of 1,012 Americans, and we 
+calculated the sample proportions of those who support the decision of the 
+U.S. Supreme Court, 95\% of those sample proportions will be between 43\% and 
+49\%.
+\item The margin of error at a 90\% confidence level would be higher than 3\%.
+\end{parts}","Keeping the same sample data, what happens to a confidence interval when the confidence level increases from 90% to 95%?","A. It becomes wider.
+B. It becomes narrower.
+C. It must become negative.
+D. It disappears.",A,"A higher confidence level uses a larger critical value, which increases the margin of error.","Keeping the same sample data, what happens to a confidence interval when the confidence level increases from 90% to 95%?
+
+Options:
+A. It becomes wider.
+B. It becomes narrower.
+C. It must become negative.
+D. It disappears.","1. Hold the data and sample size fixed.
+2. Determine how increasing the confidence level affects the critical value.
+3. Determine how the changed critical value affects the margin of error.
+4. Use that relationship to select the correct statement about interval width.","Keeping the same sample data, what happens to a confidence interval when the confidence level increases from 90% to 95%?
+
+Options:
+A. It becomes wider.
+B. It becomes narrower.
+C. It must become negative.
+D. It disappears.
+
+Follow the reasoning stages below:
+
+1. Hold the data and sample size fixed.
+2. Determine how increasing the confidence level affects the critical value.
+3. Determine how the changed critical value affects the margin of error.
+4. Use that relationship to select the correct statement about interval width.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+25,Confidence Interval,General Everyday,Easy,Single Choice,ch_inference_for_means_53_1,"Experiment resizing
+
+At a startup company running a new weather app, an engineering
+team generally runs experiments where a random sample of 1%
+of the app's visitors in the control group and another
+1% were in the treatment group to test each new feature.
+The team's core goal is to increase a metric
+called daily visitors,
+which is essentially the number of visitors to the app
+each day.
+They track this metric in each experiment arm and
+as their core experiment metric.
+In their most recent experiment, the team tested
+including a new animation when the app started,
+and the number of daily visitors in this experiment
+stabilized at +1.2% with a 95% confidence interval
+of (-0.2%, +2.6%).
+This means if this new app start animation was launched,
+the team thinks they might lose as many as 0.2% of daily
+visitors or gain as many as 2.6% more daily visitors.
+Suppose you are consulting as the team's data scientist,
+and after discussing with the team,
+you and they agree that they should run
+another experiment that is bigger.
+You also agree that this new experiment
+should be able to detect a gain in the daily visitors
+metric of 1.0% or more with 80% power.
+Now they turn to you and ask,
+``How big of an experiment do we need to run
+to ensure we can detect this effect?''
+
+How small must the standard error be if
+ the team is to be able to detect an effect
+ of 1.0% with 80% power and a significance
+ level of $ = 0.05$?
+ You may safely assume the percent change in
+ daily visitors metric follows a normal distribution.","\qt{Experiment resizing\label{tech_exp_resizing}}
+At a startup company running a new weather app, an engineering
+team generally runs experiments where a random sample of 1\%
+of the app's visitors in the control group and another
+1\% were in the treatment group to test each new feature.
+The team's core goal is to increase a metric
+called \emph{daily visitors},
+which is essentially the number of visitors to the app
+each day.
+They track this metric in each experiment arm and
+as their core experiment metric.
+In their most recent experiment, the team tested
+including a new animation when the app started,
+and the number of daily visitors in this experiment
+stabilized at +1.2\% with a 95\% confidence interval
+of (-0.2\%, +2.6\%).
+This means if this new app start animation was launched,
+the team thinks they might lose as many as 0.2\% of daily
+visitors or gain as many as 2.6\% more daily visitors.
+Suppose you are consulting as the team's data scientist,
+and after discussing with the team,
+you and they agree that they should run
+another experiment that is bigger.
+You also agree that this new experiment
+should be able to detect a gain in the daily visitors
+metric of 1.0\% or more with 80\% power.
+Now they turn to you and ask,
+``How big of an experiment do we need to run
+to ensure we can detect this effect?''
+\begin{parts}
+\item\label{tech_exp_resizing_target_se}
+    How small must the standard error be if
+    the team is to be able to detect an effect
+    of 1.0\% with 80\% power and a significance
+    level of $\alpha = 0.05$?
+    You may safely assume the percent change in
+    daily visitors metric follows a normal distribution.
+\item\label{tech_exp_resizing_original_se}
+    Consider the first experiment, where
+    the point estimate was +1.2\% and the
+    95\% confidence interval was (-0.2\%, +2.6\%).
+    If that point estimate followed a normal
+    distribution, what was the standard error
+    of the estimate?
+\item\label{tech_exp_resizing_ratio}
+    The ratio of the standard error from
+    part~(\ref{tech_exp_resizing_target_se})
+    vs the standard error from
+    part~(\ref{tech_exp_resizing_original_se})
+    should be~1.97.
+    How much bigger of an experiment is needed
+    to shrink a standard error by a factor of~1.97?
+\item
+    Using your answer from
+    part~(\ref{tech_exp_resizing_ratio})
+    and that the original experiment was
+    a 1\% vs 1\% experiment to recommend
+    an experiment size to the team.
+\end{parts}",Which formula best describes the margin of error for a simple confidence interval for a mean when using a normal critical value?,"A. critical value × standard error
+B. sample mean × sample size
+C. population mean ÷ confidence level
+D. variance − standard deviation",A,Margin of error is the critical value multiplied by the standard error.,"Which formula best describes the margin of error for a simple confidence interval for a mean when using a normal critical value?
+
+Options:
+A. critical value × standard error
+B. sample mean × sample size
+C. population mean ÷ confidence level
+D. variance − standard deviation","1. Recall the generic structure of a confidence interval as estimate plus or minus margin of error.
+2. Identify the two quantities multiplied to form the margin of error in the stated setting.
+3. Compare that relationship with the answer choices.
+4. Select the formula that matches the definition.","Which formula best describes the margin of error for a simple confidence interval for a mean when using a normal critical value?
+
+Options:
+A. critical value × standard error
+B. sample mean × sample size
+C. population mean ÷ confidence level
+D. variance − standard deviation
+
+Follow the reasoning stages below:
+
+1. Recall the generic structure of a confidence interval as estimate plus or minus margin of error.
+2. Identify the two quantities multiplied to form the margin of error in the stated setting.
+3. Compare that relationship with the answer choices.
+4. Select the formula that matches the definition.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+26,Confidence Interval,General Everyday,Easy,Single Choice,ch_foundations_for_inf_33,"Nutrition labels
+
+The nutrition label on a bag of potato chips says
+that a one ounce (28~gram) serving of potato chips
+has 130 calories and contains ten grams of fat,
+with three grams of saturated fat.
+A~random sample of 35 bags yielded
+a confidence interval for the number of calories
+per bag of 128.2 to 139.8 calories.
+Is there evidence that the nutrition label does not 
+provide an accurate measure of calories in the bags
+of potato chips?","\qt{Nutrition labels\label{nutrition_labels}}
+The nutrition label on a bag of potato chips says
+that a one ounce (28~gram) serving of potato chips
+has 130 calories and contains ten grams of fat,
+with three grams of saturated fat.
+A~random sample of 35 bags yielded
+a confidence interval for the number of calories
+per bag of 128.2 to 139.8 calories.
+Is there evidence that the nutrition label does not 
+provide an accurate measure of calories in the bags
+of potato chips?",A confidence interval for a population proportion is 0.32 to 0.40. What is the point estimate at the center of the interval?,"A. 0.36
+B. 0.08
+C. 0.72
+D. 0.40",A,The midpoint is (0.32+0.40)/2=0.36.,"A confidence interval for a population proportion is 0.32 to 0.40. What is the point estimate at the center of the interval?
+
+Options:
+A. 0.36
+B. 0.08
+C. 0.72
+D. 0.40","1. Recognize that the point estimate is located at the center of this symmetric confidence interval.
+2. Compute the midpoint of the two endpoints.
+3. Compare the resulting center with the options.
+4. Select the matching point estimate.","A confidence interval for a population proportion is 0.32 to 0.40. What is the point estimate at the center of the interval?
+
+Options:
+A. 0.36
+B. 0.08
+C. 0.72
+D. 0.40
+
+Follow the reasoning stages below:
+
+1. Recognize that the point estimate is located at the center of this symmetric confidence interval.
+2. Compute the midpoint of the two endpoints.
+3. Compare the resulting center with the options.
+4. Select the matching point estimate.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+27,Confidence Interval,Transportation,Hard,Interpretation,ch_inference_for_means_52,"Forest management
+
+Forest rangers wanted to better understand the rate
+of growth for younger trees in the park.
+They took measurements of a random sample of 50 young trees
+in 2009 and again measured those same trees in 2019.
+The data below summarize their measurements,
+where the heights are in feet:
+
+Table:
+| 2009 | 2019 | Differences | |
+| --- | --- | --- | --- |
+| $x$ | 12.0 | 24.5 | 12.5 |
+| $s$ | 3.5 | 9.5 | 7.2 |
+| $n$ | 50 | 50 | 50 |
+
+Construct a 99% confidence interval for the
+average growth of (what had been) younger trees
+in the park over 2009-2019.","\qt{Forest management\label{forest_mgmt_tree_growth}}
+Forest rangers wanted to better understand the rate
+of growth for younger trees in the park.
+They took measurements of a random sample of 50 young trees
+in 2009 and again measured those same trees in 2019.
+The data below summarize their measurements,
+where the heights are in feet:
+\begin{center}
+\begin{tabular}{l c c c}
+\hline
+          & 2009   & 2019  & Differences\\
+\hline  
+$\bar{x}$ & 12.0  & 24.5  & 12.5 \\
+$s$       & 3.5   & 9.5   & 7.2 \\
+$n$       & 50    & 50    & 50 \\
+\hline
+\end{tabular}
+\end{center}
+Construct a 99\% confidence interval for the
+average growth of (what had been) younger trees
+in the park over 2009-2019.",A city estimates the mean delay of buses during rush hour using a 95% confidence interval of 4.5 to 9.8 minutes. Explain what this means and whether “most buses are delayed by 4.5 to 9.8 minutes” is correct.,,"The city is 95% confident that the true mean rush-hour bus delay lies between 4.5 and 9.8 minutes. The statement about most buses is not correct because the interval estimates the mean, not the distribution of individual delays.",Confidence intervals describe uncertainty in a parameter. Individual observations may fall outside the interval.,A city estimates the mean delay of buses during rush hour using a 95% confidence interval of 4.5 to 9.8 minutes. Explain what this means and whether “most buses are delayed by 4.5 to 9.8 minutes” is correct.,"1. Identify the population parameter estimated by the reported interval.
+2. Interpret the endpoints as plausible values for the true mean bus delay.
+3. Distinguish uncertainty about a mean from the distribution of individual bus delays.
+4. Address both the correct interval interpretation and the claim about most buses.","A city estimates the mean delay of buses during rush hour using a 95% confidence interval of 4.5 to 9.8 minutes. Explain what this means and whether “most buses are delayed by 4.5 to 9.8 minutes” is correct.
+
+Follow the reasoning stages below:
+
+1. Identify the population parameter estimated by the reported interval.
+2. Interpret the endpoints as plausible values for the true mean bus delay.
+3. Distinguish uncertainty about a mean from the distribution of individual bus delays.
+4. Address both the correct interval interpretation and the claim about most buses.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+28,Confidence Interval,Transportation,Hard,Interpretation,ch_foundations_for_inf_27_3,"Relaxing after work
+
+The General Social Survey asked the question:
+``After an average work day, about how many hours do you have to relax or pursue 
+activities that you enjoy?"" to a random sample of 1,155 Americans.[source: data:gss] A 95% confidence interval for the mean number of hours spent 
+relaxing or pursuing activities they enjoy was (1.38, 1.92).
+
+Suppose next year a new survey asking the same question is conducted, and 
+this time the sample size is 2,500. Assuming that the population 
+characteristics, with respect to how much time people spend relaxing after work, 
+have not changed much within a year. How will the margin of error of the 95% 
+confidence interval constructed based on data from the new survey compare to the 
+margin of error of the interval stated above?","\qt{Relaxing after work\label{relax_after_work}} The General Social Survey asked the question:
+``After an average work day, about how many hours do you have to relax or pursue 
+activities that you enjoy?"" to a random sample of 1,155 Americans.\footfullcite{data:gss} A 95\% confidence interval for the mean number of hours spent 
+relaxing or pursuing activities they enjoy was (1.38, 1.92).
+\begin{parts}
+\item Interpret this interval in context of the data.
+\item Suppose another set of researchers reported a confidence interval with a 
+larger margin of error based on the same sample of 1,155 Americans. How does 
+their confidence level compare to the confidence level of the interval stated 
+above?
+\item Suppose next year a new survey asking the same question is conducted, and 
+this time the sample size is 2,500. Assuming that the population 
+characteristics, with respect to how much time people spend relaxing after work, 
+have not changed much within a year. How will the margin of error of the 95\% 
+confidence interval constructed based on data from the new survey compare to the 
+margin of error of the interval stated above?
+\end{parts}",A train operator defines the change in average arrival delay as new timetable minus old timetable. It obtains a 90% confidence interval of -0.6 to 1.4 minutes for this change. Interpret whether the timetable clearly improved punctuality.,,"No. Because 0 lies inside the interval, the data do not clearly show an improvement. The true change could be a small reduction in delay, no change, or an increase.","With change defined as new minus old, negative values indicate improvement and positive values indicate worsening. Because the interval crosses 0, the result is inconclusive.",A train operator defines the change in average arrival delay as new timetable minus old timetable. It obtains a 90% confidence interval of -0.6 to 1.4 minutes for this change. Interpret whether the timetable clearly improved punctuality.,"1. Use the stated definition of change as new timetable minus old timetable.
+2. Interpret negative, zero, and positive values of that change in terms of punctuality.
+3. Compare zero with the reported interval.
+4. Decide whether the interval provides clear evidence that the new timetable reduced average delay.","A train operator defines the change in average arrival delay as new timetable minus old timetable. It obtains a 90% confidence interval of -0.6 to 1.4 minutes for this change. Interpret whether the timetable clearly improved punctuality.
+
+Follow the reasoning stages below:
+
+1. Use the stated definition of change as new timetable minus old timetable.
+2. Interpret negative, zero, and positive values of that change in terms of punctuality.
+3. Compare zero with the reported interval.
+4. Decide whether the interval provides clear evidence that the new timetable reduced average delay.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+29,Confidence Interval,Transportation,Hard,Interpretation,ch_foundations_for_inf_28,"Minimum wage, Part II
+
+In Exercise~[ref: minimum_wage_prop_1],
+we learned that a Rasmussen Reports survey
+of 1,000 US adults found that 42% believe
+raising the minimum wage will help the economy.
+Construct a 99% confidence interval for the
+true proportion of US adults who believe this.","\qt{Minimum wage, Part II\label{minimum_wage_prop_2}}
+In Exercise~\ref{minimum_wage_prop_1},
+we learned that a Rasmussen Reports survey
+of 1,000 US adults found that 42\% believe
+raising the minimum wage will help the economy.
+Construct a 99\% confidence interval for the
+true proportion of US adults who believe this.",A ride-share company reports a 95% confidence interval of 0.62 to 0.70 for the proportion of trips rated five stars. Explain whether it is reasonable to claim that more than half of all trips are rated five stars.,,"Yes. The entire interval is above 0.50, so the data support the claim that the population proportion exceeds one half.","Compare the benchmark 0.50 with the interval. Since even the lower bound is greater than 0.50, the claim is supported.",A ride-share company reports a 95% confidence interval of 0.62 to 0.70 for the proportion of trips rated five stars. Explain whether it is reasonable to claim that more than half of all trips are rated five stars.,"1. Identify 0.50 as the benchmark corresponding to half of all trips.
+2. Compare the entire confidence interval with this benchmark.
+3. Determine whether plausible values for the population proportion include 0.50 or values below it.
+4. State whether the claim that more than half of all trips receive five stars is supported.","A ride-share company reports a 95% confidence interval of 0.62 to 0.70 for the proportion of trips rated five stars. Explain whether it is reasonable to claim that more than half of all trips are rated five stars.
+
+Follow the reasoning stages below:
+
+1. Identify 0.50 as the benchmark corresponding to half of all trips.
+2. Compare the entire confidence interval with this benchmark.
+3. Determine whether plausible values for the population proportion include 0.50 or values below it.
+4. State whether the claim that more than half of all trips receive five stars is supported.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+30,Confidence Interval,Transportation,Hard,Interpretation,ch_inference_for_means_55,"Exclusive relationships
+
+A survey conducted 
+on a reasonably random sample of 203 undergraduates asked, among many other 
+questions, about the number of exclusive relationships these students have been 
+in. The histogram below shows the distribution of the data from this sample. 
+The sample average is 3.2 with a standard deviation of 1.97.
+
+0.6ch_inference_for_means/figures/eoce/exclusive_relationships/exclusive_relationships_rel_hist
+
+Estimate the average number of exclusive relationships Duke students have been 
+in using a 90% confidence interval and interpret this interval in context. 
+Check any conditions required for inference, and note any assumptions you must 
+make as you proceed with your calculations and conclusions.","\qt{Exclusive relationships\label{exclusive_relationships}} A survey conducted 
+on a reasonably random sample of 203 undergraduates asked, among many other 
+questions, about the number of exclusive relationships these students have been 
+in. The histogram below shows the distribution of the data from this sample. 
+The sample average is 3.2 with a standard deviation of 1.97.
+\begin{center}
+\FigureFullPath[A histogram is shown for ""Number of exclusive relationships"". The distribution has a peak between 1 and 2 of about 101, a substantial dip for the 2 to 3 bin at a value of about 2, and the 3 to 4 bin is about 50, 4 to 5 bin a value of about 25, and the data continues to taper off with a maximum value of ""10"" shown.]{0.6}{ch_inference_for_means/figures/eoce/exclusive_relationships/exclusive_relationships_rel_hist}
+\end{center}
+Estimate the average number of exclusive relationships Duke students have been 
+in using a 90\% confidence interval and interpret this interval in context. 
+Check any conditions required for inference, and note any assumptions you must 
+make as you proceed with your calculations and conclusions.",A sample of delivery routes gives a 95% confidence interval of 18.2 to 22.6 miles for the mean route length. The manager says there is a 95% probability that the true mean is in this exact interval. Explain the issue.,,"In frequentist interpretation, the true mean is fixed; the interval either contains it or it does not. The 95% refers to the long-run success rate of the interval method.",Avoid saying the parameter has a probability after the interval is computed; confidence describes the procedure.,A sample of delivery routes gives a 95% confidence interval of 18.2 to 22.6 miles for the mean route length. The manager says there is a 95% probability that the true mean is in this exact interval. Explain the issue.,"1. Distinguish the fixed population mean from the random confidence interval produced by a sample.
+2. Explain what the 95% confidence level means before repeated samples are observed.
+3. Explain why a frequentist interval does not assign a 95% probability to a fixed parameter after this interval is computed.
+4. Rewrite the manager's statement using the standard confidence-interval interpretation.","A sample of delivery routes gives a 95% confidence interval of 18.2 to 22.6 miles for the mean route length. The manager says there is a 95% probability that the true mean is in this exact interval. Explain the issue.
+
+Follow the reasoning stages below:
+
+1. Distinguish the fixed population mean from the random confidence interval produced by a sample.
+2. Explain what the 95% confidence level means before repeated samples are observed.
+3. Explain why a frequentist interval does not assign a 95% probability to a fixed parameter after this interval is computed.
+4. Rewrite the manager's statement using the standard confidence-interval interpretation.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3

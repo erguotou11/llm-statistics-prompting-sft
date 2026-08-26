@@ -1,0 +1,1029 @@
+No,Knowledge Area,Scenario,Difficulty,Question Type,Source ID,original_text,raw_latex,Adapted Question,Options,Correct Answer,Solution / Key Steps,prompt_direct,cot_reasoning_scaffold,prompt_cot,student_tutor_strategy,tutor_model,tutor_max_turns
+1,Distribution,Education,Easy,Calculation,ch_summarizing_data_33,"Stats scores
+
+Below are the final exam scores of twenty 
+introductory statistics students.
+
+57, 66, 69, 71, 72, 73, 74, 77, 78, 78, 79, 79, 81, 81, 82, 83, 83, 88, 89, 94
+
+Create a box plot of the distribution of these scores. The five number summary provided below may be useful.
+
+1.5
+
+Table:
+| Min | Q1 | Q2 (Median) | Q3 | Max |
+| --- | --- | --- | --- | --- |
+| 57 | 72.5 | 78.5 | 82.5 | 94 |","\qt{Stats scores\label{stats_scores_box}} Below are the final exam scores of twenty 
+introductory statistics students.
+\begin{center}
+57, 66, 69, 71, 72, 73, 74, 77, 78, 78, 79, 79, 81, 81, 82, 83, 83, 88, 89, 94
+\end{center}
+Create a box plot of the distribution of these scores. The five number summary provided below may be useful.
+\begin{center}
+\renewcommand\arraystretch{1.5}
+\begin{tabular}{ccccc}
+Min & Q1    & Q2 (Median)   & Q3    & Max \\
+\hline
+57  & 72.5  & 78.5          & 82.5  & 94 \\
+\end{tabular}
+\end{center}","A lecturer records the following quiz scores for 12 students: 62, 68, 71, 74, 76, 78, 80, 81, 83, 84, 86, 88. Find the median score.",,79,"There are 12 values, so the median is the average of the 6th and 7th values: (78+80)/2=79.0.","A lecturer records the following quiz scores for 12 students: 62, 68, 71, 74, 76, 78, 80, 81, 83, 84, 86, 88. Find the median score.","1. Recognize that the data are already ordered and count the observations.
+2. Because the number of observations is even, identify the two middle positions.
+3. Average the two middle scores.
+4. Report the median in the context of the quiz scores.","A lecturer records the following quiz scores for 12 students: 62, 68, 71, 74, 76, 78, 80, 81, 83, 84, 86, 88. Find the median score.
+
+Follow the reasoning stages below:
+
+1. Recognize that the data are already ordered and count the observations.
+2. Because the number of observations is even, identify the two middle positions.
+3. Average the two middle scores.
+4. Report the median in the context of the quiz scores.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+2,Distribution,Education,Easy,Calculation,ch_summarizing_data_33,"Stats scores
+
+Below are the final exam scores of twenty 
+introductory statistics students.
+
+57, 66, 69, 71, 72, 73, 74, 77, 78, 78, 79, 79, 81, 81, 82, 83, 83, 88, 89, 94
+
+Create a box plot of the distribution of these scores. The five number summary provided below may be useful.
+
+1.5
+
+Table:
+| Min | Q1 | Q2 (Median) | Q3 | Max |
+| --- | --- | --- | --- | --- |
+| 57 | 72.5 | 78.5 | 82.5 | 94 |","\qt{Stats scores\label{stats_scores_box}} Below are the final exam scores of twenty 
+introductory statistics students.
+\begin{center}
+57, 66, 69, 71, 72, 73, 74, 77, 78, 78, 79, 79, 81, 81, 82, 83, 83, 88, 89, 94
+\end{center}
+Create a box plot of the distribution of these scores. The five number summary provided below may be useful.
+\begin{center}
+\renewcommand\arraystretch{1.5}
+\begin{tabular}{ccccc}
+Min & Q1    & Q2 (Median)   & Q3    & Max \\
+\hline
+57  & 72.5  & 78.5          & 82.5  & 94 \\
+\end{tabular}
+\end{center}","The same class has scores 62, 68, 71, 74, 76, 78, 80, 81, 83, 84, 86, 88. Find the range of the scores.",,26,Range = maximum - minimum = 88 - 62 = 26.,"The same class has scores 62, 68, 71, 74, 76, 78, 80, 81, 83, 84, 86, 88. Find the range of the scores.","1. Identify the minimum and maximum scores.
+2. Use range = maximum - minimum.
+3. Carry out the subtraction.
+4. Report the range in score points.","The same class has scores 62, 68, 71, 74, 76, 78, 80, 81, 83, 84, 86, 88. Find the range of the scores.
+
+Follow the reasoning stages below:
+
+1. Identify the minimum and maximum scores.
+2. Use range = maximum - minimum.
+3. Carry out the subtraction.
+4. Report the range in score points.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+3,Distribution,Education,Easy,Calculation,ch_summarizing_data_29,"TV watchers
+
+Students in an AP Statistics class 
+were asked how many hours of television they watch per week (including online 
+streaming). This sample yielded an average of 4.71 hours, with a standard 
+deviation of 4.18 hours. Is the distribution of number of hours students watch 
+television weekly symmetric? If not, what shape would you expect this distribution 
+to have? Explain your reasoning.","\qt{TV watchers\label{dist_shape_TV_watchers}} Students in an AP Statistics class 
+were asked how many hours of television they watch per week (including online 
+streaming). This sample yielded an average of 4.71 hours, with a standard 
+deviation of 4.18 hours. Is the distribution of number of hours students watch 
+television weekly symmetric? If not, what shape would you expect this distribution 
+to have? Explain your reasoning.","Eight students report watching 3, 5, 6, 8, 8, 10, 12, and 12 hours of online lectures in one week. Find the mean number of hours.",,8.0 hours,Sum the values: 3+5+6+8+8+10+12+12=64. Divide by 8: 64/8=8.0 hours.,"Eight students report watching 3, 5, 6, 8, 8, 10, 12, and 12 hours of online lectures in one week. Find the mean number of hours.","1. Add all eight reported lecture-hour values.
+2. Divide the total by the number of students.
+3. Check that the result is plausible relative to the listed values.
+4. Report the mean with units.","Eight students report watching 3, 5, 6, 8, 8, 10, 12, and 12 hours of online lectures in one week. Find the mean number of hours.
+
+Follow the reasoning stages below:
+
+1. Add all eight reported lecture-hour values.
+2. Divide the total by the number of students.
+3. Check that the result is plausible relative to the listed values.
+4. Report the mean with units.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+4,Distribution,Transportation,Easy,Calculation,ch_distributions_38_2,"Speeding on the I-5, Part II
+
+Exercise~[ref: speeding_i5_intro] states that the distribution of speeds of 
+cars traveling on the Interstate 5 Freeway (I-5) in California is nearly 
+normal with a mean of 72.6 miles/hour and a standard deviation of 4.78 
+miles/hour. The speed limit on this stretch of the I-5 is 70 miles/hour.
+
+On average, how many cars would the highway patrol officer expect to 
+watch until the first car that is speeding? What is the standard deviation of 
+the number of cars he would expect to watch?","\qt{Speeding on the I-5, Part II\label{speeding_i5_geometric}} 
+Exercise~\ref{speeding_i5_intro} states that the distribution of speeds of 
+cars traveling on the Interstate 5 Freeway (I-5) in California is nearly 
+normal with a mean of 72.6 miles/hour and a standard deviation of 4.78 
+miles/hour. The speed limit on this stretch of the I-5 is 70 miles/hour.
+\begin{parts}
+\item A highway patrol officer is hidden on the side of the freeway. What is 
+the probability that 5~cars pass and none are speeding? Assume that the 
+speeds of the cars are independent of each other.
+\item On average, how many cars would the highway patrol officer expect to 
+watch until the first car that is speeding? What is the standard deviation of 
+the number of cars he would expect to watch?
+\end{parts}","A speed camera records the following speeds (mph): 54, 58, 61, 63, 65, 66, 68, 70, 74. Calculate the interquartile range using Q1 as the median of the lower four values and Q3 as the median of the upper four values.",,9.5 mph,"Lower half: 54, 58, 61, 63, so Q1=(58+61)/2=59.5. Upper half: 66, 68, 70, 74, so Q3=(68+70)/2=69. IQR=69-59.5=9.5 mph.","A speed camera records the following speeds (mph): 54, 58, 61, 63, 65, 66, 68, 70, 74. Calculate the interquartile range using Q1 as the median of the lower four values and Q3 as the median of the upper four values.","1. Keep the ordered data and exclude the overall median when splitting the nine observations.
+2. Find Q1 from the lower four values using the convention stated in the question.
+3. Find Q3 from the upper four values using the same convention.
+4. Compute IQR = Q3 - Q1 and report it in mph.","A speed camera records the following speeds (mph): 54, 58, 61, 63, 65, 66, 68, 70, 74. Calculate the interquartile range using Q1 as the median of the lower four values and Q3 as the median of the upper four values.
+
+Follow the reasoning stages below:
+
+1. Keep the ordered data and exclude the overall median when splitting the nine observations.
+2. Find Q1 from the lower four values using the convention stated in the question.
+3. Find Q3 from the upper four values using the same convention.
+4. Compute IQR = Q3 - Q1 and report it in mph.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+5,Distribution,Transportation,Easy,Calculation,ch_inference_for_props_41_1,"Shipping holiday gifts
+
+A 
+local news survey asked 500 randomly sampled Los Angeles residents 
+which shipping carrier they prefer to use for shipping holiday gifts. 
+The table below shows the distribution of responses by age group as 
+well as the expected counts for each cell (shown in parentheses).
+
+Table:
+| 6c|Age | | | | | | | | |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 18-34 | 35-54 | 55+ | Total | | | | | |
+| 5*Shipping Method | USPS | 72 | 81 | 97 | 102 | 76 | 62 | 245 |
+| UPS | 52 | 53 | 76 | 68 | 34 | 41 | 162 | |
+| FedEx | 31 | 21 | 24 | 27 | 9 | 16 | 64 | |
+| Something else | 7 | 5 | 6 | 7 | 3 | 4 | 16 | |
+| Not sure | 3 | 5 | 6 | 5 | 4 | 3 | 13 | |
+| Total | 165 | 209 | 126 | 500 | | | | |
+
+State the null and alternative hypotheses for testing for independence 
+of age and preferred shipping method for holiday gifts among Los Angeles residents.","\qt{Shipping holiday gifts\label{ship_gifts_chisq_indep_conditions}} A 
+local news survey asked 500 randomly sampled Los Angeles residents 
+which shipping carrier they prefer to use for shipping holiday gifts. 
+The table below shows the distribution of responses by age group as 
+well as the expected counts for each cell (shown in parentheses).
+\begin{center}
+\begin{tabular}{l l | c c | c c | c c | c }
+		&		& \multicolumn{6}{c|}{\textit{Age}}	&		\\
+\cline{3-8}
+		&		& \multicolumn{2}{c|}{18-34}		& \multicolumn{2}{c|}{35-54}	& \multicolumn{2}{c|}{55+}	& Total	\\
+\cline{2-9}
+\multirow{5}{*}{\textit{Shipping Method}}	& USPS		& 72	& \ec{81}	& 97	& \ec{102}	& 76 	& \ec{62}		& 245 \\
+		& UPS		& 52	& \ec{53}	& 76	& \ec{68}	& 34	& \ec{41}		& 162 \\
+		& FedEx		& 31	& \ec{21}	& 24	& \ec{27}	& 9	& \ec{16}		& 64 \\
+		& Something else	& 7 & \ec{5}	& 6	& \ec{7}	& 3	& \ec{4}		& 16 \\
+		& Not sure	& 3	& \ec{5}	& 6	& \ec{5}	& 4	& \ec{3}		& 13 \\
+\cline{2-9}
+		& Total		& \multicolumn{2}{c|}{165}		& \multicolumn{2}{c|}{209}		& \multicolumn{2}{c|}{126}		& 500
+\end{tabular}
+\end{center} 
+\begin{parts}
+\item State the null and alternative hypotheses for testing for independence 
+of age and preferred shipping method for holiday gifts among Los Angeles residents.
+\item Are the conditions for inference using a chi-square test satisfied?
+\end{parts}","A delivery company classifies 200 parcels by arrival status: 152 on time, 34 one day late, and 14 more than one day late. What proportion arrived on time?",,0.76,Proportion on time = 152/200 = 0.76.,"A delivery company classifies 200 parcels by arrival status: 152 on time, 34 one day late, and 14 more than one day late. What proportion arrived on time?","1. Identify the number of on-time parcels and the total number of parcels.
+2. Compute the sample proportion as count/total.
+3. Simplify the result and state what it represents.","A delivery company classifies 200 parcels by arrival status: 152 on time, 34 one day late, and 14 more than one day late. What proportion arrived on time?
+
+Follow the reasoning stages below:
+
+1. Identify the number of on-time parcels and the total number of parcels.
+2. Compute the sample proportion as count/total.
+3. Simplify the result and state what it represents.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+6,Distribution,Healthcare,Medium,Calculation,ch_summarizing_data_28_1,"Infant mortality
+
+The infant mortality rate is defined as 
+the number of infant deaths per 1,000 live births. This rate is often used as an 
+indicator of the level of health in a country. The relative frequency histogram below 
+shows the distribution of estimated infant death rates for 224 countries for which such 
+data were available in 2014. 
+[source: data:ciaFactbook]
+
+0.43
+ \
+minipage
+minipage[c]0.52
+
+0.85eoce/infant_mortality_rel_freqinfant_mortality_rel_freq_hist
+minipage
+
+Estimate Q1, the median, and Q3 from the histogram.","\qt{Infant mortality\label{infant_mortality}} The infant mortality rate is defined as 
+the number of infant deaths per 1,000 live births. This rate is often used as an 
+indicator of the level of health in a country. The relative frequency histogram below 
+shows the distribution of estimated infant death rates for 224 countries for which such 
+data were available in 2014. 
+\footfullcite{data:ciaFactbook}
+
+\noindent\begin{minipage}[c]{0.43\textwidth}
+\begin{parts}
+\item Estimate Q1, the median, and Q3 from the histogram.
+\item Would you expect the mean of this data set to be smaller or larger than the 
+median? Explain your reasoning.
+\end{parts} \vfill \
+\end{minipage}
+\begin{minipage}[c]{0.52\textwidth}
+\hfill%
+\Figures[A histogram is shown for the variable ""Infant Mortality (per 1000 live births)"" with axis range of 0 to 120. The histogram vertical axis is for ""Fraction of Countries"" and runs from 0 to 0.4. The bins are as follows: the 0 to 10 bin has a height of 0.38, 10 to 20 has a height of 0.22, 20 to 30 a height of 0.11, 30 to 40 a height of 0.06, 40 to 50 a height of 0.07, 50 to 60 a height of 0.08, 60 to 70 a height of 0.04, 70 to 80 a height of 0.03, 80 to 90 a height of 0.01, 90 to 100 a height of 0.02, and 100 to 110 a height of 0.01.]{0.85}{eoce/infant_mortality_rel_freq}{infant_mortality_rel_freq_hist}
+\end{minipage}","A public-health report gives infant mortality rates per 1,000 live births for six regions: 3.8, 4.1, 4.5, 5.0, 5.4, 6.2. Calculate the mean rate.",,"4.83 deaths per 1,000 live births",Mean = (3.8+4.1+4.5+5.0+5.4+6.2)/6 = 29.0/6 = 4.83.,"A public-health report gives infant mortality rates per 1,000 live births for six regions: 3.8, 4.1, 4.5, 5.0, 5.4, 6.2. Calculate the mean rate.","1. Add the six regional mortality rates.
+2. Divide the total by six.
+3. Round appropriately and retain the units per 1,000 live births.","A public-health report gives infant mortality rates per 1,000 live births for six regions: 3.8, 4.1, 4.5, 5.0, 5.4, 6.2. Calculate the mean rate.
+
+Follow the reasoning stages below:
+
+1. Add the six regional mortality rates.
+2. Divide the total by six.
+3. Round appropriately and retain the units per 1,000 live births.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+7,Distribution,Healthcare,Medium,Calculation,ch_inference_for_means_56,"Age at first marriage, Part I
+
+The National Survey of Family Growth conducted by the Centers for Disease 
+Control gathers information on family life, marriage and divorce, pregnancy, 
+infertility, use of contraception, and men's and women's health. One of the 
+variables collected on this survey is the age at first marriage. The histogram 
+below shows the distribution of ages at first marriage of 5,534 randomly sampled 
+women between 2006 and 2010. The average age at first marriage among these women 
+is 23.44 with a standard deviation of 4.72.[source: data:nsfg:2010]
+
+0.6ch_inference_for_means/figures/eoce/age_at_first_marriage_intro/age_at_first_marriage_intro_hist
+
+Estimate the average age at first marriage of women using a 95% confidence 
+interval, and interpret this interval in context. Discuss any relevant 
+assumptions.","\qt{Age at first marriage, Part I\label{age_at_first_marriage_intro}} 
+The National Survey of Family Growth conducted by the Centers for Disease 
+Control gathers information on family life, marriage and divorce, pregnancy, 
+infertility, use of contraception, and men's and women's health. One of the 
+variables collected on this survey is the age at first marriage. The histogram 
+below shows the distribution of ages at first marriage of 5,534 randomly sampled 
+women between 2006 and 2010. The average age at first marriage among these women 
+is 23.44 with a standard deviation of 4.72.\footfullcite{data:nsfg:2010}
+\begin{center}
+\FigureFullPath[A histogram is shown for ""Age at first marriage"". The distribution is right-skewed, centered at about 23, has a standard deviation of about 5. The data smoothly tapers off in each direction but do not extend below about 12 or above 45.]{0.6}{ch_inference_for_means/figures/eoce/age_at_first_marriage_intro/age_at_first_marriage_intro_hist}
+\end{center}
+Estimate the average age at first marriage of women using a 95\% confidence 
+interval, and interpret this interval in context. Discuss any relevant 
+assumptions.","A clinic survey records ages at first long-term health screening: 22, 24, 25, 27, 28, 30, 31, 34. Calculate the sample standard deviation, rounded to two decimals.",,3.96 years,Mean = 27.625. The sum of squared deviations is 109.875. Sample variance = 109.875/(8-1) = 15.6964. Sample SD = sqrt(15.6964) = 3.96 years (rounded to two decimals).,"A clinic survey records ages at first long-term health screening: 22, 24, 25, 27, 28, 30, 31, 34. Calculate the sample standard deviation, rounded to two decimals.","1. Compute the sample mean of the eight ages.
+2. Find the squared deviations from the mean and sum them.
+3. Because a sample standard deviation is requested, divide by n-1 rather than n.
+4. Take the square root and round to two decimals.
+5. Report the result in years.","A clinic survey records ages at first long-term health screening: 22, 24, 25, 27, 28, 30, 31, 34. Calculate the sample standard deviation, rounded to two decimals.
+
+Follow the reasoning stages below:
+
+1. Compute the sample mean of the eight ages.
+2. Find the squared deviations from the mean and sum them.
+3. Because a sample standard deviation is requested, divide by n-1 rather than n.
+4. Take the square root and round to two decimals.
+5. Report the result in years.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+8,Distribution,Healthcare,Medium,Calculation,ch_inference_for_props_50_2,"Coffee and Depression
+
+Researchers conducted a study investigating the relationship between 
+caffeinated coffee consumption and risk of depression in women. They 
+collected data on 50,739 women free of depression symptoms at the start 
+of the study in the year 1996, and these women were followed through 
+2006. The researchers used questionnaires to collect data on 
+caffeinated coffee consumption, asked each individual about physician-
+diagnosed depression, and also asked about the use of antidepressants. 
+The table below shows the distribution of incidences of depression by 
+amount of caffeinated coffee consumption.[source: Lucas:2011]
+adjustwidth-4em-4em
+
+Table:
+| 5cCaffeinated coffee consumption | | | | | | | |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| $$ 1 | 2-6 | 1 | 2-3 | $$ 4 | | | |
+| cup/week | cups/week | cup/day | cups/day | cups/day | Total | | |
+| Clinical | Yes | 670 | oiB373 | 905 | 564 | 95 | 2,607 |
+| depression | No | 11,545 | 6,244 | 16,329 | 11,726 | 2,288 | 48,132 |
+| Total | 12,215 | 6,617 | 17,234 | 12,290 | 2,383 | 50,739 | |
+
+adjustwidth
+
+Write the hypotheses for the test you identified in part (a).","\qt{Coffee and Depression\label{coffee_depression_chisq_indep}} 
+Researchers conducted a study investigating the relationship between 
+caffeinated coffee consumption and risk of depression in women. They 
+collected data on 50,739 women free of depression symptoms at the start 
+of the study in the year 1996, and these women were followed through 
+2006. The researchers used questionnaires to collect data on 
+caffeinated coffee consumption, asked each individual about physician-
+diagnosed depression, and also asked about the use of antidepressants. 
+The table below shows the distribution of incidences of depression by 
+amount of caffeinated coffee consumption.\footfullcite{Lucas:2011}
+\begin{adjustwidth}{-4em}{-4em}
+{\small
+\begin{center}
+\begin{tabular}{l  l rrrrrr}
+	&  \multicolumn{1}{c}{}		& \multicolumn{5}{c}{\textit{Caffeinated coffee consumption}} \\
+\cline{3-7}
+	&		& $\le$ 1	& 2-6	& 1	& 2-3	& $\ge$ 4	&   \\
+	&		& cup/week	& cups/week	& cup/day	& cups/day	& cups/day	& Total  \\
+\cline{2-8}
+\textit{Clinical} & Yes	& 670 & \fbox{\textcolor{oiB}{373}}	& 905	& 564	& 95 	& 2,607 \\
+\textit{depression}	& No& 11,545	& 6,244	& 16,329	& 11,726	& 2,288 	& 48,132 \\
+\cline{2-8}
+				& Total	& 12,215	& 6,617 & 17,234	& 12,290	& 2,383 	& 50,739 \\
+\cline{2-8}
+\end{tabular}
+\end{center}
+}
+\end{adjustwidth}
+\begin{parts}
+\item What type of test is appropriate for evaluating if there is an 
+association between coffee intake and depression?
+\item Write the hypotheses for the test you identified in part (a).
+\item Calculate the overall proportion of women who do and do not 
+suffer from depression.
+\item Identify the expected count for the highlighted cell, and 
+calculate the contribution of this cell to the test statistic, i.e. 
+$(Observed-Expected)^2/Expected$.
+\item The test statistic is $\chi^2=20.93$. What is the p-value?
+\item What is the conclusion of the hypothesis test?
+\item One of the authors of this study was quoted on the NYTimes as 
+saying it was ``too early to recommend that women load up on extra 
+coffee"" based on just this study.\footfullcite{news:coffeeDepression} 
+Do you agree with this statement? Explain your reasoning.
+\end{parts}","In a health survey, 84 out of 350 respondents report drinking at least two cups of coffee per day. Calculate the sample proportion.",,0.24,Sample proportion = 84/350 = 0.24.,"In a health survey, 84 out of 350 respondents report drinking at least two cups of coffee per day. Calculate the sample proportion.","1. Identify the number reporting the behavior and the total sample size.
+2. Compute the sample proportion as 84/350.
+3. State the resulting proportion.","In a health survey, 84 out of 350 respondents report drinking at least two cups of coffee per day. Calculate the sample proportion.
+
+Follow the reasoning stages below:
+
+1. Identify the number reporting the behavior and the total sample size.
+2. Compute the sample proportion as 84/350.
+3. State the resulting proportion.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+9,Distribution,Marketing,Medium,Interpretation,ch_distributions_39_3,"Auto insurance premiums
+
+Suppose a 
+newspaper article states that the distribution of auto insurance premiums for 
+residents of California is approximately normal with a mean of $1,650. The 
+article also states that 25% of California residents pay more than $1,800.
+
+Identify the standard deviation of insurance premiums in California.","\qt{Auto insurance premiums\label{auto_insurance_premiums}} Suppose a 
+newspaper article states that the distribution of auto insurance premiums for 
+residents of California is approximately normal with a mean of \$1,650. The 
+article also states that 25\% of California residents pay more than \$1,800. 
+\begin{parts}
+\item What is the Z-score that corresponds to the top 25\% (or the $75^{th}$ 
+percentile) of the standard normal distribution?
+\item What is the mean insurance cost? What is the cutoff for the 75th 
+percentile?
+\item Identify the standard deviation of insurance premiums in California.
+\end{parts}","A marketing team finds that monthly subscription spending is right-skewed: most customers spend £8–£20, but a few corporate accounts spend more than £150. Which measure, mean or median, better describes a typical customer? Explain briefly.",,Median,"For a right-skewed distribution, the mean is pulled upward by extreme high values. The median is more resistant, so it better represents a typical customer.","A marketing team finds that monthly subscription spending is right-skewed: most customers spend £8–£20, but a few corporate accounts spend more than £150. Which measure, mean or median, better describes a typical customer? Explain briefly.","1. Identify the direction of skew and the presence of extreme high values.
+2. Compare how the mean and median respond to those extreme values.
+3. Choose the measure that better represents a typical customer and justify it briefly.","A marketing team finds that monthly subscription spending is right-skewed: most customers spend £8–£20, but a few corporate accounts spend more than £150. Which measure, mean or median, better describes a typical customer? Explain briefly.
+
+Follow the reasoning stages below:
+
+1. Identify the direction of skew and the presence of extreme high values.
+2. Compare how the mean and median respond to those extreme values.
+3. Choose the measure that better represents a typical customer and justify it briefly.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+10,Distribution,Marketing,Medium,Interpretation,ch_summarizing_data_30_1,"A new statistic
+
+The statistic $xmedian$ can 
+be used as a measure of skewness. Suppose we have a distribution where all 
+observations are greater than 0, $x_i > 0$. What is the expected shape of 
+the distribution under the following conditions? Explain your reasoning.
+
+$xmedian = 1$","\qt{A new statistic\label{new_stat}} The statistic $\frac{\bar{x}}{median}$ can 
+be used as a measure of skewness. Suppose we have a distribution where all 
+observations are greater than 0, $x_i > 0$. What is the expected shape of 
+the distribution under the following conditions? Explain your reasoning.
+\begin{parts}
+\item $\frac{\bar{x}}{median} = 1$
+\item $\frac{\bar{x}}{median} < 1$
+\item $\frac{\bar{x}}{median} > 1$
+\end{parts}","A product-rating distribution has median 4.2 stars and mean 3.7 stars. Assuming the difference is driven by the distribution's tail rather than an isolated data error, what shape does this pattern most strongly suggest?",,A left-skewed (negatively skewed) distribution,"The mean is below the median. This pattern is commonly associated with a longer or more influential lower tail pulling the mean downward, so it suggests left skew. Mean < median is a diagnostic clue, not by itself a mathematical guarantee of skewness.","A product-rating distribution has median 4.2 stars and mean 3.7 stars. Assuming the difference is driven by the distribution's tail rather than an isolated data error, what shape does this pattern most strongly suggest?","1. Compare the mean with the median.
+2. Recall which direction of tail typically pulls the mean below the median.
+3. State the suggested distribution shape while recognizing that mean-median ordering is evidence rather than a mathematical guarantee.","A product-rating distribution has median 4.2 stars and mean 3.7 stars. Assuming the difference is driven by the distribution's tail rather than an isolated data error, what shape does this pattern most strongly suggest?
+
+Follow the reasoning stages below:
+
+1. Compare the mean with the median.
+2. Recall which direction of tail typically pulls the mean below the median.
+3. State the suggested distribution shape while recognizing that mean-median ordering is evidence rather than a mathematical guarantee.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+11,Distribution,Marketing,Medium,Interpretation,ch_summarizing_data_29,"TV watchers
+
+Students in an AP Statistics class 
+were asked how many hours of television they watch per week (including online 
+streaming). This sample yielded an average of 4.71 hours, with a standard 
+deviation of 4.18 hours. Is the distribution of number of hours students watch 
+television weekly symmetric? If not, what shape would you expect this distribution 
+to have? Explain your reasoning.","\qt{TV watchers\label{dist_shape_TV_watchers}} Students in an AP Statistics class 
+were asked how many hours of television they watch per week (including online 
+streaming). This sample yielded an average of 4.71 hours, with a standard 
+deviation of 4.18 hours. Is the distribution of number of hours students watch 
+television weekly symmetric? If not, what shape would you expect this distribution 
+to have? Explain your reasoning.",A campaign-response histogram has two clear peaks: one around age 20–25 and another around age 55–60. What does this distribution shape suggest about the audience?,,It is bimodal and may contain two distinct customer segments.,"Two clear peaks indicate a bimodal distribution. In context, this suggests two groups respond strongly rather than one homogeneous audience.",A campaign-response histogram has two clear peaks: one around age 20–25 and another around age 55–60. What does this distribution shape suggest about the audience?,"1. Identify the defining feature of the histogram: two distinct peaks.
+2. Name the corresponding distribution shape.
+3. Interpret what two peaks may indicate about the audience in context.","A campaign-response histogram has two clear peaks: one around age 20–25 and another around age 55–60. What does this distribution shape suggest about the audience?
+
+Follow the reasoning stages below:
+
+1. Identify the defining feature of the histogram: two distinct peaks.
+2. Name the corresponding distribution shape.
+3. Interpret what two peaks may indicate about the audience in context.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+12,Distribution,Finance,Medium,Single Choice,ch_distributions_39_3,"Auto insurance premiums
+
+Suppose a 
+newspaper article states that the distribution of auto insurance premiums for 
+residents of California is approximately normal with a mean of $1,650. The 
+article also states that 25% of California residents pay more than $1,800.
+
+Identify the standard deviation of insurance premiums in California.","\qt{Auto insurance premiums\label{auto_insurance_premiums}} Suppose a 
+newspaper article states that the distribution of auto insurance premiums for 
+residents of California is approximately normal with a mean of \$1,650. The 
+article also states that 25\% of California residents pay more than \$1,800. 
+\begin{parts}
+\item What is the Z-score that corresponds to the top 25\% (or the $75^{th}$ 
+percentile) of the standard normal distribution?
+\item What is the mean insurance cost? What is the cutoff for the 75th 
+percentile?
+\item Identify the standard deviation of insurance premiums in California.
+\end{parts}",A bank studies monthly credit-card balances. The distribution is right-skewed because a small number of customers carry very large balances. Which statement is most likely true?,"A. Mean > median
+B. Mean = median
+C. Mean < median
+D. The standard deviation must be zero",A. Mean > median,"In a right-skewed distribution, high extreme values pull the mean above the median.","A bank studies monthly credit-card balances. The distribution is right-skewed because a small number of customers carry very large balances. Which statement is most likely true?
+
+Options:
+A. Mean > median
+B. Mean = median
+C. Mean < median
+D. The standard deviation must be zero","1. Identify the direction of skew.
+2. Recall how large high-end observations affect the mean relative to the median.
+3. Evaluate the answer choices and select the statement consistent with right skew.","A bank studies monthly credit-card balances. The distribution is right-skewed because a small number of customers carry very large balances. Which statement is most likely true?
+
+Options:
+A. Mean > median
+B. Mean = median
+C. Mean < median
+D. The standard deviation must be zero
+
+Follow the reasoning stages below:
+
+1. Identify the direction of skew.
+2. Recall how large high-end observations affect the mean relative to the median.
+3. Evaluate the answer choices and select the statement consistent with right skew.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+13,Distribution,Finance,Medium,Single Choice,ch_summarizing_data_32,"Exam scores
+
+The average on a history exam 
+(scored out of 100 points) was 85, with a standard deviation of 15. Is the 
+distribution of the scores on this exam symmetric? If not, what shape would 
+you expect this distribution to have? Explain your reasoning.","\qt{Exam scores\label{dist_shape_exam_scores}} The average on a history exam 
+(scored out of 100 points) was 85, with a standard deviation of 15. Is the 
+distribution of the scores on this exam symmetric? If not, what shape would 
+you expect this distribution to have? Explain your reasoning.",A portfolio return distribution has mean 1.2% and standard deviation 4.5%. A monthly return of 12% is observed. Which description is most appropriate?,"A. It is exactly average
+B. It is unusually high relative to the spread
+C. It proves the distribution is symmetric
+D. It must be impossible",B. It is unusually high relative to the spread,"12% is far above the mean compared with a 4.5% standard deviation, so it is an unusually high observation, not impossible by itself.","A portfolio return distribution has mean 1.2% and standard deviation 4.5%. A monthly return of 12% is observed. Which description is most appropriate?
+
+Options:
+A. It is exactly average
+B. It is unusually high relative to the spread
+C. It proves the distribution is symmetric
+D. It must be impossible","1. Compare the observed return with the mean.
+2. Express the difference relative to the standard deviation.
+3. Use that relative distance to evaluate the answer choices without claiming the value is impossible.
+4. Select the most appropriate description.","A portfolio return distribution has mean 1.2% and standard deviation 4.5%. A monthly return of 12% is observed. Which description is most appropriate?
+
+Options:
+A. It is exactly average
+B. It is unusually high relative to the spread
+C. It proves the distribution is symmetric
+D. It must be impossible
+
+Follow the reasoning stages below:
+
+1. Compare the observed return with the mean.
+2. Express the difference relative to the standard deviation.
+3. Use that relative distance to evaluate the answer choices without claiming the value is impossible.
+4. Select the most appropriate description.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+14,Distribution,Finance,Medium,Single Choice,ch_summarizing_data_30_1,"A new statistic
+
+The statistic $xmedian$ can 
+be used as a measure of skewness. Suppose we have a distribution where all 
+observations are greater than 0, $x_i > 0$. What is the expected shape of 
+the distribution under the following conditions? Explain your reasoning.
+
+$xmedian = 1$","\qt{A new statistic\label{new_stat}} The statistic $\frac{\bar{x}}{median}$ can 
+be used as a measure of skewness. Suppose we have a distribution where all 
+observations are greater than 0, $x_i > 0$. What is the expected shape of 
+the distribution under the following conditions? Explain your reasoning.
+\begin{parts}
+\item $\frac{\bar{x}}{median} = 1$
+\item $\frac{\bar{x}}{median} < 1$
+\item $\frac{\bar{x}}{median} > 1$
+\end{parts}","For a salary distribution in a finance firm, the mean salary is much larger than the median, and a small number of employees earn exceptionally high salaries. What is the best interpretation?","A. The distribution is probably right-skewed
+B. The distribution is probably perfectly uniform
+C. There are no high salaries
+D. The median is affected more by outliers than the mean",A. The distribution is probably right-skewed,"The exceptionally high salaries pull the mean upward more strongly than the median, which is consistent with a right-skewed salary distribution.","For a salary distribution in a finance firm, the mean salary is much larger than the median, and a small number of employees earn exceptionally high salaries. What is the best interpretation?
+
+Options:
+A. The distribution is probably right-skewed
+B. The distribution is probably perfectly uniform
+C. There are no high salaries
+D. The median is affected more by outliers than the mean","1. Use the information about exceptionally high salaries and the mean-median relationship.
+2. Determine which direction of tail those high salaries create.
+3. Evaluate the choices and select the best interpretation.","For a salary distribution in a finance firm, the mean salary is much larger than the median, and a small number of employees earn exceptionally high salaries. What is the best interpretation?
+
+Options:
+A. The distribution is probably right-skewed
+B. The distribution is probably perfectly uniform
+C. There are no high salaries
+D. The median is affected more by outliers than the mean
+
+Follow the reasoning stages below:
+
+1. Use the information about exceptionally high salaries and the mean-median relationship.
+2. Determine which direction of tail those high salaries create.
+3. Evaluate the choices and select the best interpretation.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+15,Distribution,Social Survey,Medium,Multiple Choice,ch_inference_for_props_41_1,"Shipping holiday gifts
+
+A 
+local news survey asked 500 randomly sampled Los Angeles residents 
+which shipping carrier they prefer to use for shipping holiday gifts. 
+The table below shows the distribution of responses by age group as 
+well as the expected counts for each cell (shown in parentheses).
+
+Table:
+| 6c|Age | | | | | | | | |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 18-34 | 35-54 | 55+ | Total | | | | | |
+| 5*Shipping Method | USPS | 72 | 81 | 97 | 102 | 76 | 62 | 245 |
+| UPS | 52 | 53 | 76 | 68 | 34 | 41 | 162 | |
+| FedEx | 31 | 21 | 24 | 27 | 9 | 16 | 64 | |
+| Something else | 7 | 5 | 6 | 7 | 3 | 4 | 16 | |
+| Not sure | 3 | 5 | 6 | 5 | 4 | 3 | 13 | |
+| Total | 165 | 209 | 126 | 500 | | | | |
+
+State the null and alternative hypotheses for testing for independence 
+of age and preferred shipping method for holiday gifts among Los Angeles residents.","\qt{Shipping holiday gifts\label{ship_gifts_chisq_indep_conditions}} A 
+local news survey asked 500 randomly sampled Los Angeles residents 
+which shipping carrier they prefer to use for shipping holiday gifts. 
+The table below shows the distribution of responses by age group as 
+well as the expected counts for each cell (shown in parentheses).
+\begin{center}
+\begin{tabular}{l l | c c | c c | c c | c }
+		&		& \multicolumn{6}{c|}{\textit{Age}}	&		\\
+\cline{3-8}
+		&		& \multicolumn{2}{c|}{18-34}		& \multicolumn{2}{c|}{35-54}	& \multicolumn{2}{c|}{55+}	& Total	\\
+\cline{2-9}
+\multirow{5}{*}{\textit{Shipping Method}}	& USPS		& 72	& \ec{81}	& 97	& \ec{102}	& 76 	& \ec{62}		& 245 \\
+		& UPS		& 52	& \ec{53}	& 76	& \ec{68}	& 34	& \ec{41}		& 162 \\
+		& FedEx		& 31	& \ec{21}	& 24	& \ec{27}	& 9	& \ec{16}		& 64 \\
+		& Something else	& 7 & \ec{5}	& 6	& \ec{7}	& 3	& \ec{4}		& 16 \\
+		& Not sure	& 3	& \ec{5}	& 6	& \ec{5}	& 4	& \ec{3}		& 13 \\
+\cline{2-9}
+		& Total		& \multicolumn{2}{c|}{165}		& \multicolumn{2}{c|}{209}		& \multicolumn{2}{c|}{126}		& 500
+\end{tabular}
+\end{center} 
+\begin{parts}
+\item State the null and alternative hypotheses for testing for independence 
+of age and preferred shipping method for holiday gifts among Los Angeles residents.
+\item Are the conditions for inference using a chi-square test satisfied?
+\end{parts}",A survey records whether each respondent owns a car and whether they use public transport weekly. Which of the following could help assess whether the two categorical variables are associated? Select all that apply.,"A. A two-way table of counts
+B. Conditional proportions by car-ownership group
+C. A histogram of respondent height only
+D. Comparing whether public-transport use rates differ across car-ownership groups","A, B, D",A two-way table and conditional proportions directly compare the two categorical variables. Different conditional rates suggest association. A height histogram alone is unrelated.,"A survey records whether each respondent owns a car and whether they use public transport weekly. Which of the following could help assess whether the two categorical variables are associated? Select all that apply.
+
+Options:
+A. A two-way table of counts
+B. Conditional proportions by car-ownership group
+C. A histogram of respondent height only
+D. Comparing whether public-transport use rates differ across car-ownership groups","1. Recognize that both variables are categorical.
+2. Identify summaries that directly cross-classify or compare the two categorical variables.
+3. Check each option individually for whether it can reveal association.
+4. Select all and only the relevant options.","A survey records whether each respondent owns a car and whether they use public transport weekly. Which of the following could help assess whether the two categorical variables are associated? Select all that apply.
+
+Options:
+A. A two-way table of counts
+B. Conditional proportions by car-ownership group
+C. A histogram of respondent height only
+D. Comparing whether public-transport use rates differ across car-ownership groups
+
+Follow the reasoning stages below:
+
+1. Recognize that both variables are categorical.
+2. Identify summaries that directly cross-classify or compare the two categorical variables.
+3. Check each option individually for whether it can reveal association.
+4. Select all and only the relevant options.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+16,Distribution,Social Survey,Medium,Multiple Choice,ch_inference_for_props_50_2,"Coffee and Depression
+
+Researchers conducted a study investigating the relationship between 
+caffeinated coffee consumption and risk of depression in women. They 
+collected data on 50,739 women free of depression symptoms at the start 
+of the study in the year 1996, and these women were followed through 
+2006. The researchers used questionnaires to collect data on 
+caffeinated coffee consumption, asked each individual about physician-
+diagnosed depression, and also asked about the use of antidepressants. 
+The table below shows the distribution of incidences of depression by 
+amount of caffeinated coffee consumption.[source: Lucas:2011]
+adjustwidth-4em-4em
+
+Table:
+| 5cCaffeinated coffee consumption | | | | | | | |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| $$ 1 | 2-6 | 1 | 2-3 | $$ 4 | | | |
+| cup/week | cups/week | cup/day | cups/day | cups/day | Total | | |
+| Clinical | Yes | 670 | oiB373 | 905 | 564 | 95 | 2,607 |
+| depression | No | 11,545 | 6,244 | 16,329 | 11,726 | 2,288 | 48,132 |
+| Total | 12,215 | 6,617 | 17,234 | 12,290 | 2,383 | 50,739 | |
+
+adjustwidth
+
+Write the hypotheses for the test you identified in part (a).","\qt{Coffee and Depression\label{coffee_depression_chisq_indep}} 
+Researchers conducted a study investigating the relationship between 
+caffeinated coffee consumption and risk of depression in women. They 
+collected data on 50,739 women free of depression symptoms at the start 
+of the study in the year 1996, and these women were followed through 
+2006. The researchers used questionnaires to collect data on 
+caffeinated coffee consumption, asked each individual about physician-
+diagnosed depression, and also asked about the use of antidepressants. 
+The table below shows the distribution of incidences of depression by 
+amount of caffeinated coffee consumption.\footfullcite{Lucas:2011}
+\begin{adjustwidth}{-4em}{-4em}
+{\small
+\begin{center}
+\begin{tabular}{l  l rrrrrr}
+	&  \multicolumn{1}{c}{}		& \multicolumn{5}{c}{\textit{Caffeinated coffee consumption}} \\
+\cline{3-7}
+	&		& $\le$ 1	& 2-6	& 1	& 2-3	& $\ge$ 4	&   \\
+	&		& cup/week	& cups/week	& cup/day	& cups/day	& cups/day	& Total  \\
+\cline{2-8}
+\textit{Clinical} & Yes	& 670 & \fbox{\textcolor{oiB}{373}}	& 905	& 564	& 95 	& 2,607 \\
+\textit{depression}	& No& 11,545	& 6,244	& 16,329	& 11,726	& 2,288 	& 48,132 \\
+\cline{2-8}
+				& Total	& 12,215	& 6,617 & 17,234	& 12,290	& 2,383 	& 50,739 \\
+\cline{2-8}
+\end{tabular}
+\end{center}
+}
+\end{adjustwidth}
+\begin{parts}
+\item What type of test is appropriate for evaluating if there is an 
+association between coffee intake and depression?
+\item Write the hypotheses for the test you identified in part (a).
+\item Calculate the overall proportion of women who do and do not 
+suffer from depression.
+\item Identify the expected count for the highlighted cell, and 
+calculate the contribution of this cell to the test statistic, i.e. 
+$(Observed-Expected)^2/Expected$.
+\item The test statistic is $\chi^2=20.93$. What is the p-value?
+\item What is the conclusion of the hypothesis test?
+\item One of the authors of this study was quoted on the NYTimes as 
+saying it was ``too early to recommend that women load up on extra 
+coffee"" based on just this study.\footfullcite{news:coffeeDepression} 
+Do you agree with this statement? Explain your reasoning.
+\end{parts}",A social survey reports the distribution of weekly screen-time hours. Which statements correctly describe useful summaries for a skewed quantitative distribution? Select all that apply.,"A. The median is resistant to extreme values
+B. The IQR describes the spread of the middle 50%
+C. The mean is always equal to the median
+D. Outliers can strongly affect the mean","A, B, D","The median and IQR are resistant summaries. The mean can be affected by outliers, and it is not always equal to the median.","A social survey reports the distribution of weekly screen-time hours. Which statements correctly describe useful summaries for a skewed quantitative distribution? Select all that apply.
+
+Options:
+A. The median is resistant to extreme values
+B. The IQR describes the spread of the middle 50%
+C. The mean is always equal to the median
+D. Outliers can strongly affect the mean","1. Focus on summaries appropriate for a skewed quantitative distribution.
+2. Evaluate the resistance of the median and IQR to extreme values.
+3. Consider how outliers affect the mean.
+4. Check each statement and select all correct options.","A social survey reports the distribution of weekly screen-time hours. Which statements correctly describe useful summaries for a skewed quantitative distribution? Select all that apply.
+
+Options:
+A. The median is resistant to extreme values
+B. The IQR describes the spread of the middle 50%
+C. The mean is always equal to the median
+D. Outliers can strongly affect the mean
+
+Follow the reasoning stages below:
+
+1. Focus on summaries appropriate for a skewed quantitative distribution.
+2. Evaluate the resistance of the median and IQR to extreme values.
+3. Consider how outliers affect the mean.
+4. Check each statement and select all correct options.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+17,Distribution,Social Survey,Medium,Multiple Choice,ch_inference_for_means_56,"Age at first marriage, Part I
+
+The National Survey of Family Growth conducted by the Centers for Disease 
+Control gathers information on family life, marriage and divorce, pregnancy, 
+infertility, use of contraception, and men's and women's health. One of the 
+variables collected on this survey is the age at first marriage. The histogram 
+below shows the distribution of ages at first marriage of 5,534 randomly sampled 
+women between 2006 and 2010. The average age at first marriage among these women 
+is 23.44 with a standard deviation of 4.72.[source: data:nsfg:2010]
+
+0.6ch_inference_for_means/figures/eoce/age_at_first_marriage_intro/age_at_first_marriage_intro_hist
+
+Estimate the average age at first marriage of women using a 95% confidence 
+interval, and interpret this interval in context. Discuss any relevant 
+assumptions.","\qt{Age at first marriage, Part I\label{age_at_first_marriage_intro}} 
+The National Survey of Family Growth conducted by the Centers for Disease 
+Control gathers information on family life, marriage and divorce, pregnancy, 
+infertility, use of contraception, and men's and women's health. One of the 
+variables collected on this survey is the age at first marriage. The histogram 
+below shows the distribution of ages at first marriage of 5,534 randomly sampled 
+women between 2006 and 2010. The average age at first marriage among these women 
+is 23.44 with a standard deviation of 4.72.\footfullcite{data:nsfg:2010}
+\begin{center}
+\FigureFullPath[A histogram is shown for ""Age at first marriage"". The distribution is right-skewed, centered at about 23, has a standard deviation of about 5. The data smoothly tapers off in each direction but do not extend below about 12 or above 45.]{0.6}{ch_inference_for_means/figures/eoce/age_at_first_marriage_intro/age_at_first_marriage_intro_hist}
+\end{center}
+Estimate the average age at first marriage of women using a 95\% confidence 
+interval, and interpret this interval in context. Discuss any relevant 
+assumptions.",A researcher studies the distribution of age at first full-time job. Which variables or summaries are appropriate for describing this quantitative distribution? Select all that apply.,"A. Mean age
+B. Median age
+C. Standard deviation of age
+D. Favorite job sector as the only summary","A, B, C","Age is quantitative, so mean, median, and standard deviation are appropriate. Favorite job sector is categorical and does not summarize the age distribution by itself.","A researcher studies the distribution of age at first full-time job. Which variables or summaries are appropriate for describing this quantitative distribution? Select all that apply.
+
+Options:
+A. Mean age
+B. Median age
+C. Standard deviation of age
+D. Favorite job sector as the only summary","1. Recognize age as a quantitative variable.
+2. Evaluate which proposed quantities summarize the center or spread of an age distribution.
+3. Reject a categorical variable that does not summarize the age distribution itself.
+4. Select all correct options.","A researcher studies the distribution of age at first full-time job. Which variables or summaries are appropriate for describing this quantitative distribution? Select all that apply.
+
+Options:
+A. Mean age
+B. Median age
+C. Standard deviation of age
+D. Favorite job sector as the only summary
+
+Follow the reasoning stages below:
+
+1. Recognize age as a quantitative variable.
+2. Evaluate which proposed quantities summarize the center or spread of an age distribution.
+3. Reject a categorical variable that does not summarize the age distribution itself.
+4. Select all correct options.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+18,Distribution,General Everyday,Hard,Short Answer,ch_summarizing_data_34_1,"Marathon winners
+
+The histogram and box plots below show the distribution of finishing times in hours for male and female winners of the New York Marathon between 1970 and 1999.
+
+0.56eoce/marathon_winnersmarathon_winners_hist_box
+
+0.6eoce/marathon_winnersmarathon_winners_time_series
+
+What features of the distribution are apparent in the histogram and not the box plot? What features are apparent in the box plot but not in the histogram?","\qt{Marathon winners\label{marathon_winners}} The histogram and box plots below show the distribution of finishing times in hours for male and female winners of the New York Marathon between 1970 and 1999.
+\begin{center}
+\Figures[Two plots are shown, one that is a histogram and one that is a box plot, where the range of data for each is from 2.0 to 3.2. The bins for the histogram are as follows: the 2.0 to 2.2 bin has a height of 21, bin 2.2 to 2.4 a height of 6, 2.4 to 2.6 a height of 25, 2.6 to 2.8 a height of 3, 2.8 to 3.0 a height of 2, and 3.0 to 3.2 a height of 2. The box plot shows the box spanning 2.2 to 2.5, with the median line centered at 2.4. The whiskers extend from about 2.15 to 2.75. There are four points marked beyond the upper whisker at 2.9, 3.0, 3.10, and 3.15.]{0.56}{eoce/marathon_winners}{marathon_winners_hist_box}
+\end{center}
+\begin{parts}
+\item What features of the distribution are apparent in the histogram and not the box plot? What features are apparent in the box plot but not in the histogram?
+\item What may be the reason for the bimodal distribution? Explain.
+\item Compare the distribution of marathon times for men and women based on the box plot shown below.
+\begin{center}
+\Figures[A side-by-side box plot is shown for marathon run times, one box plot for men and one for women. The axis for the run times spans from 2.0 to 3.2. All values described as follows are estimates. For the men box plot, the box spans 2.16 to 2.22 with the median line at 2.19. The whiskers span to 2.12 up to 2.27. There are 6 points above the upper whisker at 2.32, 2.36, 2.38, 2.44, 2.46, and 2.50. For the women box plot, the box spans from 2.44 to 2.52, with a median value of 2.46. The whiskers span from 2.41 to 2.57. There are 6 points above the upper whisker: 2.72, 2.78, 2.9, 2.92, 3.12, and 3.15.]{0.56}{eoce/marathon_winners}{marathon_winners_gender_box}
+\end{center}
+\item The time series plot shown below is another way to look at these data. Describe what is visible in this plot but not in the others.
+\end{parts}
+\begin{center}
+\Figures[A time series plot is shown, which in this case gives the appearance of a scatterplot. The horizontal variable is for year, which runs from 1970 to 2000, and the vertical variable is ""Marathon times"", which runs from 2.0 to 3.2 hours. There are two colors of points, one for men and one for women, and there is one point for men and one for women for each year. The points start at about 2.5 for men in 1970 and 2.9 for women in 1971. The points bounce around for a few years and then decline in 1975 or 1976 to 2.2 for men and 2.7 for women. The values for women decreases for a few more years to about 2.5. For the remainder of the years, the values fluctuate up or down 0.1 hours from year to year but are stable until 1999, which is the last data points provided.]{0.6}{eoce/marathon_winners}{marathon_winners_time_series} \\
+\end{center}","A running app compares finishing-time distributions for two local races. Race A has a lower median but a much larger IQR than Race B. In one or two sentences, explain what this means.",,"Race A has a lower typical finishing time, but its finishing times are more variable in the middle 50%.",A lower median means the typical finishing time is smaller. A larger IQR means the middle 50% of finishing times are more spread out.,"A running app compares finishing-time distributions for two local races. Race A has a lower median but a much larger IQR than Race B. In one or two sentences, explain what this means.","1. Interpret the lower median as a comparison of typical finishing times.
+2. Interpret the larger IQR as a comparison of the spread of the middle 50%.
+3. Combine both comparisons into a concise contextual statement.","A running app compares finishing-time distributions for two local races. Race A has a lower median but a much larger IQR than Race B. In one or two sentences, explain what this means.
+
+Follow the reasoning stages below:
+
+1. Interpret the lower median as a comparison of typical finishing times.
+2. Interpret the larger IQR as a comparison of the spread of the middle 50%.
+3. Combine both comparisons into a concise contextual statement.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+19,Distribution,General Everyday,Hard,Short Answer,ch_inference_for_means_51_1,"Hen eggs
+
+The distribution of the number of eggs laid 
+by a certain species of hen during their breeding period has a mean of 35 eggs 
+with a standard deviation of 18.2. Suppose a group of researchers 
+randomly samples 45 hens of this species, counts the number of eggs laid 
+during their breeding period, and records the sample mean. They repeat 
+this 1,000 times, and build a distribution of sample 
+means.
+
+What is this distribution called?","\qt{Hen eggs\label{hen_eggs}} The distribution of the number of eggs laid 
+by a certain species of hen during their breeding period has a mean of 35 eggs 
+with a standard deviation of 18.2. Suppose a group of researchers 
+randomly samples 45 hens of this species, counts the number of eggs laid 
+during their breeding period, and records the sample mean. They repeat 
+this 1,000 times, and build a distribution of sample 
+means. 
+\begin{parts}
+\item What is this distribution called? 
+\item Would you expect the shape of this distribution to be symmetric, right 
+skewed, or left skewed? Explain your reasoning.
+\item Calculate the variability of this distribution and state the appropriate 
+term used to refer to this value.
+\item Suppose the researchers' budget is reduced and they are only able to 
+collect random samples of 10 hens. The sample mean of the number of eggs is 
+recorded, and we repeat this 1,000 times, and build a new distribution of sample 
+means. How will the variability of this new distribution compare to the 
+variability of the original distribution?
+\end{parts}","A household tracks weekly electricity use. The mean is 92 kWh and the standard deviation is 18 kWh. One week has 155 kWh. Without assuming a normal distribution, describe how far this value is from the mean in standard-deviation units and explain why it may merit attention as unusually high.",,"It is 3.5 standard deviations above the mean, so it is far from the center relative to the observed spread and may reasonably be flagged as unusually high.",Standardize the distance from the mean: (155-92)/18 = 63/18 = 3.5. Thus the observation is 3.5 standard deviations above the mean. This describes its extremeness relative to the data's spread without using a normal-distribution tail probability.,"A household tracks weekly electricity use. The mean is 92 kWh and the standard deviation is 18 kWh. One week has 155 kWh. Without assuming a normal distribution, describe how far this value is from the mean in standard-deviation units and explain why it may merit attention as unusually high.","1. Compute the difference between 155 kWh and the mean.
+2. Divide that difference by the standard deviation to express the observation in standard-deviation units.
+3. Interpret the magnitude as a measure of distance from the center without using a normal tail probability.
+4. State why the week may merit attention as unusually high.","A household tracks weekly electricity use. The mean is 92 kWh and the standard deviation is 18 kWh. One week has 155 kWh. Without assuming a normal distribution, describe how far this value is from the mean in standard-deviation units and explain why it may merit attention as unusually high.
+
+Follow the reasoning stages below:
+
+1. Compute the difference between 155 kWh and the mean.
+2. Divide that difference by the standard deviation to express the observation in standard-deviation units.
+3. Interpret the magnitude as a measure of distance from the center without using a normal tail probability.
+4. State why the week may merit attention as unusually high.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+20,Distribution,General Everyday,Hard,Short Answer,ch_summarizing_data_30_1,"A new statistic
+
+The statistic $xmedian$ can 
+be used as a measure of skewness. Suppose we have a distribution where all 
+observations are greater than 0, $x_i > 0$. What is the expected shape of 
+the distribution under the following conditions? Explain your reasoning.
+
+$xmedian = 1$","\qt{A new statistic\label{new_stat}} The statistic $\frac{\bar{x}}{median}$ can 
+be used as a measure of skewness. Suppose we have a distribution where all 
+observations are greater than 0, $x_i > 0$. What is the expected shape of 
+the distribution under the following conditions? Explain your reasoning.
+\begin{parts}
+\item $\frac{\bar{x}}{median} = 1$
+\item $\frac{\bar{x}}{median} < 1$
+\item $\frac{\bar{x}}{median} > 1$
+\end{parts}",A grocery store has daily customer counts with mean 430 and median 390. The store occasionally experiences exceptionally busy promotional days. Give a plausible explanation for the difference between the mean and median.,,"The exceptionally busy days create a right tail and pull the mean above the median, so a right-skewed distribution is a plausible explanation.","The promotional days contribute unusually large counts. Because the mean is sensitive to high values while the median is more resistant, those days can raise the mean above the median, producing a plausible right-skew pattern.",A grocery store has daily customer counts with mean 430 and median 390. The store occasionally experiences exceptionally busy promotional days. Give a plausible explanation for the difference between the mean and median.,"1. Use the information about exceptionally busy promotional days.
+2. Recall that the mean is more sensitive to high observations than the median.
+3. Explain how those high-count days can make the mean exceed the median and what shape is plausible.","A grocery store has daily customer counts with mean 430 and median 390. The store occasionally experiences exceptionally busy promotional days. Give a plausible explanation for the difference between the mean and median.
+
+Follow the reasoning stages below:
+
+1. Use the information about exceptionally busy promotional days.
+2. Recall that the mean is more sensitive to high observations than the median.
+3. Explain how those high-count days can make the mean exceed the median and what shape is plausible.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+21,Distribution,General Everyday,Hard,Short Answer,ch_probability_45,"Variance of a mean, Part I
+
+Suppose we have independent observations $X_1$ and $X_2$ from
+a distribution with mean $$ and standard deviation $$.
+What is the variance of the mean of the two values:
+$X_1 + X_22$?","\qt{Variance of a mean, Part I\label{var_of_mean_1}}
+Suppose we have independent observations $X_1$ and $X_2$ from
+a distribution with mean $\mu$ and standard deviation $\sigma$.
+What is the variance of the mean of the two values:
+$\frac{X_1 + X_2}{2}$?",Suppose two independent household expenses X1 and X2 have the same variance σ². Explain why the variance of their average (X1+X2)/2 is smaller than σ².,,Averaging independent variables reduces variability; Var((X1+X2)/2)=(1/4)(σ²+σ²)=σ²/2.,"Use Var(aX+bY)=a²Var(X)+b²Var(Y) for independent variables. Here a=b=1/2, so the variance is σ²/4+σ²/4=σ²/2.",Suppose two independent household expenses X1 and X2 have the same variance σ². Explain why the variance of their average (X1+X2)/2 is smaller than σ².,"1. Write the variance of (X1+X2)/2 using the scaling rule for variance.
+2. Use independence to eliminate the covariance term.
+3. Substitute Var(X1)=Var(X2)=sigma^2.
+4. Simplify and compare the result with sigma^2.","Suppose two independent household expenses X1 and X2 have the same variance σ². Explain why the variance of their average (X1+X2)/2 is smaller than σ².
+
+Follow the reasoning stages below:
+
+1. Write the variance of (X1+X2)/2 using the scaling rule for variance.
+2. Use independence to eliminate the covariance term.
+3. Substitute Var(X1)=Var(X2)=sigma^2.
+4. Simplify and compare the result with sigma^2.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+22,Distribution,General Everyday,Hard,Interpretation,ch_summarizing_data_34_1,"Marathon winners
+
+The histogram and box plots below show the distribution of finishing times in hours for male and female winners of the New York Marathon between 1970 and 1999.
+
+0.56eoce/marathon_winnersmarathon_winners_hist_box
+
+0.6eoce/marathon_winnersmarathon_winners_time_series
+
+What features of the distribution are apparent in the histogram and not the box plot? What features are apparent in the box plot but not in the histogram?","\qt{Marathon winners\label{marathon_winners}} The histogram and box plots below show the distribution of finishing times in hours for male and female winners of the New York Marathon between 1970 and 1999.
+\begin{center}
+\Figures[Two plots are shown, one that is a histogram and one that is a box plot, where the range of data for each is from 2.0 to 3.2. The bins for the histogram are as follows: the 2.0 to 2.2 bin has a height of 21, bin 2.2 to 2.4 a height of 6, 2.4 to 2.6 a height of 25, 2.6 to 2.8 a height of 3, 2.8 to 3.0 a height of 2, and 3.0 to 3.2 a height of 2. The box plot shows the box spanning 2.2 to 2.5, with the median line centered at 2.4. The whiskers extend from about 2.15 to 2.75. There are four points marked beyond the upper whisker at 2.9, 3.0, 3.10, and 3.15.]{0.56}{eoce/marathon_winners}{marathon_winners_hist_box}
+\end{center}
+\begin{parts}
+\item What features of the distribution are apparent in the histogram and not the box plot? What features are apparent in the box plot but not in the histogram?
+\item What may be the reason for the bimodal distribution? Explain.
+\item Compare the distribution of marathon times for men and women based on the box plot shown below.
+\begin{center}
+\Figures[A side-by-side box plot is shown for marathon run times, one box plot for men and one for women. The axis for the run times spans from 2.0 to 3.2. All values described as follows are estimates. For the men box plot, the box spans 2.16 to 2.22 with the median line at 2.19. The whiskers span to 2.12 up to 2.27. There are 6 points above the upper whisker at 2.32, 2.36, 2.38, 2.44, 2.46, and 2.50. For the women box plot, the box spans from 2.44 to 2.52, with a median value of 2.46. The whiskers span from 2.41 to 2.57. There are 6 points above the upper whisker: 2.72, 2.78, 2.9, 2.92, 3.12, and 3.15.]{0.56}{eoce/marathon_winners}{marathon_winners_gender_box}
+\end{center}
+\item The time series plot shown below is another way to look at these data. Describe what is visible in this plot but not in the others.
+\end{parts}
+\begin{center}
+\Figures[A time series plot is shown, which in this case gives the appearance of a scatterplot. The horizontal variable is for year, which runs from 1970 to 2000, and the vertical variable is ""Marathon times"", which runs from 2.0 to 3.2 hours. There are two colors of points, one for men and one for women, and there is one point for men and one for women for each year. The points start at about 2.5 for men in 1970 and 2.9 for women in 1971. The points bounce around for a few years and then decline in 1975 or 1976 to 2.2 for men and 2.7 for women. The values for women decreases for a few more years to about 2.5. For the remainder of the years, the values fluctuate up or down 0.1 hours from year to year but are stable until 1999, which is the last data points provided.]{0.6}{eoce/marathon_winners}{marathon_winners_time_series} \\
+\end{center}",A box plot of daily sleep hours has a long lower whisker and several low outliers. Interpret this shape in context.,,"The distribution is left-skewed: most days have moderate or high sleep, but a few days have much lower sleep than usual.","A long lower tail and low outliers indicate unusually small values, which is left skew in context.",A box plot of daily sleep hours has a long lower whisker and several low outliers. Interpret this shape in context.,"1. Read the long lower whisker as evidence about the lower tail.
+2. Use the low outliers as additional evidence about unusually small observations.
+3. Identify the likely skew direction and interpret it in the context of sleep hours.","A box plot of daily sleep hours has a long lower whisker and several low outliers. Interpret this shape in context.
+
+Follow the reasoning stages below:
+
+1. Read the long lower whisker as evidence about the lower tail.
+2. Use the low outliers as additional evidence about unusually small observations.
+3. Identify the likely skew direction and interpret it in the context of sleep hours.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+23,Distribution,General Everyday,Hard,Interpretation,ch_distributions_39_3,"Auto insurance premiums
+
+Suppose a 
+newspaper article states that the distribution of auto insurance premiums for 
+residents of California is approximately normal with a mean of $1,650. The 
+article also states that 25% of California residents pay more than $1,800.
+
+Identify the standard deviation of insurance premiums in California.","\qt{Auto insurance premiums\label{auto_insurance_premiums}} Suppose a 
+newspaper article states that the distribution of auto insurance premiums for 
+residents of California is approximately normal with a mean of \$1,650. The 
+article also states that 25\% of California residents pay more than \$1,800. 
+\begin{parts}
+\item What is the Z-score that corresponds to the top 25\% (or the $75^{th}$ 
+percentile) of the standard normal distribution?
+\item What is the mean insurance cost? What is the cutoff for the 75th 
+percentile?
+\item Identify the standard deviation of insurance premiums in California.
+\end{parts}",A distribution of monthly grocery bills is strongly right-skewed. Explain why reporting only the mean could be misleading.,,"The mean may be pulled upward by a few very large bills, making typical spending look higher than it is for most households.","In right-skewed data, extreme high values affect the mean. The median and IQR would better describe typical spending and spread.",A distribution of monthly grocery bills is strongly right-skewed. Explain why reporting only the mean could be misleading.,"1. Identify how a strong right tail affects the mean.
+2. Explain why a few very large bills can make the mean unrepresentative of a typical household.
+3. Mention a more resistant summary that could complement or replace the mean.","A distribution of monthly grocery bills is strongly right-skewed. Explain why reporting only the mean could be misleading.
+
+Follow the reasoning stages below:
+
+1. Identify how a strong right tail affects the mean.
+2. Explain why a few very large bills can make the mean unrepresentative of a typical household.
+3. Mention a more resistant summary that could complement or replace the mean.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+24,Distribution,General Everyday,Hard,Interpretation,ch_summarizing_data_30_1,"A new statistic
+
+The statistic $xmedian$ can 
+be used as a measure of skewness. Suppose we have a distribution where all 
+observations are greater than 0, $x_i > 0$. What is the expected shape of 
+the distribution under the following conditions? Explain your reasoning.
+
+$xmedian = 1$","\qt{A new statistic\label{new_stat}} The statistic $\frac{\bar{x}}{median}$ can 
+be used as a measure of skewness. Suppose we have a distribution where all 
+observations are greater than 0, $x_i > 0$. What is the expected shape of 
+the distribution under the following conditions? Explain your reasoning.
+\begin{parts}
+\item $\frac{\bar{x}}{median} = 1$
+\item $\frac{\bar{x}}{median} < 1$
+\item $\frac{\bar{x}}{median} > 1$
+\end{parts}","A dataset has mean 50 and median 50, but it also contains two very distant observations, one at 5 and one at 95. Does equality of the mean and median guarantee that a dataset has no extreme observations or potential outliers? Explain.",,No. Equal mean and median do not rule out extreme observations or potential outliers; values far below and above the center can offset one another while leaving the mean and median equal.,"The mean and median describe center, not whether extreme observations are present. Values such as 5 and 95 can lie far from the center and offset one another, so equal mean and median do not guarantee the absence of extreme observations or potential outliers.","A dataset has mean 50 and median 50, but it also contains two very distant observations, one at 5 and one at 95. Does equality of the mean and median guarantee that a dataset has no extreme observations or potential outliers? Explain.","1. Separate measures of center from the presence of extreme observations.
+2. Consider how observations far below and above the center can offset one another while leaving the mean and median equal.
+3. Answer the yes/no question without assuming that an observation is a formal outlier unless an outlier rule is specified.","A dataset has mean 50 and median 50, but it also contains two very distant observations, one at 5 and one at 95. Does equality of the mean and median guarantee that a dataset has no extreme observations or potential outliers? Explain.
+
+Follow the reasoning stages below:
+
+1. Separate measures of center from the presence of extreme observations.
+2. Consider how observations far below and above the center can offset one another while leaving the mean and median equal.
+3. Answer the yes/no question without assuming that an observation is a formal outlier unless an outlier rule is specified.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+25,Distribution,General Everyday,Hard,Interpretation,ch_inference_for_means_51_1,"Hen eggs
+
+The distribution of the number of eggs laid 
+by a certain species of hen during their breeding period has a mean of 35 eggs 
+with a standard deviation of 18.2. Suppose a group of researchers 
+randomly samples 45 hens of this species, counts the number of eggs laid 
+during their breeding period, and records the sample mean. They repeat 
+this 1,000 times, and build a distribution of sample 
+means.
+
+What is this distribution called?","\qt{Hen eggs\label{hen_eggs}} The distribution of the number of eggs laid 
+by a certain species of hen during their breeding period has a mean of 35 eggs 
+with a standard deviation of 18.2. Suppose a group of researchers 
+randomly samples 45 hens of this species, counts the number of eggs laid 
+during their breeding period, and records the sample mean. They repeat 
+this 1,000 times, and build a distribution of sample 
+means. 
+\begin{parts}
+\item What is this distribution called? 
+\item Would you expect the shape of this distribution to be symmetric, right 
+skewed, or left skewed? Explain your reasoning.
+\item Calculate the variability of this distribution and state the appropriate 
+term used to refer to this value.
+\item Suppose the researchers' budget is reduced and they are only able to 
+collect random samples of 10 hens. The sample mean of the number of eggs is 
+recorded, and we repeat this 1,000 times, and build a new distribution of sample 
+means. How will the variability of this new distribution compare to the 
+variability of the original distribution?
+\end{parts}",A small farm compares two distributions of weekly egg counts. Farm A has the same mean as Farm B but a larger standard deviation. What does this imply?,,"The two farms have similar average weekly production, but Farm A is less consistent.",Equal means indicate similar centers. A larger standard deviation indicates greater week-to-week variability.,A small farm compares two distributions of weekly egg counts. Farm A has the same mean as Farm B but a larger standard deviation. What does this imply?,"1. Interpret equal means as similar average weekly production.
+2. Interpret the larger standard deviation as greater variability around that average.
+3. Translate the variability comparison into a statement about consistency.","A small farm compares two distributions of weekly egg counts. Farm A has the same mean as Farm B but a larger standard deviation. What does this imply?
+
+Follow the reasoning stages below:
+
+1. Interpret equal means as similar average weekly production.
+2. Interpret the larger standard deviation as greater variability around that average.
+3. Translate the variability comparison into a statement about consistency.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3

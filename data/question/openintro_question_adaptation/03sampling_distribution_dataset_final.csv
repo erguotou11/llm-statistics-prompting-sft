@@ -1,0 +1,651 @@
+No,Knowledge Area,Scenario,Difficulty,Question Type,Source ID,original_text,raw_latex,Adapted Question,Options,Correct Answer,Solution / Key Steps,prompt_direct,cot_reasoning_scaffold,prompt_cot,student_tutor_strategy,tutor_model,tutor_max_turns
+1,Sampling Distribution / CLT,Healthcare,Medium,Calculation,ch_inference_for_props_45_1,"Life after college
+
+We are interested in 
+estimating the proportion of graduates at a mid-sized university who found 
+a job within one year of completing their undergraduate degree. Suppose we 
+conduct a survey and find out that 348 of the 400 randomly sampled graduates 
+found jobs. The graduating class under consideration included over 4500 students.
+
+Describe the population parameter of interest. What is the value of 
+the point estimate of this parameter?","\qt{Life after college\label{life_after_college_CI}} We are interested in 
+estimating the proportion of graduates at a mid-sized university who found 
+a job within one year of completing their undergraduate degree. Suppose we 
+conduct a survey and find out that 348 of the 400 randomly sampled graduates 
+found jobs. The graduating class under consideration included over 4500 students.
+\begin{parts}
+\item Describe the population parameter of interest. What is the value of 
+the point estimate of this parameter?
+\item Check if the conditions for constructing a confidence interval based 
+on these data are met.
+\item Calculate a 95\% confidence interval for the proportion of graduates 
+who found a job within one year of completing their undergraduate degree at 
+this university, and interpret it in the context of the data.
+\item What does ``95\% confidence"" mean?
+\item Now calculate a 99\% confidence interval for the same parameter and 
+interpret it in the context of the data.
+\item Compare the widths of the 95\% and 99\% confidence intervals. Which 
+one is wider? Explain.
+\end{parts}","A hospital knows that individual emergency-room waiting times have mean 44 minutes and standard deviation 18 minutes. For a random sample of 64 patients, find the probability that the sample mean waiting time is greater than 48 minutes.",,0.0375,"For the sample mean, SE=18/sqrt(64)=2.25. z=(48-44)/2.25=1.78. P(Z>1.78)=0.0375.","A hospital knows that individual emergency-room waiting times have mean 44 minutes and standard deviation 18 minutes. For a random sample of 64 patients, find the probability that the sample mean waiting time is greater than 48 minutes.","1. Identify the sampling distribution of the sample mean and its center.
+2. Compute the standard error using the population standard deviation and sample size.
+3. Standardize the threshold for the sample mean.
+4. Translate the upper-tail event into a standard normal probability and report the result.","A hospital knows that individual emergency-room waiting times have mean 44 minutes and standard deviation 18 minutes. For a random sample of 64 patients, find the probability that the sample mean waiting time is greater than 48 minutes.
+
+Follow the reasoning stages below:
+
+1. Identify the sampling distribution of the sample mean and its center.
+2. Compute the standard error using the population standard deviation and sample size.
+3. Standardize the threshold for the sample mean.
+4. Translate the upper-tail event into a standard normal probability and report the result.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+2,Sampling Distribution / CLT,Healthcare,Medium,Calculation,ch_inference_for_props_45_4,"Life after college
+
+We are interested in 
+estimating the proportion of graduates at a mid-sized university who found 
+a job within one year of completing their undergraduate degree. Suppose we 
+conduct a survey and find out that 348 of the 400 randomly sampled graduates 
+found jobs. The graduating class under consideration included over 4500 students.
+
+What does ``95% confidence"" mean?","\qt{Life after college\label{life_after_college_CI}} We are interested in 
+estimating the proportion of graduates at a mid-sized university who found 
+a job within one year of completing their undergraduate degree. Suppose we 
+conduct a survey and find out that 348 of the 400 randomly sampled graduates 
+found jobs. The graduating class under consideration included over 4500 students.
+\begin{parts}
+\item Describe the population parameter of interest. What is the value of 
+the point estimate of this parameter?
+\item Check if the conditions for constructing a confidence interval based 
+on these data are met.
+\item Calculate a 95\% confidence interval for the proportion of graduates 
+who found a job within one year of completing their undergraduate degree at 
+this university, and interpret it in the context of the data.
+\item What does ``95\% confidence"" mean?
+\item Now calculate a 99\% confidence interval for the same parameter and 
+interpret it in the context of the data.
+\item Compare the widths of the 95\% and 99\% confidence intervals. Which 
+one is wider? Explain.
+\end{parts}","In a clinic, individual systolic blood pressure readings have mean 122 and standard deviation 16. For a random sample of 49 patients, find P(118 < sample mean < 126).",,0.9199,"SE=16/sqrt(49)=2.286. z1=(118-122)/2.286=-1.75, z2=(126-122)/2.286=1.75. Probability=Phi(1.75)-Phi(-1.75)=0.9199.","In a clinic, individual systolic blood pressure readings have mean 122 and standard deviation 16. For a random sample of 49 patients, find P(118 < sample mean < 126).","1. Identify the mean and standard error of the sampling distribution of the sample mean.
+2. Standardize both endpoints of the requested interval.
+3. Express the probability as the area between the two standardized endpoints.
+4. Evaluate that area and report the probability.","In a clinic, individual systolic blood pressure readings have mean 122 and standard deviation 16. For a random sample of 49 patients, find P(118 < sample mean < 126).
+
+Follow the reasoning stages below:
+
+1. Identify the mean and standard error of the sampling distribution of the sample mean.
+2. Standardize both endpoints of the requested interval.
+3. Express the probability as the area between the two standardized endpoints.
+4. Evaluate that area and report the probability.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+3,Sampling Distribution / CLT,Healthcare,Medium,Calculation,ch_foundations_for_inf_30_4,"True or false
+
+Determine if the following statements are true or false, and 
+explain your reasoning. If false, state how it could be corrected.
+
+With large sample sizes, even small differences between the null value and 
+the observed point estimate, a difference often called the
+effect sizeeffect size, will be identified as statistically significant.","\qt{True or false\label{tf_found_inf_prop_friendly}}
+Determine if the following statements are true or false, and 
+explain your reasoning. If false, state how it could be corrected.
+\begin{parts}
+\item If a given value (for example, the null hypothesized value of a parameter) 
+is within a 95\% confidence interval, it will also be within a 99\% confidence 
+interval.
+\item Decreasing the significance level ($\alpha$) will increase the probability 
+of making a Type~1 Error.
+\item Suppose the null hypothesis is $p = 0.5$ and we fail to reject $H_0$. 
+Under this scenario, the true population proportion is 0.5.
+\item With large sample sizes, even small differences between the null value and 
+the observed point estimate, a difference often called the
+effect size\index{effect size}, will be identified as statistically significant.
+\end{parts}","A medicine has a side-effect rate of 12%. In a random sample of 200 users, approximate the probability that more than 15% report the side effect.",,0.0951,"For sample proportion, SE=sqrt(0.12*0.88/200)=0.0230. z=(0.15-0.12)/0.0230=1.31. P(Z>1.31)=0.0951.","A medicine has a side-effect rate of 12%. In a random sample of 200 users, approximate the probability that more than 15% report the side effect.","1. Treat the observed sample proportion through its sampling distribution under the stated population proportion.
+2. Check that the normal approximation is reasonable from the expected numbers of successes and failures.
+3. Compute the standard error of the sample proportion.
+4. Standardize the 0.15 threshold and evaluate the required upper-tail probability.","A medicine has a side-effect rate of 12%. In a random sample of 200 users, approximate the probability that more than 15% report the side effect.
+
+Follow the reasoning stages below:
+
+1. Treat the observed sample proportion through its sampling distribution under the stated population proportion.
+2. Check that the normal approximation is reasonable from the expected numbers of successes and failures.
+3. Compute the standard error of the sample proportion.
+4. Standardize the 0.15 threshold and evaluate the required upper-tail probability.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+4,Sampling Distribution / CLT,Education,Medium,Single Choice,ch_distributions_41_3,"Married women
+
+The American Community Survey 
+estimates that 47.1% of women ages 15 years and over are married.
+[source: marWomenACS]
+
+On average, how many women would you expect to sample before selecting 
+a married woman? What is the standard deviation?","\qt{Married women} \label{married_women} The American Community Survey 
+estimates that 47.1\% of women ages 15 years and over are married.
+\footfullcite{marWomenACS}
+\begin{parts}
+\item We randomly select three women between these ages. What is the 
+probability that the third woman selected is the only one who is married?
+\item What is the probability that all three randomly selected women are 
+married?
+\item On average, how many women would you expect to sample before selecting 
+a married woman? What is the standard deviation?
+\item If the proportion of married women was actually 30\%, how many women 
+would you expect to sample before selecting a married woman? What is the 
+standard deviation?
+\item Based on your answers to parts (c) and (d), how does decreasing the 
+probability of an event affect the mean and standard deviation of the wait 
+time until success?
+\end{parts}","A university exam has individual scores with mean 72 and standard deviation 12. For a random sample of 36 students, what is P(sample mean > 75)?","A. 0.0228
+B. 0.0668
+C. 0.1587
+D. 0.3085",B. 0.0668,SE=12/sqrt(36)=2. z=(75-72)/2=1.50. P(Z>1.50)=0.0668.,"A university exam has individual scores with mean 72 and standard deviation 12. For a random sample of 36 students, what is P(sample mean > 75)?
+
+Options:
+A. 0.0228
+B. 0.0668
+C. 0.1587
+D. 0.3085","1. Determine the standard error of the sample mean from the individual-score standard deviation and sample size.
+2. Standardize the sample-mean threshold.
+3. Convert the event into the appropriate upper-tail normal probability.
+4. Compare the resulting probability with the answer choices and select the matching option.","A university exam has individual scores with mean 72 and standard deviation 12. For a random sample of 36 students, what is P(sample mean > 75)?
+
+Options:
+A. 0.0228
+B. 0.0668
+C. 0.1587
+D. 0.3085
+
+Follow the reasoning stages below:
+
+1. Determine the standard error of the sample mean from the individual-score standard deviation and sample size.
+2. Standardize the sample-mean threshold.
+3. Convert the event into the appropriate upper-tail normal probability.
+4. Compare the resulting probability with the answer choices and select the matching option.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+5,Sampling Distribution / CLT,Education,Medium,Single Choice,ch_distributions_41_4,"Married women
+
+The American Community Survey 
+estimates that 47.1% of women ages 15 years and over are married.
+[source: marWomenACS]
+
+If the proportion of married women was actually 30%, how many women 
+would you expect to sample before selecting a married woman? What is the 
+standard deviation?","\qt{Married women} \label{married_women} The American Community Survey 
+estimates that 47.1\% of women ages 15 years and over are married.
+\footfullcite{marWomenACS}
+\begin{parts}
+\item We randomly select three women between these ages. What is the 
+probability that the third woman selected is the only one who is married?
+\item What is the probability that all three randomly selected women are 
+married?
+\item On average, how many women would you expect to sample before selecting 
+a married woman? What is the standard deviation?
+\item If the proportion of married women was actually 30\%, how many women 
+would you expect to sample before selecting a married woman? What is the 
+standard deviation?
+\item Based on your answers to parts (c) and (d), how does decreasing the 
+probability of an event affect the mean and standard deviation of the wait 
+time until success?
+\end{parts}","At a college, 68% of students submit weekly homework on time. In a random sample of 100 students, what is the approximate probability that fewer than 60% submit on time?","A. 0.0436
+B. 0.0869
+C. 0.2119
+D. 0.9564",A. 0.0436,SE=sqrt(0.68*0.32/100)=0.0466. z=(0.60-0.68)/0.0466=-1.71. P(Z<-1.71)=0.0436.,"At a college, 68% of students submit weekly homework on time. In a random sample of 100 students, what is the approximate probability that fewer than 60% submit on time?
+
+Options:
+A. 0.0436
+B. 0.0869
+C. 0.2119
+D. 0.9564","1. Model the sample proportion using its approximate sampling distribution and check the success-failure condition.
+2. Compute the standard error from the stated population proportion and sample size.
+3. Standardize the 0.60 cutoff.
+4. Evaluate the lower-tail probability and select the matching answer choice.","At a college, 68% of students submit weekly homework on time. In a random sample of 100 students, what is the approximate probability that fewer than 60% submit on time?
+
+Options:
+A. 0.0436
+B. 0.0869
+C. 0.2119
+D. 0.9564
+
+Follow the reasoning stages below:
+
+1. Model the sample proportion using its approximate sampling distribution and check the success-failure condition.
+2. Compute the standard error from the stated population proportion and sample size.
+3. Standardize the 0.60 cutoff.
+4. Evaluate the lower-tail probability and select the matching answer choice.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+6,Sampling Distribution / CLT,Social Survey,Medium,Calculation,ch_intro_to_data_38_1,"City council survey
+
+A city council has requested a household survey be conducted
+in a suburban area of their city.
+The area is broken into many distinct and unique neighborhoods,
+some including large homes, some with only apartments, and others
+a diverse mixture of housing structures.
+For each part below,
+identify the sampling methods described,
+and describe the statistical pros and cons of the method
+in the city's context.
+
+Randomly sample 200 households from the city.","\qt{City council survey\label{city_council_survey}}
+A city council has requested a household survey be conducted
+in a suburban area of their city.
+The area is broken into many distinct and unique neighborhoods,
+some including large homes, some with only apartments, and others
+a diverse mixture of housing structures.
+For each part below,
+identify the sampling methods described,
+and describe the statistical pros and cons of the method
+in the city's context.
+\begin{parts}
+\item
+    Randomly sample 200 households from the city.
+\item
+    Divide the city into 20 neighborhoods,
+    and sample 10 households from each neighborhood.
+\item
+    Divide the city into 20 neighborhoods,
+    randomly sample 3 neighborhoods,
+    and then sample all households from those 3 neighborhoods.
+\item
+    Divide the city into 20 neighborhoods,
+    randomly sample 8 neighborhoods,
+    and then randomly sample 50 households
+    from those neighborhoods.
+\item
+    Sample the 200 households closest to the city council offices.
+\end{parts}","A social survey estimates that 42% of adults support a new local policy. For a random sample of 600 adults, approximate P(0.38 < sample proportion < 0.46).",,0.9534,"SE=sqrt(0.42*0.58/600)=0.0202. Using z-scores rounded to two decimals, z values are -1.99 and 1.99. Probability=Phi(1.99)-Phi(-1.99)=0.9534.","A social survey estimates that 42% of adults support a new local policy. For a random sample of 600 adults, approximate P(0.38 < sample proportion < 0.46).","1. Identify the approximate sampling distribution of the sample proportion and verify that a normal approximation is appropriate.
+2. Compute the standard error using the stated population proportion and sample size.
+3. Standardize both endpoints of the interval.
+4. Find the standard normal area between those endpoints and report the probability.","A social survey estimates that 42% of adults support a new local policy. For a random sample of 600 adults, approximate P(0.38 < sample proportion < 0.46).
+
+Follow the reasoning stages below:
+
+1. Identify the approximate sampling distribution of the sample proportion and verify that a normal approximation is appropriate.
+2. Compute the standard error using the stated population proportion and sample size.
+3. Standardize both endpoints of the interval.
+4. Find the standard normal area between those endpoints and report the probability.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+7,Sampling Distribution / CLT,Social Survey,Medium,Calculation,ch_intro_to_data_38_2,"City council survey
+
+A city council has requested a household survey be conducted
+in a suburban area of their city.
+The area is broken into many distinct and unique neighborhoods,
+some including large homes, some with only apartments, and others
+a diverse mixture of housing structures.
+For each part below,
+identify the sampling methods described,
+and describe the statistical pros and cons of the method
+in the city's context.
+
+Divide the city into 20 neighborhoods,
+ and sample 10 households from each neighborhood.","\qt{City council survey\label{city_council_survey}}
+A city council has requested a household survey be conducted
+in a suburban area of their city.
+The area is broken into many distinct and unique neighborhoods,
+some including large homes, some with only apartments, and others
+a diverse mixture of housing structures.
+For each part below,
+identify the sampling methods described,
+and describe the statistical pros and cons of the method
+in the city's context.
+\begin{parts}
+\item
+    Randomly sample 200 households from the city.
+\item
+    Divide the city into 20 neighborhoods,
+    and sample 10 households from each neighborhood.
+\item
+    Divide the city into 20 neighborhoods,
+    randomly sample 3 neighborhoods,
+    and then sample all households from those 3 neighborhoods.
+\item
+    Divide the city into 20 neighborhoods,
+    randomly sample 8 neighborhoods,
+    and then randomly sample 50 households
+    from those neighborhoods.
+\item
+    Sample the 200 households closest to the city council offices.
+\end{parts}","A survey reports that individual daily social-media use has mean 5.1 hours and standard deviation 2.4 hours. For n=81 respondents, approximate P(sample mean < 4.8).",,0.1292,"SE=2.4/sqrt(81)=0.2667. Using the required two-decimal z-score, z=(4.8-5.1)/0.2667=-1.13. P(Z<-1.13)=0.1292.","A survey reports that individual daily social-media use has mean 5.1 hours and standard deviation 2.4 hours. For n=81 respondents, approximate P(sample mean < 4.8).","1. Identify the sampling distribution of the sample mean and compute its standard error.
+2. Standardize the 4.8-hour cutoff relative to the stated population mean.
+3. Determine the appropriate lower-tail standard normal probability.
+4. Report the probability with the required numerical precision.","A survey reports that individual daily social-media use has mean 5.1 hours and standard deviation 2.4 hours. For n=81 respondents, approximate P(sample mean < 4.8).
+
+Follow the reasoning stages below:
+
+1. Identify the sampling distribution of the sample mean and compute its standard error.
+2. Standardize the 4.8-hour cutoff relative to the stated population mean.
+3. Determine the appropriate lower-tail standard normal probability.
+4. Report the probability with the required numerical precision.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+8,Sampling Distribution / CLT,Social Survey,Medium,Calculation,ch_intro_to_data_38_3,"City council survey
+
+A city council has requested a household survey be conducted
+in a suburban area of their city.
+The area is broken into many distinct and unique neighborhoods,
+some including large homes, some with only apartments, and others
+a diverse mixture of housing structures.
+For each part below,
+identify the sampling methods described,
+and describe the statistical pros and cons of the method
+in the city's context.
+
+Divide the city into 20 neighborhoods,
+ randomly sample 3 neighborhoods,
+ and then sample all households from those 3 neighborhoods.","\qt{City council survey\label{city_council_survey}}
+A city council has requested a household survey be conducted
+in a suburban area of their city.
+The area is broken into many distinct and unique neighborhoods,
+some including large homes, some with only apartments, and others
+a diverse mixture of housing structures.
+For each part below,
+identify the sampling methods described,
+and describe the statistical pros and cons of the method
+in the city's context.
+\begin{parts}
+\item
+    Randomly sample 200 households from the city.
+\item
+    Divide the city into 20 neighborhoods,
+    and sample 10 households from each neighborhood.
+\item
+    Divide the city into 20 neighborhoods,
+    randomly sample 3 neighborhoods,
+    and then sample all households from those 3 neighborhoods.
+\item
+    Divide the city into 20 neighborhoods,
+    randomly sample 8 neighborhoods,
+    and then randomly sample 50 households
+    from those neighborhoods.
+\item
+    Sample the 200 households closest to the city council offices.
+\end{parts}","In a city, household size has mean 2.6 people and standard deviation 1.4 people. For a random sample of 49 households, approximate P(sample mean > 3.0).",,0.0228,SE=1.4/sqrt(49)=0.20. z=(3.0-2.6)/0.20=2.00. P(Z>2.00)=0.0228.,"In a city, household size has mean 2.6 people and standard deviation 1.4 people. For a random sample of 49 households, approximate P(sample mean > 3.0).","1. Use the population mean, standard deviation, and sample size to describe the sampling distribution of the sample mean.
+2. Compute the standard error.
+3. Standardize the 3.0-person threshold.
+4. Evaluate the corresponding upper-tail probability.","In a city, household size has mean 2.6 people and standard deviation 1.4 people. For a random sample of 49 households, approximate P(sample mean > 3.0).
+
+Follow the reasoning stages below:
+
+1. Use the population mean, standard deviation, and sample size to describe the sampling distribution of the sample mean.
+2. Compute the standard error.
+3. Standardize the 3.0-person threshold.
+4. Evaluate the corresponding upper-tail probability.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+9,Sampling Distribution / CLT,General Everyday,Hard,Short Answer,ch_intro_to_data_38_4,"City council survey
+
+A city council has requested a household survey be conducted
+in a suburban area of their city.
+The area is broken into many distinct and unique neighborhoods,
+some including large homes, some with only apartments, and others
+a diverse mixture of housing structures.
+For each part below,
+identify the sampling methods described,
+and describe the statistical pros and cons of the method
+in the city's context.
+
+Divide the city into 20 neighborhoods,
+ randomly sample 8 neighborhoods,
+ and then randomly sample 50 households
+ from those neighborhoods.","\qt{City council survey\label{city_council_survey}}
+A city council has requested a household survey be conducted
+in a suburban area of their city.
+The area is broken into many distinct and unique neighborhoods,
+some including large homes, some with only apartments, and others
+a diverse mixture of housing structures.
+For each part below,
+identify the sampling methods described,
+and describe the statistical pros and cons of the method
+in the city's context.
+\begin{parts}
+\item
+    Randomly sample 200 households from the city.
+\item
+    Divide the city into 20 neighborhoods,
+    and sample 10 households from each neighborhood.
+\item
+    Divide the city into 20 neighborhoods,
+    randomly sample 3 neighborhoods,
+    and then sample all households from those 3 neighborhoods.
+\item
+    Divide the city into 20 neighborhoods,
+    randomly sample 8 neighborhoods,
+    and then randomly sample 50 households
+    from those neighborhoods.
+\item
+    Sample the 200 households closest to the city council offices.
+\end{parts}","Grocery receipts are strongly right-skewed with mean £38 and standard deviation £24. A researcher samples 100 receipts. Explain whether a normal approximation for the sample mean is reasonable, and estimate P(sample mean > £42).",,Reasonable; approximately 0.0475,"Because n=100 is large, the CLT makes the sampling distribution of the sample mean approximately normal if receipts are independent. SE=24/sqrt(100)=2.4. z=(42-38)/2.4=1.67. P(Z>1.67)=0.0475.","Grocery receipts are strongly right-skewed with mean £38 and standard deviation £24. A researcher samples 100 receipts. Explain whether a normal approximation for the sample mean is reasonable, and estimate P(sample mean > £42).","1. Consider the strong skewness of individual receipts together with the sample size when deciding whether the CLT supports a normal approximation for the sample mean.
+2. State any sampling condition needed for the approximation.
+3. Compute the standard error of the sample mean.
+4. Standardize the £42 threshold, evaluate the upper-tail probability, and combine the numerical result with the CLT justification.","Grocery receipts are strongly right-skewed with mean £38 and standard deviation £24. A researcher samples 100 receipts. Explain whether a normal approximation for the sample mean is reasonable, and estimate P(sample mean > £42).
+
+Follow the reasoning stages below:
+
+1. Consider the strong skewness of individual receipts together with the sample size when deciding whether the CLT supports a normal approximation for the sample mean.
+2. State any sampling condition needed for the approximation.
+3. Compute the standard error of the sample mean.
+4. Standardize the £42 threshold, evaluate the upper-tail probability, and combine the numerical result with the CLT justification.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+10,Sampling Distribution / CLT,General Everyday,Hard,Short Answer,ch_intro_to_data_38_5,"City council survey
+
+A city council has requested a household survey be conducted
+in a suburban area of their city.
+The area is broken into many distinct and unique neighborhoods,
+some including large homes, some with only apartments, and others
+a diverse mixture of housing structures.
+For each part below,
+identify the sampling methods described,
+and describe the statistical pros and cons of the method
+in the city's context.
+
+Sample the 200 households closest to the city council offices.","\qt{City council survey\label{city_council_survey}}
+A city council has requested a household survey be conducted
+in a suburban area of their city.
+The area is broken into many distinct and unique neighborhoods,
+some including large homes, some with only apartments, and others
+a diverse mixture of housing structures.
+For each part below,
+identify the sampling methods described,
+and describe the statistical pros and cons of the method
+in the city's context.
+\begin{parts}
+\item
+    Randomly sample 200 households from the city.
+\item
+    Divide the city into 20 neighborhoods,
+    and sample 10 households from each neighborhood.
+\item
+    Divide the city into 20 neighborhoods,
+    randomly sample 3 neighborhoods,
+    and then sample all households from those 3 neighborhoods.
+\item
+    Divide the city into 20 neighborhoods,
+    randomly sample 8 neighborhoods,
+    and then randomly sample 50 households
+    from those neighborhoods.
+\item
+    Sample the 200 households closest to the city council offices.
+\end{parts}","A coffee shop records cup-preparation times. Individual times are skewed, with mean 90 seconds and standard deviation 45 seconds. For a sample of n=25 cups, should the sample mean be treated as approximately normal? Briefly justify.",,Not automatically; n=25 may be too small for strong skewness,"The CLT works better as n grows. With strong skewness and only n=25, the normal approximation for the sample mean may be unreliable unless the original distribution is not too skewed or evidence supports the approximation.","A coffee shop records cup-preparation times. Individual times are skewed, with mean 90 seconds and standard deviation 45 seconds. For a sample of n=25 cups, should the sample mean be treated as approximately normal? Briefly justify.","1. Distinguish the distribution of individual preparation times from the sampling distribution of the sample mean.
+2. Consider both the stated skewness and the sample size when assessing the CLT approximation.
+3. Decide whether approximate normality can be assumed confidently from the information given.
+4. Briefly justify the conclusion without claiming that a fixed sample-size cutoff always guarantees normality.","A coffee shop records cup-preparation times. Individual times are skewed, with mean 90 seconds and standard deviation 45 seconds. For a sample of n=25 cups, should the sample mean be treated as approximately normal? Briefly justify.
+
+Follow the reasoning stages below:
+
+1. Distinguish the distribution of individual preparation times from the sampling distribution of the sample mean.
+2. Consider both the stated skewness and the sample size when assessing the CLT approximation.
+3. Decide whether approximate normality can be assumed confidently from the information given.
+4. Briefly justify the conclusion without claiming that a fixed sample-size cutoff always guarantees normality.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+11,Sampling Distribution / CLT,General Everyday,Hard,Short Answer,ch_intro_to_data_39_2,"Flawed reasoning
+
+Identify the flaw(s) in reasoning 
+in the following scenarios. Explain what the individuals in the study should 
+have done differently if they wanted to make such strong conclusions.
+
+A survey is conducted on a simple random sample of 1,000 women who 
+recently gave birth, asking them about whether or not they smoked during 
+pregnancy. A follow-up survey asking if the children have respiratory problems 
+is conducted 3 years later.
+However, only 567 of these women are reached at the 
+same address. The researcher reports that these 567 women are representative 
+of all mothers.","\qt{Flawed reasoning\label{flawed_reasoning}} Identify the flaw(s) in reasoning 
+in the following scenarios. Explain what the individuals in the study should 
+have done differently if they wanted to make such strong conclusions.
+\begin{parts}
+\item Students at an elementary school are given a questionnaire that they 
+are asked to return after their parents have completed it. One of the questions 
+asked is, ``Do you find that your work schedule makes it difficult for you to 
+spend time with your kids after school?"" Of the parents who replied, 85\% said 
+``no"". Based on these results, the school officials conclude that a great 
+majority of the parents have no difficulty spending time with their kids 
+after school.
+\item A survey is conducted on a simple random sample of 1,000 women who 
+recently gave birth, asking them about whether or not they smoked during 
+pregnancy. A follow-up survey asking if the children have respiratory problems 
+is conducted 3 years later.
+However, only 567 of these women are reached at the 
+same address. The researcher reports that these 567 women are representative 
+of all mothers.
+\item An orthopedist administers a questionnaire to 30 of his patients who do 
+not have any joint problems and finds that 20 of them regularly go running. 
+He concludes that running decreases the risk of joint problems.
+\end{parts}","A delivery app reports that individual order values have standard deviation £18. Explain why the standard deviation of the sample mean for 81 orders is not £18, and compute it.",,The standard error is £2,"Averaging reduces variability. The sampling distribution of the mean has standard deviation sigma/sqrt(n), so SE=18/sqrt(81)=2.","A delivery app reports that individual order values have standard deviation £18. Explain why the standard deviation of the sample mean for 81 orders is not £18, and compute it.","1. Distinguish the standard deviation of individual order values from the standard deviation of sample means.
+2. Recall how averaging n independent observations changes variability.
+3. Apply the standard-error formula to n=81.
+4. Interpret the computed value as sample-to-sample variability of the mean.","A delivery app reports that individual order values have standard deviation £18. Explain why the standard deviation of the sample mean for 81 orders is not £18, and compute it.
+
+Follow the reasoning stages below:
+
+1. Distinguish the standard deviation of individual order values from the standard deviation of sample means.
+2. Recall how averaging n independent observations changes variability.
+3. Apply the standard-error formula to n=81.
+4. Interpret the computed value as sample-to-sample variability of the mean.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+12,Sampling Distribution / CLT,Finance,Hard,Interpretation,ch_foundations_for_inf_35,"Practical vs. statistical significance
+
+Determine whether the following statement is true
+or false, and explain your reasoning:
+``With large sample sizes, even small differences
+between the null value and the observed point
+estimate can be statistically significant.''","\qt{Practical vs. statistical significance\label{prac_stat_sig}}
+Determine whether the following statement is true
+or false, and explain your reasoning:
+``With large sample sizes, even small differences
+between the null value and the observed point
+estimate can be statistically significant.''","A fintech company studies transaction amounts. Individual transaction amounts are highly skewed with mean £52 and standard deviation £80. If analysts repeatedly take random samples of 400 transactions, interpret the sampling distribution of the sample mean.",,Approximately normal with mean £52 and SE £4,"By the CLT, for large n the sample mean is approximately normal even when individual transactions are skewed. Its center is 52 and SE=80/sqrt(400)=4. This describes variation across repeated sample means, not individual transactions.","A fintech company studies transaction amounts. Individual transaction amounts are highly skewed with mean £52 and standard deviation £80. If analysts repeatedly take random samples of 400 transactions, interpret the sampling distribution of the sample mean.","1. Separate the highly skewed distribution of individual transactions from the distribution of repeated sample means.
+2. Use the large sample size to assess the CLT approximation.
+3. State the center of the sampling distribution.
+4. Compute its standard error and interpret what that spread describes across repeated samples.","A fintech company studies transaction amounts. Individual transaction amounts are highly skewed with mean £52 and standard deviation £80. If analysts repeatedly take random samples of 400 transactions, interpret the sampling distribution of the sample mean.
+
+Follow the reasoning stages below:
+
+1. Separate the highly skewed distribution of individual transactions from the distribution of repeated sample means.
+2. Use the large sample size to assess the CLT approximation.
+3. State the center of the sampling distribution.
+4. Compute its standard error and interpret what that spread describes across repeated samples.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+13,Sampling Distribution / CLT,Finance,Hard,Interpretation,ch_inference_for_means_49,"Sample size and pairing
+
+Determine if the 
+following statement is true or false, and if false, explain your reasoning: If 
+comparing means of two groups with equal sample sizes, always use a paired test.","\qt{Sample size and pairing\label{sample_size_pairing}} Determine if the 
+following statement is true or false, and if false, explain your reasoning: If 
+comparing means of two groups with equal sample sizes, always use a paired test.","A bank finds that 8% of card transactions are flagged by an automated rule. For repeated random samples of 250 transactions, describe the approximate sampling distribution of the sample proportion flagged and explain what the standard error means.",,Approximately normal with mean 0.08 and SE 0.0172,"Since np=20 and n(1-p)=230 are both at least 10, p-hat is approximately normal. Mean=0.08. SE=sqrt(0.08*0.92/250)=0.0172. The SE is the typical sample-to-sample variation in p-hat.","A bank finds that 8% of card transactions are flagged by an automated rule. For repeated random samples of 250 transactions, describe the approximate sampling distribution of the sample proportion flagged and explain what the standard error means.","1. Check whether the expected numbers of flagged and unflagged transactions support a normal approximation for the sample proportion.
+2. State the center of the sampling distribution of the sample proportion.
+3. Compute its standard error.
+4. Explain the standard error as the typical sample-to-sample variation in the observed proportion.","A bank finds that 8% of card transactions are flagged by an automated rule. For repeated random samples of 250 transactions, describe the approximate sampling distribution of the sample proportion flagged and explain what the standard error means.
+
+Follow the reasoning stages below:
+
+1. Check whether the expected numbers of flagged and unflagged transactions support a normal approximation for the sample proportion.
+2. State the center of the sampling distribution of the sample proportion.
+3. Compute its standard error.
+4. Explain the standard error as the typical sample-to-sample variation in the observed proportion.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+14,Sampling Distribution / CLT,Transportation,Easy,Calculation,ch_inference_for_props_45_1,"Life after college
+
+We are interested in 
+estimating the proportion of graduates at a mid-sized university who found 
+a job within one year of completing their undergraduate degree. Suppose we 
+conduct a survey and find out that 348 of the 400 randomly sampled graduates 
+found jobs. The graduating class under consideration included over 4500 students.
+
+Describe the population parameter of interest. What is the value of 
+the point estimate of this parameter?","\qt{Life after college\label{life_after_college_CI}} We are interested in 
+estimating the proportion of graduates at a mid-sized university who found 
+a job within one year of completing their undergraduate degree. Suppose we 
+conduct a survey and find out that 348 of the 400 randomly sampled graduates 
+found jobs. The graduating class under consideration included over 4500 students.
+\begin{parts}
+\item Describe the population parameter of interest. What is the value of 
+the point estimate of this parameter?
+\item Check if the conditions for constructing a confidence interval based 
+on these data are met.
+\item Calculate a 95\% confidence interval for the proportion of graduates 
+who found a job within one year of completing their undergraduate degree at 
+this university, and interpret it in the context of the data.
+\item What does ``95\% confidence"" mean?
+\item Now calculate a 99\% confidence interval for the same parameter and 
+interpret it in the context of the data.
+\item Compare the widths of the 95\% and 99\% confidence intervals. Which 
+one is wider? Explain.
+\end{parts}","Individual commute times in a town have mean 32 minutes and standard deviation 10 minutes. For a random sample of 25 commuters, approximate P(sample mean < 30).",,0.1587,SE=10/sqrt(25)=2. z=(30-32)/2=-1.00. P(Z<-1.00)=0.1587.,"Individual commute times in a town have mean 32 minutes and standard deviation 10 minutes. For a random sample of 25 commuters, approximate P(sample mean < 30).","1. Identify the center and standard error of the sampling distribution of the sample mean.
+2. Standardize the 30-minute cutoff.
+3. Determine that the requested event is a lower-tail probability.
+4. Evaluate the standard normal probability and report the result.","Individual commute times in a town have mean 32 minutes and standard deviation 10 minutes. For a random sample of 25 commuters, approximate P(sample mean < 30).
+
+Follow the reasoning stages below:
+
+1. Identify the center and standard error of the sampling distribution of the sample mean.
+2. Standardize the 30-minute cutoff.
+3. Determine that the requested event is a lower-tail probability.
+4. Evaluate the standard normal probability and report the result.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3
+15,Sampling Distribution / CLT,Transportation,Easy,Calculation,ch_inference_for_props_45_4,"Life after college
+
+We are interested in 
+estimating the proportion of graduates at a mid-sized university who found 
+a job within one year of completing their undergraduate degree. Suppose we 
+conduct a survey and find out that 348 of the 400 randomly sampled graduates 
+found jobs. The graduating class under consideration included over 4500 students.
+
+What does ``95% confidence"" mean?","\qt{Life after college\label{life_after_college_CI}} We are interested in 
+estimating the proportion of graduates at a mid-sized university who found 
+a job within one year of completing their undergraduate degree. Suppose we 
+conduct a survey and find out that 348 of the 400 randomly sampled graduates 
+found jobs. The graduating class under consideration included over 4500 students.
+\begin{parts}
+\item Describe the population parameter of interest. What is the value of 
+the point estimate of this parameter?
+\item Check if the conditions for constructing a confidence interval based 
+on these data are met.
+\item Calculate a 95\% confidence interval for the proportion of graduates 
+who found a job within one year of completing their undergraduate degree at 
+this university, and interpret it in the context of the data.
+\item What does ``95\% confidence"" mean?
+\item Now calculate a 99\% confidence interval for the same parameter and 
+interpret it in the context of the data.
+\item Compare the widths of the 95\% and 99\% confidence intervals. Which 
+one is wider? Explain.
+\end{parts}","A bus company knows that 18% of buses arrive late. For a random sample of 100 buses, approximate P(sample proportion late > 0.25).",,0.0344,SE=sqrt(0.18*0.82/100)=0.0384. z=(0.25-0.18)/0.0384=1.82. P(Z>1.82)=0.0344.,"A bus company knows that 18% of buses arrive late. For a random sample of 100 buses, approximate P(sample proportion late > 0.25).","1. Check whether the sample-proportion normal approximation is reasonable using the expected numbers of late and on-time buses.
+2. Compute the standard error under the stated population proportion.
+3. Standardize the 0.25 cutoff.
+4. Evaluate the required upper-tail probability and report it.","A bus company knows that 18% of buses arrive late. For a random sample of 100 buses, approximate P(sample proportion late > 0.25).
+
+Follow the reasoning stages below:
+
+1. Check whether the sample-proportion normal approximation is reasonable using the expected numbers of late and on-time buses.
+2. Compute the standard error under the stated population proportion.
+3. Standardize the 0.25 cutoff.
+4. Evaluate the required upper-tail probability and report it.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,Qwen3-32B-Instruct,3

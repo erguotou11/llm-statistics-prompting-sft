@@ -1,0 +1,544 @@
+No,Knowledge Area,Scenario,Difficulty,Question Type,Source ID,original_text,raw_latex,Adapted Question,Options,Correct Answer,Solution / Key Steps,prompt_direct,cot_reasoning_scaffold,prompt_cot,student_tutor_strategy,tutor_model,tutor_max_turns
+1,Descriptive Statistics,Education,Easy,Calculation,ch_summarizing_data_27_1,"Make-up exam
+
+In a class of 25 students, 24 of them took an exam 
+in class and 1 student took a make-up exam the following day. The professor graded the 
+first batch of 24 exams and found an average score of 74 points with a standard 
+deviation of 8.9 points. The student who took the make-up the following day scored 64 
+points on the exam.
+
+Does the new student's score increase or decrease the average score?","\qt{Make-up exam\label{makeup_exam}} In a class of 25 students, 24 of them took an exam 
+in class and 1 student took a make-up exam the following day. The professor graded the 
+first batch of 24 exams and found an average score of 74 points with a standard 
+deviation of 8.9 points. The student who took the make-up the following day scored 64 
+points on the exam.
+\begin{parts}
+\item Does the new student's score increase or decrease the average score?
+\item What is the new average?
+\item Does the new student's score increase or decrease the standard deviation of the 
+scores?
+\end{parts}","In a statistics class, 23 students took an in-class quiz. Their average score was 76. A 24th student took a make-up quiz and scored 88. What is the overall class mean after including the make-up quiz?",,76.5,Original total = 23 × 76 = 1748. New total = 1748 + 88 = 1836. Overall mean = 1836 / 24 = 76.5.,"In a statistics class, 23 students took an in-class quiz. Their average score was 76. A 24th student took a make-up quiz and scored 88. What is the overall class mean after including the make-up quiz?","1. Recover the total score represented by the original class mean and number of students.
+2. Add the make-up student's score to obtain the new total.
+3. Divide by the new class size.
+4. Report the overall class mean.","In a statistics class, 23 students took an in-class quiz. Their average score was 76. A 24th student took a make-up quiz and scored 88. What is the overall class mean after including the make-up quiz?
+
+Follow the reasoning stages below:
+
+1. Recover the total score represented by the original class mean and number of students.
+2. Add the make-up student's score to obtain the new total.
+3. Divide by the new class size.
+4. Report the overall class mean.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+2,Descriptive Statistics,Education,Easy,Calculation,ch_summarizing_data_27_2,"Make-up exam
+
+In a class of 25 students, 24 of them took an exam 
+in class and 1 student took a make-up exam the following day. The professor graded the 
+first batch of 24 exams and found an average score of 74 points with a standard 
+deviation of 8.9 points. The student who took the make-up the following day scored 64 
+points on the exam.
+
+What is the new average?","\qt{Make-up exam\label{makeup_exam}} In a class of 25 students, 24 of them took an exam 
+in class and 1 student took a make-up exam the following day. The professor graded the 
+first batch of 24 exams and found an average score of 74 points with a standard 
+deviation of 8.9 points. The student who took the make-up the following day scored 64 
+points on the exam.
+\begin{parts}
+\item Does the new student's score increase or decrease the average score?
+\item What is the new average?
+\item Does the new student's score increase or decrease the standard deviation of the 
+scores?
+\end{parts}",A teacher has already graded 29 projects with a mean score of 82. One late project scores 70. Calculate the new mean score for all 30 projects.,,81.6,Original total = 29 × 82 = 2378. New total = 2378 + 70 = 2448. New mean = 2448 / 30 = 81.6.,A teacher has already graded 29 projects with a mean score of 82. One late project scores 70. Calculate the new mean score for all 30 projects.,"1. Use the original mean and number of graded projects to recover the original total score.
+2. Add the late project's score.
+3. Divide the updated total by the new number of projects.
+4. Report the new mean.","A teacher has already graded 29 projects with a mean score of 82. One late project scores 70. Calculate the new mean score for all 30 projects.
+
+Follow the reasoning stages below:
+
+1. Use the original mean and number of graded projects to recover the original total score.
+2. Add the late project's score.
+3. Divide the updated total by the new number of projects.
+4. Report the new mean.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+3,Descriptive Statistics,Education,Easy,Calculation,ch_summarizing_data_29,"TV watchers
+
+Students in an AP Statistics class 
+were asked how many hours of television they watch per week (including online 
+streaming). This sample yielded an average of 4.71 hours, with a standard 
+deviation of 4.18 hours. Is the distribution of number of hours students watch 
+television weekly symmetric? If not, what shape would you expect this distribution 
+to have? Explain your reasoning.","\qt{TV watchers\label{dist_shape_TV_watchers}} Students in an AP Statistics class 
+were asked how many hours of television they watch per week (including online 
+streaming). This sample yielded an average of 4.71 hours, with a standard 
+deviation of 4.18 hours. Is the distribution of number of hours students watch 
+television weekly symmetric? If not, what shape would you expect this distribution 
+to have? Explain your reasoning.","Eight students reported the following weekly study hours: 3, 4, 4, 5, 6, 6, 7, 9. Calculate the median and the range.",,Median = 5.5 hours; Range = 6 hours,"There are 8 observations, so the median is the average of the 4th and 5th values: (5 + 6)/2 = 5.5. Range = 9 − 3 = 6.","Eight students reported the following weekly study hours: 3, 4, 4, 5, 6, 6, 7, 9. Calculate the median and the range.","1. Order the observations and note the number of values.
+2. Locate the middle position(s) needed for the median.
+3. Identify the minimum and maximum for the range.
+4. Report the median and range with units.","Eight students reported the following weekly study hours: 3, 4, 4, 5, 6, 6, 7, 9. Calculate the median and the range.
+
+Follow the reasoning stages below:
+
+1. Order the observations and note the number of values.
+2. Locate the middle position(s) needed for the median.
+3. Identify the minimum and maximum for the range.
+4. Report the median and range with units.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+4,Descriptive Statistics,Education,Easy,Calculation,ch_summarizing_data_32,"Exam scores
+
+The average on a history exam 
+(scored out of 100 points) was 85, with a standard deviation of 15. Is the 
+distribution of the scores on this exam symmetric? If not, what shape would 
+you expect this distribution to have? Explain your reasoning.","\qt{Exam scores\label{dist_shape_exam_scores}} The average on a history exam 
+(scored out of 100 points) was 85, with a standard deviation of 15. Is the 
+distribution of the scores on this exam symmetric? If not, what shape would 
+you expect this distribution to have? Explain your reasoning.",A class exam has mean 68 and standard deviation 8. A student's score is 84. Calculate the student's z-score.,,z = 2.00,z = (x − mean) / SD = (84 − 68) / 8 = 16 / 8 = 2. The score is 2 standard deviations above the mean.,"A class exam has mean 68 and standard deviation 8. A student's score is 84. Calculate the student's z-score.
+
+Numerical precision:
+- Round the final z-score to 2 decimal places.","1. Identify the student's score, the class mean, and the standard deviation.
+2. Apply the standard-score formula using the difference between the score and the mean.
+3. Divide by the standard deviation and retain the sign.
+4. Report the z-score to 2 decimal places.","A class exam has mean 68 and standard deviation 8. A student's score is 84. Calculate the student's z-score.
+
+Numerical precision:
+- Round the final z-score to 2 decimal places.
+
+Follow the reasoning stages below:
+
+1. Identify the student's score, the class mean, and the standard deviation.
+2. Apply the standard-score formula using the difference between the score and the mean.
+3. Divide by the standard deviation and retain the sign.
+4. Report the z-score to 2 decimal places.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+5,Descriptive Statistics,Healthcare,Medium,Calculation,ch_inference_for_means_48,"Gaming and distracted eating, Part II
+
+The researchers from Exercise~[ref: gaming_distracted_eating_intake] also 
+investigated the effects of being distracted by a game on how much people eat. 
+The 22 patients in the treatment group who ate their lunch while playing 
+solitaire were asked to do a serial-order recall of the food lunch items they 
+ate. The average number of items recalled by the patients in this group was 4.
+9, with a standard deviation of 1.8. The average number of items recalled by 
+the patients in the control group (no distraction) was 6.1, with a standard 
+deviation of 1.8. Do these data provide strong evidence that the average number 
+of food items recalled by the patients in the treatment and control groups are 
+different?","\qt{Gaming and distracted eating, Part II\label{gaming_distracted_eating_recall}} 
+The researchers from Exercise~\ref{gaming_distracted_eating_intake} also 
+investigated the effects of being distracted by a game on how much people eat. 
+The 22 patients in the treatment group who ate their lunch while playing 
+solitaire were asked to do a serial-order recall of the food lunch items they 
+ate. The average number of items recalled by the patients in this group was 4.
+9, with a standard deviation of 1.8. The average number of items recalled by 
+the patients in the control group (no distraction) was 6.1, with a standard 
+deviation of 1.8. Do these data provide strong evidence that the average number 
+of food items recalled by the patients in the treatment and control groups are 
+different?","A clinic compares daily step counts for two groups of patients. Group A has n = 20, mean = 6,400 steps, SD = 1,200. Group B has n = 25, mean = 5,900 steps, SD = 1,500. Calculate the difference in group means and identify which group is more variable using the coefficient of variation.",,Mean difference = 500 steps; Group B is more variable,"Difference = 6400 − 5900 = 500 steps. CV_A = 1200/6400 = 0.1875. CV_B = 1500/5900 ≈ 0.254. Because Group B has the larger coefficient of variation, it is more variable relative to its mean.","A clinic compares daily step counts for two groups of patients. Group A has n = 20, mean = 6,400 steps, SD = 1,200. Group B has n = 25, mean = 5,900 steps, SD = 1,500. Calculate the difference in group means and identify which group is more variable using the coefficient of variation.","1. Compute the difference between the two group means.
+2. For each group, calculate relative variability using its standard deviation divided by its mean.
+3. Compare the two relative-variability values.
+4. Report the mean difference and identify the group with greater relative variability.","A clinic compares daily step counts for two groups of patients. Group A has n = 20, mean = 6,400 steps, SD = 1,200. Group B has n = 25, mean = 5,900 steps, SD = 1,500. Calculate the difference in group means and identify which group is more variable using the coefficient of variation.
+
+Follow the reasoning stages below:
+
+1. Compute the difference between the two group means.
+2. For each group, calculate relative variability using its standard deviation divided by its mean.
+3. Compare the two relative-variability values.
+4. Report the mean difference and identify the group with greater relative variability.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+6,Descriptive Statistics,Healthcare,Medium,Calculation,ch_inference_for_means_48,"Gaming and distracted eating, Part II
+
+The researchers from Exercise~[ref: gaming_distracted_eating_intake] also 
+investigated the effects of being distracted by a game on how much people eat. 
+The 22 patients in the treatment group who ate their lunch while playing 
+solitaire were asked to do a serial-order recall of the food lunch items they 
+ate. The average number of items recalled by the patients in this group was 4.
+9, with a standard deviation of 1.8. The average number of items recalled by 
+the patients in the control group (no distraction) was 6.1, with a standard 
+deviation of 1.8. Do these data provide strong evidence that the average number 
+of food items recalled by the patients in the treatment and control groups are 
+different?","\qt{Gaming and distracted eating, Part II\label{gaming_distracted_eating_recall}} 
+The researchers from Exercise~\ref{gaming_distracted_eating_intake} also 
+investigated the effects of being distracted by a game on how much people eat. 
+The 22 patients in the treatment group who ate their lunch while playing 
+solitaire were asked to do a serial-order recall of the food lunch items they 
+ate. The average number of items recalled by the patients in this group was 4.
+9, with a standard deviation of 1.8. The average number of items recalled by 
+the patients in the control group (no distraction) was 6.1, with a standard 
+deviation of 1.8. Do these data provide strong evidence that the average number 
+of food items recalled by the patients in the treatment and control groups are 
+different?","A hospital records recovery times, in days, for 9 patients after a minor procedure: 4, 5, 5, 6, 6, 7, 8, 10, 18. Calculate Q1, Q3, IQR, and use the 1.5 × IQR rule to decide whether 18 is an outlier.",,"Q1 = 5, Q3 = 9, IQR = 4; 18 is an outlier","Median is 6. Excluding the median, lower half is 4,5,5,6 so Q1 = (5+5)/2 = 5. Upper half is 7,8,10,18 so Q3 = (8+10)/2 = 9. IQR = 9 − 5 = 4. Upper fence = 9 + 1.5×4 = 15. Since 18 > 15, it is an outlier.","A hospital records recovery times, in days, for 9 patients after a minor procedure: 4, 5, 5, 6, 6, 7, 8, 10, 18. Calculate Q1, Q3, IQR, and use the 1.5 × IQR rule to decide whether 18 is an outlier.","1. Work with the ordered recovery-time data and identify the median.
+2. Determine Q1 and Q3 from the lower and upper halves using a consistent quartile convention.
+3. Compute the IQR and the upper outlier fence using 1.5 × IQR.
+4. Compare 18 with the fence and report Q1, Q3, IQR, and the outlier decision.","A hospital records recovery times, in days, for 9 patients after a minor procedure: 4, 5, 5, 6, 6, 7, 8, 10, 18. Calculate Q1, Q3, IQR, and use the 1.5 × IQR rule to decide whether 18 is an outlier.
+
+Follow the reasoning stages below:
+
+1. Work with the ordered recovery-time data and identify the median.
+2. Determine Q1 and Q3 from the lower and upper halves using a consistent quartile convention.
+3. Compute the IQR and the upper outlier fence using 1.5 × IQR.
+4. Compare 18 with the fence and report Q1, Q3, IQR, and the outlier decision.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+7,Descriptive Statistics,Healthcare,Medium,Calculation,ch_distributions_39_3,"Auto insurance premiums
+
+Suppose a 
+newspaper article states that the distribution of auto insurance premiums for 
+residents of California is approximately normal with a mean of $1,650. The 
+article also states that 25% of California residents pay more than $1,800.
+
+Identify the standard deviation of insurance premiums in California.","\qt{Auto insurance premiums\label{auto_insurance_premiums}} Suppose a 
+newspaper article states that the distribution of auto insurance premiums for 
+residents of California is approximately normal with a mean of \$1,650. The 
+article also states that 25\% of California residents pay more than \$1,800. 
+\begin{parts}
+\item What is the Z-score that corresponds to the top 25\% (or the $75^{th}$ 
+percentile) of the standard normal distribution?
+\item What is the mean insurance cost? What is the cutoff for the 75th 
+percentile?
+\item Identify the standard deviation of insurance premiums in California.
+\end{parts}",The distribution of monthly physiotherapy costs for patients in a city is approximately normal with mean £120. A local report says 25% of patients pay more than £147. Estimate the standard deviation of monthly physiotherapy costs. Use z = 0.674 for the 75th percentile.,,Approximately £40.1,"If 25% pay more than £147, then £147 is the 75th percentile. z = (147 − 120) / SD = 0.674. Therefore SD = 27 / 0.674 ≈ 40.1.","The distribution of monthly physiotherapy costs for patients in a city is approximately normal with mean £120. A local report says 25% of patients pay more than £147. Estimate the standard deviation of monthly physiotherapy costs. Use z = 0.674 for the 75th percentile.
+
+Numerical precision:
+- Keep full precision in intermediate calculations.
+- Round the final estimated standard deviation to 1 decimal place.","1. Translate the statement that 25% pay more than £147 into the corresponding percentile.
+2. Use the supplied standard-normal value for that percentile.
+3. Relate the percentile value, mean, and unknown standard deviation through the standard-score equation.
+4. Solve for and report the standard deviation.","The distribution of monthly physiotherapy costs for patients in a city is approximately normal with mean £120. A local report says 25% of patients pay more than £147. Estimate the standard deviation of monthly physiotherapy costs. Use z = 0.674 for the 75th percentile.
+
+Numerical precision:
+- Keep full precision in intermediate calculations.
+- Round the final estimated standard deviation to 1 decimal place.
+
+Follow the reasoning stages below:
+
+1. Translate the statement that 25% pay more than £147 into the corresponding percentile.
+2. Use the supplied standard-normal value for that percentile.
+3. Relate the percentile value, mean, and unknown standard deviation through the standard-score equation.
+4. Solve for and report the standard deviation.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+8,Descriptive Statistics,Finance,Medium,Interpretation,ch_distributions_39_3,"Auto insurance premiums
+
+Suppose a 
+newspaper article states that the distribution of auto insurance premiums for 
+residents of California is approximately normal with a mean of $1,650. The 
+article also states that 25% of California residents pay more than $1,800.
+
+Identify the standard deviation of insurance premiums in California.","\qt{Auto insurance premiums\label{auto_insurance_premiums}} Suppose a 
+newspaper article states that the distribution of auto insurance premiums for 
+residents of California is approximately normal with a mean of \$1,650. The 
+article also states that 25\% of California residents pay more than \$1,800. 
+\begin{parts}
+\item What is the Z-score that corresponds to the top 25\% (or the $75^{th}$ 
+percentile) of the standard normal distribution?
+\item What is the mean insurance cost? What is the cutoff for the 75th 
+percentile?
+\item Identify the standard deviation of insurance premiums in California.
+\end{parts}","A fintech app summarises monthly credit-card bills. The mean bill is £720, while the median bill is £560. A few customers have extremely high bills above £3,000. Interpret the likely shape of the distribution and state which summary, mean or median, better represents a typical customer.",,Right-skewed; the median better represents a typical customer,"The mean is much larger than the median because a small number of very high bills pull the mean upward. This indicates a right-skewed distribution. The median is more resistant to extreme high values, so it better describes a typical customer.","A fintech app summarises monthly credit-card bills. The mean bill is £720, while the median bill is £560. A few customers have extremely high bills above £3,000. Interpret the likely shape of the distribution and state which summary, mean or median, better represents a typical customer.","1. Compare the numerical values of the mean and median.
+2. Consider the additional information given about the observed bills.
+3. Use these features to characterize the distribution.
+4. Evaluate which summary measure is more appropriate for the stated purpose and justify the choice.","A fintech app summarises monthly credit-card bills. The mean bill is £720, while the median bill is £560. A few customers have extremely high bills above £3,000. Interpret the likely shape of the distribution and state which summary, mean or median, better represents a typical customer.
+
+Follow the reasoning stages below:
+
+1. Compare the numerical values of the mean and median.
+2. Consider the additional information given about the observed bills.
+3. Use these features to characterize the distribution.
+4. Evaluate which summary measure is more appropriate for the stated purpose and justify the choice.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+9,Descriptive Statistics,Finance,Medium,Interpretation,ch_summarizing_data_30_1,"A new statistic
+
+The statistic $xmedian$ can 
+be used as a measure of skewness. Suppose we have a distribution where all 
+observations are greater than 0, $x_i > 0$. What is the expected shape of 
+the distribution under the following conditions? Explain your reasoning.
+
+$xmedian = 1$","\qt{A new statistic\label{new_stat}} The statistic $\frac{\bar{x}}{median}$ can 
+be used as a measure of skewness. Suppose we have a distribution where all 
+observations are greater than 0, $x_i > 0$. What is the expected shape of 
+the distribution under the following conditions? Explain your reasoning.
+\begin{parts}
+\item $\frac{\bar{x}}{median} = 1$
+\item $\frac{\bar{x}}{median} < 1$
+\item $\frac{\bar{x}}{median} > 1$
+\end{parts}",Two investment newsletters report annual returns for the same fund. Newsletter A gives a mean return of 9.5%. Newsletter B gives a median return of 5.0% and notes several unusually large positive years. Explain why the mean and median differ and what this says about the return distribution.,,The return distribution is likely right-skewed: unusually large positive returns pull the mean above the median. The median is more resistant to those extreme positive years.,"When a few large positive returns occur, they increase the mean more than the median. A mean substantially above the median is a common sign of right skew. The median is more representative of a typical year if the goal is to avoid the influence of extreme returns.",Two investment newsletters report annual returns for the same fund. Newsletter A gives a mean return of 9.5%. Newsletter B gives a median return of 5.0% and notes several unusually large positive years. Explain why the mean and median differ and what this says about the return distribution.,"1. Compare the reported mean return with the reported median return.
+2. Consider the effect of unusually large positive years on each measure of center.
+3. Infer the likely shape of the return distribution.
+4. Explain why the two summaries differ without treating either measure as inherently incorrect.","Two investment newsletters report annual returns for the same fund. Newsletter A gives a mean return of 9.5%. Newsletter B gives a median return of 5.0% and notes several unusually large positive years. Explain why the mean and median differ and what this says about the return distribution.
+
+Follow the reasoning stages below:
+
+1. Compare the reported mean return with the reported median return.
+2. Consider the effect of unusually large positive years on each measure of center.
+3. Infer the likely shape of the return distribution.
+4. Explain why the two summaries differ without treating either measure as inherently incorrect.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+10,Descriptive Statistics,Social Survey,Medium,Multiple Choice,ch_distributions_41_3,"Married women
+
+The American Community Survey 
+estimates that 47.1% of women ages 15 years and over are married.
+[source: marWomenACS]
+
+On average, how many women would you expect to sample before selecting 
+a married woman? What is the standard deviation?","\qt{Married women} \label{married_women} The American Community Survey 
+estimates that 47.1\% of women ages 15 years and over are married.
+\footfullcite{marWomenACS}
+\begin{parts}
+\item We randomly select three women between these ages. What is the 
+probability that the third woman selected is the only one who is married?
+\item What is the probability that all three randomly selected women are 
+married?
+\item On average, how many women would you expect to sample before selecting 
+a married woman? What is the standard deviation?
+\item If the proportion of married women was actually 30\%, how many women 
+would you expect to sample before selecting a married woman? What is the 
+standard deviation?
+\item Based on your answers to parts (c) and (d), how does decreasing the 
+probability of an event affect the mean and standard deviation of the wait 
+time until success?
+\end{parts}","A survey asks residents how many community meetings they attended last year. The responses are strongly right-skewed because most residents attended 0 or 1 meeting, while a few attended more than 20. Which statements are appropriate? Select all that apply.","A. The mean is likely smaller than the median.
+B. The mean is likely larger than the median.
+C. The median is more resistant to the extreme high values.
+D. The range is not affected by the extreme high values.","B, C","In a right-skewed distribution, a few large values pull the mean to the right, so the mean is usually larger than the median. The median is resistant to extreme values. The range is affected because the maximum value changes.","A survey asks residents how many community meetings they attended last year. The responses are strongly right-skewed because most residents attended 0 or 1 meeting, while a few attended more than 20. Which statements are appropriate? Select all that apply.
+
+Options:
+A. The mean is likely smaller than the median.
+B. The mean is likely larger than the median.
+C. The median is more resistant to the extreme high values.
+D. The range is not affected by the extreme high values.","1. Use the description of the distribution to identify its direction of skew.
+2. Consider how extreme high observations affect the listed summary measures.
+3. Evaluate each statement independently.
+4. Select all statements supported by the distributional description.","A survey asks residents how many community meetings they attended last year. The responses are strongly right-skewed because most residents attended 0 or 1 meeting, while a few attended more than 20. Which statements are appropriate? Select all that apply.
+
+Options:
+A. The mean is likely smaller than the median.
+B. The mean is likely larger than the median.
+C. The median is more resistant to the extreme high values.
+D. The range is not affected by the extreme high values.
+
+Follow the reasoning stages below:
+
+1. Use the description of the distribution to identify its direction of skew.
+2. Consider how extreme high observations affect the listed summary measures.
+3. Evaluate each statement independently.
+4. Select all statements supported by the distributional description.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+11,Descriptive Statistics,Social Survey,Medium,Multiple Choice,ch_distributions_41_4,"Married women
+
+The American Community Survey 
+estimates that 47.1% of women ages 15 years and over are married.
+[source: marWomenACS]
+
+If the proportion of married women was actually 30%, how many women 
+would you expect to sample before selecting a married woman? What is the 
+standard deviation?","\qt{Married women} \label{married_women} The American Community Survey 
+estimates that 47.1\% of women ages 15 years and over are married.
+\footfullcite{marWomenACS}
+\begin{parts}
+\item We randomly select three women between these ages. What is the 
+probability that the third woman selected is the only one who is married?
+\item What is the probability that all three randomly selected women are 
+married?
+\item On average, how many women would you expect to sample before selecting 
+a married woman? What is the standard deviation?
+\item If the proportion of married women was actually 30\%, how many women 
+would you expect to sample before selecting a married woman? What is the 
+standard deviation?
+\item Based on your answers to parts (c) and (d), how does decreasing the 
+probability of an event affect the mean and standard deviation of the wait 
+time until success?
+\end{parts}","A poll records the number of online forms completed by 200 respondents in a month. The five-number summary is min = 0, Q1 = 1, median = 2, Q3 = 4, max = 15. Which statements are correct? Select all that apply.","A. The IQR is 3.
+B. At least 75% of respondents completed 4 or fewer forms.
+C. The median is 4.
+D. The maximum value suggests a possible long right tail.","A, B, D","IQR = Q3 − Q1 = 4 − 1 = 3. Since Q3 = 4, about 75% of observations are at or below 4. The median is 2, not 4. The large gap from Q3 = 4 to max = 15 suggests a possible long right tail.","A poll records the number of online forms completed by 200 respondents in a month. The five-number summary is min = 0, Q1 = 1, median = 2, Q3 = 4, max = 15. Which statements are correct? Select all that apply.
+
+Options:
+A. The IQR is 3.
+B. At least 75% of respondents completed 4 or fewer forms.
+C. The median is 4.
+D. The maximum value suggests a possible long right tail.","1. Use the five-number summary to compute the interquartile range.
+2. Interpret the quartiles in terms of the ordered observations.
+3. Compare the median and maximum with the stated claims.
+4. Evaluate all options and select every statement supported by the summary.","A poll records the number of online forms completed by 200 respondents in a month. The five-number summary is min = 0, Q1 = 1, median = 2, Q3 = 4, max = 15. Which statements are correct? Select all that apply.
+
+Options:
+A. The IQR is 3.
+B. At least 75% of respondents completed 4 or fewer forms.
+C. The median is 4.
+D. The maximum value suggests a possible long right tail.
+
+Follow the reasoning stages below:
+
+1. Use the five-number summary to compute the interquartile range.
+2. Interpret the quartiles in terms of the ordered observations.
+3. Compare the median and maximum with the stated claims.
+4. Evaluate all options and select every statement supported by the summary.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+12,Descriptive Statistics,General Everyday,Hard,Short Answer,ch_summarizing_data_30_2,"A new statistic
+
+The statistic $xmedian$ can 
+be used as a measure of skewness. Suppose we have a distribution where all 
+observations are greater than 0, $x_i > 0$. What is the expected shape of 
+the distribution under the following conditions? Explain your reasoning.
+
+$xmedian < 1$","\qt{A new statistic\label{new_stat}} The statistic $\frac{\bar{x}}{median}$ can 
+be used as a measure of skewness. Suppose we have a distribution where all 
+observations are greater than 0, $x_i > 0$. What is the expected shape of 
+the distribution under the following conditions? Explain your reasoning.
+\begin{parts}
+\item $\frac{\bar{x}}{median} = 1$
+\item $\frac{\bar{x}}{median} < 1$
+\item $\frac{\bar{x}}{median} > 1$
+\end{parts}","A food-delivery app reports delivery times for 1,000 orders. The mean is 31 minutes and the median is 24 minutes. The company wants to advertise a single number as the 'typical delivery time'. Write a short answer explaining which statistic you would recommend and why. Mention the role of skewness and outliers.",,"Recommend the median, because delivery times are likely right-skewed and long delays pull the mean upward.","A strong answer should explain that the mean being larger than the median suggests right skew, probably caused by a minority of very long delivery times. The median is resistant to those outliers and better represents the central experience of a typical customer. The mean is still useful for operational planning, but it is less appropriate for advertising a typical time.","A food-delivery app reports delivery times for 1,000 orders. The mean is 31 minutes and the median is 24 minutes. The company wants to advertise a single number as the 'typical delivery time'. Write a short answer explaining which statistic you would recommend and why. Mention the role of skewness and outliers.","1. Compare the reported mean and median.
+2. Use their difference to assess what the delivery-time distribution may look like.
+3. Consider the strengths and limitations of each statistic for describing a typical order.
+4. Recommend one statistic for the company's stated purpose and justify the choice, including the requested discussion of skewness and outliers.","A food-delivery app reports delivery times for 1,000 orders. The mean is 31 minutes and the median is 24 minutes. The company wants to advertise a single number as the 'typical delivery time'. Write a short answer explaining which statistic you would recommend and why. Mention the role of skewness and outliers.
+
+Follow the reasoning stages below:
+
+1. Compare the reported mean and median.
+2. Use their difference to assess what the delivery-time distribution may look like.
+3. Consider the strengths and limitations of each statistic for describing a typical order.
+4. Recommend one statistic for the company's stated purpose and justify the choice, including the requested discussion of skewness and outliers.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+13,Descriptive Statistics,General Everyday,Hard,Short Answer,ch_summarizing_data_30_3,"A new statistic
+
+The statistic $xmedian$ can 
+be used as a measure of skewness. Suppose we have a distribution where all 
+observations are greater than 0, $x_i > 0$. What is the expected shape of 
+the distribution under the following conditions? Explain your reasoning.
+
+$xmedian > 1$","\qt{A new statistic\label{new_stat}} The statistic $\frac{\bar{x}}{median}$ can 
+be used as a measure of skewness. Suppose we have a distribution where all 
+observations are greater than 0, $x_i > 0$. What is the expected shape of 
+the distribution under the following conditions? Explain your reasoning.
+\begin{parts}
+\item $\frac{\bar{x}}{median} = 1$
+\item $\frac{\bar{x}}{median} < 1$
+\item $\frac{\bar{x}}{median} > 1$
+\end{parts}",A landlord compares monthly electricity usage for apartments. Building A has mean 410 kWh and SD 120 kWh. Building B has mean 260 kWh and SD 90 kWh. Write a short answer comparing variability in absolute terms and relative terms. Which building is more variable relative to its typical usage?,,Building A has greater absolute variability because its SD is 120 kWh versus 90 kWh for Building B. Building B has greater relative variability because CV_A ≈ 0.293 while CV_B ≈ 0.346.,"Absolute variability is compared using SD: Building A has SD 120, larger than Building B's SD 90. Relative variability should account for different means: CV_A = 120/410 ≈ 0.293, while CV_B = 90/260 ≈ 0.346. Therefore Building B is more variable relative to its typical usage.","A landlord compares monthly electricity usage for apartments. Building A has mean 410 kWh and SD 120 kWh. Building B has mean 260 kWh and SD 90 kWh. Write a short answer comparing variability in absolute terms and relative terms. Which building is more variable relative to its typical usage?
+
+Numerical precision:
+- Keep full precision in intermediate calculations.
+- Report coefficients of variation to 3 decimal places.","1. Compare absolute variability using the two standard deviations.
+2. Compute a relative measure of variability for each building using its standard deviation and mean.
+3. Compare the two relative-variability values.
+4. State separately which building has greater absolute variability and which has greater relative variability.","A landlord compares monthly electricity usage for apartments. Building A has mean 410 kWh and SD 120 kWh. Building B has mean 260 kWh and SD 90 kWh. Write a short answer comparing variability in absolute terms and relative terms. Which building is more variable relative to its typical usage?
+
+Numerical precision:
+- Keep full precision in intermediate calculations.
+- Report coefficients of variation to 3 decimal places.
+
+Follow the reasoning stages below:
+
+1. Compare absolute variability using the two standard deviations.
+2. Compute a relative measure of variability for each building using its standard deviation and mean.
+3. Compare the two relative-variability values.
+4. State separately which building has greater absolute variability and which has greater relative variability.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+14,Descriptive Statistics,Transportation,Easy,Single Choice,ch_distributions_38_2,"Speeding on the I-5, Part II
+
+Exercise~[ref: speeding_i5_intro] states that the distribution of speeds of 
+cars traveling on the Interstate 5 Freeway (I-5) in California is nearly 
+normal with a mean of 72.6 miles/hour and a standard deviation of 4.78 
+miles/hour. The speed limit on this stretch of the I-5 is 70 miles/hour.
+
+On average, how many cars would the highway patrol officer expect to 
+watch until the first car that is speeding? What is the standard deviation of 
+the number of cars he would expect to watch?","\qt{Speeding on the I-5, Part II\label{speeding_i5_geometric}} 
+Exercise~\ref{speeding_i5_intro} states that the distribution of speeds of 
+cars traveling on the Interstate 5 Freeway (I-5) in California is nearly 
+normal with a mean of 72.6 miles/hour and a standard deviation of 4.78 
+miles/hour. The speed limit on this stretch of the I-5 is 70 miles/hour.
+\begin{parts}
+\item A highway patrol officer is hidden on the side of the freeway. What is 
+the probability that 5~cars pass and none are speeding? Assume that the 
+speeds of the cars are independent of each other.
+\item On average, how many cars would the highway patrol officer expect to 
+watch until the first car that is speeding? What is the standard deviation of 
+the number of cars he would expect to watch?
+\end{parts}","A bus company records the number of minutes that buses are late on one route. The data are: 0, 2, 3, 5, 10. What is the mean delay?","A. 3 minutes
+B. 4 minutes
+C. 5 minutes
+D. 10 minutes",B,Mean = (0 + 2 + 3 + 5 + 10) / 5 = 20 / 5 = 4 minutes.,"A bus company records the number of minutes that buses are late on one route. The data are: 0, 2, 3, 5, 10. What is the mean delay?
+
+Options:
+A. 3 minutes
+B. 4 minutes
+C. 5 minutes
+D. 10 minutes","1. Add the five recorded delays.
+2. Divide the total by the number of observations.
+3. Compare the result with each answer option.
+4. Select the matching option.","A bus company records the number of minutes that buses are late on one route. The data are: 0, 2, 3, 5, 10. What is the mean delay?
+
+Options:
+A. 3 minutes
+B. 4 minutes
+C. 5 minutes
+D. 10 minutes
+
+Follow the reasoning stages below:
+
+1. Add the five recorded delays.
+2. Divide the total by the number of observations.
+3. Compare the result with each answer option.
+4. Select the matching option.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+15,Descriptive Statistics,Transportation,Easy,Single Choice,ch_distributions_38_2,"Speeding on the I-5, Part II
+
+Exercise~[ref: speeding_i5_intro] states that the distribution of speeds of 
+cars traveling on the Interstate 5 Freeway (I-5) in California is nearly 
+normal with a mean of 72.6 miles/hour and a standard deviation of 4.78 
+miles/hour. The speed limit on this stretch of the I-5 is 70 miles/hour.
+
+On average, how many cars would the highway patrol officer expect to 
+watch until the first car that is speeding? What is the standard deviation of 
+the number of cars he would expect to watch?","\qt{Speeding on the I-5, Part II\label{speeding_i5_geometric}} 
+Exercise~\ref{speeding_i5_intro} states that the distribution of speeds of 
+cars traveling on the Interstate 5 Freeway (I-5) in California is nearly 
+normal with a mean of 72.6 miles/hour and a standard deviation of 4.78 
+miles/hour. The speed limit on this stretch of the I-5 is 70 miles/hour.
+\begin{parts}
+\item A highway patrol officer is hidden on the side of the freeway. What is 
+the probability that 5~cars pass and none are speeding? Assume that the 
+speeds of the cars are independent of each other.
+\item On average, how many cars would the highway patrol officer expect to 
+watch until the first car that is speeding? What is the standard deviation of 
+the number of cars he would expect to watch?
+\end{parts}","A train operator records five trip times, in minutes: 41, 43, 44, 46, 56. Which statistic is most affected by the unusually long 56-minute trip?","A. Median
+B. Q1
+C. Mean
+D. Mode",C,"The mean uses every value and is pulled upward by unusually large observations. The median and quartiles are more resistant to a single high value, and there is no repeated value for a useful mode here.","A train operator records five trip times, in minutes: 41, 43, 44, 46, 56. Which statistic is most affected by the unusually long 56-minute trip?
+
+Options:
+A. Median
+B. Q1
+C. Mean
+D. Mode","1. Identify the unusually large trip time in the data.
+2. Consider how a single high value affects each listed summary statistic.
+3. Compare the sensitivity of the candidate summaries.
+4. Select the statistic most affected by the unusually long trip.","A train operator records five trip times, in minutes: 41, 43, 44, 46, 56. Which statistic is most affected by the unusually long 56-minute trip?
+
+Options:
+A. Median
+B. Q1
+C. Mean
+D. Mode
+
+Follow the reasoning stages below:
+
+1. Identify the unusually large trip time in the data.
+2. Consider how a single high value affects each listed summary statistic.
+3. Compare the sensitivity of the candidate summaries.
+4. Select the statistic most affected by the unusually long trip.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3

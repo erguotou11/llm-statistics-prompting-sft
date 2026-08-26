@@ -1,0 +1,1083 @@
+﻿No,Knowledge Area,Scenario,Difficulty,Question Type,Source ID,original_text,raw_latex,Adapted Question,Options,Correct Answer,Solution / Key Steps,prompt_direct,cot_reasoning_scaffold,prompt_cot,student_tutor_strategy,tutor_model,tutor_max_turns
+1,ANOVA,Healthcare,Medium,Calculation,ch_inference_for_means_54_1,"Torque on a rusty bolt
+
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.[source: youtube:torque_on_rusty_bolt]
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+
+0.8ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot
+
+Do you think it is reasonable to apply ANOVA in this case?","\qt{Torque on a rusty bolt\label{torque_on_rusty_bolt}}
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.\footfullcite{youtube:torque_on_rusty_bolt}
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+\begin{center}
+\FigureFullPath[A side-by-side dot plot is shown for ""Torque required to loosen a rusty bolt, in foot-pounds"". There are only 2 to 4 observations per option, which are roughly as follows: Heat (82, 98), WD-40 (106, 118, 129, 131), Royal Purple (108, 114, 122, 132), PB Blaster (110, 124, 127, 128), Liquid Wrench (85, 88, 98, 114), AeroKroil (107, 125, 132, 134), Acetone/ATF (105, 107, 114, 129), and ""none"" (110, 123, 129, 142).)]{0.8}{ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot}
+\end{center}
+\begin{parts}
+\item\label{torque_on_rusty_bolt_appropriate}
+    Do you think it is reasonable to apply ANOVA in this case?
+\item
+    Regardless of your answer in
+    part~(\ref{torque_on_rusty_bolt_appropriate}),
+    describe hypotheses for ANOVA in this context,
+    and use the table below to carry out the test.
+    Give your conclusion in the context of the data.
+    \begin{center}
+    \begin{tabular}{lrrrrr}
+    \hline
+    & Df & Sum Sq & Mean Sq & F value & Pr($>$F) \\ 
+    \hline
+    treatment & 7 & 3603.43 & 514.78 & 4.03 & 0.0056 \\ 
+    Residuals & 22 & 2812.80 & 127.85 &  &  \\ 
+    \hline
+    \end{tabular}
+    \end{center}
+\item\label{torque_on_rusty_bolt_pvalues}
+    The table below are p-values for pairwise $t$-tests
+    comparing each of the different groups.
+    These p-values have not been corrected for multiple
+    comparisons.
+    Which pair of groups appears most likely to represent
+    a difference?
+    \begin{center}\footnotesize
+    \begin{tabular}{l ccc ccc c}
+    \hline
+    & AeroKroil & Heat & Liquid Wrench & none &
+        PB Blaster & Royal Purple & WD-40 \\ 
+    \hline
+    Acetone/ATF & 0.2026 & 0.0308 & 0.0476 & 0.1542 &
+        0.3294 & 0.5222 & 0.3744 \\ 
+    AeroKroil &  & 0.0027 & 0.0025 & 0.8723 & 0.7551 &
+        0.5143 & 0.6883 \\ 
+    Heat &  &  & 0.5580 & 0.0020 & 0.0050 & 0.0096 &
+        0.0059 \\ 
+    Liquid Wrench &  &  &  & 0.0017 & 0.0053 &
+        0.0117 & 0.0065 \\ 
+    none &  &  &  &  & 0.6371 & 0.4180 & 0.5751 \\ 
+    PB Blaster &  &  &  &  &  & 0.7318 & 0.9286 \\ 
+    Royal Purple &  &  &  &  &  &  & 0.8000 \\
+    \hline
+    \end{tabular}
+    \end{center}
+\item
+    There are 28 p-values shown in the table in
+    part~(\ref{torque_on_rusty_bolt_pvalues}).
+    Determine if any of them are statistically
+    significant after correcting for multiple
+    comparisons.
+    If so, which one(s)?
+    Explain your answer.
+\end{parts}","A hospital team compares four wound-care protocols by recording recovery time in days. Lower values mean faster recovery. Protocol A: 8, 9, 7, 8; Protocol B: 6, 5, 7, 6; Protocol C: 10, 9, 11, 10; Protocol D: 7, 8, 6, 7. Use a one-way ANOVA to test whether the mean recovery time is the same for all four protocols. Calculate the F statistic and state the conclusion at the 5% level.",,F = 17.50; reject H0,"Compute group means: A=8, B=6, C=10, D=7, grand mean=7.75. SSB=35.00, SSW=8.00, df_between=3, df_within=12. MSB=11.67 and MSW=0.67, so F=11.67/0.67=17.50. Since the p-value is far below 0.05, reject H0: at least one protocol has a different mean recovery time.","A hospital team compares four wound-care protocols by recording recovery time in days. Lower values mean faster recovery. Protocol A: 8, 9, 7, 8; Protocol B: 6, 5, 7, 6; Protocol C: 10, 9, 11, 10; Protocol D: 7, 8, 6, 7. Use a one-way ANOVA to test whether the mean recovery time is the same for all four protocols. Calculate the F statistic and state the conclusion at the 5% level.
+
+Numerical precision:
+- Keep full precision in intermediate calculations.
+- Round final ANOVA quantities requested in the question to 2 decimal places.","1. State the one-way ANOVA null and alternative hypotheses for the four protocol means.
+2. Compute the four group means and the grand mean.
+3. Compute the between-group and within-group sums of squares, then their degrees of freedom and mean squares.
+4. Calculate F = MS_between / MS_within and use the 5% level to state the conclusion in context.","A hospital team compares four wound-care protocols by recording recovery time in days. Lower values mean faster recovery. Protocol A: 8, 9, 7, 8; Protocol B: 6, 5, 7, 6; Protocol C: 10, 9, 11, 10; Protocol D: 7, 8, 6, 7. Use a one-way ANOVA to test whether the mean recovery time is the same for all four protocols. Calculate the F statistic and state the conclusion at the 5% level.
+
+Numerical precision:
+- Keep full precision in intermediate calculations.
+- Round final ANOVA quantities requested in the question to 2 decimal places.
+
+Follow the reasoning stages below:
+
+1. State the one-way ANOVA null and alternative hypotheses for the four protocol means.
+2. Compute the four group means and the grand mean.
+3. Compute the between-group and within-group sums of squares, then their degrees of freedom and mean squares.
+4. Calculate F = MS_between / MS_within and use the 5% level to state the conclusion in context.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+2,ANOVA,Healthcare,Medium,Calculation,ch_inference_for_means_54_1,"Torque on a rusty bolt
+
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.[source: youtube:torque_on_rusty_bolt]
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+
+0.8ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot
+
+Do you think it is reasonable to apply ANOVA in this case?","\qt{Torque on a rusty bolt\label{torque_on_rusty_bolt}}
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.\footfullcite{youtube:torque_on_rusty_bolt}
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+\begin{center}
+\FigureFullPath[A side-by-side dot plot is shown for ""Torque required to loosen a rusty bolt, in foot-pounds"". There are only 2 to 4 observations per option, which are roughly as follows: Heat (82, 98), WD-40 (106, 118, 129, 131), Royal Purple (108, 114, 122, 132), PB Blaster (110, 124, 127, 128), Liquid Wrench (85, 88, 98, 114), AeroKroil (107, 125, 132, 134), Acetone/ATF (105, 107, 114, 129), and ""none"" (110, 123, 129, 142).)]{0.8}{ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot}
+\end{center}
+\begin{parts}
+\item\label{torque_on_rusty_bolt_appropriate}
+    Do you think it is reasonable to apply ANOVA in this case?
+\item
+    Regardless of your answer in
+    part~(\ref{torque_on_rusty_bolt_appropriate}),
+    describe hypotheses for ANOVA in this context,
+    and use the table below to carry out the test.
+    Give your conclusion in the context of the data.
+    \begin{center}
+    \begin{tabular}{lrrrrr}
+    \hline
+    & Df & Sum Sq & Mean Sq & F value & Pr($>$F) \\ 
+    \hline
+    treatment & 7 & 3603.43 & 514.78 & 4.03 & 0.0056 \\ 
+    Residuals & 22 & 2812.80 & 127.85 &  &  \\ 
+    \hline
+    \end{tabular}
+    \end{center}
+\item\label{torque_on_rusty_bolt_pvalues}
+    The table below are p-values for pairwise $t$-tests
+    comparing each of the different groups.
+    These p-values have not been corrected for multiple
+    comparisons.
+    Which pair of groups appears most likely to represent
+    a difference?
+    \begin{center}\footnotesize
+    \begin{tabular}{l ccc ccc c}
+    \hline
+    & AeroKroil & Heat & Liquid Wrench & none &
+        PB Blaster & Royal Purple & WD-40 \\ 
+    \hline
+    Acetone/ATF & 0.2026 & 0.0308 & 0.0476 & 0.1542 &
+        0.3294 & 0.5222 & 0.3744 \\ 
+    AeroKroil &  & 0.0027 & 0.0025 & 0.8723 & 0.7551 &
+        0.5143 & 0.6883 \\ 
+    Heat &  &  & 0.5580 & 0.0020 & 0.0050 & 0.0096 &
+        0.0059 \\ 
+    Liquid Wrench &  &  &  & 0.0017 & 0.0053 &
+        0.0117 & 0.0065 \\ 
+    none &  &  &  &  & 0.6371 & 0.4180 & 0.5751 \\ 
+    PB Blaster &  &  &  &  &  & 0.7318 & 0.9286 \\ 
+    Royal Purple &  &  &  &  &  &  & 0.8000 \\
+    \hline
+    \end{tabular}
+    \end{center}
+\item
+    There are 28 p-values shown in the table in
+    part~(\ref{torque_on_rusty_bolt_pvalues}).
+    Determine if any of them are statistically
+    significant after correcting for multiple
+    comparisons.
+    If so, which one(s)?
+    Explain your answer.
+\end{parts}","A clinic compares three physiotherapy programmes using pain-reduction scores after two weeks. Higher scores mean greater improvement. Programme A: 4, 5, 6, 5, 4; Programme B: 7, 8, 6, 7, 8; Programme C: 3, 4, 2, 3, 4. Use a one-way ANOVA to test whether the mean improvement differs between programmes. Calculate the F statistic and give the 5% conclusion.",,F = 28.95; reject H0,"The group means are A=4.8, B=7.2, C=3.2, and the grand mean is 5.07. SSB=40.53 and SSW=8.40. With df_between=2 and df_within=12, MSB=20.27 and MSW=0.70. Therefore F=20.27/0.70=28.95. The result is significant at 5%, so the mean improvement is not the same for all programmes.","A clinic compares three physiotherapy programmes using pain-reduction scores after two weeks. Higher scores mean greater improvement. Programme A: 4, 5, 6, 5, 4; Programme B: 7, 8, 6, 7, 8; Programme C: 3, 4, 2, 3, 4. Use a one-way ANOVA to test whether the mean improvement differs between programmes. Calculate the F statistic and give the 5% conclusion.
+
+Numerical precision:
+- Keep full precision in intermediate calculations.
+- Round final ANOVA quantities requested in the question to 2 decimal places.","1. State the ANOVA hypotheses for the three programme mean improvement scores.
+2. Compute each programme mean and the grand mean.
+3. Calculate the between-group and within-group sums of squares, degrees of freedom, and mean squares.
+4. Form the F statistic and give the 5% conclusion about whether all programme means are equal.","A clinic compares three physiotherapy programmes using pain-reduction scores after two weeks. Higher scores mean greater improvement. Programme A: 4, 5, 6, 5, 4; Programme B: 7, 8, 6, 7, 8; Programme C: 3, 4, 2, 3, 4. Use a one-way ANOVA to test whether the mean improvement differs between programmes. Calculate the F statistic and give the 5% conclusion.
+
+Numerical precision:
+- Keep full precision in intermediate calculations.
+- Round final ANOVA quantities requested in the question to 2 decimal places.
+
+Follow the reasoning stages below:
+
+1. State the ANOVA hypotheses for the three programme mean improvement scores.
+2. Compute each programme mean and the grand mean.
+3. Calculate the between-group and within-group sums of squares, degrees of freedom, and mean squares.
+4. Form the F statistic and give the 5% conclusion about whether all programme means are equal.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+3,ANOVA,Education,Medium,Interpretation,ch_inference_for_means_54_1,"Torque on a rusty bolt
+
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.[source: youtube:torque_on_rusty_bolt]
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+
+0.8ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot
+
+Do you think it is reasonable to apply ANOVA in this case?","\qt{Torque on a rusty bolt\label{torque_on_rusty_bolt}}
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.\footfullcite{youtube:torque_on_rusty_bolt}
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+\begin{center}
+\FigureFullPath[A side-by-side dot plot is shown for ""Torque required to loosen a rusty bolt, in foot-pounds"". There are only 2 to 4 observations per option, which are roughly as follows: Heat (82, 98), WD-40 (106, 118, 129, 131), Royal Purple (108, 114, 122, 132), PB Blaster (110, 124, 127, 128), Liquid Wrench (85, 88, 98, 114), AeroKroil (107, 125, 132, 134), Acetone/ATF (105, 107, 114, 129), and ""none"" (110, 123, 129, 142).)]{0.8}{ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot}
+\end{center}
+\begin{parts}
+\item\label{torque_on_rusty_bolt_appropriate}
+    Do you think it is reasonable to apply ANOVA in this case?
+\item
+    Regardless of your answer in
+    part~(\ref{torque_on_rusty_bolt_appropriate}),
+    describe hypotheses for ANOVA in this context,
+    and use the table below to carry out the test.
+    Give your conclusion in the context of the data.
+    \begin{center}
+    \begin{tabular}{lrrrrr}
+    \hline
+    & Df & Sum Sq & Mean Sq & F value & Pr($>$F) \\ 
+    \hline
+    treatment & 7 & 3603.43 & 514.78 & 4.03 & 0.0056 \\ 
+    Residuals & 22 & 2812.80 & 127.85 &  &  \\ 
+    \hline
+    \end{tabular}
+    \end{center}
+\item\label{torque_on_rusty_bolt_pvalues}
+    The table below are p-values for pairwise $t$-tests
+    comparing each of the different groups.
+    These p-values have not been corrected for multiple
+    comparisons.
+    Which pair of groups appears most likely to represent
+    a difference?
+    \begin{center}\footnotesize
+    \begin{tabular}{l ccc ccc c}
+    \hline
+    & AeroKroil & Heat & Liquid Wrench & none &
+        PB Blaster & Royal Purple & WD-40 \\ 
+    \hline
+    Acetone/ATF & 0.2026 & 0.0308 & 0.0476 & 0.1542 &
+        0.3294 & 0.5222 & 0.3744 \\ 
+    AeroKroil &  & 0.0027 & 0.0025 & 0.8723 & 0.7551 &
+        0.5143 & 0.6883 \\ 
+    Heat &  &  & 0.5580 & 0.0020 & 0.0050 & 0.0096 &
+        0.0059 \\ 
+    Liquid Wrench &  &  &  & 0.0017 & 0.0053 &
+        0.0117 & 0.0065 \\ 
+    none &  &  &  &  & 0.6371 & 0.4180 & 0.5751 \\ 
+    PB Blaster &  &  &  &  &  & 0.7318 & 0.9286 \\ 
+    Royal Purple &  &  &  &  &  &  & 0.8000 \\
+    \hline
+    \end{tabular}
+    \end{center}
+\item
+    There are 28 p-values shown in the table in
+    part~(\ref{torque_on_rusty_bolt_pvalues}).
+    Determine if any of them are statistically
+    significant after correcting for multiple
+    comparisons.
+    If so, which one(s)?
+    Explain your answer.
+\end{parts}","A lecturer compares final quiz scores from three teaching formats: live lecture, recorded video, and flipped classroom. The one-way ANOVA output is F(2, 87)=6.42 with p=0.0025. Interpret this result in context. Be clear about what the ANOVA does and does not tell us.",,There is evidence that at least one teaching-format mean differs; ANOVA alone does not identify which pair differs.,"Because p=0.0025 < 0.05, reject the null hypothesis that the three population mean quiz scores are equal. In context, the teaching format appears to be associated with different average quiz performance. However, the ANOVA result only says that at least one mean is different; it does not identify which formats differ. A post-hoc comparison, such as Tukey's HSD, would be needed for pairwise differences.","A lecturer compares final quiz scores from three teaching formats: live lecture, recorded video, and flipped classroom. The one-way ANOVA output is F(2, 87)=6.42 with p=0.0025. Interpret this result in context. Be clear about what the ANOVA does and does not tell us.","1. Use the reported test statistic and p-value to make the overall ANOVA decision.
+2. Translate that decision into the teaching-format context.
+3. Consider carefully the scope of conclusions supported by an omnibus ANOVA.
+4. Explain whether any additional analysis would be needed for more specific group comparisons.","A lecturer compares final quiz scores from three teaching formats: live lecture, recorded video, and flipped classroom. The one-way ANOVA output is F(2, 87)=6.42 with p=0.0025. Interpret this result in context. Be clear about what the ANOVA does and does not tell us.
+
+Follow the reasoning stages below:
+
+1. Use the reported test statistic and p-value to make the overall ANOVA decision.
+2. Translate that decision into the teaching-format context.
+3. Consider carefully the scope of conclusions supported by an omnibus ANOVA.
+4. Explain whether any additional analysis would be needed for more specific group comparisons.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+4,ANOVA,Education,Medium,Interpretation,ch_inference_for_means_54_1,"Torque on a rusty bolt
+
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.[source: youtube:torque_on_rusty_bolt]
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+
+0.8ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot
+
+Do you think it is reasonable to apply ANOVA in this case?","\qt{Torque on a rusty bolt\label{torque_on_rusty_bolt}}
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.\footfullcite{youtube:torque_on_rusty_bolt}
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+\begin{center}
+\FigureFullPath[A side-by-side dot plot is shown for ""Torque required to loosen a rusty bolt, in foot-pounds"". There are only 2 to 4 observations per option, which are roughly as follows: Heat (82, 98), WD-40 (106, 118, 129, 131), Royal Purple (108, 114, 122, 132), PB Blaster (110, 124, 127, 128), Liquid Wrench (85, 88, 98, 114), AeroKroil (107, 125, 132, 134), Acetone/ATF (105, 107, 114, 129), and ""none"" (110, 123, 129, 142).)]{0.8}{ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot}
+\end{center}
+\begin{parts}
+\item\label{torque_on_rusty_bolt_appropriate}
+    Do you think it is reasonable to apply ANOVA in this case?
+\item
+    Regardless of your answer in
+    part~(\ref{torque_on_rusty_bolt_appropriate}),
+    describe hypotheses for ANOVA in this context,
+    and use the table below to carry out the test.
+    Give your conclusion in the context of the data.
+    \begin{center}
+    \begin{tabular}{lrrrrr}
+    \hline
+    & Df & Sum Sq & Mean Sq & F value & Pr($>$F) \\ 
+    \hline
+    treatment & 7 & 3603.43 & 514.78 & 4.03 & 0.0056 \\ 
+    Residuals & 22 & 2812.80 & 127.85 &  &  \\ 
+    \hline
+    \end{tabular}
+    \end{center}
+\item\label{torque_on_rusty_bolt_pvalues}
+    The table below are p-values for pairwise $t$-tests
+    comparing each of the different groups.
+    These p-values have not been corrected for multiple
+    comparisons.
+    Which pair of groups appears most likely to represent
+    a difference?
+    \begin{center}\footnotesize
+    \begin{tabular}{l ccc ccc c}
+    \hline
+    & AeroKroil & Heat & Liquid Wrench & none &
+        PB Blaster & Royal Purple & WD-40 \\ 
+    \hline
+    Acetone/ATF & 0.2026 & 0.0308 & 0.0476 & 0.1542 &
+        0.3294 & 0.5222 & 0.3744 \\ 
+    AeroKroil &  & 0.0027 & 0.0025 & 0.8723 & 0.7551 &
+        0.5143 & 0.6883 \\ 
+    Heat &  &  & 0.5580 & 0.0020 & 0.0050 & 0.0096 &
+        0.0059 \\ 
+    Liquid Wrench &  &  &  & 0.0017 & 0.0053 &
+        0.0117 & 0.0065 \\ 
+    none &  &  &  &  & 0.6371 & 0.4180 & 0.5751 \\ 
+    PB Blaster &  &  &  &  &  & 0.7318 & 0.9286 \\ 
+    Royal Purple &  &  &  &  &  &  & 0.8000 \\
+    \hline
+    \end{tabular}
+    \end{center}
+\item
+    There are 28 p-values shown in the table in
+    part~(\ref{torque_on_rusty_bolt_pvalues}).
+    Determine if any of them are statistically
+    significant after correcting for multiple
+    comparisons.
+    If so, which one(s)?
+    Explain your answer.
+\end{parts}","A school wants to compare mean homework completion time across four grade levels. The sample sizes are 8, 9, 30, and 32. A dot plot shows one grade level has a strong right skew and several unusually long times. Explain whether a standard one-way ANOVA is reasonable here and what the researcher should check or consider before trusting the result.",,"Use caution: the combination of unequal group sizes, strong skew/outliers, and possible variance heterogeneity can make standard one-way ANOVA unreliable. Check independence, group distributions, and variances; consider transformation, Welch's ANOVA, or a robust/non-parametric alternative if assumptions are seriously violated.","One-way ANOVA can tolerate moderate non-normality, especially with larger balanced groups, but this design is unbalanced and one group is small with strong skew and outliers. The researcher should check whether observations are independent, whether variation is roughly similar across groups, and whether the skew/outliers dominate the result. A log transformation, robust ANOVA, or Kruskal-Wallis test may be more appropriate if assumptions are badly violated.","A school wants to compare mean homework completion time across four grade levels. The sample sizes are 8, 9, 30, and 32. A dot plot shows one grade level has a strong right skew and several unusually long times. Explain whether a standard one-way ANOVA is reasonable here and what the researcher should check or consider before trusting the result.","1. Identify the main ANOVA assumptions relevant to this design.
+2. Consider the unequal group sizes together with the strong skew and outliers in one of the smaller groups.
+3. Explain what diagnostics or checks should be performed before relying on the standard ANOVA result.
+4. State reasonable alternatives if the assumptions appear seriously violated.","A school wants to compare mean homework completion time across four grade levels. The sample sizes are 8, 9, 30, and 32. A dot plot shows one grade level has a strong right skew and several unusually long times. Explain whether a standard one-way ANOVA is reasonable here and what the researcher should check or consider before trusting the result.
+
+Follow the reasoning stages below:
+
+1. Identify the main ANOVA assumptions relevant to this design.
+2. Consider the unequal group sizes together with the strong skew and outliers in one of the smaller groups.
+3. Explain what diagnostics or checks should be performed before relying on the standard ANOVA result.
+4. State reasonable alternatives if the assumptions appear seriously violated.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+5,ANOVA,Agriculture,Medium,Calculation,ch_inference_for_means_54_1,"Torque on a rusty bolt
+
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.[source: youtube:torque_on_rusty_bolt]
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+
+0.8ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot
+
+Do you think it is reasonable to apply ANOVA in this case?","\qt{Torque on a rusty bolt\label{torque_on_rusty_bolt}}
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.\footfullcite{youtube:torque_on_rusty_bolt}
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+\begin{center}
+\FigureFullPath[A side-by-side dot plot is shown for ""Torque required to loosen a rusty bolt, in foot-pounds"". There are only 2 to 4 observations per option, which are roughly as follows: Heat (82, 98), WD-40 (106, 118, 129, 131), Royal Purple (108, 114, 122, 132), PB Blaster (110, 124, 127, 128), Liquid Wrench (85, 88, 98, 114), AeroKroil (107, 125, 132, 134), Acetone/ATF (105, 107, 114, 129), and ""none"" (110, 123, 129, 142).)]{0.8}{ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot}
+\end{center}
+\begin{parts}
+\item\label{torque_on_rusty_bolt_appropriate}
+    Do you think it is reasonable to apply ANOVA in this case?
+\item
+    Regardless of your answer in
+    part~(\ref{torque_on_rusty_bolt_appropriate}),
+    describe hypotheses for ANOVA in this context,
+    and use the table below to carry out the test.
+    Give your conclusion in the context of the data.
+    \begin{center}
+    \begin{tabular}{lrrrrr}
+    \hline
+    & Df & Sum Sq & Mean Sq & F value & Pr($>$F) \\ 
+    \hline
+    treatment & 7 & 3603.43 & 514.78 & 4.03 & 0.0056 \\ 
+    Residuals & 22 & 2812.80 & 127.85 &  &  \\ 
+    \hline
+    \end{tabular}
+    \end{center}
+\item\label{torque_on_rusty_bolt_pvalues}
+    The table below are p-values for pairwise $t$-tests
+    comparing each of the different groups.
+    These p-values have not been corrected for multiple
+    comparisons.
+    Which pair of groups appears most likely to represent
+    a difference?
+    \begin{center}\footnotesize
+    \begin{tabular}{l ccc ccc c}
+    \hline
+    & AeroKroil & Heat & Liquid Wrench & none &
+        PB Blaster & Royal Purple & WD-40 \\ 
+    \hline
+    Acetone/ATF & 0.2026 & 0.0308 & 0.0476 & 0.1542 &
+        0.3294 & 0.5222 & 0.3744 \\ 
+    AeroKroil &  & 0.0027 & 0.0025 & 0.8723 & 0.7551 &
+        0.5143 & 0.6883 \\ 
+    Heat &  &  & 0.5580 & 0.0020 & 0.0050 & 0.0096 &
+        0.0059 \\ 
+    Liquid Wrench &  &  &  & 0.0017 & 0.0053 &
+        0.0117 & 0.0065 \\ 
+    none &  &  &  &  & 0.6371 & 0.4180 & 0.5751 \\ 
+    PB Blaster &  &  &  &  &  & 0.7318 & 0.9286 \\ 
+    Royal Purple &  &  &  &  &  &  & 0.8000 \\
+    \hline
+    \end{tabular}
+    \end{center}
+\item
+    There are 28 p-values shown in the table in
+    part~(\ref{torque_on_rusty_bolt_pvalues}).
+    Determine if any of them are statistically
+    significant after correcting for multiple
+    comparisons.
+    If so, which one(s)?
+    Explain your answer.
+\end{parts}","An agronomist compares crop yield, in tonnes per hectare, under four fertiliser treatments. Treatment A: 22, 24, 23, 25; Treatment B: 28, 29, 27, 30; Treatment C: 21, 20, 22, 19; Treatment D: 26, 25, 27, 24. Use a one-way ANOVA to calculate the F statistic and state whether the data provide evidence of different mean yields at the 5% level.",,F = 27.20; reject H0,"Group means are A=23.5, B=28.5, C=20.5, D=25.5, with grand mean=24.5. SSB=136.00 and SSW=20.00. With df_between=3 and df_within=12, MSB=45.33 and MSW=1.67, so F=27.20. This is significant at 5%, giving strong evidence that not all fertiliser treatments have the same mean yield.","An agronomist compares crop yield, in tonnes per hectare, under four fertiliser treatments. Treatment A: 22, 24, 23, 25; Treatment B: 28, 29, 27, 30; Treatment C: 21, 20, 22, 19; Treatment D: 26, 25, 27, 24. Use a one-way ANOVA to calculate the F statistic and state whether the data provide evidence of different mean yields at the 5% level.
+
+Numerical precision:
+- Keep full precision in intermediate calculations.
+- Round final ANOVA quantities requested in the question to 2 decimal places.","1. State the one-way ANOVA hypotheses for the four fertiliser-treatment mean yields.
+2. Compute the treatment means and grand mean.
+3. Calculate the between-group and within-group sums of squares, degrees of freedom, and mean squares.
+4. Calculate the F statistic and state the 5% conclusion in the agricultural context.","An agronomist compares crop yield, in tonnes per hectare, under four fertiliser treatments. Treatment A: 22, 24, 23, 25; Treatment B: 28, 29, 27, 30; Treatment C: 21, 20, 22, 19; Treatment D: 26, 25, 27, 24. Use a one-way ANOVA to calculate the F statistic and state whether the data provide evidence of different mean yields at the 5% level.
+
+Numerical precision:
+- Keep full precision in intermediate calculations.
+- Round final ANOVA quantities requested in the question to 2 decimal places.
+
+Follow the reasoning stages below:
+
+1. State the one-way ANOVA hypotheses for the four fertiliser-treatment mean yields.
+2. Compute the treatment means and grand mean.
+3. Calculate the between-group and within-group sums of squares, degrees of freedom, and mean squares.
+4. Calculate the F statistic and state the 5% conclusion in the agricultural context.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+6,ANOVA,Agriculture,Medium,Calculation,ch_inference_for_means_54_1,"Torque on a rusty bolt
+
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.[source: youtube:torque_on_rusty_bolt]
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+
+0.8ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot
+
+Do you think it is reasonable to apply ANOVA in this case?","\qt{Torque on a rusty bolt\label{torque_on_rusty_bolt}}
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.\footfullcite{youtube:torque_on_rusty_bolt}
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+\begin{center}
+\FigureFullPath[A side-by-side dot plot is shown for ""Torque required to loosen a rusty bolt, in foot-pounds"". There are only 2 to 4 observations per option, which are roughly as follows: Heat (82, 98), WD-40 (106, 118, 129, 131), Royal Purple (108, 114, 122, 132), PB Blaster (110, 124, 127, 128), Liquid Wrench (85, 88, 98, 114), AeroKroil (107, 125, 132, 134), Acetone/ATF (105, 107, 114, 129), and ""none"" (110, 123, 129, 142).)]{0.8}{ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot}
+\end{center}
+\begin{parts}
+\item\label{torque_on_rusty_bolt_appropriate}
+    Do you think it is reasonable to apply ANOVA in this case?
+\item
+    Regardless of your answer in
+    part~(\ref{torque_on_rusty_bolt_appropriate}),
+    describe hypotheses for ANOVA in this context,
+    and use the table below to carry out the test.
+    Give your conclusion in the context of the data.
+    \begin{center}
+    \begin{tabular}{lrrrrr}
+    \hline
+    & Df & Sum Sq & Mean Sq & F value & Pr($>$F) \\ 
+    \hline
+    treatment & 7 & 3603.43 & 514.78 & 4.03 & 0.0056 \\ 
+    Residuals & 22 & 2812.80 & 127.85 &  &  \\ 
+    \hline
+    \end{tabular}
+    \end{center}
+\item\label{torque_on_rusty_bolt_pvalues}
+    The table below are p-values for pairwise $t$-tests
+    comparing each of the different groups.
+    These p-values have not been corrected for multiple
+    comparisons.
+    Which pair of groups appears most likely to represent
+    a difference?
+    \begin{center}\footnotesize
+    \begin{tabular}{l ccc ccc c}
+    \hline
+    & AeroKroil & Heat & Liquid Wrench & none &
+        PB Blaster & Royal Purple & WD-40 \\ 
+    \hline
+    Acetone/ATF & 0.2026 & 0.0308 & 0.0476 & 0.1542 &
+        0.3294 & 0.5222 & 0.3744 \\ 
+    AeroKroil &  & 0.0027 & 0.0025 & 0.8723 & 0.7551 &
+        0.5143 & 0.6883 \\ 
+    Heat &  &  & 0.5580 & 0.0020 & 0.0050 & 0.0096 &
+        0.0059 \\ 
+    Liquid Wrench &  &  &  & 0.0017 & 0.0053 &
+        0.0117 & 0.0065 \\ 
+    none &  &  &  &  & 0.6371 & 0.4180 & 0.5751 \\ 
+    PB Blaster &  &  &  &  &  & 0.7318 & 0.9286 \\ 
+    Royal Purple &  &  &  &  &  &  & 0.8000 \\
+    \hline
+    \end{tabular}
+    \end{center}
+\item
+    There are 28 p-values shown in the table in
+    part~(\ref{torque_on_rusty_bolt_pvalues}).
+    Determine if any of them are statistically
+    significant after correcting for multiple
+    comparisons.
+    If so, which one(s)?
+    Explain your answer.
+\end{parts}","A field trial compares three pest-control treatments by measuring leaf-damage scores. Lower scores are better. Treatment A: 12, 14, 13, 15, 14; Treatment B: 9, 8, 10, 9, 11; Treatment C: 16, 17, 15, 18, 16. Calculate the ANOVA degrees of freedom, mean squares, and F statistic. Then give the 5% conclusion.",,"df=(2,12), MSB=62.07, MSW=1.30, F=47.74; reject H0","There are k=3 groups and N=15 observations, so df_between=2 and df_within=12. The treatment means are 13.6, 9.4, and 16.4; the grand mean is 13.13. SSB=124.13 and SSW=15.60, so MSB=62.07 and MSW=1.30. Therefore F=62.07/1.30=47.74. The result is significant at 5%, so the mean damage score differs for at least one treatment.","A field trial compares three pest-control treatments by measuring leaf-damage scores. Lower scores are better. Treatment A: 12, 14, 13, 15, 14; Treatment B: 9, 8, 10, 9, 11; Treatment C: 16, 17, 15, 18, 16. Calculate the ANOVA degrees of freedom, mean squares, and F statistic. Then give the 5% conclusion.
+
+Numerical precision:
+- Keep full precision in intermediate calculations.
+- Round final ANOVA quantities requested in the question to 2 decimal places.","1. Determine the total sample size and number of groups, then calculate the between-group and within-group degrees of freedom.
+2. Compute the group means and grand mean, followed by the between-group and within-group sums of squares.
+3. Divide each sum of squares by its corresponding degrees of freedom to obtain the mean squares.
+4. Calculate the F statistic and state the 5% conclusion about the treatment mean damage scores.","A field trial compares three pest-control treatments by measuring leaf-damage scores. Lower scores are better. Treatment A: 12, 14, 13, 15, 14; Treatment B: 9, 8, 10, 9, 11; Treatment C: 16, 17, 15, 18, 16. Calculate the ANOVA degrees of freedom, mean squares, and F statistic. Then give the 5% conclusion.
+
+Numerical precision:
+- Keep full precision in intermediate calculations.
+- Round final ANOVA quantities requested in the question to 2 decimal places.
+
+Follow the reasoning stages below:
+
+1. Determine the total sample size and number of groups, then calculate the between-group and within-group degrees of freedom.
+2. Compute the group means and grand mean, followed by the between-group and within-group sums of squares.
+3. Divide each sum of squares by its corresponding degrees of freedom to obtain the mean squares.
+4. Calculate the F statistic and state the 5% conclusion about the treatment mean damage scores.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+7,ANOVA,Marketing,Hard,Short Answer,ch_inference_for_means_54_1,"Torque on a rusty bolt
+
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.[source: youtube:torque_on_rusty_bolt]
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+
+0.8ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot
+
+Do you think it is reasonable to apply ANOVA in this case?","\qt{Torque on a rusty bolt\label{torque_on_rusty_bolt}}
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.\footfullcite{youtube:torque_on_rusty_bolt}
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+\begin{center}
+\FigureFullPath[A side-by-side dot plot is shown for ""Torque required to loosen a rusty bolt, in foot-pounds"". There are only 2 to 4 observations per option, which are roughly as follows: Heat (82, 98), WD-40 (106, 118, 129, 131), Royal Purple (108, 114, 122, 132), PB Blaster (110, 124, 127, 128), Liquid Wrench (85, 88, 98, 114), AeroKroil (107, 125, 132, 134), Acetone/ATF (105, 107, 114, 129), and ""none"" (110, 123, 129, 142).)]{0.8}{ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot}
+\end{center}
+\begin{parts}
+\item\label{torque_on_rusty_bolt_appropriate}
+    Do you think it is reasonable to apply ANOVA in this case?
+\item
+    Regardless of your answer in
+    part~(\ref{torque_on_rusty_bolt_appropriate}),
+    describe hypotheses for ANOVA in this context,
+    and use the table below to carry out the test.
+    Give your conclusion in the context of the data.
+    \begin{center}
+    \begin{tabular}{lrrrrr}
+    \hline
+    & Df & Sum Sq & Mean Sq & F value & Pr($>$F) \\ 
+    \hline
+    treatment & 7 & 3603.43 & 514.78 & 4.03 & 0.0056 \\ 
+    Residuals & 22 & 2812.80 & 127.85 &  &  \\ 
+    \hline
+    \end{tabular}
+    \end{center}
+\item\label{torque_on_rusty_bolt_pvalues}
+    The table below are p-values for pairwise $t$-tests
+    comparing each of the different groups.
+    These p-values have not been corrected for multiple
+    comparisons.
+    Which pair of groups appears most likely to represent
+    a difference?
+    \begin{center}\footnotesize
+    \begin{tabular}{l ccc ccc c}
+    \hline
+    & AeroKroil & Heat & Liquid Wrench & none &
+        PB Blaster & Royal Purple & WD-40 \\ 
+    \hline
+    Acetone/ATF & 0.2026 & 0.0308 & 0.0476 & 0.1542 &
+        0.3294 & 0.5222 & 0.3744 \\ 
+    AeroKroil &  & 0.0027 & 0.0025 & 0.8723 & 0.7551 &
+        0.5143 & 0.6883 \\ 
+    Heat &  &  & 0.5580 & 0.0020 & 0.0050 & 0.0096 &
+        0.0059 \\ 
+    Liquid Wrench &  &  &  & 0.0017 & 0.0053 &
+        0.0117 & 0.0065 \\ 
+    none &  &  &  &  & 0.6371 & 0.4180 & 0.5751 \\ 
+    PB Blaster &  &  &  &  &  & 0.7318 & 0.9286 \\ 
+    Royal Purple &  &  &  &  &  &  & 0.8000 \\
+    \hline
+    \end{tabular}
+    \end{center}
+\item
+    There are 28 p-values shown in the table in
+    part~(\ref{torque_on_rusty_bolt_pvalues}).
+    Determine if any of them are statistically
+    significant after correcting for multiple
+    comparisons.
+    If so, which one(s)?
+    Explain your answer.
+\end{parts}","A company tests five advertising channels using weekly sales lift. The sample sizes are 3, 4, 4, 12, and 15. One small group has a very high outlier caused by a viral post, and the standard deviations differ noticeably across channels. Should the analyst simply report a standard one-way ANOVA p-value? Give a short, well-justified answer.",,"No. The highly unequal sample sizes, influential outlier in a small group, and noticeably different group variances make a standard one-way ANOVA potentially unreliable. Examine appropriate diagnostics and consider Welch's ANOVA or another robust alternative.","A standard one-way ANOVA would be risky here because the design is highly unbalanced, one small group contains an influential outlier, and the equal-variance assumption looks doubtful. The analyst should inspect residuals and group spreads, investigate whether the viral post is part of the target process or an exceptional event, and consider Welch's ANOVA or a robust/non-parametric method. If a difference is found, post-hoc comparisons adjusted for multiple testing should be used rather than claiming all channels differ.","A company tests five advertising channels using weekly sales lift. The sample sizes are 3, 4, 4, 12, and 15. One small group has a very high outlier caused by a viral post, and the standard deviations differ noticeably across channels. Should the analyst simply report a standard one-way ANOVA p-value? Give a short, well-justified answer.","1. Assess whether the design is balanced and whether any observations may be unusually influential.
+2. Consider whether the group variances appear sufficiently similar for standard one-way ANOVA.
+3. Explain why these features matter for the reliability of the ordinary ANOVA p-value.
+4. Recommend appropriate diagnostics or alternative methods and give a concise overall judgment.","A company tests five advertising channels using weekly sales lift. The sample sizes are 3, 4, 4, 12, and 15. One small group has a very high outlier caused by a viral post, and the standard deviations differ noticeably across channels. Should the analyst simply report a standard one-way ANOVA p-value? Give a short, well-justified answer.
+
+Follow the reasoning stages below:
+
+1. Assess whether the design is balanced and whether any observations may be unusually influential.
+2. Consider whether the group variances appear sufficiently similar for standard one-way ANOVA.
+3. Explain why these features matter for the reliability of the ordinary ANOVA p-value.
+4. Recommend appropriate diagnostics or alternative methods and give a concise overall judgment.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+8,ANOVA,Marketing,Hard,Short Answer,ch_inference_for_means_54_1,"Torque on a rusty bolt
+
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.[source: youtube:torque_on_rusty_bolt]
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+
+0.8ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot
+
+Do you think it is reasonable to apply ANOVA in this case?","\qt{Torque on a rusty bolt\label{torque_on_rusty_bolt}}
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.\footfullcite{youtube:torque_on_rusty_bolt}
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+\begin{center}
+\FigureFullPath[A side-by-side dot plot is shown for ""Torque required to loosen a rusty bolt, in foot-pounds"". There are only 2 to 4 observations per option, which are roughly as follows: Heat (82, 98), WD-40 (106, 118, 129, 131), Royal Purple (108, 114, 122, 132), PB Blaster (110, 124, 127, 128), Liquid Wrench (85, 88, 98, 114), AeroKroil (107, 125, 132, 134), Acetone/ATF (105, 107, 114, 129), and ""none"" (110, 123, 129, 142).)]{0.8}{ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot}
+\end{center}
+\begin{parts}
+\item\label{torque_on_rusty_bolt_appropriate}
+    Do you think it is reasonable to apply ANOVA in this case?
+\item
+    Regardless of your answer in
+    part~(\ref{torque_on_rusty_bolt_appropriate}),
+    describe hypotheses for ANOVA in this context,
+    and use the table below to carry out the test.
+    Give your conclusion in the context of the data.
+    \begin{center}
+    \begin{tabular}{lrrrrr}
+    \hline
+    & Df & Sum Sq & Mean Sq & F value & Pr($>$F) \\ 
+    \hline
+    treatment & 7 & 3603.43 & 514.78 & 4.03 & 0.0056 \\ 
+    Residuals & 22 & 2812.80 & 127.85 &  &  \\ 
+    \hline
+    \end{tabular}
+    \end{center}
+\item\label{torque_on_rusty_bolt_pvalues}
+    The table below are p-values for pairwise $t$-tests
+    comparing each of the different groups.
+    These p-values have not been corrected for multiple
+    comparisons.
+    Which pair of groups appears most likely to represent
+    a difference?
+    \begin{center}\footnotesize
+    \begin{tabular}{l ccc ccc c}
+    \hline
+    & AeroKroil & Heat & Liquid Wrench & none &
+        PB Blaster & Royal Purple & WD-40 \\ 
+    \hline
+    Acetone/ATF & 0.2026 & 0.0308 & 0.0476 & 0.1542 &
+        0.3294 & 0.5222 & 0.3744 \\ 
+    AeroKroil &  & 0.0027 & 0.0025 & 0.8723 & 0.7551 &
+        0.5143 & 0.6883 \\ 
+    Heat &  &  & 0.5580 & 0.0020 & 0.0050 & 0.0096 &
+        0.0059 \\ 
+    Liquid Wrench &  &  &  & 0.0017 & 0.0053 &
+        0.0117 & 0.0065 \\ 
+    none &  &  &  &  & 0.6371 & 0.4180 & 0.5751 \\ 
+    PB Blaster &  &  &  &  &  & 0.7318 & 0.9286 \\ 
+    Royal Purple &  &  &  &  &  &  & 0.8000 \\
+    \hline
+    \end{tabular}
+    \end{center}
+\item
+    There are 28 p-values shown in the table in
+    part~(\ref{torque_on_rusty_bolt_pvalues}).
+    Determine if any of them are statistically
+    significant after correcting for multiple
+    comparisons.
+    If so, which one(s)?
+    Explain your answer.
+\end{parts}","A marketing team runs a one-way ANOVA comparing average customer dwell time across four store-layout designs. The result is significant at the 1% level. The manager says, 'This proves layout B is the best design, so we should use it everywhere.' Explain what is wrong or incomplete in this conclusion.",,The ANOVA only shows at least one mean differs; it does not prove B is best or establish universal causality/practical value.,"A significant ANOVA rejects the hypothesis that all four mean dwell times are equal, but it does not identify which layout has the highest mean or which pairwise differences are significant. The team needs post-hoc comparisons and confidence intervals. They should also check effect size, practical importance, random assignment, store-level confounding, and whether the tested stores represent the wider population. Statistical significance alone is not enough to justify rolling out design B everywhere.","A marketing team runs a one-way ANOVA comparing average customer dwell time across four store-layout designs. The result is significant at the 1% level. The manager says, 'This proves layout B is the best design, so we should use it everywhere.' Explain what is wrong or incomplete in this conclusion.","1. Interpret the statistical result in terms of the four store-layout means.
+2. Evaluate each part of the manager's conclusion against what the analysis actually supports.
+3. Identify any further evidence or analysis that would be relevant before choosing a particular layout.
+4. Consider whether the statistical result alone is sufficient for a universal business decision.","A marketing team runs a one-way ANOVA comparing average customer dwell time across four store-layout designs. The result is significant at the 1% level. The manager says, 'This proves layout B is the best design, so we should use it everywhere.' Explain what is wrong or incomplete in this conclusion.
+
+Follow the reasoning stages below:
+
+1. Interpret the statistical result in terms of the four store-layout means.
+2. Evaluate each part of the manager's conclusion against what the analysis actually supports.
+3. Identify any further evidence or analysis that would be relevant before choosing a particular layout.
+4. Consider whether the statistical result alone is sufficient for a universal business decision.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+9,ANOVA,General Everyday,Easy,Single Choice,ch_inference_for_means_54_1,"Torque on a rusty bolt
+
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.[source: youtube:torque_on_rusty_bolt]
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+
+0.8ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot
+
+Do you think it is reasonable to apply ANOVA in this case?","\qt{Torque on a rusty bolt\label{torque_on_rusty_bolt}}
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.\footfullcite{youtube:torque_on_rusty_bolt}
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+\begin{center}
+\FigureFullPath[A side-by-side dot plot is shown for ""Torque required to loosen a rusty bolt, in foot-pounds"". There are only 2 to 4 observations per option, which are roughly as follows: Heat (82, 98), WD-40 (106, 118, 129, 131), Royal Purple (108, 114, 122, 132), PB Blaster (110, 124, 127, 128), Liquid Wrench (85, 88, 98, 114), AeroKroil (107, 125, 132, 134), Acetone/ATF (105, 107, 114, 129), and ""none"" (110, 123, 129, 142).)]{0.8}{ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot}
+\end{center}
+\begin{parts}
+\item\label{torque_on_rusty_bolt_appropriate}
+    Do you think it is reasonable to apply ANOVA in this case?
+\item
+    Regardless of your answer in
+    part~(\ref{torque_on_rusty_bolt_appropriate}),
+    describe hypotheses for ANOVA in this context,
+    and use the table below to carry out the test.
+    Give your conclusion in the context of the data.
+    \begin{center}
+    \begin{tabular}{lrrrrr}
+    \hline
+    & Df & Sum Sq & Mean Sq & F value & Pr($>$F) \\ 
+    \hline
+    treatment & 7 & 3603.43 & 514.78 & 4.03 & 0.0056 \\ 
+    Residuals & 22 & 2812.80 & 127.85 &  &  \\ 
+    \hline
+    \end{tabular}
+    \end{center}
+\item\label{torque_on_rusty_bolt_pvalues}
+    The table below are p-values for pairwise $t$-tests
+    comparing each of the different groups.
+    These p-values have not been corrected for multiple
+    comparisons.
+    Which pair of groups appears most likely to represent
+    a difference?
+    \begin{center}\footnotesize
+    \begin{tabular}{l ccc ccc c}
+    \hline
+    & AeroKroil & Heat & Liquid Wrench & none &
+        PB Blaster & Royal Purple & WD-40 \\ 
+    \hline
+    Acetone/ATF & 0.2026 & 0.0308 & 0.0476 & 0.1542 &
+        0.3294 & 0.5222 & 0.3744 \\ 
+    AeroKroil &  & 0.0027 & 0.0025 & 0.8723 & 0.7551 &
+        0.5143 & 0.6883 \\ 
+    Heat &  &  & 0.5580 & 0.0020 & 0.0050 & 0.0096 &
+        0.0059 \\ 
+    Liquid Wrench &  &  &  & 0.0017 & 0.0053 &
+        0.0117 & 0.0065 \\ 
+    none &  &  &  &  & 0.6371 & 0.4180 & 0.5751 \\ 
+    PB Blaster &  &  &  &  &  & 0.7318 & 0.9286 \\ 
+    Royal Purple &  &  &  &  &  &  & 0.8000 \\
+    \hline
+    \end{tabular}
+    \end{center}
+\item
+    There are 28 p-values shown in the table in
+    part~(\ref{torque_on_rusty_bolt_pvalues}).
+    Determine if any of them are statistically
+    significant after correcting for multiple
+    comparisons.
+    If so, which one(s)?
+    Explain your answer.
+\end{parts}",A person compares mean satisfaction ratings for three coffee brands using one-way ANOVA. The test gives p=0.03. Which statement is the best interpretation?,"A. There is evidence that at least one brand has a different mean satisfaction rating.
+B. All three brands have exactly the same average rating.
+C. The brand with the largest sample mean is definitely better than the other two.
+D. ANOVA proves that every pair of brands differs.",A,"Since p=0.03 is below 0.05, reject the null hypothesis that all three population means are equal. The correct interpretation is that at least one mean differs. ANOVA by itself does not identify which brand differs or prove every pair differs.","A person compares mean satisfaction ratings for three coffee brands using one-way ANOVA. The test gives p=0.03. Which statement is the best interpretation?
+
+Options:
+A. There is evidence that at least one brand has a different mean satisfaction rating.
+B. All three brands have exactly the same average rating.
+C. The brand with the largest sample mean is definitely better than the other two.
+D. ANOVA proves that every pair of brands differs.","1. Compare p=0.03 with the 5% significance level.
+2. Recall what rejection of the one-way ANOVA null hypothesis implies about the group means.
+3. Evaluate each option for whether it claims more than the omnibus ANOVA can establish.
+4. Select the single best interpretation.","A person compares mean satisfaction ratings for three coffee brands using one-way ANOVA. The test gives p=0.03. Which statement is the best interpretation?
+
+Options:
+A. There is evidence that at least one brand has a different mean satisfaction rating.
+B. All three brands have exactly the same average rating.
+C. The brand with the largest sample mean is definitely better than the other two.
+D. ANOVA proves that every pair of brands differs.
+
+Follow the reasoning stages below:
+
+1. Compare p=0.03 with the 5% significance level.
+2. Recall what rejection of the one-way ANOVA null hypothesis implies about the group means.
+3. Evaluate each option for whether it claims more than the omnibus ANOVA can establish.
+4. Select the single best interpretation.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+10,ANOVA,General Everyday,Easy,Single Choice,ch_inference_for_means_54_1,"Torque on a rusty bolt
+
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.[source: youtube:torque_on_rusty_bolt]
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+
+0.8ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot
+
+Do you think it is reasonable to apply ANOVA in this case?","\qt{Torque on a rusty bolt\label{torque_on_rusty_bolt}}
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.\footfullcite{youtube:torque_on_rusty_bolt}
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+\begin{center}
+\FigureFullPath[A side-by-side dot plot is shown for ""Torque required to loosen a rusty bolt, in foot-pounds"". There are only 2 to 4 observations per option, which are roughly as follows: Heat (82, 98), WD-40 (106, 118, 129, 131), Royal Purple (108, 114, 122, 132), PB Blaster (110, 124, 127, 128), Liquid Wrench (85, 88, 98, 114), AeroKroil (107, 125, 132, 134), Acetone/ATF (105, 107, 114, 129), and ""none"" (110, 123, 129, 142).)]{0.8}{ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot}
+\end{center}
+\begin{parts}
+\item\label{torque_on_rusty_bolt_appropriate}
+    Do you think it is reasonable to apply ANOVA in this case?
+\item
+    Regardless of your answer in
+    part~(\ref{torque_on_rusty_bolt_appropriate}),
+    describe hypotheses for ANOVA in this context,
+    and use the table below to carry out the test.
+    Give your conclusion in the context of the data.
+    \begin{center}
+    \begin{tabular}{lrrrrr}
+    \hline
+    & Df & Sum Sq & Mean Sq & F value & Pr($>$F) \\ 
+    \hline
+    treatment & 7 & 3603.43 & 514.78 & 4.03 & 0.0056 \\ 
+    Residuals & 22 & 2812.80 & 127.85 &  &  \\ 
+    \hline
+    \end{tabular}
+    \end{center}
+\item\label{torque_on_rusty_bolt_pvalues}
+    The table below are p-values for pairwise $t$-tests
+    comparing each of the different groups.
+    These p-values have not been corrected for multiple
+    comparisons.
+    Which pair of groups appears most likely to represent
+    a difference?
+    \begin{center}\footnotesize
+    \begin{tabular}{l ccc ccc c}
+    \hline
+    & AeroKroil & Heat & Liquid Wrench & none &
+        PB Blaster & Royal Purple & WD-40 \\ 
+    \hline
+    Acetone/ATF & 0.2026 & 0.0308 & 0.0476 & 0.1542 &
+        0.3294 & 0.5222 & 0.3744 \\ 
+    AeroKroil &  & 0.0027 & 0.0025 & 0.8723 & 0.7551 &
+        0.5143 & 0.6883 \\ 
+    Heat &  &  & 0.5580 & 0.0020 & 0.0050 & 0.0096 &
+        0.0059 \\ 
+    Liquid Wrench &  &  &  & 0.0017 & 0.0053 &
+        0.0117 & 0.0065 \\ 
+    none &  &  &  &  & 0.6371 & 0.4180 & 0.5751 \\ 
+    PB Blaster &  &  &  &  &  & 0.7318 & 0.9286 \\ 
+    Royal Purple &  &  &  &  &  &  & 0.8000 \\
+    \hline
+    \end{tabular}
+    \end{center}
+\item
+    There are 28 p-values shown in the table in
+    part~(\ref{torque_on_rusty_bolt_pvalues}).
+    Determine if any of them are statistically
+    significant after correcting for multiple
+    comparisons.
+    If so, which one(s)?
+    Explain your answer.
+\end{parts}",Which situation is most appropriate for a one-way ANOVA?,"A. Comparing the mean sleep time of people in three exercise groups.
+B. Testing whether two categorical variables are associated in a contingency table.
+C. Predicting house price from house size using a straight-line model.
+D. Comparing one sample mean with a known population mean.",A,"One-way ANOVA is used to compare the means of a quantitative response across three or more groups defined by one categorical factor. Mean sleep time is quantitative, and exercise group is a categorical factor with three groups, so option A fits.","Which situation is most appropriate for a one-way ANOVA?
+
+Options:
+A. Comparing the mean sleep time of people in three exercise groups.
+B. Testing whether two categorical variables are associated in a contingency table.
+C. Predicting house price from house size using a straight-line model.
+D. Comparing one sample mean with a known population mean.","1. Recall the type of response variable and grouping structure required for a one-way ANOVA.
+2. Evaluate each option by identifying its response and explanatory-variable structure.
+3. Distinguish ANOVA from tests of categorical association, simple linear regression, and a one-sample mean test.
+4. Select the single situation that matches a one-way ANOVA.","Which situation is most appropriate for a one-way ANOVA?
+
+Options:
+A. Comparing the mean sleep time of people in three exercise groups.
+B. Testing whether two categorical variables are associated in a contingency table.
+C. Predicting house price from house size using a straight-line model.
+D. Comparing one sample mean with a known population mean.
+
+Follow the reasoning stages below:
+
+1. Recall the type of response variable and grouping structure required for a one-way ANOVA.
+2. Evaluate each option by identifying its response and explanatory-variable structure.
+3. Distinguish ANOVA from tests of categorical association, simple linear regression, and a one-sample mean test.
+4. Select the single situation that matches a one-way ANOVA.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3

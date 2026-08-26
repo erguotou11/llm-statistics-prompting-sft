@@ -1,0 +1,1878 @@
+﻿No,Knowledge Area,Scenario,Difficulty,Question Type,Source ID,original_text,raw_latex,Adapted Question,Options,Correct Answer,Solution / Key Steps,prompt_direct,cot_reasoning_scaffold,prompt_cot,student_tutor_strategy,tutor_model,tutor_max_turns
+1,Hypothesis Testing,Healthcare,Hard,Calculation,ch_foundations_for_inf_29_6,"Testing for food safety
+
+A food safety inspector 
+is called upon to investigate a restaurant with a few customer reports of poor 
+sanitation practices. The food safety inspector uses a hypothesis testing 
+framework to evaluate whether regulations are not being met. If he decides 
+the restaurant is in gross violation, its license to serve food will be revoked.
+
+As a diner, would you prefer that the food safety inspector requires 
+strong evidence or very strong evidence of health concerns before revoking a 
+restaurant's license? Explain your reasoning.","\qt{Testing for food safety\label{errors_food_safety}} A food safety inspector 
+is called upon to investigate a restaurant with a few customer reports of poor 
+sanitation practices. The food safety inspector uses a hypothesis testing 
+framework to evaluate whether regulations are not being met. If he decides 
+the restaurant is in gross violation, its license to serve food will be revoked.
+\begin{parts}
+\item Write the hypotheses in words.
+\item What is a Type~1 Error in this context?
+\item What is a Type~2 Error in this context?
+\item Which error is more problematic for the restaurant owner? Why?
+\item Which error is more problematic for the diners? Why?
+\item As a diner, would you prefer that the food safety inspector requires 
+strong evidence or very strong evidence of health concerns before revoking a 
+restaurant's license? Explain your reasoning.
+\end{parts}","A hospital infection-control team wants to test whether the contamination rate of a surgical tray exceeds the acceptable level of 4%. In a random audit of 250 trays, 17 show contamination. Test at the 5% significance level.",,Reject H0,"H0: p=0.04; HA: p>0.04. p_hat=17/250=0.068. SE=sqrt(0.04*0.96/250)=0.0124. z=(0.068-0.04)/0.0124=2.26. One-sided p≈0.012. Since p<0.05, reject H0.","A hospital infection-control team wants to test whether the contamination rate of a surgical tray exceeds the acceptable level of 4%. In a random audit of 250 trays, 17 show contamination. Test at the 5% significance level.","1. Define the population proportion and state the null and one-sided alternative that match the claim that contamination exceeds 4%.
+2. Compute the sample proportion and the null-based standard error for a one-proportion z test.
+3. Standardize the observed proportion and obtain the right-tail p-value.
+4. Compare the p-value with alpha=0.05 and state the decision and conclusion in the hospital context.","A hospital infection-control team wants to test whether the contamination rate of a surgical tray exceeds the acceptable level of 4%. In a random audit of 250 trays, 17 show contamination. Test at the 5% significance level.
+
+Follow the reasoning stages below:
+
+1. Define the population proportion and state the null and one-sided alternative that match the claim that contamination exceeds 4%.
+2. Compute the sample proportion and the null-based standard error for a one-proportion z test.
+3. Standardize the observed proportion and obtain the right-tail p-value.
+4. Compare the p-value with alpha=0.05 and state the decision and conclusion in the hospital context.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+2,Hypothesis Testing,Healthcare,Hard,Calculation,ch_foundations_for_inf_37_2,"Gender pay gap in medicine
+
+A study examined the average pay for men and women
+entering the workforce as doctors for 21 different
+positions.[source: LoSassoMedicineGenderPayGap]
+
+Men were, on average, paid more in 19 of those
+ 21 positions.
+ Supposing these 21 positions represent a simple random sample,
+ complete a hypothesis test using your hypotheses
+ from part~([ref: gender_pay_gap_medicine_hypotheses]).","\qt{Gender pay gap in medicine\label{gender_pay_gap_medicine}}
+A study examined the average pay for men and women
+entering the workforce as doctors for 21 different
+positions.\footfullcite{LoSassoMedicineGenderPayGap}
+\begin{parts}
+\item\label{gender_pay_gap_medicine_hypotheses}
+    If each gender was equally paid, then we would expect
+    about half of those positions to have men paid more
+    than women and women would be paid more than men in
+    the other half of positions.
+    Write appropriate hypotheses to test this scenario.
+\item
+    Men were, on average, paid more in 19 of those
+    21 positions.
+    Supposing these 21 positions represent a simple random sample,
+    complete a hypothesis test using your hypotheses
+    from part~(\ref{gender_pay_gap_medicine_hypotheses}).
+\end{parts}","A medical school claims that female and male residents receive equal average evaluation scores. In a sample of 48 female residents, the mean score is 82.1 with s=7.4; in a sample of 52 male residents, the mean score is 85.0 with s=6.8. Test whether female residents receive lower scores at alpha=0.05.",,Reject H0,"H0: μF−μM=0; HA: μF−μM<0. SE=sqrt(7.4^2/48+6.8^2/52)=1.42. t=(82.1−85.0)/1.42=−2.04. One-sided p≈0.022, so reject H0.","A medical school claims that female and male residents receive equal average evaluation scores. In a sample of 48 female residents, the mean score is 82.1 with s=7.4; in a sample of 52 male residents, the mean score is 85.0 with s=6.8. Test whether female residents receive lower scores at alpha=0.05.","1. Define the two population means and state hypotheses for whether the female mean evaluation score is lower.
+2. Use the two independent samples to compute the standard error for the difference in means.
+3. Form the appropriate t statistic and obtain the one-sided p-value using an appropriate degrees-of-freedom method.
+4. Compare the p-value with alpha=0.05 and interpret the decision in terms of resident evaluation scores.","A medical school claims that female and male residents receive equal average evaluation scores. In a sample of 48 female residents, the mean score is 82.1 with s=7.4; in a sample of 52 male residents, the mean score is 85.0 with s=6.8. Test whether female residents receive lower scores at alpha=0.05.
+
+Follow the reasoning stages below:
+
+1. Define the two population means and state hypotheses for whether the female mean evaluation score is lower.
+2. Use the two independent samples to compute the standard error for the difference in means.
+3. Form the appropriate t statistic and obtain the one-sided p-value using an appropriate degrees-of-freedom method.
+4. Compare the p-value with alpha=0.05 and interpret the decision in terms of resident evaluation scores.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+3,Hypothesis Testing,Healthcare,Hard,Calculation,ch_inference_for_means_47,"Gaming and distracted eating, Part I
+
+A group of researchers are interested in the possible effects of distracting 
+stimuli during eating, such as an increase or decrease in the amount of food 
+consumption. To test this hypothesis, they monitored food intake for a group of 
+44 patients who were randomized into two equal groups. The treatment group ate 
+lunch while playing solitaire, and the control group ate lunch without any 
+added distractions. Patients in the treatment group ate 52.1 grams of biscuits, 
+with a standard deviation of 45.1 grams, and patients in the control group ate 
+27.1 grams of biscuits, with a standard deviation of 26.4 grams. Do these data 
+provide convincing evidence that the average food intake (measured in amount of 
+biscuits consumed) is different for the patients in the treatment group? Assume 
+that conditions for inference are satisfied. [source: Oldham:2011]","\qt{Gaming and distracted eating, Part I\label{gaming_distracted_eating_intake}}
+A group of researchers are interested in the possible effects of distracting 
+stimuli during eating, such as an increase or decrease in the amount of food 
+consumption. To test this hypothesis, they monitored food intake for a group of 
+44 patients who were randomized into two equal groups. The treatment group ate 
+lunch while playing solitaire, and the control group ate lunch without any 
+added distractions. Patients in the treatment group ate 52.1 grams of biscuits, 
+with a standard deviation of 45.1 grams, and patients in the control group ate 
+27.1 grams of biscuits, with a standard deviation of 26.4 grams. Do these data 
+provide convincing evidence that the average food intake (measured in amount of 
+biscuits consumed) is different for the patients in the treatment group? Assume 
+that conditions for inference are satisfied. \footfullcite{Oldham:2011}","A nutrition researcher tests whether distracted eating increases calorie intake. The mean difference paired as distracted minus non-distracted is 38 calories for 36 participants, with standard deviation of differences 96 calories. Test at alpha=0.05 whether the mean increase is positive.",,Reject H0,"H0: μd=0; HA: μd>0. SE=96/sqrt(36)=16. t=38/16=2.375 with df=35. Using t=2.375, one-sided p≈0.0116. Since p<0.05, reject H0 and conclude there is evidence that distracted eating increases mean calorie intake.","A nutrition researcher tests whether distracted eating increases calorie intake. The mean difference paired as distracted minus non-distracted is 38 calories for 36 participants, with standard deviation of differences 96 calories. Test at alpha=0.05 whether the mean increase is positive.","1. Recognize the paired design and define each difference as distracted minus non-distracted calorie intake.
+2. State hypotheses for whether the population mean paired difference is positive.
+3. Compute the standard error of the mean difference and the one-sample paired t statistic with the correct degrees of freedom.
+4. Obtain the one-sided p-value, compare it with alpha=0.05, and state the conclusion about distracted eating.","A nutrition researcher tests whether distracted eating increases calorie intake. The mean difference paired as distracted minus non-distracted is 38 calories for 36 participants, with standard deviation of differences 96 calories. Test at alpha=0.05 whether the mean increase is positive.
+
+Follow the reasoning stages below:
+
+1. Recognize the paired design and define each difference as distracted minus non-distracted calorie intake.
+2. State hypotheses for whether the population mean paired difference is positive.
+3. Compute the standard error of the mean difference and the one-sample paired t statistic with the correct degrees of freedom.
+4. Obtain the one-sided p-value, compare it with alpha=0.05, and state the conclusion about distracted eating.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+4,Hypothesis Testing,Healthcare,Hard,Calculation,ch_inference_for_means_54_3,"Torque on a rusty bolt
+
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.[source: youtube:torque_on_rusty_bolt]
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+
+0.8ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot
+
+The table below are p-values for pairwise $t$-tests
+ comparing each of the different groups.
+ These p-values have not been corrected for multiple
+ comparisons.
+ Which pair of groups appears most likely to represent
+ a difference?
+
+Table:
+| AeroKroil | Heat | Liquid Wrench | none | PB Blaster | Royal Purple | WD-40 | |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Acetone/ATF | 0.2026 | 0.0308 | 0.0476 | 0.1542 | 0.3294 | 0.5222 | 0.3744 |
+| AeroKroil | 0.0027 | 0.0025 | 0.8723 | 0.7551 | 0.5143 | 0.6883 | |
+| Heat | 0.5580 | 0.0020 | 0.0050 | 0.0096 | 0.0059 | | |
+| Liquid Wrench | 0.0017 | 0.0053 | 0.0117 | 0.0065 | | | |
+| none | 0.6371 | 0.4180 | 0.5751 | | | | |
+| PB Blaster | 0.7318 | 0.9286 | | | | | |
+| Royal Purple | 0.8000 | | | | | | |","\qt{Torque on a rusty bolt\label{torque_on_rusty_bolt}}
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.\footfullcite{youtube:torque_on_rusty_bolt}
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+\begin{center}
+\FigureFullPath[A side-by-side dot plot is shown for ""Torque required to loosen a rusty bolt, in foot-pounds"". There are only 2 to 4 observations per option, which are roughly as follows: Heat (82, 98), WD-40 (106, 118, 129, 131), Royal Purple (108, 114, 122, 132), PB Blaster (110, 124, 127, 128), Liquid Wrench (85, 88, 98, 114), AeroKroil (107, 125, 132, 134), Acetone/ATF (105, 107, 114, 129), and ""none"" (110, 123, 129, 142).)]{0.8}{ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot}
+\end{center}
+\begin{parts}
+\item\label{torque_on_rusty_bolt_appropriate}
+    Do you think it is reasonable to apply ANOVA in this case?
+\item
+    Regardless of your answer in
+    part~(\ref{torque_on_rusty_bolt_appropriate}),
+    describe hypotheses for ANOVA in this context,
+    and use the table below to carry out the test.
+    Give your conclusion in the context of the data.
+    \begin{center}
+    \begin{tabular}{lrrrrr}
+    \hline
+    & Df & Sum Sq & Mean Sq & F value & Pr($>$F) \\ 
+    \hline
+    treatment & 7 & 3603.43 & 514.78 & 4.03 & 0.0056 \\ 
+    Residuals & 22 & 2812.80 & 127.85 &  &  \\ 
+    \hline
+    \end{tabular}
+    \end{center}
+\item\label{torque_on_rusty_bolt_pvalues}
+    The table below are p-values for pairwise $t$-tests
+    comparing each of the different groups.
+    These p-values have not been corrected for multiple
+    comparisons.
+    Which pair of groups appears most likely to represent
+    a difference?
+    \begin{center}\footnotesize
+    \begin{tabular}{l ccc ccc c}
+    \hline
+    & AeroKroil & Heat & Liquid Wrench & none &
+        PB Blaster & Royal Purple & WD-40 \\ 
+    \hline
+    Acetone/ATF & 0.2026 & 0.0308 & 0.0476 & 0.1542 &
+        0.3294 & 0.5222 & 0.3744 \\ 
+    AeroKroil &  & 0.0027 & 0.0025 & 0.8723 & 0.7551 &
+        0.5143 & 0.6883 \\ 
+    Heat &  &  & 0.5580 & 0.0020 & 0.0050 & 0.0096 &
+        0.0059 \\ 
+    Liquid Wrench &  &  &  & 0.0017 & 0.0053 &
+        0.0117 & 0.0065 \\ 
+    none &  &  &  &  & 0.6371 & 0.4180 & 0.5751 \\ 
+    PB Blaster &  &  &  &  &  & 0.7318 & 0.9286 \\ 
+    Royal Purple &  &  &  &  &  &  & 0.8000 \\
+    \hline
+    \end{tabular}
+    \end{center}
+\item
+    There are 28 p-values shown in the table in
+    part~(\ref{torque_on_rusty_bolt_pvalues}).
+    Determine if any of them are statistically
+    significant after correcting for multiple
+    comparisons.
+    If so, which one(s)?
+    Explain your answer.
+\end{parts}","A lab evaluates whether a new orthopedic screw requires less removal torque than the old standard of 110 N·cm. For 16 screws, the sample mean is 103.5 N·cm and s=12.0. Test at alpha=0.01.",,Do not reject H0,"H0: μ=110; HA: μ<110. SE=12/sqrt(16)=3. t=(103.5−110)/3=−2.17, df=15. One-sided p≈0.023. Since 0.023>0.01, do not reject H0.","A lab evaluates whether a new orthopedic screw requires less removal torque than the old standard of 110 N·cm. For 16 screws, the sample mean is 103.5 N·cm and s=12.0. Test at alpha=0.01.","1. State hypotheses for whether the new screw's population mean removal torque is below 110 N·cm.
+2. Because the population standard deviation is unknown, compute the one-sample t standard error and degrees of freedom.
+3. Calculate the left-tailed t statistic and corresponding p-value.
+4. Compare the p-value with alpha=0.01 and give the decision in the orthopedic-screw context.","A lab evaluates whether a new orthopedic screw requires less removal torque than the old standard of 110 N·cm. For 16 screws, the sample mean is 103.5 N·cm and s=12.0. Test at alpha=0.01.
+
+Follow the reasoning stages below:
+
+1. State hypotheses for whether the new screw's population mean removal torque is below 110 N·cm.
+2. Because the population standard deviation is unknown, compute the one-sample t standard error and degrees of freedom.
+3. Calculate the left-tailed t statistic and corresponding p-value.
+4. Compare the p-value with alpha=0.01 and give the decision in the orthopedic-screw context.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+5,Hypothesis Testing,Healthcare,Hard,Calculation,ch_inference_for_means_54_4,"Torque on a rusty bolt
+
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.[source: youtube:torque_on_rusty_bolt]
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+
+0.8ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot
+
+There are 28 p-values shown in the table in
+ part~([ref: torque_on_rusty_bolt_pvalues]).
+ Determine if any of them are statistically
+ significant after correcting for multiple
+ comparisons.
+ If so, which one(s)?
+ Explain your answer.","\qt{Torque on a rusty bolt\label{torque_on_rusty_bolt}}
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.\footfullcite{youtube:torque_on_rusty_bolt}
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+\begin{center}
+\FigureFullPath[A side-by-side dot plot is shown for ""Torque required to loosen a rusty bolt, in foot-pounds"". There are only 2 to 4 observations per option, which are roughly as follows: Heat (82, 98), WD-40 (106, 118, 129, 131), Royal Purple (108, 114, 122, 132), PB Blaster (110, 124, 127, 128), Liquid Wrench (85, 88, 98, 114), AeroKroil (107, 125, 132, 134), Acetone/ATF (105, 107, 114, 129), and ""none"" (110, 123, 129, 142).)]{0.8}{ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot}
+\end{center}
+\begin{parts}
+\item\label{torque_on_rusty_bolt_appropriate}
+    Do you think it is reasonable to apply ANOVA in this case?
+\item
+    Regardless of your answer in
+    part~(\ref{torque_on_rusty_bolt_appropriate}),
+    describe hypotheses for ANOVA in this context,
+    and use the table below to carry out the test.
+    Give your conclusion in the context of the data.
+    \begin{center}
+    \begin{tabular}{lrrrrr}
+    \hline
+    & Df & Sum Sq & Mean Sq & F value & Pr($>$F) \\ 
+    \hline
+    treatment & 7 & 3603.43 & 514.78 & 4.03 & 0.0056 \\ 
+    Residuals & 22 & 2812.80 & 127.85 &  &  \\ 
+    \hline
+    \end{tabular}
+    \end{center}
+\item\label{torque_on_rusty_bolt_pvalues}
+    The table below are p-values for pairwise $t$-tests
+    comparing each of the different groups.
+    These p-values have not been corrected for multiple
+    comparisons.
+    Which pair of groups appears most likely to represent
+    a difference?
+    \begin{center}\footnotesize
+    \begin{tabular}{l ccc ccc c}
+    \hline
+    & AeroKroil & Heat & Liquid Wrench & none &
+        PB Blaster & Royal Purple & WD-40 \\ 
+    \hline
+    Acetone/ATF & 0.2026 & 0.0308 & 0.0476 & 0.1542 &
+        0.3294 & 0.5222 & 0.3744 \\ 
+    AeroKroil &  & 0.0027 & 0.0025 & 0.8723 & 0.7551 &
+        0.5143 & 0.6883 \\ 
+    Heat &  &  & 0.5580 & 0.0020 & 0.0050 & 0.0096 &
+        0.0059 \\ 
+    Liquid Wrench &  &  &  & 0.0017 & 0.0053 &
+        0.0117 & 0.0065 \\ 
+    none &  &  &  &  & 0.6371 & 0.4180 & 0.5751 \\ 
+    PB Blaster &  &  &  &  &  & 0.7318 & 0.9286 \\ 
+    Royal Purple &  &  &  &  &  &  & 0.8000 \\
+    \hline
+    \end{tabular}
+    \end{center}
+\item
+    There are 28 p-values shown in the table in
+    part~(\ref{torque_on_rusty_bolt_pvalues}).
+    Determine if any of them are statistically
+    significant after correcting for multiple
+    comparisons.
+    If so, which one(s)?
+    Explain your answer.
+\end{parts}","A device manufacturer tests whether a redesigned implant has a mean failure load different from 420 N. In 25 tests, the sample mean is 438 N and s=40 N. Carry out a two-sided test at alpha=0.05.",,Reject H0,"H0: μ=420; HA: μ≠420. SE=40/sqrt(25)=8. t=(438−420)/8=2.25, df=24. Two-sided p≈0.034. Reject H0.","A device manufacturer tests whether a redesigned implant has a mean failure load different from 420 N. In 25 tests, the sample mean is 438 N and s=40 N. Carry out a two-sided test at alpha=0.05.","1. State a two-sided null and alternative for the population mean failure load relative to 420 N.
+2. Compute the one-sample t standard error and degrees of freedom from the sample information.
+3. Calculate the t statistic and two-sided p-value.
+4. Compare the p-value with alpha=0.05 and state whether the data support a mean failure load different from 420 N.","A device manufacturer tests whether a redesigned implant has a mean failure load different from 420 N. In 25 tests, the sample mean is 438 N and s=40 N. Carry out a two-sided test at alpha=0.05.
+
+Follow the reasoning stages below:
+
+1. State a two-sided null and alternative for the population mean failure load relative to 420 N.
+2. Compute the one-sample t standard error and degrees of freedom from the sample information.
+3. Calculate the t statistic and two-sided p-value.
+4. Compare the p-value with alpha=0.05 and state whether the data support a mean failure load different from 420 N.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+6,Hypothesis Testing,Healthcare,Hard,Calculation,ch_inference_for_props_46_3,"Diabetes and unemployment
+
+A 
+Gallup poll surveyed Americans about their employment status and whether or 
+not they have diabetes. The survey results indicate that 1.5% of the 47,774 
+employed (full or part time) and 2.5% of the 5,855 unemployed 18-29 year 
+olds have diabetes.[source: data:employmentDiabetes]
+
+The sample difference is about 1%. If we completed the hypothesis 
+test, we would find that the p-value is very small (about 0), meaning the 
+difference is statistically significant. Use this result to explain the 
+difference between statistically significant and practically significant 
+findings.","\qt{Diabetes and unemployment\label{diabetes_unemp_effect_size}} A 
+Gallup poll surveyed Americans about their employment status and whether or 
+not they have diabetes. The survey results indicate that 1.5\% of the 47,774 
+employed (full or part time) and 2.5\% of the 5,855 unemployed 18-29 year 
+olds have diabetes.\footfullcite{data:employmentDiabetes}
+\begin{parts}
+\item Create a two-way table presenting the results of this study.
+\item State appropriate hypotheses to test for difference in proportions of 
+diabetes between employed and unemployed Americans.
+\item The sample difference is about 1\%. If we completed the hypothesis 
+test, we would find that the p-value is very small (about 0), meaning the 
+difference is statistically significant. Use this result to explain the 
+difference between statistically significant and practically significant 
+findings.
+\end{parts}","A public-health analyst tests whether unemployment is associated with diabetes diagnosis. Among 1,000 unemployed adults, 98 report diabetes; among 1,200 employed adults, 84 report diabetes. Test whether the unemployed proportion is higher at alpha=0.05.",,Reject H0,"p1=0.098, p2=0.070. Pooled p=(98+84)/(1000+1200)=0.0827. SE=sqrt(p(1-p)(1/1000+1/1200))=0.0118. z=(0.098−0.070)/0.0118=2.37, p≈0.009. Reject H0.","A public-health analyst tests whether unemployment is associated with diabetes diagnosis. Among 1,000 unemployed adults, 98 report diabetes; among 1,200 employed adults, 84 report diabetes. Test whether the unemployed proportion is higher at alpha=0.05.","1. Define the unemployed and employed population proportions and state a one-sided hypothesis test for whether the unemployed proportion is higher.
+2. Compute both sample proportions and the pooled proportion under the null hypothesis.
+3. Use the pooled proportion to compute the standard error, then calculate the z statistic and right-tail p-value.
+4. Compare the p-value with alpha=0.05 and interpret the result as evidence about the association described.","A public-health analyst tests whether unemployment is associated with diabetes diagnosis. Among 1,000 unemployed adults, 98 report diabetes; among 1,200 employed adults, 84 report diabetes. Test whether the unemployed proportion is higher at alpha=0.05.
+
+Follow the reasoning stages below:
+
+1. Define the unemployed and employed population proportions and state a one-sided hypothesis test for whether the unemployed proportion is higher.
+2. Compute both sample proportions and the pooled proportion under the null hypothesis.
+3. Use the pooled proportion to compute the standard error, then calculate the z statistic and right-tail p-value.
+4. Compare the p-value with alpha=0.05 and interpret the result as evidence about the association described.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+7,Hypothesis Testing,Social Survey,Medium,Calculation,ch_foundations_for_inf_31_2,"Unemployment and relationship problems
+
+A USA Today/Gallup poll asked a group of
+unemployed and underemployed Americans if they have
+had major problems in their relationships with their
+spouse or another close family member as a result of
+not having a job (if unemployed) or not having
+a full-time job (if underemployed).
+27%~of the 1,145 unemployed respondents and
+25%~of the 675 underemployed respondents said they had
+major problems in relationships as a result of their
+employment status.
+
+The p-value for this hypothesis test is approximately 0.35.
+ Explain what this means in context of the hypothesis test
+ and the data.","\qt{Unemployment and relationship problems\label{unemployment_relationship}} 
+A USA Today/Gallup poll asked a group of
+unemployed and underemployed Americans if they have
+had major problems in their  relationships with their
+spouse or another close family member as a result of
+not having a job (if unemployed) or not having
+a full-time job (if underemployed).
+27\%~of the 1,145 unemployed respondents and
+25\%~of the 675 underemployed respondents said they had
+major problems in relationships as a  result of their
+employment status.
+\begin{parts}
+\item
+    What are the hypotheses for evaluating if the proportions
+    of unemployed and underemployed people who had relationship
+    problems were different?
+\item
+    The p-value for this hypothesis test is approximately 0.35.
+    Explain what this means in context of the hypothesis test
+    and the data.
+\end{parts}","A survey asks whether relationship stress is more common among unemployed adults. Of 420 unemployed respondents, 168 report serious relationship stress. Of 580 employed respondents, 174 report it. Test whether the unemployed proportion is higher at alpha=0.05.",,Reject H0,"H0: p_unemployed=p_employed; HA: p_unemployed>p_employed. p1=168/420=0.400, p2=174/580=0.300. Pooled p=(168+174)/(420+580)=0.342. SE=sqrt[0.342(0.658)(1/420+1/580)]=0.03039. z=(0.400-0.300)/0.03039=3.29. One-sided p≈0.0005. Reject H0.","A survey asks whether relationship stress is more common among unemployed adults. Of 420 unemployed respondents, 168 report serious relationship stress. Of 580 employed respondents, 174 report it. Test whether the unemployed proportion is higher at alpha=0.05.","1. Define the two population proportions and state hypotheses for whether serious relationship stress is more common among unemployed adults.
+2. Compute the two sample proportions and the pooled proportion required under the null.
+3. Compute the pooled standard error, z statistic, and right-tail p-value.
+4. Compare the p-value with alpha=0.05 and state the conclusion in the survey context.","A survey asks whether relationship stress is more common among unemployed adults. Of 420 unemployed respondents, 168 report serious relationship stress. Of 580 employed respondents, 174 report it. Test whether the unemployed proportion is higher at alpha=0.05.
+
+Follow the reasoning stages below:
+
+1. Define the two population proportions and state hypotheses for whether serious relationship stress is more common among unemployed adults.
+2. Compute the two sample proportions and the pooled proportion required under the null.
+3. Compute the pooled standard error, z statistic, and right-tail p-value.
+4. Compare the p-value with alpha=0.05 and state the conclusion in the survey context.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+8,Hypothesis Testing,Social Survey,Medium,Calculation,ch_inference_for_props_42_1,"The Civil War
+
+A national survey conducted 
+among a simple random sample of 1,507 adults shows that 56% of
+Americans think the Civil War is still relevant to American politics and 
+political life.
+[source: data:civilWar]
+
+Conduct a hypothesis test to determine if these data provide strong 
+evidence that the majority of the Americans think the Civil War is still 
+relevant.","\qt{The Civil War\label{civil_war_HT_CI_2_sided}}
+A national survey conducted 
+among a simple random sample of 1,507 adults shows that 56\% of
+Americans think the Civil War is still relevant to American politics and 
+political life.%
+\footfullcite{data:civilWar} 
+\begin{parts}
+\item Conduct a hypothesis test to determine if these data provide strong 
+evidence that the majority of the Americans think the Civil War is still 
+relevant.
+\item Interpret the p-value in this context.
+\item Calculate a 90\% confidence interval for the proportion of Americans 
+who think the Civil War is still relevant. Interpret the interval in this 
+context, and comment on whether or not the confidence interval agrees with 
+the conclusion of the hypothesis test.
+\end{parts}",A poll of 900 adults finds that 477 support building a new museum. Test whether a majority of adults support the proposal at alpha=0.05.,,Reject H0,"H0: p=0.50; HA: p>0.50. p_hat=477/900=0.530. SE=sqrt[0.50(0.50)/900]=0.01667. z=(0.530-0.500)/0.01667=1.80. Using z=1.80, one-sided p≈0.0359. Since p<0.05, reject H0; there is evidence that a majority support the proposal.",A poll of 900 adults finds that 477 support building a new museum. Test whether a majority of adults support the proposal at alpha=0.05.,"1. Translate 'a majority' into a one-sided population-proportion hypothesis with null value 0.50.
+2. Compute the sample proportion and the null-based standard error.
+3. Calculate the z statistic and right-tail p-value.
+4. Compare the p-value with alpha=0.05 and state whether there is sufficient evidence that support exceeds 50%.","A poll of 900 adults finds that 477 support building a new museum. Test whether a majority of adults support the proposal at alpha=0.05.
+
+Follow the reasoning stages below:
+
+1. Translate 'a majority' into a one-sided population-proportion hypothesis with null value 0.50.
+2. Compute the sample proportion and the null-based standard error.
+3. Calculate the z statistic and right-tail p-value.
+4. Compare the p-value with alpha=0.05 and state whether there is sufficient evidence that support exceeds 50%.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+9,Hypothesis Testing,Social Survey,Medium,Calculation,ch_inference_for_props_42_2,"The Civil War
+
+A national survey conducted 
+among a simple random sample of 1,507 adults shows that 56% of
+Americans think the Civil War is still relevant to American politics and 
+political life.
+[source: data:civilWar]
+
+Interpret the p-value in this context.","\qt{The Civil War\label{civil_war_HT_CI_2_sided}}
+A national survey conducted 
+among a simple random sample of 1,507 adults shows that 56\% of
+Americans think the Civil War is still relevant to American politics and 
+political life.%
+\footfullcite{data:civilWar} 
+\begin{parts}
+\item Conduct a hypothesis test to determine if these data provide strong 
+evidence that the majority of the Americans think the Civil War is still 
+relevant.
+\item Interpret the p-value in this context.
+\item Calculate a 90\% confidence interval for the proportion of Americans 
+who think the Civil War is still relevant. Interpret the interval in this 
+context, and comment on whether or not the confidence interval agrees with 
+the conclusion of the hypothesis test.
+\end{parts}","In a national survey, 312 of 800 respondents say they trust local news. Test whether the population proportion differs from 40% at alpha=0.05.",,Do not reject H0,"H0: p=0.40; HA: p≠0.40. p_hat=312/800=0.390. SE=sqrt[0.40(0.60)/800]=0.01732. z=(0.390-0.400)/0.01732=-0.58. Using z=-0.58, two-sided p≈0.5619. Since p>0.05, do not reject H0.","In a national survey, 312 of 800 respondents say they trust local news. Test whether the population proportion differs from 40% at alpha=0.05.","1. State a two-sided test for whether the population proportion differs from 0.40.
+2. Compute the sample proportion and the standard error under the null value.
+3. Calculate the z statistic and two-sided p-value.
+4. Compare the p-value with alpha=0.05 and state the conclusion without treating failure to reject as proof of equality.","In a national survey, 312 of 800 respondents say they trust local news. Test whether the population proportion differs from 40% at alpha=0.05.
+
+Follow the reasoning stages below:
+
+1. State a two-sided test for whether the population proportion differs from 0.40.
+2. Compute the sample proportion and the standard error under the null value.
+3. Calculate the z statistic and two-sided p-value.
+4. Compare the p-value with alpha=0.05 and state the conclusion without treating failure to reject as proof of equality.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+10,Hypothesis Testing,Social Survey,Medium,Calculation,ch_inference_for_props_49_1,"Browsing on the mobile device
+
+A 
+survey of 2,254 American adults indicates that 17% of cell phone owners
+browse the internet exclusively on their phone rather than a computer
+or other device.
+[source: data:mobileBrowse]
+
+According to an online article, a report from a mobile research 
+company indicates that 38 percent of Chinese mobile web users only access 
+the internet through their cell phones.
+[source: news:mobileBrowseChinese] Conduct a hypothesis test to 
+determine if these data provide strong evidence that the proportion of 
+Americans who only use their cell phones to access the internet is different 
+than the Chinese proportion of 38%.","\qt{Browsing on the mobile device\label{mobile_browsing_HT_CI}} A 
+survey of 2,254 American adults indicates that 17\% of cell phone owners
+browse the internet exclusively on their phone rather than a computer
+or other device.
+\footfullcite{data:mobileBrowse}
+\begin{parts}
+\item  According to an online article, a report from a mobile research 
+company indicates that 38 percent of Chinese mobile web users only access 
+the internet through their cell phones.
+\footfullcite{news:mobileBrowseChinese} Conduct a hypothesis test to 
+determine if these data provide strong evidence that the proportion of 
+Americans who only use their cell phones to access the internet is different 
+than the Chinese proportion of 38\%.
+\item Interpret the p-value in this context.
+\item Calculate a 95\% confidence interval for the proportion of Americans 
+who access the internet on their cell phones, and interpret the interval in 
+this context.
+\end{parts}","A survey of 1,200 phone owners finds that 246 browse the internet only on their phones. Test whether this proportion is greater than 18% at alpha=0.05.",,Reject H0,"H0: p=0.18; HA: p>0.18. p_hat=246/1200=0.205. SE=sqrt[0.18(0.82)/1200]=0.01109. z=(0.205-0.180)/0.01109=2.25. Using z=2.25, one-sided p≈0.0122. Since p<0.05, reject H0.","A survey of 1,200 phone owners finds that 246 browse the internet only on their phones. Test whether this proportion is greater than 18% at alpha=0.05.","1. State hypotheses for whether the population proportion of phone-only internet users exceeds 0.18.
+2. Compute the sample proportion and null-based standard error.
+3. Calculate the right-tailed z statistic and p-value.
+4. Compare the p-value with alpha=0.05 and give the decision in context.","A survey of 1,200 phone owners finds that 246 browse the internet only on their phones. Test whether this proportion is greater than 18% at alpha=0.05.
+
+Follow the reasoning stages below:
+
+1. State hypotheses for whether the population proportion of phone-only internet users exceeds 0.18.
+2. Compute the sample proportion and null-based standard error.
+3. Calculate the right-tailed z statistic and p-value.
+4. Compare the p-value with alpha=0.05 and give the decision in context.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+11,Hypothesis Testing,Social Survey,Medium,Calculation,ch_inference_for_props_49_2,"Browsing on the mobile device
+
+A 
+survey of 2,254 American adults indicates that 17% of cell phone owners
+browse the internet exclusively on their phone rather than a computer
+or other device.
+[source: data:mobileBrowse]
+
+Interpret the p-value in this context.","\qt{Browsing on the mobile device\label{mobile_browsing_HT_CI}} A 
+survey of 2,254 American adults indicates that 17\% of cell phone owners
+browse the internet exclusively on their phone rather than a computer
+or other device.
+\footfullcite{data:mobileBrowse}
+\begin{parts}
+\item  According to an online article, a report from a mobile research 
+company indicates that 38 percent of Chinese mobile web users only access 
+the internet through their cell phones.
+\footfullcite{news:mobileBrowseChinese} Conduct a hypothesis test to 
+determine if these data provide strong evidence that the proportion of 
+Americans who only use their cell phones to access the internet is different 
+than the Chinese proportion of 38\%.
+\item Interpret the p-value in this context.
+\item Calculate a 95\% confidence interval for the proportion of Americans 
+who access the internet on their cell phones, and interpret the interval in 
+this context.
+\end{parts}","In a follow-up poll of 1,500 adults, 615 say they prefer online public services. Test whether the true proportion is different from 38% at alpha=0.05.",,Reject H0,"H0: p=0.38; HA: p≠0.38. p_hat=615/1500=0.410. SE=sqrt[0.38(0.62)/1500]=0.01253. z=(0.410-0.380)/0.01253=2.39. Using z=2.39, two-sided p≈0.0168. Since p<0.05, reject H0.","In a follow-up poll of 1,500 adults, 615 say they prefer online public services. Test whether the true proportion is different from 38% at alpha=0.05.","1. State a two-sided hypothesis test for whether the true preference proportion differs from 0.38.
+2. Compute the observed sample proportion and the standard error under H0.
+3. Calculate the z statistic and two-sided p-value.
+4. Compare the p-value with alpha=0.05 and state the statistical conclusion.","In a follow-up poll of 1,500 adults, 615 say they prefer online public services. Test whether the true proportion is different from 38% at alpha=0.05.
+
+Follow the reasoning stages below:
+
+1. State a two-sided hypothesis test for whether the true preference proportion differs from 0.38.
+2. Compute the observed sample proportion and the standard error under H0.
+3. Calculate the z statistic and two-sided p-value.
+4. Compare the p-value with alpha=0.05 and state the statistical conclusion.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+12,Hypothesis Testing,Social Survey,Medium,Calculation,ch_inference_for_props_50_5,"Coffee and Depression
+
+Researchers conducted a study investigating the relationship between 
+caffeinated coffee consumption and risk of depression in women. They 
+collected data on 50,739 women free of depression symptoms at the start 
+of the study in the year 1996, and these women were followed through 
+2006. The researchers used questionnaires to collect data on 
+caffeinated coffee consumption, asked each individual about physician-
+diagnosed depression, and also asked about the use of antidepressants. 
+The table below shows the distribution of incidences of depression by 
+amount of caffeinated coffee consumption.[source: Lucas:2011]
+adjustwidth-4em-4em
+
+Table:
+| 5cCaffeinated coffee consumption | | | | | | | |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| $$ 1 | 2-6 | 1 | 2-3 | $$ 4 | | | |
+| cup/week | cups/week | cup/day | cups/day | cups/day | Total | | |
+| Clinical | Yes | 670 | oiB373 | 905 | 564 | 95 | 2,607 |
+| depression | No | 11,545 | 6,244 | 16,329 | 11,726 | 2,288 | 48,132 |
+| Total | 12,215 | 6,617 | 17,234 | 12,290 | 2,383 | 50,739 | |
+
+adjustwidth
+
+The test statistic is $^2=20.93$. What is the p-value?","\qt{Coffee and Depression\label{coffee_depression_chisq_indep}} 
+Researchers conducted a study investigating the relationship between 
+caffeinated coffee consumption and risk of depression in women. They 
+collected data on 50,739 women free of depression symptoms at the start 
+of the study in the year 1996, and these women were followed through 
+2006. The researchers used questionnaires to collect data on 
+caffeinated coffee consumption, asked each individual about physician-
+diagnosed depression, and also asked about the use of antidepressants. 
+The table below shows the distribution of incidences of depression by 
+amount of caffeinated coffee consumption.\footfullcite{Lucas:2011}
+\begin{adjustwidth}{-4em}{-4em}
+{\small
+\begin{center}
+\begin{tabular}{l  l rrrrrr}
+	&  \multicolumn{1}{c}{}		& \multicolumn{5}{c}{\textit{Caffeinated coffee consumption}} \\
+\cline{3-7}
+	&		& $\le$ 1	& 2-6	& 1	& 2-3	& $\ge$ 4	&   \\
+	&		& cup/week	& cups/week	& cup/day	& cups/day	& cups/day	& Total  \\
+\cline{2-8}
+\textit{Clinical} & Yes	& 670 & \fbox{\textcolor{oiB}{373}}	& 905	& 564	& 95 	& 2,607 \\
+\textit{depression}	& No& 11,545	& 6,244	& 16,329	& 11,726	& 2,288 	& 48,132 \\
+\cline{2-8}
+				& Total	& 12,215	& 6,617 & 17,234	& 12,290	& 2,383 	& 50,739 \\
+\cline{2-8}
+\end{tabular}
+\end{center}
+}
+\end{adjustwidth}
+\begin{parts}
+\item What type of test is appropriate for evaluating if there is an 
+association between coffee intake and depression?
+\item Write the hypotheses for the test you identified in part (a).
+\item Calculate the overall proportion of women who do and do not 
+suffer from depression.
+\item Identify the expected count for the highlighted cell, and 
+calculate the contribution of this cell to the test statistic, i.e. 
+$(Observed-Expected)^2/Expected$.
+\item The test statistic is $\chi^2=20.93$. What is the p-value?
+\item What is the conclusion of the hypothesis test?
+\item One of the authors of this study was quoted on the NYTimes as 
+saying it was ``too early to recommend that women load up on extra 
+coffee"" based on just this study.\footfullcite{news:coffeeDepression} 
+Do you agree with this statement? Explain your reasoning.
+\end{parts}",A survey of 760 adults finds that 205 drink coffee daily and also report low mood. Historical data suggest this joint proportion is 24%. Test whether the current proportion is higher at alpha=0.05.,,Reject H0,"H0: p=0.24; HA: p>0.24. p_hat=205/760=0.2697. SE=sqrt[0.24(0.76)/760]=0.01549. z=(0.2697-0.2400)/0.01549=1.92. Using z=1.92, one-sided p≈0.0274. Since p<0.05, reject H0; there is evidence that the current joint proportion is higher than 24%.",A survey of 760 adults finds that 205 drink coffee daily and also report low mood. Historical data suggest this joint proportion is 24%. Test whether the current proportion is higher at alpha=0.05.,"1. State a one-sided hypothesis test for whether the current joint proportion exceeds the historical value 0.24.
+2. Compute the observed proportion and the null-based standard error.
+3. Calculate the right-tailed z statistic and p-value.
+4. Compare the p-value with alpha=0.05 and state whether the survey provides evidence of an increase.","A survey of 760 adults finds that 205 drink coffee daily and also report low mood. Historical data suggest this joint proportion is 24%. Test whether the current proportion is higher at alpha=0.05.
+
+Follow the reasoning stages below:
+
+1. State a one-sided hypothesis test for whether the current joint proportion exceeds the historical value 0.24.
+2. Compute the observed proportion and the null-based standard error.
+3. Calculate the right-tailed z statistic and p-value.
+4. Compare the p-value with alpha=0.05 and state whether the survey provides evidence of an increase.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+13,Hypothesis Testing,Marketing,Medium,Interpretation,ch_foundations_for_inf_29_1,"Testing for food safety
+
+A food safety inspector 
+is called upon to investigate a restaurant with a few customer reports of poor 
+sanitation practices. The food safety inspector uses a hypothesis testing 
+framework to evaluate whether regulations are not being met. If he decides 
+the restaurant is in gross violation, its license to serve food will be revoked.
+
+Write the hypotheses in words.","\qt{Testing for food safety\label{errors_food_safety}} A food safety inspector 
+is called upon to investigate a restaurant with a few customer reports of poor 
+sanitation practices. The food safety inspector uses a hypothesis testing 
+framework to evaluate whether regulations are not being met. If he decides 
+the restaurant is in gross violation, its license to serve food will be revoked.
+\begin{parts}
+\item Write the hypotheses in words.
+\item What is a Type~1 Error in this context?
+\item What is a Type~2 Error in this context?
+\item Which error is more problematic for the restaurant owner? Why?
+\item Which error is more problematic for the diners? Why?
+\item As a diner, would you prefer that the food safety inspector requires 
+strong evidence or very strong evidence of health concerns before revoking a 
+restaurant's license? Explain your reasoning.
+\end{parts}",A company A/B test gives p=0.018 for H0: the new landing page has the same conversion rate as the old page. Interpret this p-value in context.,,The result is statistically significant at 5%.,"If the two pages truly had equal conversion rates, results at least this favorable to the new page would occur about 1.8% of the time. Since 0.018<0.05, the evidence favors the new page.",A company A/B test gives p=0.018 for H0: the new landing page has the same conversion rate as the old page. Interpret this p-value in context.,"1. Identify what the reported p-value is conditional on: the null hypothesis of equal conversion rates.
+2. Explain the p-value as the probability, under H0, of observing a result at least as extreme as the one obtained.
+3. Compare p=0.018 with the conventional 5% significance level.
+4. State the statistical conclusion without interpreting the p-value as the probability that H0 is true.","A company A/B test gives p=0.018 for H0: the new landing page has the same conversion rate as the old page. Interpret this p-value in context.
+
+Follow the reasoning stages below:
+
+1. Identify what the reported p-value is conditional on: the null hypothesis of equal conversion rates.
+2. Explain the p-value as the probability, under H0, of observing a result at least as extreme as the one obtained.
+3. Compare p=0.018 with the conventional 5% significance level.
+4. State the statistical conclusion without interpreting the p-value as the probability that H0 is true.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+14,Hypothesis Testing,Marketing,Medium,Interpretation,ch_foundations_for_inf_29_2,"Testing for food safety
+
+A food safety inspector 
+is called upon to investigate a restaurant with a few customer reports of poor 
+sanitation practices. The food safety inspector uses a hypothesis testing 
+framework to evaluate whether regulations are not being met. If he decides 
+the restaurant is in gross violation, its license to serve food will be revoked.
+
+What is a Type~1 Error in this context?","\qt{Testing for food safety\label{errors_food_safety}} A food safety inspector 
+is called upon to investigate a restaurant with a few customer reports of poor 
+sanitation practices. The food safety inspector uses a hypothesis testing 
+framework to evaluate whether regulations are not being met. If he decides 
+the restaurant is in gross violation, its license to serve food will be revoked.
+\begin{parts}
+\item Write the hypotheses in words.
+\item What is a Type~1 Error in this context?
+\item What is a Type~2 Error in this context?
+\item Which error is more problematic for the restaurant owner? Why?
+\item Which error is more problematic for the diners? Why?
+\item As a diner, would you prefer that the food safety inspector requires 
+strong evidence or very strong evidence of health concerns before revoking a 
+restaurant's license? Explain your reasoning.
+\end{parts}",A marketing team fails to reject H0 that a discount email has no effect on purchase rate. Explain what this decision does and does not mean.,,"It means insufficient evidence, not proof of no effect.",Failing to reject H0 means the sample did not provide strong enough evidence of an effect. It does not prove the discount has exactly zero effect.,A marketing team fails to reject H0 that a discount email has no effect on purchase rate. Explain what this decision does and does not mean.,"1. Identify the decision made: failure to reject the null hypothesis.
+2. Explain what this decision says about the strength of evidence in the observed sample.
+3. Distinguish 'insufficient evidence of an effect' from 'proof of exactly no effect'.
+4. Give a concise interpretation appropriate to the marketing experiment.","A marketing team fails to reject H0 that a discount email has no effect on purchase rate. Explain what this decision does and does not mean.
+
+Follow the reasoning stages below:
+
+1. Identify the decision made: failure to reject the null hypothesis.
+2. Explain what this decision says about the strength of evidence in the observed sample.
+3. Distinguish 'insufficient evidence of an effect' from 'proof of exactly no effect'.
+4. Give a concise interpretation appropriate to the marketing experiment.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+15,Hypothesis Testing,Marketing,Medium,Interpretation,ch_foundations_for_inf_29_3,"Testing for food safety
+
+A food safety inspector 
+is called upon to investigate a restaurant with a few customer reports of poor 
+sanitation practices. The food safety inspector uses a hypothesis testing 
+framework to evaluate whether regulations are not being met. If he decides 
+the restaurant is in gross violation, its license to serve food will be revoked.
+
+What is a Type~2 Error in this context?","\qt{Testing for food safety\label{errors_food_safety}} A food safety inspector 
+is called upon to investigate a restaurant with a few customer reports of poor 
+sanitation practices. The food safety inspector uses a hypothesis testing 
+framework to evaluate whether regulations are not being met. If he decides 
+the restaurant is in gross violation, its license to serve food will be revoked.
+\begin{parts}
+\item Write the hypotheses in words.
+\item What is a Type~1 Error in this context?
+\item What is a Type~2 Error in this context?
+\item Which error is more problematic for the restaurant owner? Why?
+\item Which error is more problematic for the diners? Why?
+\item As a diner, would you prefer that the food safety inspector requires 
+strong evidence or very strong evidence of health concerns before revoking a 
+restaurant's license? Explain your reasoning.
+\end{parts}",An ad campaign test uses alpha=0.01 instead of alpha=0.05. Explain how this changes the chance of a Type I error.,,It lowers the Type I error rate.,"A Type I error is falsely concluding the campaign works when it does not. Setting alpha=0.01 makes that false-positive risk 1%, lower than 5%.",An ad campaign test uses alpha=0.01 instead of alpha=0.05. Explain how this changes the chance of a Type I error.,"1. Recall that alpha is the long-run probability of a Type I error when the null hypothesis is true.
+2. Compare alpha=0.01 with alpha=0.05.
+3. Explain how the stricter threshold changes the false-positive risk.
+4. State the consequence without claiming that Type II error is also reduced.","An ad campaign test uses alpha=0.01 instead of alpha=0.05. Explain how this changes the chance of a Type I error.
+
+Follow the reasoning stages below:
+
+1. Recall that alpha is the long-run probability of a Type I error when the null hypothesis is true.
+2. Compare alpha=0.01 with alpha=0.05.
+3. Explain how the stricter threshold changes the false-positive risk.
+4. State the consequence without claiming that Type II error is also reduced.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+16,Hypothesis Testing,Marketing,Medium,Interpretation,ch_foundations_for_inf_29_4,"Testing for food safety
+
+A food safety inspector 
+is called upon to investigate a restaurant with a few customer reports of poor 
+sanitation practices. The food safety inspector uses a hypothesis testing 
+framework to evaluate whether regulations are not being met. If he decides 
+the restaurant is in gross violation, its license to serve food will be revoked.
+
+Which error is more problematic for the restaurant owner? Why?","\qt{Testing for food safety\label{errors_food_safety}} A food safety inspector 
+is called upon to investigate a restaurant with a few customer reports of poor 
+sanitation practices. The food safety inspector uses a hypothesis testing 
+framework to evaluate whether regulations are not being met. If he decides 
+the restaurant is in gross violation, its license to serve food will be revoked.
+\begin{parts}
+\item Write the hypotheses in words.
+\item What is a Type~1 Error in this context?
+\item What is a Type~2 Error in this context?
+\item Which error is more problematic for the restaurant owner? Why?
+\item Which error is more problematic for the diners? Why?
+\item As a diner, would you prefer that the food safety inspector requires 
+strong evidence or very strong evidence of health concerns before revoking a 
+restaurant's license? Explain your reasoning.
+\end{parts}","A product manager says, 'Our p-value is 0.07, so the campaign definitely failed.' Is this interpretation correct?",,No.,"A p-value of 0.07 means the result is not statistically significant at 5%, but it is not proof that the campaign failed. The estimate, sample size, and practical effect size still matter.","A product manager says, 'Our p-value is 0.07, so the campaign definitely failed.' Is this interpretation correct?","1. Compare p=0.07 with alpha=0.05 and identify the formal hypothesis-test decision.
+2. Explain why a non-significant result is not proof that the campaign failed or that the null is true.
+3. Note that effect size, uncertainty, and sample size still matter.
+4. Give a direct judgment on the product manager's statement.","A product manager says, 'Our p-value is 0.07, so the campaign definitely failed.' Is this interpretation correct?
+
+Follow the reasoning stages below:
+
+1. Compare p=0.07 with alpha=0.05 and identify the formal hypothesis-test decision.
+2. Explain why a non-significant result is not proof that the campaign failed or that the null is true.
+3. Note that effect size, uncertainty, and sample size still matter.
+4. Give a direct judgment on the product manager's statement.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+17,Hypothesis Testing,Marketing,Medium,Interpretation,ch_foundations_for_inf_29_5,"Testing for food safety
+
+A food safety inspector 
+is called upon to investigate a restaurant with a few customer reports of poor 
+sanitation practices. The food safety inspector uses a hypothesis testing 
+framework to evaluate whether regulations are not being met. If he decides 
+the restaurant is in gross violation, its license to serve food will be revoked.
+
+Which error is more problematic for the diners? Why?","\qt{Testing for food safety\label{errors_food_safety}} A food safety inspector 
+is called upon to investigate a restaurant with a few customer reports of poor 
+sanitation practices. The food safety inspector uses a hypothesis testing 
+framework to evaluate whether regulations are not being met. If he decides 
+the restaurant is in gross violation, its license to serve food will be revoked.
+\begin{parts}
+\item Write the hypotheses in words.
+\item What is a Type~1 Error in this context?
+\item What is a Type~2 Error in this context?
+\item Which error is more problematic for the restaurant owner? Why?
+\item Which error is more problematic for the diners? Why?
+\item As a diner, would you prefer that the food safety inspector requires 
+strong evidence or very strong evidence of health concerns before revoking a 
+restaurant's license? Explain your reasoning.
+\end{parts}","A restaurant tests whether a new menu layout increases average order value. The test is significant, but the estimated increase is only £0.06 per order. Interpret the distinction between statistical and practical significance.",,Statistical significance does not guarantee practical importance.,A very large sample can make a tiny effect statistically significant. The £0.06 gain may be too small to justify redesign costs.,"A restaurant tests whether a new menu layout increases average order value. The test is significant, but the estimated increase is only £0.06 per order. Interpret the distinction between statistical and practical significance.","1. Separate statistical significance from the magnitude of the estimated effect.
+2. Recognize that a very small effect can be statistically significant, especially with a large sample.
+3. Evaluate the £0.06 increase in relation to practical costs or business value.
+4. State why statistical significance alone is insufficient to establish practical importance.","A restaurant tests whether a new menu layout increases average order value. The test is significant, but the estimated increase is only £0.06 per order. Interpret the distinction between statistical and practical significance.
+
+Follow the reasoning stages below:
+
+1. Separate statistical significance from the magnitude of the estimated effect.
+2. Recognize that a very small effect can be statistically significant, especially with a large sample.
+3. Evaluate the £0.06 increase in relation to practical costs or business value.
+4. State why statistical significance alone is insufficient to establish practical importance.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+18,Hypothesis Testing,Finance,Hard,Short Answer,ch_foundations_for_inf_30_2,"True or false
+
+Determine if the following statements are true or false, and 
+explain your reasoning. If false, state how it could be corrected.
+
+Decreasing the significance level ($$) will increase the probability 
+of making a Type~1 Error.","\qt{True or false\label{tf_found_inf_prop_friendly}}
+Determine if the following statements are true or false, and 
+explain your reasoning. If false, state how it could be corrected.
+\begin{parts}
+\item If a given value (for example, the null hypothesized value of a parameter) 
+is within a 95\% confidence interval, it will also be within a 99\% confidence 
+interval.
+\item Decreasing the significance level ($\alpha$) will increase the probability 
+of making a Type~1 Error.
+\item Suppose the null hypothesis is $p = 0.5$ and we fail to reject $H_0$. 
+Under this scenario, the true population proportion is 0.5.
+\item With large sample sizes, even small differences between the null value and 
+the observed point estimate, a difference often called the
+effect size\index{effect size}, will be identified as statistically significant.
+\end{parts}",A bank tests whether its average mortgage approval time is below 12 days. State the null and alternative hypotheses in words and symbols.,,H0: μ=12 days; HA: μ<12 days.,The null represents the benchmark approval time. The alternative matches the bank's claim of a shorter average time.,A bank tests whether its average mortgage approval time is below 12 days. State the null and alternative hypotheses in words and symbols.,"1. Define the population parameter as the bank's true mean mortgage approval time.
+2. Use the 12-day benchmark to formulate the null hypothesis.
+3. Match the bank's claim 'below 12 days' with a left-sided alternative.
+4. State both hypotheses clearly in words and symbols.","A bank tests whether its average mortgage approval time is below 12 days. State the null and alternative hypotheses in words and symbols.
+
+Follow the reasoning stages below:
+
+1. Define the population parameter as the bank's true mean mortgage approval time.
+2. Use the 12-day benchmark to formulate the null hypothesis.
+3. Match the bank's claim 'below 12 days' with a left-sided alternative.
+4. State both hypotheses clearly in words and symbols.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+19,Hypothesis Testing,Finance,Hard,Short Answer,ch_foundations_for_inf_30_3,"True or false
+
+Determine if the following statements are true or false, and 
+explain your reasoning. If false, state how it could be corrected.
+
+Suppose the null hypothesis is $p = 0.5$ and we fail to reject $H_0$. 
+Under this scenario, the true population proportion is 0.5.","\qt{True or false\label{tf_found_inf_prop_friendly}}
+Determine if the following statements are true or false, and 
+explain your reasoning. If false, state how it could be corrected.
+\begin{parts}
+\item If a given value (for example, the null hypothesized value of a parameter) 
+is within a 95\% confidence interval, it will also be within a 99\% confidence 
+interval.
+\item Decreasing the significance level ($\alpha$) will increase the probability 
+of making a Type~1 Error.
+\item Suppose the null hypothesis is $p = 0.5$ and we fail to reject $H_0$. 
+Under this scenario, the true population proportion is 0.5.
+\item With large sample sizes, even small differences between the null value and 
+the observed point estimate, a difference often called the
+effect size\index{effect size}, will be identified as statistically significant.
+\end{parts}",A trading platform tests whether a new warning screen reduces the proportion of users making high-risk trades. What would a Type II error mean in this context?,,Concluding there is no reduction when the warning screen truly reduces high-risk trades.,"Type II error means failing to reject a false null. Here, the platform misses a real beneficial effect.",A trading platform tests whether a new warning screen reduces the proportion of users making high-risk trades. What would a Type II error mean in this context?,"1. Identify the null as no reduction in the high-risk-trade proportion and the alternative as a real reduction.
+2. Recall that a Type II error means failing to reject a false null hypothesis.
+3. Translate that definition into the warning-screen context.
+4. State the missed real effect clearly without confusing it with a false positive.","A trading platform tests whether a new warning screen reduces the proportion of users making high-risk trades. What would a Type II error mean in this context?
+
+Follow the reasoning stages below:
+
+1. Identify the null as no reduction in the high-risk-trade proportion and the alternative as a real reduction.
+2. Recall that a Type II error means failing to reject a false null hypothesis.
+3. Translate that definition into the warning-screen context.
+4. State the missed real effect clearly without confusing it with a false positive.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+20,Hypothesis Testing,Finance,Hard,Short Answer,ch_inference_for_means_54_3,"Torque on a rusty bolt
+
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.[source: youtube:torque_on_rusty_bolt]
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+
+0.8ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot
+
+The table below are p-values for pairwise $t$-tests
+ comparing each of the different groups.
+ These p-values have not been corrected for multiple
+ comparisons.
+ Which pair of groups appears most likely to represent
+ a difference?
+
+Table:
+| AeroKroil | Heat | Liquid Wrench | none | PB Blaster | Royal Purple | WD-40 | |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Acetone/ATF | 0.2026 | 0.0308 | 0.0476 | 0.1542 | 0.3294 | 0.5222 | 0.3744 |
+| AeroKroil | 0.0027 | 0.0025 | 0.8723 | 0.7551 | 0.5143 | 0.6883 | |
+| Heat | 0.5580 | 0.0020 | 0.0050 | 0.0096 | 0.0059 | | |
+| Liquid Wrench | 0.0017 | 0.0053 | 0.0117 | 0.0065 | | | |
+| none | 0.6371 | 0.4180 | 0.5751 | | | | |
+| PB Blaster | 0.7318 | 0.9286 | | | | | |
+| Royal Purple | 0.8000 | | | | | | |","\qt{Torque on a rusty bolt\label{torque_on_rusty_bolt}}
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.\footfullcite{youtube:torque_on_rusty_bolt}
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+\begin{center}
+\FigureFullPath[A side-by-side dot plot is shown for ""Torque required to loosen a rusty bolt, in foot-pounds"". There are only 2 to 4 observations per option, which are roughly as follows: Heat (82, 98), WD-40 (106, 118, 129, 131), Royal Purple (108, 114, 122, 132), PB Blaster (110, 124, 127, 128), Liquid Wrench (85, 88, 98, 114), AeroKroil (107, 125, 132, 134), Acetone/ATF (105, 107, 114, 129), and ""none"" (110, 123, 129, 142).)]{0.8}{ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot}
+\end{center}
+\begin{parts}
+\item\label{torque_on_rusty_bolt_appropriate}
+    Do you think it is reasonable to apply ANOVA in this case?
+\item
+    Regardless of your answer in
+    part~(\ref{torque_on_rusty_bolt_appropriate}),
+    describe hypotheses for ANOVA in this context,
+    and use the table below to carry out the test.
+    Give your conclusion in the context of the data.
+    \begin{center}
+    \begin{tabular}{lrrrrr}
+    \hline
+    & Df & Sum Sq & Mean Sq & F value & Pr($>$F) \\ 
+    \hline
+    treatment & 7 & 3603.43 & 514.78 & 4.03 & 0.0056 \\ 
+    Residuals & 22 & 2812.80 & 127.85 &  &  \\ 
+    \hline
+    \end{tabular}
+    \end{center}
+\item\label{torque_on_rusty_bolt_pvalues}
+    The table below are p-values for pairwise $t$-tests
+    comparing each of the different groups.
+    These p-values have not been corrected for multiple
+    comparisons.
+    Which pair of groups appears most likely to represent
+    a difference?
+    \begin{center}\footnotesize
+    \begin{tabular}{l ccc ccc c}
+    \hline
+    & AeroKroil & Heat & Liquid Wrench & none &
+        PB Blaster & Royal Purple & WD-40 \\ 
+    \hline
+    Acetone/ATF & 0.2026 & 0.0308 & 0.0476 & 0.1542 &
+        0.3294 & 0.5222 & 0.3744 \\ 
+    AeroKroil &  & 0.0027 & 0.0025 & 0.8723 & 0.7551 &
+        0.5143 & 0.6883 \\ 
+    Heat &  &  & 0.5580 & 0.0020 & 0.0050 & 0.0096 &
+        0.0059 \\ 
+    Liquid Wrench &  &  &  & 0.0017 & 0.0053 &
+        0.0117 & 0.0065 \\ 
+    none &  &  &  &  & 0.6371 & 0.4180 & 0.5751 \\ 
+    PB Blaster &  &  &  &  &  & 0.7318 & 0.9286 \\ 
+    Royal Purple &  &  &  &  &  &  & 0.8000 \\
+    \hline
+    \end{tabular}
+    \end{center}
+\item
+    There are 28 p-values shown in the table in
+    part~(\ref{torque_on_rusty_bolt_pvalues}).
+    Determine if any of them are statistically
+    significant after correcting for multiple
+    comparisons.
+    If so, which one(s)?
+    Explain your answer.
+\end{parts}","A fintech experiment reports p=0.004 for an increase in savings-account signups, but the experiment was run only on users from one city. Give one statistical concern before generalising the result.",,External validity / sampling bias.,"The test may show strong evidence for that city, but the sample may not represent all users, so the effect may not generalise.","A fintech experiment reports p=0.004 for an increase in savings-account signups, but the experiment was run only on users from one city. Give one statistical concern before generalising the result.","1. Separate statistical significance within the observed sample from the ability to generalise beyond that sample.
+2. Identify the restriction that all experimental users came from one city.
+3. Explain how this may create a representativeness or external-validity problem.
+4. State one clear statistical concern before generalising the result.","A fintech experiment reports p=0.004 for an increase in savings-account signups, but the experiment was run only on users from one city. Give one statistical concern before generalising the result.
+
+Follow the reasoning stages below:
+
+1. Separate statistical significance within the observed sample from the ability to generalise beyond that sample.
+2. Identify the restriction that all experimental users came from one city.
+3. Explain how this may create a representativeness or external-validity problem.
+4. State one clear statistical concern before generalising the result.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+21,Hypothesis Testing,Finance,Hard,Short Answer,ch_regr_simple_linear_40_2,"Cats, Part II
+
+Exercise~[ref: cat_body_heart_reg] 
+presents regression output from a model for predicting the heart 
+weight (in g) of cats from their body weight (in kg). The coefficients 
+are estimated using a dataset of 144 domestic cat. The model output 
+is also provided below.
+
+Table:
+| Estimate | Std. Error | t value | Pr($>$$|$t$|$) | |
+| --- | --- | --- | --- | --- |
+| (Intercept) | -0.357 | 0.692 | -0.515 | 0.607 |
+| body wt | 4.034 | 0.250 | 16.119 | 0.000 |
+
+\[ s = 1.452 R^2 = 64.66% R^2_adj = 64.41% \]
+
+State the conclusion of the hypothesis test from part (a) in 
+context of the data.","\qt{Cats, Part II\label{cat_body_heart_inf}}
+Exercise~\ref{cat_body_heart_reg} 
+presents regression output from a model for predicting the heart 
+weight (in g) of cats from their body weight (in kg). The coefficients 
+are estimated using a dataset of 144 domestic cat. The model output 
+is also provided below.
+\begin{center}
+\begin{tabular}{rrrrr}
+    \hline
+            & Estimate  & Std. Error    & t value   & Pr($>$$|$t$|$) \\ 
+    \hline
+(Intercept) & -0.357    & 0.692         & -0.515    & 0.607 \\ 
+body wt     & 4.034     & 0.250         & 16.119    & 0.000 \\ 
+    \hline
+\end{tabular}
+\[ s = 1.452 \qquad R^2 = 64.66\% \qquad R^2_{adj} = 64.41\% \]
+\end{center}
+\begin{parts}
+\item We see that the point estimate for the slope is positive.
+    What are the hypotheses for evaluating whether body weight is
+    positively associated with heart weight in cats?
+\item State the conclusion of the hypothesis test from part (a) in 
+context of the data.
+\item Calculate a 95\% confidence interval for the slope of body 
+weight, and interpret it in context of the data.
+\item Do your results from the hypothesis test and the confidence 
+interval agree? Explain.
+\end{parts}",A stock analyst tests whether a factor model's average monthly abnormal return differs from 0. Why is a two-sided test more appropriate than a one-sided test if the analyst has no directional prior?,,Because deviations in either direction matter.,"Without a pre-specified direction, both positive and negative abnormal returns are evidence against H0.",A stock analyst tests whether a factor model's average monthly abnormal return differs from 0. Why is a two-sided test more appropriate than a one-sided test if the analyst has no directional prior?,"1. Identify the null value for average abnormal return.
+2. Note that the analyst has not specified a direction of departure in advance.
+3. Explain that both positive and negative deviations from zero are relevant evidence against H0.
+4. Conclude why a two-sided alternative is appropriate.","A stock analyst tests whether a factor model's average monthly abnormal return differs from 0. Why is a two-sided test more appropriate than a one-sided test if the analyst has no directional prior?
+
+Follow the reasoning stages below:
+
+1. Identify the null value for average abnormal return.
+2. Note that the analyst has not specified a direction of departure in advance.
+3. Explain that both positive and negative deviations from zero are relevant evidence against H0.
+4. Conclude why a two-sided alternative is appropriate.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+22,Hypothesis Testing,Education,Medium,Multiple Choice,ch_inference_for_means_57,"Online communication
+
+A study suggests that the 
+average college student spends 10 hours per week communicating with others 
+online. You believe that this is an underestimate and decide to collect your 
+own sample for a hypothesis test. You randomly sample 60 students from your 
+dorm and find that on average they spent 13.5 hours a week communicating with 
+others online. A friend of yours, who offers to help you with the hypothesis 
+test, comes up with the following set of hypotheses. Indicate any errors you see.
+align*
+H_0 | : x < 10~hours 
+
+H_A | : x > 13.5~hours
+align*","\qt{Online communication\label{online_communication}} A study suggests that the 
+average college student spends 10 hours per week communicating with others 
+online. You believe that this is an underestimate and decide to collect your 
+own sample for a hypothesis test. You randomly sample 60 students from your 
+dorm and find that on average they spent 13.5 hours a week communicating with 
+others online. A friend of yours, who offers to help you with the hypothesis 
+test, comes up with the following set of hypotheses. Indicate any errors you see.
+\begin{align*}
+H_0&: \bar{x} < 10~hours \\
+H_A&: \bar{x} > 13.5~hours
+\end{align*}",A university tests whether a new online discussion tool changes the mean exam score. Which hypotheses are appropriate?,"A. H0: μ=0; HA: μ>0
+B. H0: μ_new−μ_old=0; HA: μ_new−μ_old≠0
+C. H0: p_new=p_old; HA: p_new>p_old
+D. H0: x̄=0; HA: x̄≠0",B,"Because the response is a mean score and the wording says 'changes', a two-sided test for the difference in means is appropriate.","A university tests whether a new online discussion tool changes the mean exam score. Which hypotheses are appropriate?
+
+Options:
+A. H0: μ=0; HA: μ>0
+B. H0: μ_new−μ_old=0; HA: μ_new−μ_old≠0
+C. H0: p_new=p_old; HA: p_new>p_old
+D. H0: x̄=0; HA: x̄≠0","1. Identify the response variable as a mean exam score rather than a proportion.
+2. Translate the word 'changes' into a non-directional alternative.
+3. Compare each option with a two-sample difference-in-means hypothesis about population means.
+4. Select the option that correctly expresses H0 and HA.","A university tests whether a new online discussion tool changes the mean exam score. Which hypotheses are appropriate?
+
+Options:
+A. H0: μ=0; HA: μ>0
+B. H0: μ_new−μ_old=0; HA: μ_new−μ_old≠0
+C. H0: p_new=p_old; HA: p_new>p_old
+D. H0: x̄=0; HA: x̄≠0
+
+Follow the reasoning stages below:
+
+1. Identify the response variable as a mean exam score rather than a proportion.
+2. Translate the word 'changes' into a non-directional alternative.
+3. Compare each option with a two-sample difference-in-means hypothesis about population means.
+4. Select the option that correctly expresses H0 and HA.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+23,Hypothesis Testing,Education,Medium,Multiple Choice,ch_foundations_for_inf_30_2,"True or false
+
+Determine if the following statements are true or false, and 
+explain your reasoning. If false, state how it could be corrected.
+
+Decreasing the significance level ($$) will increase the probability 
+of making a Type~1 Error.","\qt{True or false\label{tf_found_inf_prop_friendly}}
+Determine if the following statements are true or false, and 
+explain your reasoning. If false, state how it could be corrected.
+\begin{parts}
+\item If a given value (for example, the null hypothesized value of a parameter) 
+is within a 95\% confidence interval, it will also be within a 99\% confidence 
+interval.
+\item Decreasing the significance level ($\alpha$) will increase the probability 
+of making a Type~1 Error.
+\item Suppose the null hypothesis is $p = 0.5$ and we fail to reject $H_0$. 
+Under this scenario, the true population proportion is 0.5.
+\item With large sample sizes, even small differences between the null value and 
+the observed point estimate, a difference often called the
+effect size\index{effect size}, will be identified as statistically significant.
+\end{parts}","In a study skills experiment, p=0.032 for an improvement in pass rate. Which statements are correct at alpha=0.05?","A. Reject H0
+B. The probability H0 is true is 0.032
+C. The result is statistically significant at 5%
+D. The improvement is automatically large in practice",A and C,"Since p<0.05, reject H0 and call the result statistically significant. The p-value is not the probability H0 is true, and practical size is separate.","In a study skills experiment, p=0.032 for an improvement in pass rate. Which statements are correct at alpha=0.05?
+
+Options:
+A. Reject H0
+B. The probability H0 is true is 0.032
+C. The result is statistically significant at 5%
+D. The improvement is automatically large in practice","1. Compare p=0.032 with alpha=0.05 to determine the formal test decision.
+2. Identify which statement correctly describes statistical significance.
+3. Reject statements that treat the p-value as P(H0 is true) or equate significance with a large practical effect.
+4. Select every option that is supported.","In a study skills experiment, p=0.032 for an improvement in pass rate. Which statements are correct at alpha=0.05?
+
+Options:
+A. Reject H0
+B. The probability H0 is true is 0.032
+C. The result is statistically significant at 5%
+D. The improvement is automatically large in practice
+
+Follow the reasoning stages below:
+
+1. Compare p=0.032 with alpha=0.05 to determine the formal test decision.
+2. Identify which statement correctly describes statistical significance.
+3. Reject statements that treat the p-value as P(H0 is true) or equate significance with a large practical effect.
+4. Select every option that is supported.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+24,Hypothesis Testing,Education,Medium,Multiple Choice,ch_foundations_for_inf_32,"Nearsighted
+
+It is believed that nearsightedness affects about 8% of 
+all children.
+In a random sample of 194 children, 21 are nearsighted.
+Conduct a hypothesis test for the following question:
+do these data provide evidence that the 8% value is inaccurate?","\qt{Nearsighted\label{nearsighted_updated}}
+It is believed that nearsightedness affects about 8\% of 
+all children.
+In a random sample of 194 children, 21 are nearsighted.
+Conduct a hypothesis test for the following question:
+do these data provide evidence that the 8\% value is inaccurate?",A school survey uses alpha=0.10 instead of 0.05. Which statements are correct?,"A. The test becomes easier to reject H0
+B. The Type I error rate increases
+C. The sample mean must increase
+D. The null hypothesis changes",A and B,A larger alpha gives a wider rejection region and a higher false-positive risk. It does not change the observed data or hypotheses.,"A school survey uses alpha=0.10 instead of 0.05. Which statements are correct?
+
+Options:
+A. The test becomes easier to reject H0
+B. The Type I error rate increases
+C. The sample mean must increase
+D. The null hypothesis changes","1. Recall how the rejection rule depends on the chosen significance level alpha.
+2. Determine what increasing alpha from 0.05 to 0.10 does to the ease of rejecting H0.
+3. Relate alpha directly to the Type I error probability.
+4. Reject options claiming that alpha changes the observed data or the hypotheses, then select all correct statements.","A school survey uses alpha=0.10 instead of 0.05. Which statements are correct?
+
+Options:
+A. The test becomes easier to reject H0
+B. The Type I error rate increases
+C. The sample mean must increase
+D. The null hypothesis changes
+
+Follow the reasoning stages below:
+
+1. Recall how the rejection rule depends on the chosen significance level alpha.
+2. Determine what increasing alpha from 0.05 to 0.10 does to the ease of rejecting H0.
+3. Relate alpha directly to the Type I error probability.
+4. Reject options claiming that alpha changes the observed data or the hypotheses, then select all correct statements.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+25,Hypothesis Testing,Education,Medium,Multiple Choice,ch_inference_for_props_40_2,"Website experiment
+
+The OpenIntro website occasionally experiments with design
+and link placement.
+We conducted one experiment testing three different placements
+of a download link for this textbook on the book's main page
+to see which location, if any, led to the most downloads.
+The number of site visitors included in the experiment
+was~701 and is captured in one of the response combinations
+in the following table:
+
+Table:
+| Download | No Download | |
+| --- | --- | --- |
+| Position 1 | 13.8
+| Position 2 | 14.6
+| Position 3 | 12.1
+
+Each individual in the experiment had an equal chance of
+ being in any of the three experiment groups.
+ However, we see that there are slightly different
+ totals for the groups.
+ Is there any evidence that the groups were actually imbalanced?
+ Make sure to clearly state hypotheses, check conditions,
+ calculate the appropriate test statistic and the p-value,
+ and make your conclusion in context of the data.","\qt{Website experiment\label{web_ctr_exp_chisq}}
+The OpenIntro website occasionally experiments with design
+and link placement.
+We conducted one experiment testing three different placements
+of a download link for this textbook on the book's main page
+to see which location, if any, led to the most downloads.
+The number of site visitors included in the experiment
+was~701 and is captured in one of the response combinations
+in the following table:
+\begin{center}
+\begin{tabular}{r cc}
+  \hline
+            & Download & No Download \\ 
+  \hline
+Position 1  & 13.8\%   & 18.3\% \\ 
+Position 2  & 14.6\%   & 18.5\% \\ 
+Position 3  & 12.1\%   & 22.7\% \\ 
+  \hline
+\end{tabular}
+\end{center}
+% x <- matrix(c(97, 102, 85, 128, 130, 159), 3, 2)
+\begin{parts}
+\item
+    Calculate the actual number of site visitors in each
+    of the six response categories.
+\item
+    Each individual in the experiment had an equal chance of
+    being in any of the three experiment groups.
+    However, we see that there are slightly different
+    totals for the groups.
+    Is there any evidence that the groups were actually imbalanced?
+    Make sure to clearly state hypotheses, check conditions,
+    calculate the appropriate test statistic and the p-value,
+    and make your conclusion in context of the data.
+\item
+   Complete an appropriate hypothesis test to check whether
+   there is evidence that there is a higher rate of site visitors
+   clicking on the textbook link in any of the three groups.
+\end{parts}",A learning app compares completion rates for two versions using a two-proportion test. Which conditions should be checked?,"A. Random assignment or random sampling
+B. Independent observations
+C. Enough expected successes and failures
+D. The sample mean must be normally distributed exactly","A, B and C",The two-proportion z test needs independence/randomisation and enough successes/failures for the normal approximation; exact normality of a sample mean is irrelevant.,"A learning app compares completion rates for two versions using a two-proportion test. Which conditions should be checked?
+
+Options:
+A. Random assignment or random sampling
+B. Independent observations
+C. Enough expected successes and failures
+D. The sample mean must be normally distributed exactly","1. Identify the procedure as a two-proportion z test.
+2. Check the design requirements involving random sampling/assignment and independence.
+3. Check whether expected successes and failures are sufficiently large for the normal approximation.
+4. Distinguish these requirements from irrelevant claims about exact normality of a sample mean, then select all valid conditions.","A learning app compares completion rates for two versions using a two-proportion test. Which conditions should be checked?
+
+Options:
+A. Random assignment or random sampling
+B. Independent observations
+C. Enough expected successes and failures
+D. The sample mean must be normally distributed exactly
+
+Follow the reasoning stages below:
+
+1. Identify the procedure as a two-proportion z test.
+2. Check the design requirements involving random sampling/assignment and independence.
+3. Check whether expected successes and failures are sufficiently large for the normal approximation.
+4. Distinguish these requirements from irrelevant claims about exact normality of a sample mean, then select all valid conditions.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+26,Hypothesis Testing,Transportation,Medium,Single Choice,ch_foundations_for_inf_36,"Same observation, different sample size
+
+Suppose you 
+conduct a hypothesis test based on a sample where the sample size is $n = 50$, 
+and arrive at a p-value of 0.08. You then refer back to your notes and discover 
+that you made a careless mistake, the sample size should have been $n = 500$. 
+Will your p-value increase, decrease, or stay the same? Explain.","\qt{Same observation, different sample size\label{same_obs_diff_n}} Suppose you 
+conduct a hypothesis test based on a sample where the sample size is $n = 50$, 
+and arrive at a p-value of 0.08. You then refer back to your notes and discover 
+that you made a careless mistake, the sample size should have been $n = 500$. 
+Will your p-value increase, decrease, or stay the same? Explain.","A transit agency tests whether a new bus lane reduces the mean commute time. The p-value is 0.21. At alpha=0.05, what is the correct conclusion?","A. Reject H0; there is strong evidence commute time fell
+B. Do not reject H0; there is not enough evidence commute time fell
+C. Accept HA as true
+D. The new bus lane increased commute time",B,"Because p=0.21>0.05, the result is not statistically significant.","A transit agency tests whether a new bus lane reduces the mean commute time. The p-value is 0.21. At alpha=0.05, what is the correct conclusion?
+
+Options:
+A. Reject H0; there is strong evidence commute time fell
+B. Do not reject H0; there is not enough evidence commute time fell
+C. Accept HA as true
+D. The new bus lane increased commute time","1. Compare the reported p-value with alpha=0.05.
+2. Determine whether H0 should be rejected.
+3. Translate that decision into the specific claim that the bus lane reduces mean commute time.
+4. Choose the option that expresses insufficient evidence without accepting H0 as proven.","A transit agency tests whether a new bus lane reduces the mean commute time. The p-value is 0.21. At alpha=0.05, what is the correct conclusion?
+
+Options:
+A. Reject H0; there is strong evidence commute time fell
+B. Do not reject H0; there is not enough evidence commute time fell
+C. Accept HA as true
+D. The new bus lane increased commute time
+
+Follow the reasoning stages below:
+
+1. Compare the reported p-value with alpha=0.05.
+2. Determine whether H0 should be rejected.
+3. Translate that decision into the specific claim that the bus lane reduces mean commute time.
+4. Choose the option that expresses insufficient evidence without accepting H0 as proven.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+27,Hypothesis Testing,Transportation,Medium,Single Choice,ch_inference_for_props_40_3,"Website experiment
+
+The OpenIntro website occasionally experiments with design
+and link placement.
+We conducted one experiment testing three different placements
+of a download link for this textbook on the book's main page
+to see which location, if any, led to the most downloads.
+The number of site visitors included in the experiment
+was~701 and is captured in one of the response combinations
+in the following table:
+
+Table:
+| Download | No Download | |
+| --- | --- | --- |
+| Position 1 | 13.8
+| Position 2 | 14.6
+| Position 3 | 12.1
+
+Complete an appropriate hypothesis test to check whether
+ there is evidence that there is a higher rate of site visitors
+ clicking on the textbook link in any of the three groups.","\qt{Website experiment\label{web_ctr_exp_chisq}}
+The OpenIntro website occasionally experiments with design
+and link placement.
+We conducted one experiment testing three different placements
+of a download link for this textbook on the book's main page
+to see which location, if any, led to the most downloads.
+The number of site visitors included in the experiment
+was~701 and is captured in one of the response combinations
+in the following table:
+\begin{center}
+\begin{tabular}{r cc}
+  \hline
+            & Download & No Download \\ 
+  \hline
+Position 1  & 13.8\%   & 18.3\% \\ 
+Position 2  & 14.6\%   & 18.5\% \\ 
+Position 3  & 12.1\%   & 22.7\% \\ 
+  \hline
+\end{tabular}
+\end{center}
+% x <- matrix(c(97, 102, 85, 128, 130, 159), 3, 2)
+\begin{parts}
+\item
+    Calculate the actual number of site visitors in each
+    of the six response categories.
+\item
+    Each individual in the experiment had an equal chance of
+    being in any of the three experiment groups.
+    However, we see that there are slightly different
+    totals for the groups.
+    Is there any evidence that the groups were actually imbalanced?
+    Make sure to clearly state hypotheses, check conditions,
+    calculate the appropriate test statistic and the p-value,
+    and make your conclusion in context of the data.
+\item
+   Complete an appropriate hypothesis test to check whether
+   there is evidence that there is a higher rate of site visitors
+   clicking on the textbook link in any of the three groups.
+\end{parts}","A railway operator tests H0: p=0.08 against HA: p<0.08, where p is the cancellation rate. Which result gives strongest evidence for improvement?","A. z=0.10
+B. z=-0.40
+C. z=-2.90
+D. z=1.80",C,"For a left-tailed test, a large negative z statistic gives the smallest p-value.","A railway operator tests H0: p=0.08 against HA: p<0.08, where p is the cancellation rate. Which result gives strongest evidence for improvement?
+
+Options:
+A. z=0.10
+B. z=-0.40
+C. z=-2.90
+D. z=1.80","1. Recognize that HA: p<0.08 defines a left-tailed test.
+2. Recall that stronger evidence for a left-tailed alternative corresponds to a more negative z statistic and a smaller p-value.
+3. Compare the signs and magnitudes of the listed z statistics.
+4. Select the result that provides the strongest evidence for a lower cancellation rate.","A railway operator tests H0: p=0.08 against HA: p<0.08, where p is the cancellation rate. Which result gives strongest evidence for improvement?
+
+Options:
+A. z=0.10
+B. z=-0.40
+C. z=-2.90
+D. z=1.80
+
+Follow the reasoning stages below:
+
+1. Recognize that HA: p<0.08 defines a left-tailed test.
+2. Recall that stronger evidence for a left-tailed alternative corresponds to a more negative z statistic and a smaller p-value.
+3. Compare the signs and magnitudes of the listed z statistics.
+4. Select the result that provides the strongest evidence for a lower cancellation rate.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+28,Hypothesis Testing,Transportation,Medium,Single Choice,ch_foundations_for_inf_30_2,"True or false
+
+Determine if the following statements are true or false, and 
+explain your reasoning. If false, state how it could be corrected.
+
+Decreasing the significance level ($$) will increase the probability 
+of making a Type~1 Error.","\qt{True or false\label{tf_found_inf_prop_friendly}}
+Determine if the following statements are true or false, and 
+explain your reasoning. If false, state how it could be corrected.
+\begin{parts}
+\item If a given value (for example, the null hypothesized value of a parameter) 
+is within a 95\% confidence interval, it will also be within a 99\% confidence 
+interval.
+\item Decreasing the significance level ($\alpha$) will increase the probability 
+of making a Type~1 Error.
+\item Suppose the null hypothesis is $p = 0.5$ and we fail to reject $H_0$. 
+Under this scenario, the true population proportion is 0.5.
+\item With large sample sizes, even small differences between the null value and 
+the observed point estimate, a difference often called the
+effect size\index{effect size}, will be identified as statistically significant.
+\end{parts}","A road-safety study reports a 95% confidence interval for the change in accident rate of (-0.03, 0.01). Which conclusion matches a two-sided 5% test?","A. Reject H0 because 0 is inside the interval
+B. Do not reject H0 because 0 is inside the interval
+C. Reject H0 because the interval has negative values
+D. The accident rate definitely increased",B,"For a two-sided test at 5%, if the 95% CI contains 0, the result is not statistically significant.","A road-safety study reports a 95% confidence interval for the change in accident rate of (-0.03, 0.01). Which conclusion matches a two-sided 5% test?
+
+Options:
+A. Reject H0 because 0 is inside the interval
+B. Do not reject H0 because 0 is inside the interval
+C. Reject H0 because the interval has negative values
+D. The accident rate definitely increased","1. Use the equivalence between a two-sided test at alpha=0.05 and a 95% confidence interval.
+2. Check whether the null value of zero change lies inside the reported interval.
+3. Infer the corresponding reject/do-not-reject decision.
+4. Select the option that states the decision correctly without claiming a definite direction of change.","A road-safety study reports a 95% confidence interval for the change in accident rate of (-0.03, 0.01). Which conclusion matches a two-sided 5% test?
+
+Options:
+A. Reject H0 because 0 is inside the interval
+B. Do not reject H0 because 0 is inside the interval
+C. Reject H0 because the interval has negative values
+D. The accident rate definitely increased
+
+Follow the reasoning stages below:
+
+1. Use the equivalence between a two-sided test at alpha=0.05 and a 95% confidence interval.
+2. Check whether the null value of zero change lies inside the reported interval.
+3. Infer the corresponding reject/do-not-reject decision.
+4. Select the option that states the decision correctly without claiming a definite direction of change.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+29,Hypothesis Testing,General Everyday,Hard,Interpretation,ch_foundations_for_inf_30_2,"True or false
+
+Determine if the following statements are true or false, and 
+explain your reasoning. If false, state how it could be corrected.
+
+Decreasing the significance level ($$) will increase the probability 
+of making a Type~1 Error.","\qt{True or false\label{tf_found_inf_prop_friendly}}
+Determine if the following statements are true or false, and 
+explain your reasoning. If false, state how it could be corrected.
+\begin{parts}
+\item If a given value (for example, the null hypothesized value of a parameter) 
+is within a 95\% confidence interval, it will also be within a 99\% confidence 
+interval.
+\item Decreasing the significance level ($\alpha$) will increase the probability 
+of making a Type~1 Error.
+\item Suppose the null hypothesis is $p = 0.5$ and we fail to reject $H_0$. 
+Under this scenario, the true population proportion is 0.5.
+\item With large sample sizes, even small differences between the null value and 
+the observed point estimate, a difference often called the
+effect size\index{effect size}, will be identified as statistically significant.
+\end{parts}",A household-products test gives p=0.049 at alpha=0.05. Explain why this is not the same as saying the new product has a 95.1% chance of working.,,"p-values are conditional on H0, not probabilities that the alternative is true.",The p-value is the probability of data this extreme assuming no true effect. It is not the posterior probability that the product works.,A household-products test gives p=0.049 at alpha=0.05. Explain why this is not the same as saying the new product has a 95.1% chance of working.,"1. State what a p-value conditions on: the assumption that the null hypothesis is true.
+2. Explain what p=0.049 measures about the observed data or more extreme data under H0.
+3. Contrast this with a posterior probability that the new product works.
+4. Explain why 1-0.049 cannot be interpreted as the probability of the alternative hypothesis.","A household-products test gives p=0.049 at alpha=0.05. Explain why this is not the same as saying the new product has a 95.1% chance of working.
+
+Follow the reasoning stages below:
+
+1. State what a p-value conditions on: the assumption that the null hypothesis is true.
+2. Explain what p=0.049 measures about the observed data or more extreme data under H0.
+3. Contrast this with a posterior probability that the new product works.
+4. Explain why 1-0.049 cannot be interpreted as the probability of the alternative hypothesis.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+30,Hypothesis Testing,General Everyday,Hard,Interpretation,ch_foundations_for_inf_32,"Nearsighted
+
+It is believed that nearsightedness affects about 8% of 
+all children.
+In a random sample of 194 children, 21 are nearsighted.
+Conduct a hypothesis test for the following question:
+do these data provide evidence that the 8% value is inaccurate?","\qt{Nearsighted\label{nearsighted_updated}}
+It is believed that nearsightedness affects about 8\% of 
+all children.
+In a random sample of 194 children, 21 are nearsighted.
+Conduct a hypothesis test for the following question:
+do these data provide evidence that the 8\% value is inaccurate?",Two identical effect estimates have different p-values because one study has n=50 and the other has n=500. Explain why.,,The larger study has a smaller standard error and therefore stronger statistical evidence for the same estimate.,"As sample size increases, SE decreases, making the test statistic larger in magnitude for the same observed effect.",Two identical effect estimates have different p-values because one study has n=50 and the other has n=500. Explain why.,"1. Hold the observed effect estimate fixed and compare the two sample sizes.
+2. Explain how a larger sample size changes the standard error.
+3. Relate the smaller standard error to the magnitude of the test statistic and the p-value.
+4. State why the n=500 study can provide stronger statistical evidence for the same estimated effect.","Two identical effect estimates have different p-values because one study has n=50 and the other has n=500. Explain why.
+
+Follow the reasoning stages below:
+
+1. Hold the observed effect estimate fixed and compare the two sample sizes.
+2. Explain how a larger sample size changes the standard error.
+3. Relate the smaller standard error to the magnitude of the test statistic and the p-value.
+4. State why the n=500 study can provide stronger statistical evidence for the same estimated effect.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+31,Hypothesis Testing,General Everyday,Hard,Interpretation,ch_inference_for_props_50_6,"Coffee and Depression
+
+Researchers conducted a study investigating the relationship between 
+caffeinated coffee consumption and risk of depression in women. They 
+collected data on 50,739 women free of depression symptoms at the start 
+of the study in the year 1996, and these women were followed through 
+2006. The researchers used questionnaires to collect data on 
+caffeinated coffee consumption, asked each individual about physician-
+diagnosed depression, and also asked about the use of antidepressants. 
+The table below shows the distribution of incidences of depression by 
+amount of caffeinated coffee consumption.[source: Lucas:2011]
+adjustwidth-4em-4em
+
+Table:
+| 5cCaffeinated coffee consumption | | | | | | | |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| $$ 1 | 2-6 | 1 | 2-3 | $$ 4 | | | |
+| cup/week | cups/week | cup/day | cups/day | cups/day | Total | | |
+| Clinical | Yes | 670 | oiB373 | 905 | 564 | 95 | 2,607 |
+| depression | No | 11,545 | 6,244 | 16,329 | 11,726 | 2,288 | 48,132 |
+| Total | 12,215 | 6,617 | 17,234 | 12,290 | 2,383 | 50,739 | |
+
+adjustwidth
+
+What is the conclusion of the hypothesis test?","\qt{Coffee and Depression\label{coffee_depression_chisq_indep}} 
+Researchers conducted a study investigating the relationship between 
+caffeinated coffee consumption and risk of depression in women. They 
+collected data on 50,739 women free of depression symptoms at the start 
+of the study in the year 1996, and these women were followed through 
+2006. The researchers used questionnaires to collect data on 
+caffeinated coffee consumption, asked each individual about physician-
+diagnosed depression, and also asked about the use of antidepressants. 
+The table below shows the distribution of incidences of depression by 
+amount of caffeinated coffee consumption.\footfullcite{Lucas:2011}
+\begin{adjustwidth}{-4em}{-4em}
+{\small
+\begin{center}
+\begin{tabular}{l  l rrrrrr}
+	&  \multicolumn{1}{c}{}		& \multicolumn{5}{c}{\textit{Caffeinated coffee consumption}} \\
+\cline{3-7}
+	&		& $\le$ 1	& 2-6	& 1	& 2-3	& $\ge$ 4	&   \\
+	&		& cup/week	& cups/week	& cup/day	& cups/day	& cups/day	& Total  \\
+\cline{2-8}
+\textit{Clinical} & Yes	& 670 & \fbox{\textcolor{oiB}{373}}	& 905	& 564	& 95 	& 2,607 \\
+\textit{depression}	& No& 11,545	& 6,244	& 16,329	& 11,726	& 2,288 	& 48,132 \\
+\cline{2-8}
+				& Total	& 12,215	& 6,617 & 17,234	& 12,290	& 2,383 	& 50,739 \\
+\cline{2-8}
+\end{tabular}
+\end{center}
+}
+\end{adjustwidth}
+\begin{parts}
+\item What type of test is appropriate for evaluating if there is an 
+association between coffee intake and depression?
+\item Write the hypotheses for the test you identified in part (a).
+\item Calculate the overall proportion of women who do and do not 
+suffer from depression.
+\item Identify the expected count for the highlighted cell, and 
+calculate the contribution of this cell to the test statistic, i.e. 
+$(Observed-Expected)^2/Expected$.
+\item The test statistic is $\chi^2=20.93$. What is the p-value?
+\item What is the conclusion of the hypothesis test?
+\item One of the authors of this study was quoted on the NYTimes as 
+saying it was ``too early to recommend that women load up on extra 
+coffee"" based on just this study.\footfullcite{news:coffeeDepression} 
+Do you agree with this statement? Explain your reasoning.
+\end{parts}",A coffee-consumption study finds a statistically significant association with sleep quality. Explain one reason this should not immediately be interpreted as causation.,,It may be observational and affected by confounding.,"For example, stress or workload may affect both coffee consumption and sleep quality. Without random assignment, causation is not guaranteed.",A coffee-consumption study finds a statistically significant association with sleep quality. Explain one reason this should not immediately be interpreted as causation.,"1. Identify the reported result as an association rather than automatically a causal effect.
+2. Ask whether the study design includes random assignment.
+3. Explain how an unmeasured third variable could affect both coffee consumption and sleep quality.
+4. Give one concrete confounding or design-based reason that causation is not established.","A coffee-consumption study finds a statistically significant association with sleep quality. Explain one reason this should not immediately be interpreted as causation.
+
+Follow the reasoning stages below:
+
+1. Identify the reported result as an association rather than automatically a causal effect.
+2. Ask whether the study design includes random assignment.
+3. Explain how an unmeasured third variable could affect both coffee consumption and sleep quality.
+4. Give one concrete confounding or design-based reason that causation is not established.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+32,Hypothesis Testing,General Everyday,Hard,Interpretation,ch_regr_simple_linear_40_2,"Cats, Part II
+
+Exercise~[ref: cat_body_heart_reg] 
+presents regression output from a model for predicting the heart 
+weight (in g) of cats from their body weight (in kg). The coefficients 
+are estimated using a dataset of 144 domestic cat. The model output 
+is also provided below.
+
+Table:
+| Estimate | Std. Error | t value | Pr($>$$|$t$|$) | |
+| --- | --- | --- | --- | --- |
+| (Intercept) | -0.357 | 0.692 | -0.515 | 0.607 |
+| body wt | 4.034 | 0.250 | 16.119 | 0.000 |
+
+\[ s = 1.452 R^2 = 64.66% R^2_adj = 64.41% \]
+
+State the conclusion of the hypothesis test from part (a) in 
+context of the data.","\qt{Cats, Part II\label{cat_body_heart_inf}}
+Exercise~\ref{cat_body_heart_reg} 
+presents regression output from a model for predicting the heart 
+weight (in g) of cats from their body weight (in kg). The coefficients 
+are estimated using a dataset of 144 domestic cat. The model output 
+is also provided below.
+\begin{center}
+\begin{tabular}{rrrrr}
+    \hline
+            & Estimate  & Std. Error    & t value   & Pr($>$$|$t$|$) \\ 
+    \hline
+(Intercept) & -0.357    & 0.692         & -0.515    & 0.607 \\ 
+body wt     & 4.034     & 0.250         & 16.119    & 0.000 \\ 
+    \hline
+\end{tabular}
+\[ s = 1.452 \qquad R^2 = 64.66\% \qquad R^2_{adj} = 64.41\% \]
+\end{center}
+\begin{parts}
+\item We see that the point estimate for the slope is positive.
+    What are the hypotheses for evaluating whether body weight is
+    positively associated with heart weight in cats?
+\item State the conclusion of the hypothesis test from part (a) in 
+context of the data.
+\item Calculate a 95\% confidence interval for the slope of body 
+weight, and interpret it in context of the data.
+\item Do your results from the hypothesis test and the confidence 
+interval agree? Explain.
+\end{parts}",A pet shelter tests whether a new adoption photo layout changes adoption time and obtains a significant result. What should be checked before claiming the layout is useful?,,Check the effect size and practical benefit.,A significant result may be too small to matter operationally; the shelter should compare the reduction in waiting time with implementation cost.,A pet shelter tests whether a new adoption photo layout changes adoption time and obtains a significant result. What should be checked before claiming the layout is useful?,"1. Separate statistical significance from practical usefulness.
+2. Examine the estimated effect size, not only its p-value.
+3. Compare the magnitude of the change in adoption time with operational benefits and implementation costs.
+4. State what additional practical evidence should be checked before claiming the layout is useful.","A pet shelter tests whether a new adoption photo layout changes adoption time and obtains a significant result. What should be checked before claiming the layout is useful?
+
+Follow the reasoning stages below:
+
+1. Separate statistical significance from practical usefulness.
+2. Examine the estimated effect size, not only its p-value.
+3. Compare the magnitude of the change in adoption time with operational benefits and implementation costs.
+4. State what additional practical evidence should be checked before claiming the layout is useful.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+33,Hypothesis Testing,General Everyday,Hard,Interpretation,ch_regr_simple_linear_40_4,"Cats, Part II
+
+Exercise~[ref: cat_body_heart_reg] 
+presents regression output from a model for predicting the heart 
+weight (in g) of cats from their body weight (in kg). The coefficients 
+are estimated using a dataset of 144 domestic cat. The model output 
+is also provided below.
+
+Table:
+| Estimate | Std. Error | t value | Pr($>$$|$t$|$) | |
+| --- | --- | --- | --- | --- |
+| (Intercept) | -0.357 | 0.692 | -0.515 | 0.607 |
+| body wt | 4.034 | 0.250 | 16.119 | 0.000 |
+
+\[ s = 1.452 R^2 = 64.66% R^2_adj = 64.41% \]
+
+Do your results from the hypothesis test and the confidence 
+interval agree? Explain.","\qt{Cats, Part II\label{cat_body_heart_inf}}
+Exercise~\ref{cat_body_heart_reg} 
+presents regression output from a model for predicting the heart 
+weight (in g) of cats from their body weight (in kg). The coefficients 
+are estimated using a dataset of 144 domestic cat. The model output 
+is also provided below.
+\begin{center}
+\begin{tabular}{rrrrr}
+    \hline
+            & Estimate  & Std. Error    & t value   & Pr($>$$|$t$|$) \\ 
+    \hline
+(Intercept) & -0.357    & 0.692         & -0.515    & 0.607 \\ 
+body wt     & 4.034     & 0.250         & 16.119    & 0.000 \\ 
+    \hline
+\end{tabular}
+\[ s = 1.452 \qquad R^2 = 64.66\% \qquad R^2_{adj} = 64.41\% \]
+\end{center}
+\begin{parts}
+\item We see that the point estimate for the slope is positive.
+    What are the hypotheses for evaluating whether body weight is
+    positively associated with heart weight in cats?
+\item State the conclusion of the hypothesis test from part (a) in 
+context of the data.
+\item Calculate a 95\% confidence interval for the slope of body 
+weight, and interpret it in context of the data.
+\item Do your results from the hypothesis test and the confidence 
+interval agree? Explain.
+\end{parts}",A website experiment runs 20 separate hypothesis tests and reports one p-value below 0.05. Explain the multiple-testing concern.,,Running many tests increases the chance of at least one false positive.,"Even if all null hypotheses are true, about 5% of tests may be significant by chance at alpha=0.05.",A website experiment runs 20 separate hypothesis tests and reports one p-value below 0.05. Explain the multiple-testing concern.,"1. Recall the meaning of a 5% Type I error rate for a single test.
+2. Consider what happens to the chance of at least one false positive when many tests are run.
+3. Explain why observing one p-value below 0.05 among 20 tests is less surprising than in a single pre-specified test.
+4. State the multiple-testing concern and the need for appropriate adjustment or pre-specification.","A website experiment runs 20 separate hypothesis tests and reports one p-value below 0.05. Explain the multiple-testing concern.
+
+Follow the reasoning stages below:
+
+1. Recall the meaning of a 5% Type I error rate for a single test.
+2. Consider what happens to the chance of at least one false positive when many tests are run.
+3. Explain why observing one p-value below 0.05 among 20 tests is less surprising than in a single pre-specified test.
+4. State the multiple-testing concern and the need for appropriate adjustment or pre-specification.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+34,Hypothesis Testing,General Everyday,Hard,Interpretation,ch_inference_for_props_40_2,"Website experiment
+
+The OpenIntro website occasionally experiments with design
+and link placement.
+We conducted one experiment testing three different placements
+of a download link for this textbook on the book's main page
+to see which location, if any, led to the most downloads.
+The number of site visitors included in the experiment
+was~701 and is captured in one of the response combinations
+in the following table:
+
+Table:
+| Download | No Download | |
+| --- | --- | --- |
+| Position 1 | 13.8
+| Position 2 | 14.6
+| Position 3 | 12.1
+
+Each individual in the experiment had an equal chance of
+ being in any of the three experiment groups.
+ However, we see that there are slightly different
+ totals for the groups.
+ Is there any evidence that the groups were actually imbalanced?
+ Make sure to clearly state hypotheses, check conditions,
+ calculate the appropriate test statistic and the p-value,
+ and make your conclusion in context of the data.","\qt{Website experiment\label{web_ctr_exp_chisq}}
+The OpenIntro website occasionally experiments with design
+and link placement.
+We conducted one experiment testing three different placements
+of a download link for this textbook on the book's main page
+to see which location, if any, led to the most downloads.
+The number of site visitors included in the experiment
+was~701 and is captured in one of the response combinations
+in the following table:
+\begin{center}
+\begin{tabular}{r cc}
+  \hline
+            & Download & No Download \\ 
+  \hline
+Position 1  & 13.8\%   & 18.3\% \\ 
+Position 2  & 14.6\%   & 18.5\% \\ 
+Position 3  & 12.1\%   & 22.7\% \\ 
+  \hline
+\end{tabular}
+\end{center}
+% x <- matrix(c(97, 102, 85, 128, 130, 159), 3, 2)
+\begin{parts}
+\item
+    Calculate the actual number of site visitors in each
+    of the six response categories.
+\item
+    Each individual in the experiment had an equal chance of
+    being in any of the three experiment groups.
+    However, we see that there are slightly different
+    totals for the groups.
+    Is there any evidence that the groups were actually imbalanced?
+    Make sure to clearly state hypotheses, check conditions,
+    calculate the appropriate test statistic and the p-value,
+    and make your conclusion in context of the data.
+\item
+   Complete an appropriate hypothesis test to check whether
+   there is evidence that there is a higher rate of site visitors
+   clicking on the textbook link in any of the three groups.
+\end{parts}",A smart-home app test fails to reject H0. The manager says the old and new versions are exactly equivalent. Explain the problem.,,Failure to reject does not prove equality.,"The data may be too noisy or the sample too small. Equivalence requires a different design, such as an equivalence or non-inferiority test.",A smart-home app test fails to reject H0. The manager says the old and new versions are exactly equivalent. Explain the problem.,"1. Identify the formal meaning of failing to reject H0.
+2. Explain why lack of statistical significance may result from limited power or noisy data.
+3. Distinguish a standard null-hypothesis test from an equivalence or non-inferiority test.
+4. Explain why the manager cannot conclude that the two versions are exactly equivalent.","A smart-home app test fails to reject H0. The manager says the old and new versions are exactly equivalent. Explain the problem.
+
+Follow the reasoning stages below:
+
+1. Identify the formal meaning of failing to reject H0.
+2. Explain why lack of statistical significance may result from limited power or noisy data.
+3. Distinguish a standard null-hypothesis test from an equivalence or non-inferiority test.
+4. Explain why the manager cannot conclude that the two versions are exactly equivalent.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+35,Hypothesis Testing,General Everyday,Hard,Interpretation,ch_inference_for_props_40_3,"Website experiment
+
+The OpenIntro website occasionally experiments with design
+and link placement.
+We conducted one experiment testing three different placements
+of a download link for this textbook on the book's main page
+to see which location, if any, led to the most downloads.
+The number of site visitors included in the experiment
+was~701 and is captured in one of the response combinations
+in the following table:
+
+Table:
+| Download | No Download | |
+| --- | --- | --- |
+| Position 1 | 13.8
+| Position 2 | 14.6
+| Position 3 | 12.1
+
+Complete an appropriate hypothesis test to check whether
+ there is evidence that there is a higher rate of site visitors
+ clicking on the textbook link in any of the three groups.","\qt{Website experiment\label{web_ctr_exp_chisq}}
+The OpenIntro website occasionally experiments with design
+and link placement.
+We conducted one experiment testing three different placements
+of a download link for this textbook on the book's main page
+to see which location, if any, led to the most downloads.
+The number of site visitors included in the experiment
+was~701 and is captured in one of the response combinations
+in the following table:
+\begin{center}
+\begin{tabular}{r cc}
+  \hline
+            & Download & No Download \\ 
+  \hline
+Position 1  & 13.8\%   & 18.3\% \\ 
+Position 2  & 14.6\%   & 18.5\% \\ 
+Position 3  & 12.1\%   & 22.7\% \\ 
+  \hline
+\end{tabular}
+\end{center}
+% x <- matrix(c(97, 102, 85, 128, 130, 159), 3, 2)
+\begin{parts}
+\item
+    Calculate the actual number of site visitors in each
+    of the six response categories.
+\item
+    Each individual in the experiment had an equal chance of
+    being in any of the three experiment groups.
+    However, we see that there are slightly different
+    totals for the groups.
+    Is there any evidence that the groups were actually imbalanced?
+    Make sure to clearly state hypotheses, check conditions,
+    calculate the appropriate test statistic and the p-value,
+    and make your conclusion in context of the data.
+\item
+   Complete an appropriate hypothesis test to check whether
+   there is evidence that there is a higher rate of site visitors
+   clicking on the textbook link in any of the three groups.
+\end{parts}",A cooking app reports a statistically significant increase in recipe saves after changing notifications. Why should the hypothesis and alpha be chosen before looking at the data?,,To avoid data snooping and inflated false-positive risk.,Choosing hypotheses after seeing the result makes the p-value misleading because the test was tailored to the observed data.,A cooking app reports a statistically significant increase in recipe saves after changing notifications. Why should the hypothesis and alpha be chosen before looking at the data?,"1. Explain why hypotheses and alpha should be specified independently of the observed result.
+2. Identify the problem with choosing a hypothesis after inspecting the data.
+3. Relate this practice to data snooping and an inflated false-positive rate.
+4. State how pre-specification preserves the intended interpretation of the p-value.","A cooking app reports a statistically significant increase in recipe saves after changing notifications. Why should the hypothesis and alpha be chosen before looking at the data?
+
+Follow the reasoning stages below:
+
+1. Explain why hypotheses and alpha should be specified independently of the observed result.
+2. Identify the problem with choosing a hypothesis after inspecting the data.
+3. Relate this practice to data snooping and an inflated false-positive rate.
+4. State how pre-specification preserves the intended interpretation of the p-value.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3

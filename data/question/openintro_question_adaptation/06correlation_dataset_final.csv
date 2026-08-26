@@ -1,0 +1,502 @@
+No,Knowledge Area,Scenario,Difficulty,Question Type,Source ID,original_text,raw_latex,Adapted Question,Options,Correct Answer,Solution / Key Steps,prompt_direct,cot_reasoning_scaffold,prompt_cot,student_tutor_strategy,tutor_model,tutor_max_turns
+1,Correlation,Healthcare,Easy,Calculation,,"Coffee and Depression
+
+Researchers conducted a study investigating the relationship between 
+caffeinated coffee consumption and risk of depression in women. They 
+collected data on 50,739 women free of depression symptoms at the start 
+of the study in the year 1996, and these women were followed through 
+2006. The researchers used questionnaires to collect data on 
+caffeinated coffee consumption, asked each individual about physician-
+diagnosed depression, and also asked about the use of antidepressants. 
+The table below shows the distribution of incidences of depression by 
+amount of caffeinated coffee consumption.[source: Lucas:2011]
+adjustwidth-4em-4em
+
+Table:
+| 5cCaffeinated coffee consumption | | | | | | | |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| $$ 1 | 2-6 | 1 | 2-3 | $$ 4 | | | |
+| cup/week | cups/week | cup/day | cups/day | cups/day | Total | | |
+| Clinical | Yes | 670 | oiB373 | 905 | 564 | 95 | 2,607 |
+| depression | No | 11,545 | 6,244 | 16,329 | 11,726 | 2,288 | 48,132 |
+| Total | 12,215 | 6,617 | 17,234 | 12,290 | 2,383 | 50,739 | |
+
+adjustwidth
+
+What type of test is appropriate for evaluating if there is an 
+association between coffee intake and depression?","\qt{Coffee and Depression\label{coffee_depression_chisq_indep}} 
+Researchers conducted a study investigating the relationship between 
+caffeinated coffee consumption and risk of depression in women. They 
+collected data on 50,739 women free of depression symptoms at the start 
+of the study in the year 1996, and these women were followed through 
+2006. The researchers used questionnaires to collect data on 
+caffeinated coffee consumption, asked each individual about physician-
+diagnosed depression, and also asked about the use of antidepressants. 
+The table below shows the distribution of incidences of depression by 
+amount of caffeinated coffee consumption.\footfullcite{Lucas:2011}
+\begin{adjustwidth}{-4em}{-4em}
+{\small
+\begin{center}
+\begin{tabular}{l  l rrrrrr}
+	&  \multicolumn{1}{c}{}		& \multicolumn{5}{c}{\textit{Caffeinated coffee consumption}} \\
+\cline{3-7}
+	&		& $\le$ 1	& 2-6	& 1	& 2-3	& $\ge$ 4	&   \\
+	&		& cup/week	& cups/week	& cup/day	& cups/day	& cups/day	& Total  \\
+\cline{2-8}
+\textit{Clinical} & Yes	& 670 & \fbox{\textcolor{oiB}{373}}	& 905	& 564	& 95 	& 2,607 \\
+\textit{depression}	& No& 11,545	& 6,244	& 16,329	& 11,726	& 2,288 	& 48,132 \\
+\cline{2-8}
+				& Total	& 12,215	& 6,617 & 17,234	& 12,290	& 2,383 	& 50,739 \\
+\cline{2-8}
+\end{tabular}
+\end{center}
+}
+\end{adjustwidth}
+\begin{parts}
+\item What type of test is appropriate for evaluating if there is an 
+association between coffee intake and depression?
+\item Write the hypotheses for the test you identified in part (a).
+\item Calculate the overall proportion of women who do and do not 
+suffer from depression.
+\item Identify the expected count for the highlighted cell, and 
+calculate the contribution of this cell to the test statistic, i.e. 
+$(Observed-Expected)^2/Expected$.
+\item The test statistic is $\chi^2=20.93$. What is the p-value?
+\item What is the conclusion of the hypothesis test?
+\item One of the authors of this study was quoted on the NYTimes as 
+saying it was ``too early to recommend that women load up on extra 
+coffee"" based on just this study.\footfullcite{news:coffeeDepression} 
+Do you agree with this statement? Explain your reasoning.
+\end{parts}","A clinic records weekly exercise hours and resting heart-rate improvement for 5 patients: (2,6), (3,7), (4,9), (5,10), (6,12). Calculate the sample correlation coefficient r between exercise hours and improvement.",,0.993,"Use r = sum[(x-xbar)(y-ybar)] / sqrt(sum(x-xbar)^2 sum(y-ybar)^2). Here xbar=4 and ybar=8.8, giving r≈0.993. The variables have a very strong positive linear association.","A clinic records weekly exercise hours and resting heart-rate improvement for 5 patients: (2,6), (3,7), (4,9), (5,10), (6,12). Calculate the sample correlation coefficient r between exercise hours and improvement.
+
+Numerical precision:
+- Round the final correlation coefficient r to 3 decimal places.","1. Compute the mean of the exercise-hour values and the mean of the heart-rate improvement values.
+2. For each patient, calculate the deviations from the two means and the cross-products of those deviations.
+3. Use the Pearson sample correlation formula to combine the cross-products and squared deviations.
+4. Report the final correlation coefficient to 3 decimal places.","A clinic records weekly exercise hours and resting heart-rate improvement for 5 patients: (2,6), (3,7), (4,9), (5,10), (6,12). Calculate the sample correlation coefficient r between exercise hours and improvement.
+
+Numerical precision:
+- Round the final correlation coefficient r to 3 decimal places.
+
+Follow the reasoning stages below:
+
+1. Compute the mean of the exercise-hour values and the mean of the heart-rate improvement values.
+2. For each patient, calculate the deviations from the two means and the cross-products of those deviations.
+3. Use the Pearson sample correlation formula to combine the cross-products and squared deviations.
+4. Report the final correlation coefficient to 3 decimal places.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+2,Correlation,Healthcare,Easy,Calculation,,"Coffee and Depression
+
+Researchers conducted a study investigating the relationship between 
+caffeinated coffee consumption and risk of depression in women. They 
+collected data on 50,739 women free of depression symptoms at the start 
+of the study in the year 1996, and these women were followed through 
+2006. The researchers used questionnaires to collect data on 
+caffeinated coffee consumption, asked each individual about physician-
+diagnosed depression, and also asked about the use of antidepressants. 
+The table below shows the distribution of incidences of depression by 
+amount of caffeinated coffee consumption.[source: Lucas:2011]
+adjustwidth-4em-4em
+
+Table:
+| 5cCaffeinated coffee consumption | | | | | | | |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| $$ 1 | 2-6 | 1 | 2-3 | $$ 4 | | | |
+| cup/week | cups/week | cup/day | cups/day | cups/day | Total | | |
+| Clinical | Yes | 670 | oiB373 | 905 | 564 | 95 | 2,607 |
+| depression | No | 11,545 | 6,244 | 16,329 | 11,726 | 2,288 | 48,132 |
+| Total | 12,215 | 6,617 | 17,234 | 12,290 | 2,383 | 50,739 | |
+
+adjustwidth
+
+What type of test is appropriate for evaluating if there is an 
+association between coffee intake and depression?","\qt{Coffee and Depression\label{coffee_depression_chisq_indep}} 
+Researchers conducted a study investigating the relationship between 
+caffeinated coffee consumption and risk of depression in women. They 
+collected data on 50,739 women free of depression symptoms at the start 
+of the study in the year 1996, and these women were followed through 
+2006. The researchers used questionnaires to collect data on 
+caffeinated coffee consumption, asked each individual about physician-
+diagnosed depression, and also asked about the use of antidepressants. 
+The table below shows the distribution of incidences of depression by 
+amount of caffeinated coffee consumption.\footfullcite{Lucas:2011}
+\begin{adjustwidth}{-4em}{-4em}
+{\small
+\begin{center}
+\begin{tabular}{l  l rrrrrr}
+	&  \multicolumn{1}{c}{}		& \multicolumn{5}{c}{\textit{Caffeinated coffee consumption}} \\
+\cline{3-7}
+	&		& $\le$ 1	& 2-6	& 1	& 2-3	& $\ge$ 4	&   \\
+	&		& cup/week	& cups/week	& cup/day	& cups/day	& cups/day	& Total  \\
+\cline{2-8}
+\textit{Clinical} & Yes	& 670 & \fbox{\textcolor{oiB}{373}}	& 905	& 564	& 95 	& 2,607 \\
+\textit{depression}	& No& 11,545	& 6,244	& 16,329	& 11,726	& 2,288 	& 48,132 \\
+\cline{2-8}
+				& Total	& 12,215	& 6,617 & 17,234	& 12,290	& 2,383 	& 50,739 \\
+\cline{2-8}
+\end{tabular}
+\end{center}
+}
+\end{adjustwidth}
+\begin{parts}
+\item What type of test is appropriate for evaluating if there is an 
+association between coffee intake and depression?
+\item Write the hypotheses for the test you identified in part (a).
+\item Calculate the overall proportion of women who do and do not 
+suffer from depression.
+\item Identify the expected count for the highlighted cell, and 
+calculate the contribution of this cell to the test statistic, i.e. 
+$(Observed-Expected)^2/Expected$.
+\item The test statistic is $\chi^2=20.93$. What is the p-value?
+\item What is the conclusion of the hypothesis test?
+\item One of the authors of this study was quoted on the NYTimes as 
+saying it was ``too early to recommend that women load up on extra 
+coffee"" based on just this study.\footfullcite{news:coffeeDepression} 
+Do you agree with this statement? Explain your reasoning.
+\end{parts}","A health app compares daily fruit servings with a wellness score for 5 users: (1,4), (2,7), (3,8), (4,10), (5,13). Calculate the sample correlation coefficient r.",,0.988,"Compute the standardized co-movement of the two variables. With xbar=3 and ybar=8.4, the correlation is r≈0.988, showing a very strong positive linear relationship.","A health app compares daily fruit servings with a wellness score for 5 users: (1,4), (2,7), (3,8), (4,10), (5,13). Calculate the sample correlation coefficient r.
+
+Numerical precision:
+- Round the final correlation coefficient r to 3 decimal places.","1. Compute the mean fruit-servings value and the mean wellness-score value.
+2. Calculate the deviations from the means, the products of paired deviations, and the squared deviations.
+3. Substitute these quantities into the Pearson sample correlation formula.
+4. Report the final correlation coefficient to 3 decimal places.","A health app compares daily fruit servings with a wellness score for 5 users: (1,4), (2,7), (3,8), (4,10), (5,13). Calculate the sample correlation coefficient r.
+
+Numerical precision:
+- Round the final correlation coefficient r to 3 decimal places.
+
+Follow the reasoning stages below:
+
+1. Compute the mean fruit-servings value and the mean wellness-score value.
+2. Calculate the deviations from the means, the products of paired deviations, and the squared deviations.
+3. Substitute these quantities into the Pearson sample correlation formula.
+4. Report the final correlation coefficient to 3 decimal places.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+3,Correlation,Finance,Medium,Interpretation,,"True / False
+
+Determine if the following statements are true or false.
+If false, explain why.
+
+A correlation coefficient of -0.90 indicates a stronger 
+linear relationship than a correlation of 0.5.","\qt{True / False\label{tf_correlation}}
+Determine if the following statements are true or false.
+If false, explain why.
+\begin{parts}
+\item A correlation coefficient of -0.90 indicates a stronger 
+linear relationship than a correlation of 0.5.
+\item Correlation is a measure of the association between any 
+two variables.
+\end{parts}",A portfolio analyst finds that the correlation between a technology ETF and a bond ETF is -0.68. Interpret the sign and strength of this correlation in context.,,There is a moderately strong negative linear association between the technology ETF and bond ETF returns.,"The negative sign means the two ETFs tend to move in opposite directions. The magnitude 0.68 is fairly large, so the linear association is moderately to strongly negative, though correlation alone does not prove causation.",A portfolio analyst finds that the correlation between a technology ETF and a bond ETF is -0.68. Interpret the sign and strength of this correlation in context.,"1. Use the sign of r to determine whether the linear relationship is positive or negative.
+2. Use the magnitude |r| to assess the strength of the linear association.
+3. Express both the direction and the strength in the ETF-return context.
+4. Avoid making a causal claim from correlation alone.","A portfolio analyst finds that the correlation between a technology ETF and a bond ETF is -0.68. Interpret the sign and strength of this correlation in context.
+
+Follow the reasoning stages below:
+
+1. Use the sign of r to determine whether the linear relationship is positive or negative.
+2. Use the magnitude |r| to assess the strength of the linear association.
+3. Express both the direction and the strength in the ETF-return context.
+4. Avoid making a causal claim from correlation alone.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+4,Correlation,Finance,Medium,Interpretation,,"True / False
+
+Determine if the following statements are true or false.
+If false, explain why.
+
+Correlation is a measure of the association between any 
+two variables.","\qt{True / False\label{tf_correlation}}
+Determine if the following statements are true or false.
+If false, explain why.
+\begin{parts}
+\item A correlation coefficient of -0.90 indicates a stronger 
+linear relationship than a correlation of 0.5.
+\item Correlation is a measure of the association between any 
+two variables.
+\end{parts}",A risk dashboard reports a correlation of 0.08 between daily gold returns and daily returns of a small retail stock over the last year. What does this suggest?,,"There is a very weak positive linear association between the two daily return series; practically, the linear relationship is close to negligible.",A correlation close to 0 means weak linear association. It does not mean the assets are unrelated in every possible way; it only says there is little evidence of a linear relationship in these returns.,A risk dashboard reports a correlation of 0.08 between daily gold returns and daily returns of a small retail stock over the last year. What does this suggest?,"1. Compare the reported correlation with zero.
+2. Explain what a correlation close to zero says specifically about linear association.
+3. Distinguish weak linear association from the stronger claim that the two variables are unrelated in every possible way.
+4. Give a concise interpretation in the context of the two daily return series.","A risk dashboard reports a correlation of 0.08 between daily gold returns and daily returns of a small retail stock over the last year. What does this suggest?
+
+Follow the reasoning stages below:
+
+1. Compare the reported correlation with zero.
+2. Explain what a correlation close to zero says specifically about linear association.
+3. Distinguish weak linear association from the stronger claim that the two variables are unrelated in every possible way.
+4. Give a concise interpretation in the context of the two daily return series.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+5,Correlation,Education,Medium,Single Choice,,"True / False
+
+Determine if the following statements are true or false.
+If false, explain why.
+
+A correlation coefficient of -0.90 indicates a stronger 
+linear relationship than a correlation of 0.5.","\qt{True / False\label{tf_correlation}}
+Determine if the following statements are true or false.
+If false, explain why.
+\begin{parts}
+\item A correlation coefficient of -0.90 indicates a stronger 
+linear relationship than a correlation of 0.5.
+\item Correlation is a measure of the association between any 
+two variables.
+\end{parts}","In a class dataset, the correlation between hours spent revising and exam score is 0.74. Which statement is most appropriate?","A. Students who revise more tend to have higher scores, but this does not prove revision causes the score increase.
+B. Revision definitely causes higher scores for every student.
+C. The relationship is negative.
+D. The correlation means 74% of students revised.",A,"A positive r means higher revision hours tend to be associated with higher scores. Correlation does not by itself prove causation, and 0.74 is not a percentage of students.","In a class dataset, the correlation between hours spent revising and exam score is 0.74. Which statement is most appropriate?
+
+Options:
+A. Students who revise more tend to have higher scores, but this does not prove revision causes the score increase.
+B. Revision definitely causes higher scores for every student.
+C. The relationship is negative.
+D. The correlation means 74% of students revised.","1. Identify the direction of the association from the positive sign of r.
+2. Interpret the magnitude of r as evidence about the strength of the linear relationship.
+3. Evaluate each answer choice, rejecting statements that confuse correlation with causation or treat r as a percentage.
+4. Select the single option that is fully supported by the reported correlation.","In a class dataset, the correlation between hours spent revising and exam score is 0.74. Which statement is most appropriate?
+
+Options:
+A. Students who revise more tend to have higher scores, but this does not prove revision causes the score increase.
+B. Revision definitely causes higher scores for every student.
+C. The relationship is negative.
+D. The correlation means 74% of students revised.
+
+Follow the reasoning stages below:
+
+1. Identify the direction of the association from the positive sign of r.
+2. Interpret the magnitude of r as evidence about the strength of the linear relationship.
+3. Evaluate each answer choice, rejecting statements that confuse correlation with causation or treat r as a percentage.
+4. Select the single option that is fully supported by the reported correlation.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+6,Correlation,Education,Medium,Single Choice,,"True / False
+
+Determine if the following statements are true or false.
+If false, explain why.
+
+Correlation is a measure of the association between any 
+two variables.","\qt{True / False\label{tf_correlation}}
+Determine if the following statements are true or false.
+If false, explain why.
+\begin{parts}
+\item A correlation coefficient of -0.90 indicates a stronger 
+linear relationship than a correlation of 0.5.
+\item Correlation is a measure of the association between any 
+two variables.
+\end{parts}",A lecturer says: “Correlation measures the association between any two variables.” Which option best evaluates this statement?,"A. True, because correlation works for all variable types.
+B. False, because the usual correlation coefficient measures linear association between two quantitative variables.
+C. True, because correlation proves causation.
+D. False, because correlation only applies to categorical variables.",B,The common Pearson correlation coefficient is designed for linear association between two numerical variables. It is not a general measure for any pair of variables and does not prove causation.,"A lecturer says: “Correlation measures the association between any two variables.” Which option best evaluates this statement?
+
+Options:
+A. True, because correlation works for all variable types.
+B. False, because the usual correlation coefficient measures linear association between two quantitative variables.
+C. True, because correlation proves causation.
+D. False, because correlation only applies to categorical variables.","1. Recall what the usual Pearson correlation coefficient is designed to measure.
+2. Check whether the statement is valid for arbitrary variable types or specifically for quantitative variables and linear association.
+3. Evaluate each option for claims about variable type and causation.
+4. Select the one option that gives the most accurate evaluation.","A lecturer says: “Correlation measures the association between any two variables.” Which option best evaluates this statement?
+
+Options:
+A. True, because correlation works for all variable types.
+B. False, because the usual correlation coefficient measures linear association between two quantitative variables.
+C. True, because correlation proves causation.
+D. False, because correlation only applies to categorical variables.
+
+Follow the reasoning stages below:
+
+1. Recall what the usual Pearson correlation coefficient is designed to measure.
+2. Check whether the statement is valid for arbitrary variable types or specifically for quantitative variables and linear association.
+3. Evaluate each option for claims about variable type and causation.
+4. Select the one option that gives the most accurate evaluation.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+7,Correlation,Marketing,Medium,Multiple Choice,,"Match the correlation, Part III
+
+Match each correlation to the corresponding scatterplot.
+
+minipage[c]0.17
+
+minipage
+minipage[c]0.83
+0.245ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_1
+0.245ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_2
+0.245ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_3
+0.245ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_4
+minipage
+
+$r = -0.72$","\qt{Match the correlation, Part III\label{match_corr_3}} 
+Match each correlation to the corresponding scatterplot.
+
+\noindent%
+\begin{minipage}[c]{0.17\textwidth}
+\begin{parts}
+\item $r = -0.72$
+\item $r = 0.07$ 
+\item $r = 0.86$ 
+\item $r = 0.99$
+\end{parts}\vspace{3mm}
+\end{minipage}%
+\begin{minipage}[c]{0.83\textwidth}
+\FigureFullPath[A scatterplot is shown. The left third of the data has values that range in the bottom half of the range in the vertical direction. The middle third of the data has values that mostly range in the middle 50\% of the vertical direction. The right third of the data has values that range in the upper half of the range in the vertical direction.]{0.245}{ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_1}
+\FigureFullPath[A scatterplot is shown. The pattern resembles an arch, where the left third of the arch has been cut off. The peak of this ""arch"" of data is about a third of the way into the horizontal range.]{0.245}{ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_2}
+\FigureFullPath[A scatterplot is shown, with what appears to be a stable upward trend in the data. If we were to imagine a line drawn against the data, the residuals would generally have a standard deviation equal to only about 5\% of the vertical range of the data. That is, the data would be very ""tightly packed"" around the regression line.]{0.245}{ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_3}
+\FigureFullPath[A scatterplot is shown. There is no clear pattern in the data when looking from left to right.]{0.245}{ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_4}
+\end{minipage}",A marketing team compares ad spending with weekly sales. Which conclusions are reasonable if the correlation is r = 0.86? Select all that apply.,"A. The relationship is positive.
+B. The linear relationship is strong.
+C. Higher ad spending is associated with higher sales.
+D. Ad spending is proven to be the only cause of higher sales.","A, B, C","A correlation of 0.86 is positive and strong, so higher ad spending tends to be associated with higher sales. However, correlation does not prove a single causal explanation.","A marketing team compares ad spending with weekly sales. Which conclusions are reasonable if the correlation is r = 0.86? Select all that apply.
+
+Options:
+A. The relationship is positive.
+B. The linear relationship is strong.
+C. Higher ad spending is associated with higher sales.
+D. Ad spending is proven to be the only cause of higher sales.","1. Use the positive sign of r=0.86 to determine the direction of the association.
+2. Use |r|=0.86 to judge the strength of the linear relationship.
+3. Evaluate each option independently and distinguish association from proof of causation.
+4. Select all and only the statements supported by the correlation.","A marketing team compares ad spending with weekly sales. Which conclusions are reasonable if the correlation is r = 0.86? Select all that apply.
+
+Options:
+A. The relationship is positive.
+B. The linear relationship is strong.
+C. Higher ad spending is associated with higher sales.
+D. Ad spending is proven to be the only cause of higher sales.
+
+Follow the reasoning stages below:
+
+1. Use the positive sign of r=0.86 to determine the direction of the association.
+2. Use |r|=0.86 to judge the strength of the linear relationship.
+3. Evaluate each option independently and distinguish association from proof of causation.
+4. Select all and only the statements supported by the correlation.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+8,Correlation,Marketing,Medium,Multiple Choice,,"Match the correlation, Part III
+
+Match each correlation to the corresponding scatterplot.
+
+minipage[c]0.17
+
+minipage
+minipage[c]0.83
+0.245ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_1
+0.245ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_2
+0.245ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_3
+0.245ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_4
+minipage
+
+$r = 0.86$","\qt{Match the correlation, Part III\label{match_corr_3}} 
+Match each correlation to the corresponding scatterplot.
+
+\noindent%
+\begin{minipage}[c]{0.17\textwidth}
+\begin{parts}
+\item $r = -0.72$
+\item $r = 0.07$ 
+\item $r = 0.86$ 
+\item $r = 0.99$
+\end{parts}\vspace{3mm}
+\end{minipage}%
+\begin{minipage}[c]{0.83\textwidth}
+\FigureFullPath[A scatterplot is shown. The left third of the data has values that range in the bottom half of the range in the vertical direction. The middle third of the data has values that mostly range in the middle 50\% of the vertical direction. The right third of the data has values that range in the upper half of the range in the vertical direction.]{0.245}{ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_1}
+\FigureFullPath[A scatterplot is shown. The pattern resembles an arch, where the left third of the arch has been cut off. The peak of this ""arch"" of data is about a third of the way into the horizontal range.]{0.245}{ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_2}
+\FigureFullPath[A scatterplot is shown, with what appears to be a stable upward trend in the data. If we were to imagine a line drawn against the data, the residuals would generally have a standard deviation equal to only about 5\% of the vertical range of the data. That is, the data would be very ""tightly packed"" around the regression line.]{0.245}{ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_3}
+\FigureFullPath[A scatterplot is shown. There is no clear pattern in the data when looking from left to right.]{0.245}{ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_4}
+\end{minipage}",A brand study reports r = -0.72 between price discount depth and profit margin. Which statements are reasonable? Select all that apply.,"A. Larger discounts tend to be associated with lower profit margins.
+B. The association is negative.
+C. The relationship is moderately to strongly linear.
+D. The correlation proves discounts directly caused every margin change.","A, B, C","The negative sign means larger values of one variable tend to occur with smaller values of the other. The magnitude 0.72 indicates a fairly strong linear association, but it still does not prove causation.","A brand study reports r = -0.72 between price discount depth and profit margin. Which statements are reasonable? Select all that apply.
+
+Options:
+A. Larger discounts tend to be associated with lower profit margins.
+B. The association is negative.
+C. The relationship is moderately to strongly linear.
+D. The correlation proves discounts directly caused every margin change.","1. Use the negative sign of r=-0.72 to determine the direction of the association.
+2. Use |r|=0.72 to assess the strength of the linear relationship.
+3. Evaluate each option separately, especially any claim that correlation proves direct causation.
+4. Select all and only the statements supported by the reported correlation.","A brand study reports r = -0.72 between price discount depth and profit margin. Which statements are reasonable? Select all that apply.
+
+Options:
+A. Larger discounts tend to be associated with lower profit margins.
+B. The association is negative.
+C. The relationship is moderately to strongly linear.
+D. The correlation proves discounts directly caused every margin change.
+
+Follow the reasoning stages below:
+
+1. Use the negative sign of r=-0.72 to determine the direction of the association.
+2. Use |r|=0.72 to assess the strength of the linear relationship.
+3. Evaluate each option separately, especially any claim that correlation proves direct causation.
+4. Select all and only the statements supported by the reported correlation.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+9,Correlation,General Everyday,Hard,Short Answer,,"Match the correlation, Part III
+
+Match each correlation to the corresponding scatterplot.
+
+minipage[c]0.17
+
+minipage
+minipage[c]0.83
+0.245ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_1
+0.245ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_2
+0.245ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_3
+0.245ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_4
+minipage
+
+$r = 0.99$","\qt{Match the correlation, Part III\label{match_corr_3}} 
+Match each correlation to the corresponding scatterplot.
+
+\noindent%
+\begin{minipage}[c]{0.17\textwidth}
+\begin{parts}
+\item $r = -0.72$
+\item $r = 0.07$ 
+\item $r = 0.86$ 
+\item $r = 0.99$
+\end{parts}\vspace{3mm}
+\end{minipage}%
+\begin{minipage}[c]{0.83\textwidth}
+\FigureFullPath[A scatterplot is shown. The left third of the data has values that range in the bottom half of the range in the vertical direction. The middle third of the data has values that mostly range in the middle 50\% of the vertical direction. The right third of the data has values that range in the upper half of the range in the vertical direction.]{0.245}{ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_1}
+\FigureFullPath[A scatterplot is shown. The pattern resembles an arch, where the left third of the arch has been cut off. The peak of this ""arch"" of data is about a third of the way into the horizontal range.]{0.245}{ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_2}
+\FigureFullPath[A scatterplot is shown, with what appears to be a stable upward trend in the data. If we were to imagine a line drawn against the data, the residuals would generally have a standard deviation equal to only about 5\% of the vertical range of the data. That is, the data would be very ""tightly packed"" around the regression line.]{0.245}{ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_3}
+\FigureFullPath[A scatterplot is shown. There is no clear pattern in the data when looking from left to right.]{0.245}{ch_regr_simple_linear/figures/eoce/match_corr_3/scatter_4}
+\end{minipage}",A study of households finds r = 0.99 between monthly electricity use and monthly electricity bill. Explain what this tells us and give one reason why such a high correlation might occur.,,"Very strong positive linear association; higher use is closely associated with higher bills, likely because bills are calculated largely from usage.","Since r is very close to 1, the association is almost perfectly positive and linear. A natural explanation is that electricity bills are usually based on the number of units used, though fixed charges and tariff differences may prevent a perfect relationship.",A study of households finds r = 0.99 between monthly electricity use and monthly electricity bill. Explain what this tells us and give one reason why such a high correlation might occur.,"1. Interpret the sign of r=0.99.
+2. Interpret its magnitude in terms of the strength of the linear association.
+3. Translate the relationship into the household electricity-use and electricity-bill context.
+4. Give one plausible contextual reason why such a high correlation might occur, without treating correlation alone as proof of causation.","A study of households finds r = 0.99 between monthly electricity use and monthly electricity bill. Explain what this tells us and give one reason why such a high correlation might occur.
+
+Follow the reasoning stages below:
+
+1. Interpret the sign of r=0.99.
+2. Interpret its magnitude in terms of the strength of the linear association.
+3. Translate the relationship into the household electricity-use and electricity-bill context.
+4. Give one plausible contextual reason why such a high correlation might occur, without treating correlation alone as proof of causation.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+10,Correlation,General Everyday,Hard,Short Answer,,"True / False
+
+Determine if the following statements are true or false.
+If false, explain why.
+
+A correlation coefficient of -0.90 indicates a stronger 
+linear relationship than a correlation of 0.5.","\qt{True / False\label{tf_correlation}}
+Determine if the following statements are true or false.
+If false, explain why.
+\begin{parts}
+\item A correlation coefficient of -0.90 indicates a stronger 
+linear relationship than a correlation of 0.5.
+\item Correlation is a measure of the association between any 
+two variables.
+\end{parts}","Two apps report correlations between screen time and sleep hours: App A reports r = -0.90 and App B reports r = 0.50. Which app shows the stronger linear relationship, and why?",,"App A; strength is judged by the absolute value of r, and |-0.90| > |0.50|.","The sign gives direction, not strength. Strength is based on the magnitude of the correlation coefficient. Because 0.90 is larger than 0.50 in absolute value, App A shows the stronger linear association, and it is negative.","Two apps report correlations between screen time and sleep hours: App A reports r = -0.90 and App B reports r = 0.50. Which app shows the stronger linear relationship, and why?","1. Compare the two correlations using absolute values to assess strength.
+2. Identify which coefficient has the larger magnitude.
+3. Explain separately what the sign of each coefficient says about direction.
+4. State which app has the stronger linear relationship and why.","Two apps report correlations between screen time and sleep hours: App A reports r = -0.90 and App B reports r = 0.50. Which app shows the stronger linear relationship, and why?
+
+Follow the reasoning stages below:
+
+1. Compare the two correlations using absolute values to assess strength.
+2. Identify which coefficient has the larger magnitude.
+3. Explain separately what the sign of each coefficient says about direction.
+4. State which app has the stronger linear relationship and why.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3

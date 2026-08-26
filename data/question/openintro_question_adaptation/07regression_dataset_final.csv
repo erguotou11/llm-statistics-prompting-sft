@@ -1,0 +1,2181 @@
+No,Knowledge Area,Scenario,Difficulty,Question Type,Source ID,original_text,raw_latex,Adapted Question,Options,Correct Answer,Solution / Key Steps,prompt_direct,cot_reasoning_scaffold,prompt_cot,student_tutor_strategy,tutor_model,tutor_max_turns
+1,Regression,Finance,Medium,Calculation,ch_regr_simple_linear_40_1,"Cats, Part II
+
+Exercise~[ref: cat_body_heart_reg] 
+presents regression output from a model for predicting the heart 
+weight (in g) of cats from their body weight (in kg). The coefficients 
+are estimated using a dataset of 144 domestic cat. The model output 
+is also provided below.
+
+Table:
+| Estimate | Std. Error | t value | Pr($>$$|$t$|$) | |
+| --- | --- | --- | --- | --- |
+| (Intercept) | -0.357 | 0.692 | -0.515 | 0.607 |
+| body wt | 4.034 | 0.250 | 16.119 | 0.000 |
+
+\[ s = 1.452 R^2 = 64.66% R^2_adj = 64.41% \]
+
+We see that the point estimate for the slope is positive.
+ What are the hypotheses for evaluating whether body weight is
+ positively associated with heart weight in cats?","\qt{Cats, Part II\label{cat_body_heart_inf}}
+Exercise~\ref{cat_body_heart_reg} 
+presents regression output from a model for predicting the heart 
+weight (in g) of cats from their body weight (in kg). The coefficients 
+are estimated using a dataset of 144 domestic cat. The model output 
+is also provided below.
+\begin{center}
+\begin{tabular}{rrrrr}
+    \hline
+            & Estimate  & Std. Error    & t value   & Pr($>$$|$t$|$) \\ 
+    \hline
+(Intercept) & -0.357    & 0.692         & -0.515    & 0.607 \\ 
+body wt     & 4.034     & 0.250         & 16.119    & 0.000 \\ 
+    \hline
+\end{tabular}
+\[ s = 1.452 \qquad R^2 = 64.66\% \qquad R^2_{adj} = 64.41\% \]
+\end{center}
+\begin{parts}
+\item We see that the point estimate for the slope is positive.
+    What are the hypotheses for evaluating whether body weight is
+    positively associated with heart weight in cats?
+\item State the conclusion of the hypothesis test from part (a) in 
+context of the data.
+\item Calculate a 95\% confidence interval for the slope of body 
+weight, and interpret it in context of the data.
+\item Do your results from the hypothesis test and the confidence 
+interval agree? Explain.
+\end{parts}","A bank fits a simple linear regression model to predict a customer’s monthly saving amount (in £) from monthly income x (in £): ŷ = 120 + 0.08x. For a customer with income £3,200 who actually saves £410, compute the predicted saving and the residual.",,Predicted saving = £376; residual = £34.,"Substitute x=3200: ŷ=120+0.08(3200)=376. Residual = observed − predicted = 410−376=34, so the customer saves £34 more than predicted.","A bank fits a simple linear regression model to predict a customer’s monthly saving amount (in £) from monthly income x (in £): ŷ = 120 + 0.08x. For a customer with income £3,200 who actually saves £410, compute the predicted saving and the residual.","1. Substitute the customer's income into the fitted regression equation to obtain the predicted saving.
+2. Compute the residual using observed value minus predicted value.
+3. Keep the signs and monetary units clear.
+4. Report both the predicted saving and the residual.","A bank fits a simple linear regression model to predict a customer’s monthly saving amount (in £) from monthly income x (in £): ŷ = 120 + 0.08x. For a customer with income £3,200 who actually saves £410, compute the predicted saving and the residual.
+
+Follow the reasoning stages below:
+
+1. Substitute the customer's income into the fitted regression equation to obtain the predicted saving.
+2. Compute the residual using observed value minus predicted value.
+3. Keep the signs and monetary units clear.
+4. Report both the predicted saving and the residual.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+2,Regression,Finance,Medium,Calculation,ch_regr_simple_linear_39_2,"Husbands and wives, Part III
+
+Exercise~[ref: husbands_wives_height_inf] presents a scatterplot displaying the 
+relationship between husbands' and wives' ages in a random sample of 
+170 married couples in Britain, where both partners' ages are below 65 
+years. Given below is summary output of the least squares fit for 
+predicting wife's age from husband's age.
+
+0.4
+
+ch_regr_simple_linear/figures/eoce/husbands_wives_age_inf/husbands_wives_age
+
+minipage
+minipage[c]0.6
+
+Table:
+| Estimate | Std. Error | t value | Pr($>$$|$t$|$) | |
+| --- | --- | --- | --- | --- |
+| (Intercept) | 1.5740 | 1.1501 | 1.37 | 0.1730 |
+| age_husband | 0.9112 | 0.0259 | 35.25 | 0.0000 |
+| $df = 168$ | | | | |
+
+minipage
+
+Write the equation of the regression line for predicting wife's 
+age from husband's age.","\qt{Husbands and wives, Part III\label{husbands_wives_age_inf}}
+Exercise~\ref{husbands_wives_height_inf} presents a scatterplot displaying the 
+relationship between husbands' and wives' ages in a random sample of 
+170 married couples in Britain, where both partners' ages are below 65 
+years. Given below is summary output of the least squares fit for 
+predicting wife's age from husband's age.
+
+\noindent\begin{minipage}[c]{0.4\textwidth}
+\begin{center}
+\FigureFullPath[A scatterplot is shown with about 150 points. The horizontal axis is for ""Hus, in inches"" and takes values between 8 and 22 inches. The vertical axis is for ""Volume, in cubic feet"" and takes values between 8 and 80 cubic feet. About 15 points with circumferences smaller than 12 inches, volumes range from about 8 to 25 cubic feet. For the approximately ten points with circumferences between 12 and 16 feet, volumes range from 22 to 35 cubic feet. For the 6 points with circumferences larger than 16 inches, volumes range from 40 to 60 cubic feet, with one outlier with a circumference of 22 inches and a volume of about 80 cubic feet.]{}{ch_regr_simple_linear/figures/eoce/husbands_wives_age_inf/husbands_wives_age}
+\end{center}
+\end{minipage}
+\begin{minipage}[c]{0.6\textwidth}
+{\scriptsize
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+                & Estimate  & Std. Error    & t value   & Pr($>$$|$t$|$) \\ 
+  \hline
+(Intercept)     & 1.5740    & 1.1501        & 1.37      & 0.1730 \\ 
+age\_\hspace{0.3mm}husband  & 0.9112    & 0.0259        & 35.25     & 0.0000 \\ 
+   \hline
+\multicolumn{5}{r}{$df = 168$} \\
+\end{tabular}
+\end{center}
+}
+\end{minipage}
+\begin{parts}
+\item We might wonder, is the age difference between husbands and 
+wives consistent across ages? If this were the case, then the slope 
+parameter would be $\beta_1 = 1$. Use the information above to evaluate 
+if there is strong evidence that the difference in husband and wife ages 
+differs for different ages.
+\item Write the equation of the regression line for predicting wife's 
+age from husband's age.
+\item Interpret the slope and intercept in context.
+\item Given that $R^2 = 0.88$, what is the correlation of ages  in 
+this data set?
+\item You meet a married man from Britain who is 55 years old. What 
+would you predict his wife's age to be? How reliable is this prediction?
+\item You meet another married man from Britain who is 85 years old. 
+Would it be wise to use the same linear model to predict his wife's 
+age? Explain.
+\end{parts}","A regression model predicts an ETF’s daily return y (%) from the market return x (%): ŷ = -1.2 + 0.85x. If the market return is 4% and the ETF actually returns 1.5%, compute the predicted return and residual.",,Predicted return = 2.2%; residual = -0.7 percentage points.,"ŷ=-1.2+0.85(4)=2.2. Residual = 1.5−2.2=-0.7, meaning the ETF underperformed the model prediction by 0.7 percentage points.","A regression model predicts an ETF’s daily return y (%) from the market return x (%): ŷ = -1.2 + 0.85x. If the market return is 4% and the ETF actually returns 1.5%, compute the predicted return and residual.","1. Substitute the market return into the fitted regression equation to obtain the predicted ETF return.
+2. Compute the residual as observed ETF return minus predicted ETF return.
+3. Interpret the sign of the residual only as needed to keep the calculation clear.
+4. Report the predicted return and residual in percentage-point terms.","A regression model predicts an ETF’s daily return y (%) from the market return x (%): ŷ = -1.2 + 0.85x. If the market return is 4% and the ETF actually returns 1.5%, compute the predicted return and residual.
+
+Follow the reasoning stages below:
+
+1. Substitute the market return into the fitted regression equation to obtain the predicted ETF return.
+2. Compute the residual as observed ETF return minus predicted ETF return.
+3. Interpret the sign of the residual only as needed to keep the calculation clear.
+4. Report the predicted return and residual in percentage-point terms.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+3,Regression,Finance,Medium,Calculation,ch_regr_mult_and_log_19_4,"Multiple regression fact checking
+
+Determine which of the following statements are
+true and false.
+For each statement that is false, explain why it is false.
+
+Suppose we fit a multiple regression model
+ based on a data set of 472 observations.
+ We also notice that the distribution of the
+ residuals includes some skew but does not
+ include any particularly extreme outliers.
+ Because the residuals are not nearly normal,
+ we should not use this model and require
+ more advanced methods to model these data.","\qt{Multiple regression fact checking\label{mult_regr_facts}}
+Determine which of the following statements are
+true and false.
+For each statement that is false, explain why it is false.
+\begin{parts}
+\item
+    If predictors are collinear, then removing
+    one variable will have no influence on the
+    point estimate of another variable's coefficient.
+\item
+    Suppose a numerical variable $x$ has a coefficient of
+    $b_1 = 2.5$ in the multiple regression model.
+    Suppose also that the first observation has $x_1 = 7.2$,
+    the second observation has a value of $x_1 = 8.2$,
+    and these two observations have the same values
+    for all other predictors.
+    Then the predicted value of the second observation
+    will be 2.5 higher than the prediction of the first
+    observation based on the multiple regression model.
+\item
+    If a regression model's first variable has
+    a coefficient of $b_1 = 5.7$, then if we are
+    able to influence the data so that an observation
+    will have its $x_1$ be 1 larger than it would
+    otherwise, the value $y_1$ for this observation
+    would increase by 5.7.
+\item
+    Suppose we fit a multiple regression model
+    based on a data set of 472 observations.
+    We also notice that the distribution of the
+    residuals includes some skew but does not
+    include any particularly extreme outliers.
+    Because the residuals are not nearly normal,
+    we should not use this model and require
+    more advanced methods to model these data.
+\end{parts}","A multiple regression model predicts a credit-card interest spread: ŷ = 21.5 + 0.09(DTI) − 0.018(credit score) + 0.70(missed payment), where DTI is in percent and missed payment is 1 if yes, 0 if no. Compute the predicted spread for DTI=35, credit score=680, and missed payment=1.",,13.11 percentage points.,ŷ=21.5+0.09(35)−0.018(680)+0.70(1)=21.5+3.15−12.24+0.70=13.11.,"A multiple regression model predicts a credit-card interest spread: ŷ = 21.5 + 0.09(DTI) − 0.018(credit score) + 0.70(missed payment), where DTI is in percent and missed payment is 1 if yes, 0 if no. Compute the predicted spread for DTI=35, credit score=680, and missed payment=1.","1. Identify the values of DTI, credit score, and the missed-payment indicator.
+2. Substitute all predictor values into the multiple regression equation with the correct coefficient signs.
+3. Combine the terms carefully.
+4. Report the predicted interest spread in percentage points.","A multiple regression model predicts a credit-card interest spread: ŷ = 21.5 + 0.09(DTI) − 0.018(credit score) + 0.70(missed payment), where DTI is in percent and missed payment is 1 if yes, 0 if no. Compute the predicted spread for DTI=35, credit score=680, and missed payment=1.
+
+Follow the reasoning stages below:
+
+1. Identify the values of DTI, credit score, and the missed-payment indicator.
+2. Substitute all predictor values into the multiple regression equation with the correct coefficient signs.
+3. Combine the terms carefully.
+4. Report the predicted interest spread in percentage points.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+4,Regression,Finance,Medium,Calculation,ch_regr_mult_and_log_21_1,"Spam filtering, Part I
+
+Spam filters are built on principles similar to those
+used in logistic regression.
+We fit a probability that each message is spam
+or not spam.
+We have several email variables for this problem:
+tomultiple,
+cc,
+attach,
+dollar,
+winner,
+inherit,
+password,
+format,
+resubj,
+exclaimsubj, and
+sentemail.
+We won't describe what each variable means
+here for the sake of brevity, but each is
+either a numerical or indicator variable.
+
+For variable selection,
+ we fit the full model, which includes all
+ variables, and then we also fit each model
+ where we've dropped exactly one of the variables.
+ In each of these reduced models, the AIC value
+ for the model is reported below.
+ Based on these results, which variable,
+ if any, should we drop as part of model
+ selection?
+ Explain.
+
+Table:
+| Variable Dropped | AIC |
+| --- | --- |
+| None Dropped | 1863.50 |
+| tomultiple | 2023.50 |
+| cc | 1863.18 |
+| attach | 1871.89 |
+| dollar | 1879.70 |
+| winner | 1885.03 |
+| inherit | 1865.55 |
+| password | 1879.31 |
+| format | 2008.85 |
+| resubj | 1904.60 |
+| exclaimsubj | 1862.76 |
+| sentemail | 1958.18 |
+
+ See the next page for part~(b).","\qt{Spam filtering, Part I\label{spam_filtering_model_sel}}
+Spam filters are built on principles similar to those
+used in logistic regression.
+We fit a probability that each message is spam
+or not spam.
+We have several email variables for this problem:
+\resp{to\us{}multiple},
+\resp{cc},
+\resp{attach},
+\resp{dollar},
+\resp{winner},
+\resp{inherit},
+\resp{password},
+\resp{format},
+\resp{re\us{}subj},
+\resp{exclaim\us{}subj}, and
+\resp{sent\us{}email}.
+We won't describe what each variable means
+here for the sake of brevity, but each is
+either a numerical or indicator variable.
+\begin{parts}
+\item
+    For variable selection,
+    we fit the full model, which includes all
+    variables, and then we also fit each model
+    where we've dropped exactly one of the variables.
+    In each of these reduced models, the AIC value
+    for the model is reported below.
+    Based on these results, which variable,
+    if any, should we drop as part of model
+    selection?
+    Explain.
+    \begin{center}
+    \begin{tabular}{lc}
+      \hline
+      Variable Dropped & AIC \\ 
+      \hline
+      None Dropped & 1863.50 \\ 
+      \resp{to\us{}multiple} & 2023.50 \\ 
+      \resp{cc} & 1863.18 \\ 
+      \resp{attach} & 1871.89 \\ 
+      \resp{dollar} & 1879.70 \\ 
+      \resp{winner} & 1885.03 \\ 
+      \resp{inherit} & 1865.55 \\ 
+      \resp{password} & 1879.31 \\ 
+      \resp{format} & 2008.85 \\ 
+      \resp{re\us{}subj} & 1904.60 \\ 
+      \resp{exclaim\us{}subj} & 1862.76 \\ 
+      \resp{sent\us{}email} & 1958.18 \\ 
+      \hline
+    \end{tabular}
+    \end{center}
+    \textbf{See the next page for part~(b).}
+
+\D{\newpage}
+
+\item
+    Consider the following model selection stage.
+    Here again we've computed the AIC
+    for each leave-one-variable-out model.
+    Based on the results, which variable,
+    if any, should we drop as part of model
+    selection?
+    Explain.
+    \begin{center}
+    \begin{tabular}{lc}
+      \hline
+      Variable Dropped & AIC \\ 
+      \hline
+      None Dropped & 1862.41 \\ 
+      \resp{to\us{}multiple} & 2019.55 \\ 
+      \resp{attach} & 1871.17 \\ 
+      \resp{dollar} & 1877.73 \\ 
+      \resp{winner} & 1884.95 \\ 
+      \resp{inherit} & 1864.52 \\ 
+      \resp{password} & 1878.19 \\ 
+      \resp{format} & 2007.45 \\ 
+      \resp{re\us{}subj} & 1902.94 \\ 
+      \resp{sent\us{}email} & 1957.56 \\ 
+      \hline
+    \end{tabular}
+    \end{center}
+\end{parts}","A logistic regression model estimates the probability that a loan application is high risk: logit(p) = -2.0 + 0.80(previous default) + 0.03(utilization). For an applicant with previous default = 1 and utilization = 60, compute p.",,Approximately 0.646.,η=-2.0+0.80(1)+0.03(60)=0.60. Then p=e^0.60/(1+e^0.60)=0.646 approximately.,"A logistic regression model estimates the probability that a loan application is high risk: logit(p) = -2.0 + 0.80(previous default) + 0.03(utilization). For an applicant with previous default = 1 and utilization = 60, compute p.
+
+Numerical precision:
+- Keep full precision in intermediate calculations.
+- Round only the final predicted probability to 3 decimal places.","1. Substitute the applicant's predictor values into the logistic linear predictor to obtain eta.
+2. Convert eta to probability using p = exp(eta) / [1 + exp(eta)].
+3. Keep full precision until the final probability is obtained.
+4. Report the predicted probability to 3 decimal places.","A logistic regression model estimates the probability that a loan application is high risk: logit(p) = -2.0 + 0.80(previous default) + 0.03(utilization). For an applicant with previous default = 1 and utilization = 60, compute p.
+
+Numerical precision:
+- Keep full precision in intermediate calculations.
+- Round only the final predicted probability to 3 decimal places.
+
+Follow the reasoning stages below:
+
+1. Substitute the applicant's predictor values into the logistic linear predictor to obtain eta.
+2. Convert eta to probability using p = exp(eta) / [1 + exp(eta)].
+3. Keep full precision until the final probability is obtained.
+4. Report the predicted probability to 3 decimal places.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+5,Regression,Finance,Medium,Calculation,ch_regr_mult_and_log_21_1,"Spam filtering, Part I
+
+Spam filters are built on principles similar to those
+used in logistic regression.
+We fit a probability that each message is spam
+or not spam.
+We have several email variables for this problem:
+tomultiple,
+cc,
+attach,
+dollar,
+winner,
+inherit,
+password,
+format,
+resubj,
+exclaimsubj, and
+sentemail.
+We won't describe what each variable means
+here for the sake of brevity, but each is
+either a numerical or indicator variable.
+
+For variable selection,
+ we fit the full model, which includes all
+ variables, and then we also fit each model
+ where we've dropped exactly one of the variables.
+ In each of these reduced models, the AIC value
+ for the model is reported below.
+ Based on these results, which variable,
+ if any, should we drop as part of model
+ selection?
+ Explain.
+
+Table:
+| Variable Dropped | AIC |
+| --- | --- |
+| None Dropped | 1863.50 |
+| tomultiple | 2023.50 |
+| cc | 1863.18 |
+| attach | 1871.89 |
+| dollar | 1879.70 |
+| winner | 1885.03 |
+| inherit | 1865.55 |
+| password | 1879.31 |
+| format | 2008.85 |
+| resubj | 1904.60 |
+| exclaimsubj | 1862.76 |
+| sentemail | 1958.18 |
+
+ See the next page for part~(b).","\qt{Spam filtering, Part I\label{spam_filtering_model_sel}}
+Spam filters are built on principles similar to those
+used in logistic regression.
+We fit a probability that each message is spam
+or not spam.
+We have several email variables for this problem:
+\resp{to\us{}multiple},
+\resp{cc},
+\resp{attach},
+\resp{dollar},
+\resp{winner},
+\resp{inherit},
+\resp{password},
+\resp{format},
+\resp{re\us{}subj},
+\resp{exclaim\us{}subj}, and
+\resp{sent\us{}email}.
+We won't describe what each variable means
+here for the sake of brevity, but each is
+either a numerical or indicator variable.
+\begin{parts}
+\item
+    For variable selection,
+    we fit the full model, which includes all
+    variables, and then we also fit each model
+    where we've dropped exactly one of the variables.
+    In each of these reduced models, the AIC value
+    for the model is reported below.
+    Based on these results, which variable,
+    if any, should we drop as part of model
+    selection?
+    Explain.
+    \begin{center}
+    \begin{tabular}{lc}
+      \hline
+      Variable Dropped & AIC \\ 
+      \hline
+      None Dropped & 1863.50 \\ 
+      \resp{to\us{}multiple} & 2023.50 \\ 
+      \resp{cc} & 1863.18 \\ 
+      \resp{attach} & 1871.89 \\ 
+      \resp{dollar} & 1879.70 \\ 
+      \resp{winner} & 1885.03 \\ 
+      \resp{inherit} & 1865.55 \\ 
+      \resp{password} & 1879.31 \\ 
+      \resp{format} & 2008.85 \\ 
+      \resp{re\us{}subj} & 1904.60 \\ 
+      \resp{exclaim\us{}subj} & 1862.76 \\ 
+      \resp{sent\us{}email} & 1958.18 \\ 
+      \hline
+    \end{tabular}
+    \end{center}
+    \textbf{See the next page for part~(b).}
+
+\D{\newpage}
+
+\item
+    Consider the following model selection stage.
+    Here again we've computed the AIC
+    for each leave-one-variable-out model.
+    Based on the results, which variable,
+    if any, should we drop as part of model
+    selection?
+    Explain.
+    \begin{center}
+    \begin{tabular}{lc}
+      \hline
+      Variable Dropped & AIC \\ 
+      \hline
+      None Dropped & 1862.41 \\ 
+      \resp{to\us{}multiple} & 2019.55 \\ 
+      \resp{attach} & 1871.17 \\ 
+      \resp{dollar} & 1877.73 \\ 
+      \resp{winner} & 1884.95 \\ 
+      \resp{inherit} & 1864.52 \\ 
+      \resp{password} & 1878.19 \\ 
+      \resp{format} & 2007.45 \\ 
+      \resp{re\us{}subj} & 1902.94 \\ 
+      \resp{sent\us{}email} & 1957.56 \\ 
+      \hline
+    \end{tabular}
+    \end{center}
+\end{parts}","In a logistic regression model for detecting fraudulent transactions, the coefficient for “foreign transaction” is 0.65. Compute the odds ratio and interpret it briefly.",,"Odds ratio ≈ 1.92; holding other variables fixed, foreign transactions have about 1.92 times the odds of being flagged, or about 92% higher odds.","For logistic regression, odds ratio = e^b. Here e^0.65≈1.92, so the odds are multiplied by about 1.92.","In a logistic regression model for detecting fraudulent transactions, the coefficient for “foreign transaction” is 0.65. Compute the odds ratio and interpret it briefly.
+
+Numerical precision:
+- Keep full precision in intermediate calculations.
+- Round only the final odds ratio to 2 decimal places.","1. Recall that a logistic-regression coefficient b corresponds to an odds ratio exp(b).
+2. Compute exp(0.65).
+3. Translate the odds ratio into a multiplicative change in odds and, if helpful, the corresponding percentage increase in odds.
+4. Interpret the result while holding other model predictors fixed; do not describe it as a probability increase.","In a logistic regression model for detecting fraudulent transactions, the coefficient for “foreign transaction” is 0.65. Compute the odds ratio and interpret it briefly.
+
+Numerical precision:
+- Keep full precision in intermediate calculations.
+- Round only the final odds ratio to 2 decimal places.
+
+Follow the reasoning stages below:
+
+1. Recall that a logistic-regression coefficient b corresponds to an odds ratio exp(b).
+2. Compute exp(0.65).
+3. Translate the odds ratio into a multiplicative change in odds and, if helpful, the corresponding percentage increase in odds.
+4. Interpret the result while holding other model predictors fixed; do not describe it as a probability increase.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+6,Regression,Marketing,Medium,Interpretation,ch_regr_simple_linear_41,"Nutrition at Starbucks, Part II
+
+Exercise~[ref: starbucks_cals_carbos] introduced a data set on nutrition 
+information on Starbucks food menu items. Based on the scatterplot 
+and the residual plot provided, describe the relationship between the 
+protein content and calories of these menu items, and determine if a 
+simple linear model is appropriate to predict amount of protein from 
+the number of calories.
+
+0.35ch_regr_simple_linear/figures/eoce/starbucks_cals_protein/starbucks_cals_protein","\qt{Nutrition at Starbucks, Part II\label{starbucks_cals_protein}} 
+Exercise~\ref{starbucks_cals_carbos} introduced a data set on nutrition 
+information on Starbucks food menu items. Based on the scatterplot 
+and the residual plot provided, describe the relationship between the 
+protein content and calories of these menu items, and determine if a 
+simple linear model is appropriate to predict amount of protein from 
+the number of calories.
+\begin{center}
+\FigureFullPath[A scatterplot is shown with about 75 points and an overlaid regression line that trends upward along with a residual plot. The horizontal axis represents ""Calories"" and has values ranging from about 100 to 500. The vertical axis represents ""Protein, in grams"" and has values ranging from 0 to about 30. Scatterplot: About 15 points are shown with fewer than 200 calories, and these have between about 0 and 5 grams of protein. About 30 points are shown with 200 to 400 calories, and these mostly have between 5 and 30 grams of protein. About 20 points are shown with more than 400 calories, and these mostly have between 5 and 30 grams of carbs. Residual plot: About 15 points are shown with fewer than 200 calories, and these have residuals roughly between -5 and positive 2. About 30 points are shown with 200 to 400 calories, and these residuals largely range from about -10 to positive 20. About 20 points are shown with more than 400 calories, and the residuals for these points mostly range between -10 and positive 8.]{0.35}{ch_regr_simple_linear/figures/eoce/starbucks_cals_protein/starbucks_cals_protein}
+\end{center}",A coffee chain regresses weekly product sales on advertising spend. The fitted slope for advertising spend is 0.42 when sales are measured in units and advertising is measured in £. Interpret this slope in context.,,"For each additional £1 of advertising spend, predicted weekly sales increase by about 0.42 units on average.",A slope describes the expected change in the response for a one-unit increase in the predictor. Here the response is weekly sales and the predictor is advertising spend.,A coffee chain regresses weekly product sales on advertising spend. The fitted slope for advertising spend is 0.42 when sales are measured in units and advertising is measured in £. Interpret this slope in context.,"1. Identify the response variable and predictor and note their units.
+2. Recall that the slope is the predicted change in the response for a one-unit increase in the predictor.
+3. Apply that definition to a £1 increase in advertising spend.
+4. State the slope interpretation in context without making a causal claim.","A coffee chain regresses weekly product sales on advertising spend. The fitted slope for advertising spend is 0.42 when sales are measured in units and advertising is measured in £. Interpret this slope in context.
+
+Follow the reasoning stages below:
+
+1. Identify the response variable and predictor and note their units.
+2. Recall that the slope is the predicted change in the response for a one-unit increase in the predictor.
+3. Apply that definition to a £1 increase in advertising spend.
+4. State the slope interpretation in context without making a causal claim.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+7,Regression,Marketing,Medium,Interpretation,ch_regr_simple_linear_41,"Nutrition at Starbucks, Part II
+
+Exercise~[ref: starbucks_cals_carbos] introduced a data set on nutrition 
+information on Starbucks food menu items. Based on the scatterplot 
+and the residual plot provided, describe the relationship between the 
+protein content and calories of these menu items, and determine if a 
+simple linear model is appropriate to predict amount of protein from 
+the number of calories.
+
+0.35ch_regr_simple_linear/figures/eoce/starbucks_cals_protein/starbucks_cals_protein","\qt{Nutrition at Starbucks, Part II\label{starbucks_cals_protein}} 
+Exercise~\ref{starbucks_cals_carbos} introduced a data set on nutrition 
+information on Starbucks food menu items. Based on the scatterplot 
+and the residual plot provided, describe the relationship between the 
+protein content and calories of these menu items, and determine if a 
+simple linear model is appropriate to predict amount of protein from 
+the number of calories.
+\begin{center}
+\FigureFullPath[A scatterplot is shown with about 75 points and an overlaid regression line that trends upward along with a residual plot. The horizontal axis represents ""Calories"" and has values ranging from about 100 to 500. The vertical axis represents ""Protein, in grams"" and has values ranging from 0 to about 30. Scatterplot: About 15 points are shown with fewer than 200 calories, and these have between about 0 and 5 grams of protein. About 30 points are shown with 200 to 400 calories, and these mostly have between 5 and 30 grams of protein. About 20 points are shown with more than 400 calories, and these mostly have between 5 and 30 grams of carbs. Residual plot: About 15 points are shown with fewer than 200 calories, and these have residuals roughly between -5 and positive 2. About 30 points are shown with 200 to 400 calories, and these residuals largely range from about -10 to positive 20. About 20 points are shown with more than 400 calories, and the residuals for these points mostly range between -10 and positive 8.]{0.35}{ch_regr_simple_linear/figures/eoce/starbucks_cals_protein/starbucks_cals_protein}
+\end{center}",A residual plot for a model predicting drink sales from price shows a clear U-shaped pattern. What does this suggest about the linear regression model?,,The linear model is probably not adequate; the relationship may be nonlinear.,A good linear model should have residuals scattered randomly around zero. A U-shaped residual pattern suggests systematic structure left in the residuals.,A residual plot for a model predicting drink sales from price shows a clear U-shaped pattern. What does this suggest about the linear regression model?,"1. Recall what a well-fitting linear model should look like in a residual plot.
+2. Compare that expectation with the observed U-shaped pattern.
+3. Identify the type of model inadequacy suggested by systematic curvature.
+4. State the implication for the linear regression model.","A residual plot for a model predicting drink sales from price shows a clear U-shaped pattern. What does this suggest about the linear regression model?
+
+Follow the reasoning stages below:
+
+1. Recall what a well-fitting linear model should look like in a residual plot.
+2. Compare that expectation with the observed U-shaped pattern.
+3. Identify the type of model inadequacy suggested by systematic curvature.
+4. State the implication for the linear regression model.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+8,Regression,Marketing,Medium,Interpretation,ch_regr_mult_and_log_19_4,"Multiple regression fact checking
+
+Determine which of the following statements are
+true and false.
+For each statement that is false, explain why it is false.
+
+Suppose we fit a multiple regression model
+ based on a data set of 472 observations.
+ We also notice that the distribution of the
+ residuals includes some skew but does not
+ include any particularly extreme outliers.
+ Because the residuals are not nearly normal,
+ we should not use this model and require
+ more advanced methods to model these data.","\qt{Multiple regression fact checking\label{mult_regr_facts}}
+Determine which of the following statements are
+true and false.
+For each statement that is false, explain why it is false.
+\begin{parts}
+\item
+    If predictors are collinear, then removing
+    one variable will have no influence on the
+    point estimate of another variable's coefficient.
+\item
+    Suppose a numerical variable $x$ has a coefficient of
+    $b_1 = 2.5$ in the multiple regression model.
+    Suppose also that the first observation has $x_1 = 7.2$,
+    the second observation has a value of $x_1 = 8.2$,
+    and these two observations have the same values
+    for all other predictors.
+    Then the predicted value of the second observation
+    will be 2.5 higher than the prediction of the first
+    observation based on the multiple regression model.
+\item
+    If a regression model's first variable has
+    a coefficient of $b_1 = 5.7$, then if we are
+    able to influence the data so that an observation
+    will have its $x_1$ be 1 larger than it would
+    otherwise, the value $y_1$ for this observation
+    would increase by 5.7.
+\item
+    Suppose we fit a multiple regression model
+    based on a data set of 472 observations.
+    We also notice that the distribution of the
+    residuals includes some skew but does not
+    include any particularly extreme outliers.
+    Because the residuals are not nearly normal,
+    we should not use this model and require
+    more advanced methods to model these data.
+\end{parts}","A multiple regression model predicts customer spending using website visits and email clicks. After adding website visits to the model, the coefficient for email clicks drops sharply. Give a likely explanation.",,"Email clicks and website visits may be correlated, so part of what email clicks appeared to explain is now captured by website visits.","In multiple regression, coefficients are adjusted for the other predictors. When predictors are related, adding one variable can change another coefficient substantially.","A multiple regression model predicts customer spending using website visits and email clicks. After adding website visits to the model, the coefficient for email clicks drops sharply. Give a likely explanation.","1. Recall that a multiple-regression coefficient is conditional on the other predictors in the model.
+2. Consider what it means if website visits and email clicks contain overlapping information.
+3. Explain why adding one correlated predictor can substantially change the coefficient of another.
+4. Give the most plausible explanation without claiming a unique causal mechanism.","A multiple regression model predicts customer spending using website visits and email clicks. After adding website visits to the model, the coefficient for email clicks drops sharply. Give a likely explanation.
+
+Follow the reasoning stages below:
+
+1. Recall that a multiple-regression coefficient is conditional on the other predictors in the model.
+2. Consider what it means if website visits and email clicks contain overlapping information.
+3. Explain why adding one correlated predictor can substantially change the coefficient of another.
+4. Give the most plausible explanation without claiming a unique causal mechanism.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+9,Regression,Marketing,Medium,Interpretation,ch_regr_mult_and_log_21_1,"Spam filtering, Part I
+
+Spam filters are built on principles similar to those
+used in logistic regression.
+We fit a probability that each message is spam
+or not spam.
+We have several email variables for this problem:
+tomultiple,
+cc,
+attach,
+dollar,
+winner,
+inherit,
+password,
+format,
+resubj,
+exclaimsubj, and
+sentemail.
+We won't describe what each variable means
+here for the sake of brevity, but each is
+either a numerical or indicator variable.
+
+For variable selection,
+ we fit the full model, which includes all
+ variables, and then we also fit each model
+ where we've dropped exactly one of the variables.
+ In each of these reduced models, the AIC value
+ for the model is reported below.
+ Based on these results, which variable,
+ if any, should we drop as part of model
+ selection?
+ Explain.
+
+Table:
+| Variable Dropped | AIC |
+| --- | --- |
+| None Dropped | 1863.50 |
+| tomultiple | 2023.50 |
+| cc | 1863.18 |
+| attach | 1871.89 |
+| dollar | 1879.70 |
+| winner | 1885.03 |
+| inherit | 1865.55 |
+| password | 1879.31 |
+| format | 2008.85 |
+| resubj | 1904.60 |
+| exclaimsubj | 1862.76 |
+| sentemail | 1958.18 |
+
+ See the next page for part~(b).","\qt{Spam filtering, Part I\label{spam_filtering_model_sel}}
+Spam filters are built on principles similar to those
+used in logistic regression.
+We fit a probability that each message is spam
+or not spam.
+We have several email variables for this problem:
+\resp{to\us{}multiple},
+\resp{cc},
+\resp{attach},
+\resp{dollar},
+\resp{winner},
+\resp{inherit},
+\resp{password},
+\resp{format},
+\resp{re\us{}subj},
+\resp{exclaim\us{}subj}, and
+\resp{sent\us{}email}.
+We won't describe what each variable means
+here for the sake of brevity, but each is
+either a numerical or indicator variable.
+\begin{parts}
+\item
+    For variable selection,
+    we fit the full model, which includes all
+    variables, and then we also fit each model
+    where we've dropped exactly one of the variables.
+    In each of these reduced models, the AIC value
+    for the model is reported below.
+    Based on these results, which variable,
+    if any, should we drop as part of model
+    selection?
+    Explain.
+    \begin{center}
+    \begin{tabular}{lc}
+      \hline
+      Variable Dropped & AIC \\ 
+      \hline
+      None Dropped & 1863.50 \\ 
+      \resp{to\us{}multiple} & 2023.50 \\ 
+      \resp{cc} & 1863.18 \\ 
+      \resp{attach} & 1871.89 \\ 
+      \resp{dollar} & 1879.70 \\ 
+      \resp{winner} & 1885.03 \\ 
+      \resp{inherit} & 1865.55 \\ 
+      \resp{password} & 1879.31 \\ 
+      \resp{format} & 2008.85 \\ 
+      \resp{re\us{}subj} & 1904.60 \\ 
+      \resp{exclaim\us{}subj} & 1862.76 \\ 
+      \resp{sent\us{}email} & 1958.18 \\ 
+      \hline
+    \end{tabular}
+    \end{center}
+    \textbf{See the next page for part~(b).}
+
+\D{\newpage}
+
+\item
+    Consider the following model selection stage.
+    Here again we've computed the AIC
+    for each leave-one-variable-out model.
+    Based on the results, which variable,
+    if any, should we drop as part of model
+    selection?
+    Explain.
+    \begin{center}
+    \begin{tabular}{lc}
+      \hline
+      Variable Dropped & AIC \\ 
+      \hline
+      None Dropped & 1862.41 \\ 
+      \resp{to\us{}multiple} & 2019.55 \\ 
+      \resp{attach} & 1871.17 \\ 
+      \resp{dollar} & 1877.73 \\ 
+      \resp{winner} & 1884.95 \\ 
+      \resp{inherit} & 1864.52 \\ 
+      \resp{password} & 1878.19 \\ 
+      \resp{format} & 2007.45 \\ 
+      \resp{re\us{}subj} & 1902.94 \\ 
+      \resp{sent\us{}email} & 1957.56 \\ 
+      \hline
+    \end{tabular}
+    \end{center}
+\end{parts}",A logistic regression model for whether a customer buys a promoted item gives an odds ratio of 1.50 for seeing the advert. Interpret this result in context.,,"Holding other variables fixed, customers who see the advert have 1.50 times the odds of buying the promoted item compared with customers who do not see it.","An odds ratio above 1 indicates higher odds. The interpretation is about odds, not directly about probability or percentage-point increase.",A logistic regression model for whether a customer buys a promoted item gives an odds ratio of 1.50 for seeing the advert. Interpret this result in context.,"1. Identify the odds ratio and the two groups being compared.
+2. Interpret 1.50 as a multiplicative factor on the odds, holding other predictors fixed.
+3. Distinguish odds from probability and from percentage-point change.
+4. State the contextual interpretation concisely.","A logistic regression model for whether a customer buys a promoted item gives an odds ratio of 1.50 for seeing the advert. Interpret this result in context.
+
+Follow the reasoning stages below:
+
+1. Identify the odds ratio and the two groups being compared.
+2. Interpret 1.50 as a multiplicative factor on the odds, holding other predictors fixed.
+3. Distinguish odds from probability and from percentage-point change.
+4. State the contextual interpretation concisely.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+10,Regression,Healthcare,Hard,Short Answer,ch_inference_for_means_54_2,"Torque on a rusty bolt
+
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.[source: youtube:torque_on_rusty_bolt]
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+
+0.8ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot
+
+Regardless of your answer in
+ part~([ref: torque_on_rusty_bolt_appropriate]),
+ describe hypotheses for ANOVA in this context,
+ and use the table below to carry out the test.
+ Give your conclusion in the context of the data.
+
+Table:
+| Df | Sum Sq | Mean Sq | F value | Pr($>$F) | |
+| --- | --- | --- | --- | --- | --- |
+| treatment | 7 | 3603.43 | 514.78 | 4.03 | 0.0056 |
+| Residuals | 22 | 2812.80 | 127.85 | | |","\qt{Torque on a rusty bolt\label{torque_on_rusty_bolt}}
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.\footfullcite{youtube:torque_on_rusty_bolt}
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+\begin{center}
+\FigureFullPath[A side-by-side dot plot is shown for ""Torque required to loosen a rusty bolt, in foot-pounds"". There are only 2 to 4 observations per option, which are roughly as follows: Heat (82, 98), WD-40 (106, 118, 129, 131), Royal Purple (108, 114, 122, 132), PB Blaster (110, 124, 127, 128), Liquid Wrench (85, 88, 98, 114), AeroKroil (107, 125, 132, 134), Acetone/ATF (105, 107, 114, 129), and ""none"" (110, 123, 129, 142).)]{0.8}{ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot}
+\end{center}
+\begin{parts}
+\item\label{torque_on_rusty_bolt_appropriate}
+    Do you think it is reasonable to apply ANOVA in this case?
+\item
+    Regardless of your answer in
+    part~(\ref{torque_on_rusty_bolt_appropriate}),
+    describe hypotheses for ANOVA in this context,
+    and use the table below to carry out the test.
+    Give your conclusion in the context of the data.
+    \begin{center}
+    \begin{tabular}{lrrrrr}
+    \hline
+    & Df & Sum Sq & Mean Sq & F value & Pr($>$F) \\ 
+    \hline
+    treatment & 7 & 3603.43 & 514.78 & 4.03 & 0.0056 \\ 
+    Residuals & 22 & 2812.80 & 127.85 &  &  \\ 
+    \hline
+    \end{tabular}
+    \end{center}
+\item\label{torque_on_rusty_bolt_pvalues}
+    The table below are p-values for pairwise $t$-tests
+    comparing each of the different groups.
+    These p-values have not been corrected for multiple
+    comparisons.
+    Which pair of groups appears most likely to represent
+    a difference?
+    \begin{center}\footnotesize
+    \begin{tabular}{l ccc ccc c}
+    \hline
+    & AeroKroil & Heat & Liquid Wrench & none &
+        PB Blaster & Royal Purple & WD-40 \\ 
+    \hline
+    Acetone/ATF & 0.2026 & 0.0308 & 0.0476 & 0.1542 &
+        0.3294 & 0.5222 & 0.3744 \\ 
+    AeroKroil &  & 0.0027 & 0.0025 & 0.8723 & 0.7551 &
+        0.5143 & 0.6883 \\ 
+    Heat &  &  & 0.5580 & 0.0020 & 0.0050 & 0.0096 &
+        0.0059 \\ 
+    Liquid Wrench &  &  &  & 0.0017 & 0.0053 &
+        0.0117 & 0.0065 \\ 
+    none &  &  &  &  & 0.6371 & 0.4180 & 0.5751 \\ 
+    PB Blaster &  &  &  &  &  & 0.7318 & 0.9286 \\ 
+    Royal Purple &  &  &  &  &  &  & 0.8000 \\
+    \hline
+    \end{tabular}
+    \end{center}
+\item
+    There are 28 p-values shown in the table in
+    part~(\ref{torque_on_rusty_bolt_pvalues}).
+    Determine if any of them are statistically
+    significant after correcting for multiple
+    comparisons.
+    If so, which one(s)?
+    Explain your answer.
+\end{parts}","A hospital models recovery time after surgery using age, severity score, and number of complications. Age and severity score are highly correlated. Explain why removing severity score may change the estimated coefficient for age.",,"Because the predictors are collinear. The age coefficient in the full model measures the association with recovery time after adjusting for severity. If severity is removed, age may partly absorb severity’s explanatory effect, so its coefficient can change.","Collinearity means predictors share information. Multiple-regression coefficients are conditional on the other variables in the model, so removing a correlated predictor can affect the remaining estimates.","A hospital models recovery time after surgery using age, severity score, and number of complications. Age and severity score are highly correlated. Explain why removing severity score may change the estimated coefficient for age.","1. Recognize that age and severity score share substantial information because they are highly correlated.
+2. Recall that a multiple-regression coefficient describes an association conditional on the other included predictors.
+3. Consider what information age may absorb when severity is removed.
+4. Explain why the estimated age coefficient can therefore change.","A hospital models recovery time after surgery using age, severity score, and number of complications. Age and severity score are highly correlated. Explain why removing severity score may change the estimated coefficient for age.
+
+Follow the reasoning stages below:
+
+1. Recognize that age and severity score share substantial information because they are highly correlated.
+2. Recall that a multiple-regression coefficient describes an association conditional on the other included predictors.
+3. Consider what information age may absorb when severity is removed.
+4. Explain why the estimated age coefficient can therefore change.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+11,Regression,Healthcare,Hard,Short Answer,ch_inference_for_means_54_2,"Torque on a rusty bolt
+
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.[source: youtube:torque_on_rusty_bolt]
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+
+0.8ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot
+
+Regardless of your answer in
+ part~([ref: torque_on_rusty_bolt_appropriate]),
+ describe hypotheses for ANOVA in this context,
+ and use the table below to carry out the test.
+ Give your conclusion in the context of the data.
+
+Table:
+| Df | Sum Sq | Mean Sq | F value | Pr($>$F) | |
+| --- | --- | --- | --- | --- | --- |
+| treatment | 7 | 3603.43 | 514.78 | 4.03 | 0.0056 |
+| Residuals | 22 | 2812.80 | 127.85 | | |","\qt{Torque on a rusty bolt\label{torque_on_rusty_bolt}}
+Project Farm is a YouTube channel that routinely
+compares different products.
+In one episode, the channel evaluated different
+options for loosening rusty
+bolts.\footfullcite{youtube:torque_on_rusty_bolt}
+Eight options were evaluated,
+including a control group where no treatment was given
+(``none'' in the graph),
+to determine which was most effective.
+For all treatments, there were four bolts tested,
+except for a treatment of heat with a blow torch,
+where only two data points were collected.
+The results are shown in the figure below:
+\begin{center}
+\FigureFullPath[A side-by-side dot plot is shown for ""Torque required to loosen a rusty bolt, in foot-pounds"". There are only 2 to 4 observations per option, which are roughly as follows: Heat (82, 98), WD-40 (106, 118, 129, 131), Royal Purple (108, 114, 122, 132), PB Blaster (110, 124, 127, 128), Liquid Wrench (85, 88, 98, 114), AeroKroil (107, 125, 132, 134), Acetone/ATF (105, 107, 114, 129), and ""none"" (110, 123, 129, 142).)]{0.8}{ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot}
+\end{center}
+\begin{parts}
+\item\label{torque_on_rusty_bolt_appropriate}
+    Do you think it is reasonable to apply ANOVA in this case?
+\item
+    Regardless of your answer in
+    part~(\ref{torque_on_rusty_bolt_appropriate}),
+    describe hypotheses for ANOVA in this context,
+    and use the table below to carry out the test.
+    Give your conclusion in the context of the data.
+    \begin{center}
+    \begin{tabular}{lrrrrr}
+    \hline
+    & Df & Sum Sq & Mean Sq & F value & Pr($>$F) \\ 
+    \hline
+    treatment & 7 & 3603.43 & 514.78 & 4.03 & 0.0056 \\ 
+    Residuals & 22 & 2812.80 & 127.85 &  &  \\ 
+    \hline
+    \end{tabular}
+    \end{center}
+\item\label{torque_on_rusty_bolt_pvalues}
+    The table below are p-values for pairwise $t$-tests
+    comparing each of the different groups.
+    These p-values have not been corrected for multiple
+    comparisons.
+    Which pair of groups appears most likely to represent
+    a difference?
+    \begin{center}\footnotesize
+    \begin{tabular}{l ccc ccc c}
+    \hline
+    & AeroKroil & Heat & Liquid Wrench & none &
+        PB Blaster & Royal Purple & WD-40 \\ 
+    \hline
+    Acetone/ATF & 0.2026 & 0.0308 & 0.0476 & 0.1542 &
+        0.3294 & 0.5222 & 0.3744 \\ 
+    AeroKroil &  & 0.0027 & 0.0025 & 0.8723 & 0.7551 &
+        0.5143 & 0.6883 \\ 
+    Heat &  &  & 0.5580 & 0.0020 & 0.0050 & 0.0096 &
+        0.0059 \\ 
+    Liquid Wrench &  &  &  & 0.0017 & 0.0053 &
+        0.0117 & 0.0065 \\ 
+    none &  &  &  &  & 0.6371 & 0.4180 & 0.5751 \\ 
+    PB Blaster &  &  &  &  &  & 0.7318 & 0.9286 \\ 
+    Royal Purple &  &  &  &  &  &  & 0.8000 \\
+    \hline
+    \end{tabular}
+    \end{center}
+\item
+    There are 28 p-values shown in the table in
+    part~(\ref{torque_on_rusty_bolt_pvalues}).
+    Determine if any of them are statistically
+    significant after correcting for multiple
+    comparisons.
+    If so, which one(s)?
+    Explain your answer.
+\end{parts}","A regression model predicts blood-pressure reduction from medication dose. The fitted slope is positive, even though clinically a higher dose should reduce blood pressure. Give two statistical reasons this could happen.",,"Two valid statistical reasons include confounding and model misspecification such as nonlinearity. Other possibilities include influential outliers, small-sample variability, measurement error, or outcome-coding problems.",Regression coefficients describe associations in the observed data. They can be misleading when important design or model assumptions are violated.,"A regression model predicts blood-pressure reduction from medication dose. The fitted slope is positive, even though clinically a higher dose should reduce blood pressure. Give two statistical reasons this could happen.","1. Recognize that an unexpected fitted slope can arise from features of the data, study design, or model specification rather than the underlying clinical effect.
+2. Identify two distinct statistical or modeling factors that could make the fitted slope differ from the expected clinical relationship.
+3. Briefly explain how each chosen factor could produce an unexpected positive slope.
+4. Give exactly two well-justified reasons.","A regression model predicts blood-pressure reduction from medication dose. The fitted slope is positive, even though clinically a higher dose should reduce blood pressure. Give two statistical reasons this could happen.
+
+Follow the reasoning stages below:
+
+1. Recognize that an unexpected fitted slope can arise from features of the data, study design, or model specification rather than the underlying clinical effect.
+2. Identify two distinct statistical or modeling factors that could make the fitted slope differ from the expected clinical relationship.
+3. Briefly explain how each chosen factor could produce an unexpected positive slope.
+4. Give exactly two well-justified reasons.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+12,Regression,Healthcare,Hard,Short Answer,ch_regr_mult_and_log_20_4,"Logistic regression fact checking
+
+Determine which of the following statements are
+true and false.
+For each statement that is false, explain why it is false.
+
+When fitting logistic regression,
+ we typically complete model selection using
+ adjusted $R^2$.","\qt{Logistic regression fact checking\label{log_regr_facts}}
+Determine which of the following statements are
+true and false.
+For each statement that is false, explain why it is false.
+\begin{parts}
+\item
+    Suppose we consider the first two observations
+    based on a logistic regression model,
+    where the first variable in observation~1
+    takes a value of $x_1 = 6$ and observation~2
+    has $x_1 = 4$.
+%    Each observation has all the same values for the
+%    other variables used in the model.
+    Suppose we realized we made an error for these
+    two observations, and the first observation
+    was actually $x_1 = 7$ (instead of~6)
+    and the second observation actually had
+    $x_1 = 5$ (instead of~4).
+    Then the predicted probability from the
+    logistic regression model would increase
+    the same amount for each observation after
+    we correct these variables.
+\item
+    When using a logistic regression model,
+    it is impossible for the model to predict
+    a probability that is negative or a probability
+    that is greater than 1.
+\item
+    Because logistic regression predicts probabilities
+    of outcomes, observations used to build a logistic
+    regression model need not be independent.
+\item
+    When fitting logistic regression,
+    we typically complete model selection using
+    adjusted $R^2$.
+\end{parts}","A clinic uses logistic regression to predict whether a patient will be readmitted. A doctor says: “Because the model predicts probabilities, we can fit it by ordinary least squares just like linear regression.” Explain why this is not appropriate.",,"Logistic regression is usually fitted by maximum likelihood, not ordinary least squares, because the response is binary and the model uses a logit link to keep predicted probabilities between 0 and 1.",OLS is designed for continuous outcomes with linear mean structure. Binary outcomes require a probability model; logistic regression models log-odds and uses likelihood-based estimation.,"A clinic uses logistic regression to predict whether a patient will be readmitted. A doctor says: “Because the model predicts probabilities, we can fit it by ordinary least squares just like linear regression.” Explain why this is not appropriate.","1. Identify the response variable as binary rather than continuous.
+2. Compare ordinary linear regression with a model designed specifically for a binary response.
+3. Consider whether the fitted values and error structure from ordinary least squares are appropriate for probability outcomes.
+4. Explain why logistic regression is more suitable in this setting.","A clinic uses logistic regression to predict whether a patient will be readmitted. A doctor says: “Because the model predicts probabilities, we can fit it by ordinary least squares just like linear regression.” Explain why this is not appropriate.
+
+Follow the reasoning stages below:
+
+1. Identify the response variable as binary rather than continuous.
+2. Compare ordinary linear regression with a model designed specifically for a binary response.
+3. Consider whether the fitted values and error structure from ordinary least squares are appropriate for probability outcomes.
+4. Explain why logistic regression is more suitable in this setting.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+13,Regression,Healthcare,Hard,Short Answer,ch_regr_simple_linear_41,"Nutrition at Starbucks, Part II
+
+Exercise~[ref: starbucks_cals_carbos] introduced a data set on nutrition 
+information on Starbucks food menu items. Based on the scatterplot 
+and the residual plot provided, describe the relationship between the 
+protein content and calories of these menu items, and determine if a 
+simple linear model is appropriate to predict amount of protein from 
+the number of calories.
+
+0.35ch_regr_simple_linear/figures/eoce/starbucks_cals_protein/starbucks_cals_protein","\qt{Nutrition at Starbucks, Part II\label{starbucks_cals_protein}} 
+Exercise~\ref{starbucks_cals_carbos} introduced a data set on nutrition 
+information on Starbucks food menu items. Based on the scatterplot 
+and the residual plot provided, describe the relationship between the 
+protein content and calories of these menu items, and determine if a 
+simple linear model is appropriate to predict amount of protein from 
+the number of calories.
+\begin{center}
+\FigureFullPath[A scatterplot is shown with about 75 points and an overlaid regression line that trends upward along with a residual plot. The horizontal axis represents ""Calories"" and has values ranging from about 100 to 500. The vertical axis represents ""Protein, in grams"" and has values ranging from 0 to about 30. Scatterplot: About 15 points are shown with fewer than 200 calories, and these have between about 0 and 5 grams of protein. About 30 points are shown with 200 to 400 calories, and these mostly have between 5 and 30 grams of protein. About 20 points are shown with more than 400 calories, and these mostly have between 5 and 30 grams of carbs. Residual plot: About 15 points are shown with fewer than 200 calories, and these have residuals roughly between -5 and positive 2. About 30 points are shown with 200 to 400 calories, and these residuals largely range from about -10 to positive 20. About 20 points are shown with more than 400 calories, and the residuals for these points mostly range between -10 and positive 8.]{0.35}{ch_regr_simple_linear/figures/eoce/starbucks_cals_protein/starbucks_cals_protein}
+\end{center}","A nutrition researcher fits a linear regression model using adults aged 20–65, then uses it to predict the cholesterol level of a 12-year-old child. Why is this risky?",,"This is extrapolation outside the observed age range. The relationship fitted for adults may not hold for children, so the prediction may be unreliable.",Regression predictions are most defensible within the range and context of the data used to fit the model.,"A nutrition researcher fits a linear regression model using adults aged 20–65, then uses it to predict the cholesterol level of a 12-year-old child. Why is this risky?","1. Identify the age range used to fit the model and compare it with the age of the child.
+2. Recognize that the requested prediction lies outside the observed predictor range.
+3. Explain why the adult age-response relationship may not continue unchanged for children.
+4. State the resulting concern about prediction reliability.","A nutrition researcher fits a linear regression model using adults aged 20–65, then uses it to predict the cholesterol level of a 12-year-old child. Why is this risky?
+
+Follow the reasoning stages below:
+
+1. Identify the age range used to fit the model and compare it with the age of the child.
+2. Recognize that the requested prediction lies outside the observed predictor range.
+3. Explain why the adult age-response relationship may not continue unchanged for children.
+4. State the resulting concern about prediction reliability.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+14,Regression,Transportation,Medium,Calculation,ch_regr_simple_linear_40_1,"Cats, Part II
+
+Exercise~[ref: cat_body_heart_reg] 
+presents regression output from a model for predicting the heart 
+weight (in g) of cats from their body weight (in kg). The coefficients 
+are estimated using a dataset of 144 domestic cat. The model output 
+is also provided below.
+
+Table:
+| Estimate | Std. Error | t value | Pr($>$$|$t$|$) | |
+| --- | --- | --- | --- | --- |
+| (Intercept) | -0.357 | 0.692 | -0.515 | 0.607 |
+| body wt | 4.034 | 0.250 | 16.119 | 0.000 |
+
+\[ s = 1.452 R^2 = 64.66% R^2_adj = 64.41% \]
+
+We see that the point estimate for the slope is positive.
+ What are the hypotheses for evaluating whether body weight is
+ positively associated with heart weight in cats?","\qt{Cats, Part II\label{cat_body_heart_inf}}
+Exercise~\ref{cat_body_heart_reg} 
+presents regression output from a model for predicting the heart 
+weight (in g) of cats from their body weight (in kg). The coefficients 
+are estimated using a dataset of 144 domestic cat. The model output 
+is also provided below.
+\begin{center}
+\begin{tabular}{rrrrr}
+    \hline
+            & Estimate  & Std. Error    & t value   & Pr($>$$|$t$|$) \\ 
+    \hline
+(Intercept) & -0.357    & 0.692         & -0.515    & 0.607 \\ 
+body wt     & 4.034     & 0.250         & 16.119    & 0.000 \\ 
+    \hline
+\end{tabular}
+\[ s = 1.452 \qquad R^2 = 64.66\% \qquad R^2_{adj} = 64.41\% \]
+\end{center}
+\begin{parts}
+\item We see that the point estimate for the slope is positive.
+    What are the hypotheses for evaluating whether body weight is
+    positively associated with heart weight in cats?
+\item State the conclusion of the hypothesis test from part (a) in 
+context of the data.
+\item Calculate a 95\% confidence interval for the slope of body 
+weight, and interpret it in context of the data.
+\item Do your results from the hypothesis test and the confidence 
+interval agree? Explain.
+\end{parts}","A city fits a regression model for bus delay in minutes: ŷ = 2.5 + 0.60x, where x is a traffic congestion index. For x=8, compute the predicted delay. If the actual delay is 10 minutes, compute the residual.",,Predicted delay = 7.3 minutes; residual = 2.7 minutes.,ŷ=2.5+0.60(8)=7.3. Residual = observed − predicted = 10−7.3=2.7 minutes.,"A city fits a regression model for bus delay in minutes: ŷ = 2.5 + 0.60x, where x is a traffic congestion index. For x=8, compute the predicted delay. If the actual delay is 10 minutes, compute the residual.","1. Substitute the congestion index into the fitted bus-delay regression equation.
+2. Compute the predicted delay.
+3. Compute the residual as observed delay minus predicted delay.
+4. Report both values with minutes as the unit.","A city fits a regression model for bus delay in minutes: ŷ = 2.5 + 0.60x, where x is a traffic congestion index. For x=8, compute the predicted delay. If the actual delay is 10 minutes, compute the residual.
+
+Follow the reasoning stages below:
+
+1. Substitute the congestion index into the fitted bus-delay regression equation.
+2. Compute the predicted delay.
+3. Compute the residual as observed delay minus predicted delay.
+4. Report both values with minutes as the unit.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+15,Regression,Transportation,Medium,Calculation,ch_regr_simple_linear_39_2,"Husbands and wives, Part III
+
+Exercise~[ref: husbands_wives_height_inf] presents a scatterplot displaying the 
+relationship between husbands' and wives' ages in a random sample of 
+170 married couples in Britain, where both partners' ages are below 65 
+years. Given below is summary output of the least squares fit for 
+predicting wife's age from husband's age.
+
+0.4
+
+ch_regr_simple_linear/figures/eoce/husbands_wives_age_inf/husbands_wives_age
+
+minipage
+minipage[c]0.6
+
+Table:
+| Estimate | Std. Error | t value | Pr($>$$|$t$|$) | |
+| --- | --- | --- | --- | --- |
+| (Intercept) | 1.5740 | 1.1501 | 1.37 | 0.1730 |
+| age_husband | 0.9112 | 0.0259 | 35.25 | 0.0000 |
+| $df = 168$ | | | | |
+
+minipage
+
+Write the equation of the regression line for predicting wife's 
+age from husband's age.","\qt{Husbands and wives, Part III\label{husbands_wives_age_inf}}
+Exercise~\ref{husbands_wives_height_inf} presents a scatterplot displaying the 
+relationship between husbands' and wives' ages in a random sample of 
+170 married couples in Britain, where both partners' ages are below 65 
+years. Given below is summary output of the least squares fit for 
+predicting wife's age from husband's age.
+
+\noindent\begin{minipage}[c]{0.4\textwidth}
+\begin{center}
+\FigureFullPath[A scatterplot is shown with about 150 points. The horizontal axis is for ""Hus, in inches"" and takes values between 8 and 22 inches. The vertical axis is for ""Volume, in cubic feet"" and takes values between 8 and 80 cubic feet. About 15 points with circumferences smaller than 12 inches, volumes range from about 8 to 25 cubic feet. For the approximately ten points with circumferences between 12 and 16 feet, volumes range from 22 to 35 cubic feet. For the 6 points with circumferences larger than 16 inches, volumes range from 40 to 60 cubic feet, with one outlier with a circumference of 22 inches and a volume of about 80 cubic feet.]{}{ch_regr_simple_linear/figures/eoce/husbands_wives_age_inf/husbands_wives_age}
+\end{center}
+\end{minipage}
+\begin{minipage}[c]{0.6\textwidth}
+{\scriptsize
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+                & Estimate  & Std. Error    & t value   & Pr($>$$|$t$|$) \\ 
+  \hline
+(Intercept)     & 1.5740    & 1.1501        & 1.37      & 0.1730 \\ 
+age\_\hspace{0.3mm}husband  & 0.9112    & 0.0259        & 35.25     & 0.0000 \\ 
+   \hline
+\multicolumn{5}{r}{$df = 168$} \\
+\end{tabular}
+\end{center}
+}
+\end{minipage}
+\begin{parts}
+\item We might wonder, is the age difference between husbands and 
+wives consistent across ages? If this were the case, then the slope 
+parameter would be $\beta_1 = 1$. Use the information above to evaluate 
+if there is strong evidence that the difference in husband and wife ages 
+differs for different ages.
+\item Write the equation of the regression line for predicting wife's 
+age from husband's age.
+\item Interpret the slope and intercept in context.
+\item Given that $R^2 = 0.88$, what is the correlation of ages  in 
+this data set?
+\item You meet a married man from Britain who is 55 years old. What 
+would you predict his wife's age to be? How reliable is this prediction?
+\item You meet another married man from Britain who is 85 years old. 
+Would it be wise to use the same linear model to predict his wife's 
+age? Explain.
+\end{parts}",A delivery company predicts delivery time y (minutes) from route distance x (km): ŷ = 4.2 + 1.1x. Compute the predicted delivery time for a 12 km route.,,17.4 minutes.,ŷ=4.2+1.1(12)=4.2+13.2=17.4 minutes.,A delivery company predicts delivery time y (minutes) from route distance x (km): ŷ = 4.2 + 1.1x. Compute the predicted delivery time for a 12 km route.,"1. Substitute the 12 km route distance into the fitted regression equation.
+2. Multiply the slope by distance and add the intercept.
+3. Check the units of the response.
+4. Report the predicted delivery time.","A delivery company predicts delivery time y (minutes) from route distance x (km): ŷ = 4.2 + 1.1x. Compute the predicted delivery time for a 12 km route.
+
+Follow the reasoning stages below:
+
+1. Substitute the 12 km route distance into the fitted regression equation.
+2. Multiply the slope by distance and add the intercept.
+3. Check the units of the response.
+4. Report the predicted delivery time.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+16,Regression,Transportation,Medium,Calculation,ch_regr_mult_and_log_21_1,"Spam filtering, Part I
+
+Spam filters are built on principles similar to those
+used in logistic regression.
+We fit a probability that each message is spam
+or not spam.
+We have several email variables for this problem:
+tomultiple,
+cc,
+attach,
+dollar,
+winner,
+inherit,
+password,
+format,
+resubj,
+exclaimsubj, and
+sentemail.
+We won't describe what each variable means
+here for the sake of brevity, but each is
+either a numerical or indicator variable.
+
+For variable selection,
+ we fit the full model, which includes all
+ variables, and then we also fit each model
+ where we've dropped exactly one of the variables.
+ In each of these reduced models, the AIC value
+ for the model is reported below.
+ Based on these results, which variable,
+ if any, should we drop as part of model
+ selection?
+ Explain.
+
+Table:
+| Variable Dropped | AIC |
+| --- | --- |
+| None Dropped | 1863.50 |
+| tomultiple | 2023.50 |
+| cc | 1863.18 |
+| attach | 1871.89 |
+| dollar | 1879.70 |
+| winner | 1885.03 |
+| inherit | 1865.55 |
+| password | 1879.31 |
+| format | 2008.85 |
+| resubj | 1904.60 |
+| exclaimsubj | 1862.76 |
+| sentemail | 1958.18 |
+
+ See the next page for part~(b).","\qt{Spam filtering, Part I\label{spam_filtering_model_sel}}
+Spam filters are built on principles similar to those
+used in logistic regression.
+We fit a probability that each message is spam
+or not spam.
+We have several email variables for this problem:
+\resp{to\us{}multiple},
+\resp{cc},
+\resp{attach},
+\resp{dollar},
+\resp{winner},
+\resp{inherit},
+\resp{password},
+\resp{format},
+\resp{re\us{}subj},
+\resp{exclaim\us{}subj}, and
+\resp{sent\us{}email}.
+We won't describe what each variable means
+here for the sake of brevity, but each is
+either a numerical or indicator variable.
+\begin{parts}
+\item
+    For variable selection,
+    we fit the full model, which includes all
+    variables, and then we also fit each model
+    where we've dropped exactly one of the variables.
+    In each of these reduced models, the AIC value
+    for the model is reported below.
+    Based on these results, which variable,
+    if any, should we drop as part of model
+    selection?
+    Explain.
+    \begin{center}
+    \begin{tabular}{lc}
+      \hline
+      Variable Dropped & AIC \\ 
+      \hline
+      None Dropped & 1863.50 \\ 
+      \resp{to\us{}multiple} & 2023.50 \\ 
+      \resp{cc} & 1863.18 \\ 
+      \resp{attach} & 1871.89 \\ 
+      \resp{dollar} & 1879.70 \\ 
+      \resp{winner} & 1885.03 \\ 
+      \resp{inherit} & 1865.55 \\ 
+      \resp{password} & 1879.31 \\ 
+      \resp{format} & 2008.85 \\ 
+      \resp{re\us{}subj} & 1904.60 \\ 
+      \resp{exclaim\us{}subj} & 1862.76 \\ 
+      \resp{sent\us{}email} & 1958.18 \\ 
+      \hline
+    \end{tabular}
+    \end{center}
+    \textbf{See the next page for part~(b).}
+
+\D{\newpage}
+
+\item
+    Consider the following model selection stage.
+    Here again we've computed the AIC
+    for each leave-one-variable-out model.
+    Based on the results, which variable,
+    if any, should we drop as part of model
+    selection?
+    Explain.
+    \begin{center}
+    \begin{tabular}{lc}
+      \hline
+      Variable Dropped & AIC \\ 
+      \hline
+      None Dropped & 1862.41 \\ 
+      \resp{to\us{}multiple} & 2019.55 \\ 
+      \resp{attach} & 1871.17 \\ 
+      \resp{dollar} & 1877.73 \\ 
+      \resp{winner} & 1884.95 \\ 
+      \resp{inherit} & 1864.52 \\ 
+      \resp{password} & 1878.19 \\ 
+      \resp{format} & 2007.45 \\ 
+      \resp{re\us{}subj} & 1902.94 \\ 
+      \resp{sent\us{}email} & 1957.56 \\ 
+      \hline
+    \end{tabular}
+    \end{center}
+\end{parts}","A logistic regression model predicts whether a flight is delayed: logit(p) = -2.2 + 1.10(rain) + 0.80(peak hour). For rain=1 and peak hour=1, compute the predicted probability.",,Approximately 0.426.,η=-2.2+1.10+0.80=-0.30. Then p=e^{-0.30}/(1+e^{-0.30})≈0.426.,"A logistic regression model predicts whether a flight is delayed: logit(p) = -2.2 + 1.10(rain) + 0.80(peak hour). For rain=1 and peak hour=1, compute the predicted probability.
+
+Numerical precision:
+- Keep full precision in intermediate calculations.
+- Round only the final predicted probability to 3 decimal places.","1. Substitute rain=1 and peak hour=1 into the logistic linear predictor to obtain eta.
+2. Convert eta to a probability using p = exp(eta) / [1 + exp(eta)].
+3. Keep full precision until the final probability.
+4. Report the predicted probability to 3 decimal places.","A logistic regression model predicts whether a flight is delayed: logit(p) = -2.2 + 1.10(rain) + 0.80(peak hour). For rain=1 and peak hour=1, compute the predicted probability.
+
+Numerical precision:
+- Keep full precision in intermediate calculations.
+- Round only the final predicted probability to 3 decimal places.
+
+Follow the reasoning stages below:
+
+1. Substitute rain=1 and peak hour=1 into the logistic linear predictor to obtain eta.
+2. Convert eta to a probability using p = exp(eta) / [1 + exp(eta)].
+3. Keep full precision until the final probability.
+4. Report the predicted probability to 3 decimal places.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+17,Regression,Education,Medium,Multiple Choice,ch_regr_simple_linear_44_1,"Rate my professor
+
+Many college courses conclude by giving students
+the opportunity to evaluate the course and the
+instructor anonymously.
+However, the use of these student evaluations
+as an indicator of course quality and teaching
+effectiveness is often criticized because these
+measures may reflect the influence of
+non-teaching related characteristics,
+such as the physical appearance of the instructor.
+Researchers at University of Texas, Austin
+collected data on teaching evaluation score
+(higher score means better) and standardized
+beauty score (a score of 0 means average, negative
+score means below average, and a positive score
+means above average) for a sample of 463
+professors.[source: Hamermesh:2005]
+The scatterplot below shows the relationship
+between these variables, and regression output
+is provided for predicting teaching evaluation
+score from beauty score.
+
+Table:
+| Estimate | Std. Error | t value | Pr($>$$|$t$|$) | |
+| --- | --- | --- | --- | --- |
+| (Intercept) | 4.010 | 0.0255 | 157.21 | 0.0000 |
+| beauty | white Cell 1 | 0.0322 | 4.13 | 0.0000 |
+
+0.45
+
+minipage
+minipage[c]0.07
+$\:$ 
+
+minipage
+minipage[c]0.45
+ch_regr_simple_linear/figures/eoce/rate_my_prof/rate_my_prof_eval_beauty 
+
+minipage
+
+0.32ch_regr_simple_linear/figures/eoce/rate_my_prof/rate_my_prof_residuals
+0.32ch_regr_simple_linear/figures/eoce/rate_my_prof/rate_my_prof_residuals_hist
+0.32ch_regr_simple_linear/figures/eoce/rate_my_prof/rate_my_prof_residuals_order
+
+Given that the average standardized beauty score
+ is -0.0883 and average teaching evaluation score
+ is 3.9983, calculate the slope.
+ Alternatively, the slope may be computed using just
+ the information provided in the model summary table.","\qt{Rate my professor\label{rate_my_prof}}
+Many college courses conclude by giving students
+the opportunity to evaluate the course and the
+instructor anonymously.
+However, the use of these student evaluations
+as an indicator of course quality and teaching
+effectiveness is often criticized because these
+measures may reflect the influence of
+non-teaching related characteristics,
+such as the physical appearance of the instructor.
+Researchers at University of Texas, Austin
+collected data on teaching evaluation score
+(higher score means better) and standardized
+beauty score (a score of 0 means average, negative
+score means below average, and a positive score
+means above average) for a sample of 463
+professors.\footfullcite{Hamermesh:2005}
+The scatterplot below shows the relationship
+between these variables, and regression output
+is provided for predicting teaching evaluation
+score from beauty score.
+\begin{center}
+\begin{tabular}{rrrrr}
+    \hline
+            & Estimate  & Std. Error    & t value   & Pr($>$$|$t$|$) \\ 
+  \hline
+(Intercept) & 4.010     & 0.0255        & 	157.21  & 0.0000 \\ 
+beauty      &  \fbox{\textcolor{white}{{\footnotesize Cell 1}}}  
+                        & 0.0322        & 4.13      & 0.0000\vspace{0.8mm} \\ 
+   \hline
+\end{tabular}
+\end{center}
+\noindent\begin{minipage}[c]{0.45\textwidth}
+{\raggedright\begin{parts}
+\item
+    Given that the average standardized beauty score
+    is -0.0883 and average teaching evaluation score
+    is 3.9983, calculate the slope.
+    Alternatively, the slope may be computed using just
+    the information provided in the model summary table.
+\item
+    Do these data provide convincing evidence that the
+    slope of the relationship between teaching evaluation
+    and beauty is positive?
+    Explain your reasoning.
+\item
+    List the conditions required for linear regression
+    and check if each one is satisfied for this model
+    based on the following diagnostic plots.
+\end{parts}}
+\end{minipage}
+\begin{minipage}[c]{0.07\textwidth}
+$\:$ \\
+\end{minipage}
+\begin{minipage}[c]{0.45\textwidth}
+\FigureFullPath[A scatterplot is shown for several hundred points. The horizontal axis is for a ""Beauty"" score and takes values between -1.8 and positive 2. The vertical axis is for ""Teaching evaluation"" and takes values between 2 and 5. For beauty scores smaller than 0, the Teaching Evaluation scores range mostly between 2.5 and 4.8, with no obvious trend in this region of the data. For beauty scores between 0 and 1, the Teaching Evaluation scores range mostly between 3 and 4.7. For beauty scores between 1 and 2, the Teaching Evaluation scores range mostly between 3.2 and 4.8.]{}{ch_regr_simple_linear/figures/eoce/rate_my_prof/rate_my_prof_eval_beauty} \\
+\end{minipage}
+\begin{center}
+\FigureFullPath[A residual plot is shown for several hundred points. The horizontal axis is for a ""Beauty"" score and takes values between -1.8 and positive 2. The vertical axis is for ""Residuals"" and takes values between -1.5 and positive 1. For beauty scores smaller than 0, the residuals range mostly between -1.2 and positive 1. For beauty scores between 0 and 1, the residuals range mostly between -1.2 and positive 0.8. For beauty scores between 1 and 2, which has somewhat fewer points, the residuals range mostly between -1.0 and positive 0.5.]{0.32}{ch_regr_simple_linear/figures/eoce/rate_my_prof/rate_my_prof_residuals}
+\FigureFullPath[A histogram is shown for residuals, where bins range between -2 and 1.5. The distribution is centered at zero and very slightly skewed to the left.]{0.32}{ch_regr_simple_linear/figures/eoce/rate_my_prof/rate_my_prof_residuals_hist}
+\FigureFullPath[A scatterplot is shown. The horizontal axis is for ""Order of data collection"" and takes values between 1 and about 450. The vertical axis is for ""Residuals"" and takes values between about -1.5 and positive 1. The residuals mostly lie between -1.2 and 0.9 across the range with no discernible pattern.]{0.32}{ch_regr_simple_linear/figures/eoce/rate_my_prof/rate_my_prof_residuals_order}
+\end{center}",A university regresses final exam score on the number of hours students report studying per week. The fitted slope is 1.8. Which statements are statistically reasonable? Select all that apply.,"A. Each additional reported study hour is associated with 1.8 higher predicted exam points, on average.
+B. The positive slope indicates a positive linear association between reported study hours and predicted exam score.
+C. A student who studies 0 hours must score exactly 1.8 points.
+D. The regression proves that increasing study time causes exam scores to rise by 1.8 points per hour.",A and B,"The slope of 1.8 means that one additional reported study hour is associated with an average increase of 1.8 predicted exam points, so A is correct. Because the slope is positive, the fitted linear association is positive, so B is also correct. The slope is not the predicted score at x=0, and an observational regression does not by itself prove causation.","A university regresses final exam score on the number of hours students report studying per week. The fitted slope is 1.8. Which statements are statistically reasonable? Select all that apply.
+
+Options:
+A. Each additional reported study hour is associated with 1.8 higher predicted exam points, on average.
+B. The positive slope indicates a positive linear association between reported study hours and predicted exam score.
+C. A student who studies 0 hours must score exactly 1.8 points.
+D. The regression proves that increasing study time causes exam scores to rise by 1.8 points per hour.","1. Identify the predictor, response, and fitted slope.
+2. Translate the slope into the predicted change in exam score for a one-unit increase in reported study hours.
+3. Use the sign of the slope to assess the direction of the fitted linear association.
+4. Evaluate each option separately, rejecting statements that confuse the slope with the intercept or claim causation, then select all supported statements.","A university regresses final exam score on the number of hours students report studying per week. The fitted slope is 1.8. Which statements are statistically reasonable? Select all that apply.
+
+Options:
+A. Each additional reported study hour is associated with 1.8 higher predicted exam points, on average.
+B. The positive slope indicates a positive linear association between reported study hours and predicted exam score.
+C. A student who studies 0 hours must score exactly 1.8 points.
+D. The regression proves that increasing study time causes exam scores to rise by 1.8 points per hour.
+
+Follow the reasoning stages below:
+
+1. Identify the predictor, response, and fitted slope.
+2. Translate the slope into the predicted change in exam score for a one-unit increase in reported study hours.
+3. Use the sign of the slope to assess the direction of the fitted linear association.
+4. Evaluate each option separately, rejecting statements that confuse the slope with the intercept or claim causation, then select all supported statements.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+18,Regression,Education,Medium,Multiple Choice,ch_regr_simple_linear_44_1,"Rate my professor
+
+Many college courses conclude by giving students
+the opportunity to evaluate the course and the
+instructor anonymously.
+However, the use of these student evaluations
+as an indicator of course quality and teaching
+effectiveness is often criticized because these
+measures may reflect the influence of
+non-teaching related characteristics,
+such as the physical appearance of the instructor.
+Researchers at University of Texas, Austin
+collected data on teaching evaluation score
+(higher score means better) and standardized
+beauty score (a score of 0 means average, negative
+score means below average, and a positive score
+means above average) for a sample of 463
+professors.[source: Hamermesh:2005]
+The scatterplot below shows the relationship
+between these variables, and regression output
+is provided for predicting teaching evaluation
+score from beauty score.
+
+Table:
+| Estimate | Std. Error | t value | Pr($>$$|$t$|$) | |
+| --- | --- | --- | --- | --- |
+| (Intercept) | 4.010 | 0.0255 | 157.21 | 0.0000 |
+| beauty | white Cell 1 | 0.0322 | 4.13 | 0.0000 |
+
+0.45
+
+minipage
+minipage[c]0.07
+$\:$ 
+
+minipage
+minipage[c]0.45
+ch_regr_simple_linear/figures/eoce/rate_my_prof/rate_my_prof_eval_beauty 
+
+minipage
+
+0.32ch_regr_simple_linear/figures/eoce/rate_my_prof/rate_my_prof_residuals
+0.32ch_regr_simple_linear/figures/eoce/rate_my_prof/rate_my_prof_residuals_hist
+0.32ch_regr_simple_linear/figures/eoce/rate_my_prof/rate_my_prof_residuals_order
+
+Given that the average standardized beauty score
+ is -0.0883 and average teaching evaluation score
+ is 3.9983, calculate the slope.
+ Alternatively, the slope may be computed using just
+ the information provided in the model summary table.","\qt{Rate my professor\label{rate_my_prof}}
+Many college courses conclude by giving students
+the opportunity to evaluate the course and the
+instructor anonymously.
+However, the use of these student evaluations
+as an indicator of course quality and teaching
+effectiveness is often criticized because these
+measures may reflect the influence of
+non-teaching related characteristics,
+such as the physical appearance of the instructor.
+Researchers at University of Texas, Austin
+collected data on teaching evaluation score
+(higher score means better) and standardized
+beauty score (a score of 0 means average, negative
+score means below average, and a positive score
+means above average) for a sample of 463
+professors.\footfullcite{Hamermesh:2005}
+The scatterplot below shows the relationship
+between these variables, and regression output
+is provided for predicting teaching evaluation
+score from beauty score.
+\begin{center}
+\begin{tabular}{rrrrr}
+    \hline
+            & Estimate  & Std. Error    & t value   & Pr($>$$|$t$|$) \\ 
+  \hline
+(Intercept) & 4.010     & 0.0255        & 	157.21  & 0.0000 \\ 
+beauty      &  \fbox{\textcolor{white}{{\footnotesize Cell 1}}}  
+                        & 0.0322        & 4.13      & 0.0000\vspace{0.8mm} \\ 
+   \hline
+\end{tabular}
+\end{center}
+\noindent\begin{minipage}[c]{0.45\textwidth}
+{\raggedright\begin{parts}
+\item
+    Given that the average standardized beauty score
+    is -0.0883 and average teaching evaluation score
+    is 3.9983, calculate the slope.
+    Alternatively, the slope may be computed using just
+    the information provided in the model summary table.
+\item
+    Do these data provide convincing evidence that the
+    slope of the relationship between teaching evaluation
+    and beauty is positive?
+    Explain your reasoning.
+\item
+    List the conditions required for linear regression
+    and check if each one is satisfied for this model
+    based on the following diagnostic plots.
+\end{parts}}
+\end{minipage}
+\begin{minipage}[c]{0.07\textwidth}
+$\:$ \\
+\end{minipage}
+\begin{minipage}[c]{0.45\textwidth}
+\FigureFullPath[A scatterplot is shown for several hundred points. The horizontal axis is for a ""Beauty"" score and takes values between -1.8 and positive 2. The vertical axis is for ""Teaching evaluation"" and takes values between 2 and 5. For beauty scores smaller than 0, the Teaching Evaluation scores range mostly between 2.5 and 4.8, with no obvious trend in this region of the data. For beauty scores between 0 and 1, the Teaching Evaluation scores range mostly between 3 and 4.7. For beauty scores between 1 and 2, the Teaching Evaluation scores range mostly between 3.2 and 4.8.]{}{ch_regr_simple_linear/figures/eoce/rate_my_prof/rate_my_prof_eval_beauty} \\
+\end{minipage}
+\begin{center}
+\FigureFullPath[A residual plot is shown for several hundred points. The horizontal axis is for a ""Beauty"" score and takes values between -1.8 and positive 2. The vertical axis is for ""Residuals"" and takes values between -1.5 and positive 1. For beauty scores smaller than 0, the residuals range mostly between -1.2 and positive 1. For beauty scores between 0 and 1, the residuals range mostly between -1.2 and positive 0.8. For beauty scores between 1 and 2, which has somewhat fewer points, the residuals range mostly between -1.0 and positive 0.5.]{0.32}{ch_regr_simple_linear/figures/eoce/rate_my_prof/rate_my_prof_residuals}
+\FigureFullPath[A histogram is shown for residuals, where bins range between -2 and 1.5. The distribution is centered at zero and very slightly skewed to the left.]{0.32}{ch_regr_simple_linear/figures/eoce/rate_my_prof/rate_my_prof_residuals_hist}
+\FigureFullPath[A scatterplot is shown. The horizontal axis is for ""Order of data collection"" and takes values between 1 and about 450. The vertical axis is for ""Residuals"" and takes values between about -1.5 and positive 1. The residuals mostly lie between -1.2 and 0.9 across the range with no discernible pattern.]{0.32}{ch_regr_simple_linear/figures/eoce/rate_my_prof/rate_my_prof_residuals_order}
+\end{center}",An instructor uses a regression model to predict course evaluation score from class size. Which statements are statistically reasonable? Select all that apply.,"A. A negative slope means larger classes tend to have lower predicted evaluation scores.
+B. A negative slope proves that reducing class size will improve evaluations.
+C. Predictions far outside the observed class-size range should be treated cautiously.
+D. The residual for a class equals predicted score minus observed score.",A and C,"Regression can show association and help with prediction, but observational data alone do not prove causation. Extreme predictions may also be unreliable if they are outside the data range.","An instructor uses a regression model to predict course evaluation score from class size. Which statements are statistically reasonable? Select all that apply.
+
+Options:
+A. A negative slope means larger classes tend to have lower predicted evaluation scores.
+B. A negative slope proves that reducing class size will improve evaluations.
+C. Predictions far outside the observed class-size range should be treated cautiously.
+D. The residual for a class equals predicted score minus observed score.","1. Evaluate what a negative regression slope says about the direction of association.
+2. Distinguish association from a causal conclusion about changing class size.
+3. Consider the reliability of predictions outside the observed predictor range.
+4. Check the residual definition, then select all statistically reasonable statements.","An instructor uses a regression model to predict course evaluation score from class size. Which statements are statistically reasonable? Select all that apply.
+
+Options:
+A. A negative slope means larger classes tend to have lower predicted evaluation scores.
+B. A negative slope proves that reducing class size will improve evaluations.
+C. Predictions far outside the observed class-size range should be treated cautiously.
+D. The residual for a class equals predicted score minus observed score.
+
+Follow the reasoning stages below:
+
+1. Evaluate what a negative regression slope says about the direction of association.
+2. Distinguish association from a causal conclusion about changing class size.
+3. Consider the reliability of predictions outside the observed predictor range.
+4. Check the residual definition, then select all statistically reasonable statements.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+19,Regression,Education,Medium,Multiple Choice,ch_regr_simple_linear_42_5,"Helmets and lunches
+
+The scatterplot shows the 
+relationship between socioeconomic status measured as the percentage of 
+children in a neighborhood receiving reduced-fee lunches at school 
+( lunch) and the percentage of bike riders in the neighborhood 
+wearing helmets ( helmet). The average percentage of children 
+receiving reduced-fee lunches is 30.8% with a standard deviation 
+of 26.7% and the average percentage of bike riders wearing helmets 
+is 38.8% with a standard deviation of 16.9%.
+
+0.5
+
+minipage
+minipage[c]0.05
+$\:$ 
+
+minipage
+minipage[c]0.42
+
+ch_regr_simple_linear/figures/eoce/helmet_lunch/helmet_lunch 
+
+minipage
+
+What would the value of the residual be for a neighborhood where 
+40% of the children receive reduced-fee lunches and 40% of the bike 
+riders wear helmets? Interpret the meaning of this residual in the context 
+of the application.","\qt{Helmets and lunches\label{helmet_lunch}}
+The scatterplot shows the 
+relationship between socioeconomic status measured as the percentage of 
+children in a neighborhood receiving reduced-fee lunches at school 
+({\tt lunch}) and the percentage of bike riders in the neighborhood 
+wearing helmets ({\tt helmet}). The average percentage of children 
+receiving reduced-fee lunches is 30.8\% with a standard deviation 
+of 26.7\% and the average percentage of bike riders wearing helmets 
+is 38.8\% with a standard deviation of 16.9\%.
+
+\noindent\begin{minipage}[c]{0.5\textwidth}
+{\raggedright\begin{parts}
+\item If the $R^2$ for the least-squares regression line for these 
+data is $72\%$, what is the correlation between {\tt lunch} 
+and {\tt helmet}?
+\item Calculate the slope and intercept for the least-squares regression 
+line for these data.
+\item Interpret the intercept of the least-squares regression line in 
+the context of the application.
+\item Interpret the slope of the least-squares regression line in the 
+context of the application.
+\item What would the value of the residual be for a neighborhood where 
+40\% of the children receive reduced-fee lunches and 40\% of the bike 
+riders wear helmets? Interpret the meaning of this residual in the context 
+of the application.
+\end{parts}}
+\end{minipage}
+\begin{minipage}[c]{0.05\textwidth}
+$\:$ \\
+\end{minipage}
+\begin{minipage}[c]{0.42\textwidth}
+\begin{center}
+\FigureFullPath[A scatterplot is shown with 12 points. The horizontal axis is for ""Rate of Receiving a Reduced-Fee Lunch"" and takes values between 0\% and 82\%. The vertical axis is for ""Rate of Wearing a Helmet"" and takes values between about 3\% and 58\%. Eight points have a reduced-fee lunch rate smaller than 25\%, and these points have helmet wearing rates between about 20\% and 58\%. Two points have a reduced-fee lunch rate of about 50\%, and these points have helmet wearing rates about 21\% and 22\%. Two points have a reduced-fee lunch rate of 75\% and 82\%, and these points have helmet wearing rates of 5\% and 3\%, respectively.]{}{ch_regr_simple_linear/figures/eoce/helmet_lunch/helmet_lunch} \\
+\end{center}
+\end{minipage}",A school district models the percentage of students passing a math exam using the percentage receiving free lunch. Which variables could plausibly act as lurking variables in this relationship? Select all that apply.,"A. School funding level.
+B. Average teacher experience at the school.
+C. The fitted intercept of the regression line.
+D. The sample size used to fit the model.",A and B,"A lurking variable is a third variable that is associated with both the predictor and the response and can distort the observed relationship. School funding and average teacher experience could plausibly be related to school socioeconomic conditions and exam performance, so A and B are reasonable. The fitted intercept and sample size are not lurking variables.","A school district models the percentage of students passing a math exam using the percentage receiving free lunch. Which variables could plausibly act as lurking variables in this relationship? Select all that apply.
+
+Options:
+A. School funding level.
+B. Average teacher experience at the school.
+C. The fitted intercept of the regression line.
+D. The sample size used to fit the model.","1. Recall that a lurking variable is an unmodeled third variable that could be related to both the predictor and the response.
+2. Evaluate each candidate for whether it could plausibly vary with free-lunch percentage and also affect math-pass percentage.
+3. Distinguish substantive third variables from model outputs or design quantities.
+4. Select all plausible lurking variables.","A school district models the percentage of students passing a math exam using the percentage receiving free lunch. Which variables could plausibly act as lurking variables in this relationship? Select all that apply.
+
+Options:
+A. School funding level.
+B. Average teacher experience at the school.
+C. The fitted intercept of the regression line.
+D. The sample size used to fit the model.
+
+Follow the reasoning stages below:
+
+1. Recall that a lurking variable is an unmodeled third variable that could be related to both the predictor and the response.
+2. Evaluate each candidate for whether it could plausibly vary with free-lunch percentage and also affect math-pass percentage.
+3. Distinguish substantive third variables from model outputs or design quantities.
+4. Select all plausible lurking variables.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+20,Regression,Social Survey,Hard,Interpretation,ch_regr_simple_linear_39_1,"Husbands and wives, Part III
+
+Exercise~[ref: husbands_wives_height_inf] presents a scatterplot displaying the 
+relationship between husbands' and wives' ages in a random sample of 
+170 married couples in Britain, where both partners' ages are below 65 
+years. Given below is summary output of the least squares fit for 
+predicting wife's age from husband's age.
+
+0.4
+
+ch_regr_simple_linear/figures/eoce/husbands_wives_age_inf/husbands_wives_age
+
+minipage
+minipage[c]0.6
+
+Table:
+| Estimate | Std. Error | t value | Pr($>$$|$t$|$) | |
+| --- | --- | --- | --- | --- |
+| (Intercept) | 1.5740 | 1.1501 | 1.37 | 0.1730 |
+| age_husband | 0.9112 | 0.0259 | 35.25 | 0.0000 |
+| $df = 168$ | | | | |
+
+minipage
+
+We might wonder, is the age difference between husbands and 
+wives consistent across ages? If this were the case, then the slope 
+parameter would be $_1 = 1$. Use the information above to evaluate 
+if there is strong evidence that the difference in husband and wife ages 
+differs for different ages.","\qt{Husbands and wives, Part III\label{husbands_wives_age_inf}}
+Exercise~\ref{husbands_wives_height_inf} presents a scatterplot displaying the 
+relationship between husbands' and wives' ages in a random sample of 
+170 married couples in Britain, where both partners' ages are below 65 
+years. Given below is summary output of the least squares fit for 
+predicting wife's age from husband's age.
+
+\noindent\begin{minipage}[c]{0.4\textwidth}
+\begin{center}
+\FigureFullPath[A scatterplot is shown with about 150 points. The horizontal axis is for ""Hus, in inches"" and takes values between 8 and 22 inches. The vertical axis is for ""Volume, in cubic feet"" and takes values between 8 and 80 cubic feet. About 15 points with circumferences smaller than 12 inches, volumes range from about 8 to 25 cubic feet. For the approximately ten points with circumferences between 12 and 16 feet, volumes range from 22 to 35 cubic feet. For the 6 points with circumferences larger than 16 inches, volumes range from 40 to 60 cubic feet, with one outlier with a circumference of 22 inches and a volume of about 80 cubic feet.]{}{ch_regr_simple_linear/figures/eoce/husbands_wives_age_inf/husbands_wives_age}
+\end{center}
+\end{minipage}
+\begin{minipage}[c]{0.6\textwidth}
+{\scriptsize
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+                & Estimate  & Std. Error    & t value   & Pr($>$$|$t$|$) \\ 
+  \hline
+(Intercept)     & 1.5740    & 1.1501        & 1.37      & 0.1730 \\ 
+age\_\hspace{0.3mm}husband  & 0.9112    & 0.0259        & 35.25     & 0.0000 \\ 
+   \hline
+\multicolumn{5}{r}{$df = 168$} \\
+\end{tabular}
+\end{center}
+}
+\end{minipage}
+\begin{parts}
+\item We might wonder, is the age difference between husbands and 
+wives consistent across ages? If this were the case, then the slope 
+parameter would be $\beta_1 = 1$. Use the information above to evaluate 
+if there is strong evidence that the difference in husband and wife ages 
+differs for different ages.
+\item Write the equation of the regression line for predicting wife's 
+age from husband's age.
+\item Interpret the slope and intercept in context.
+\item Given that $R^2 = 0.88$, what is the correlation of ages  in 
+this data set?
+\item You meet a married man from Britain who is 55 years old. What 
+would you predict his wife's age to be? How reliable is this prediction?
+\item You meet another married man from Britain who is 85 years old. 
+Would it be wise to use the same linear model to predict his wife's 
+age? Explain.
+\end{parts}",A survey regression finds that predicted life satisfaction increases with weekly social-media use. Explain why this result should not automatically be interpreted as social media causing higher life satisfaction.,,"The result is an association, not necessarily causation. Confounders such as age, income, social connectedness, or personality may affect both social-media use and life satisfaction.","Regression on observational survey data can adjust for measured variables, but unmeasured confounding and reverse causality can still remain.",A survey regression finds that predicted life satisfaction increases with weekly social-media use. Explain why this result should not automatically be interpreted as social media causing higher life satisfaction.,"1. Identify the fitted regression result as an association from observational survey data.
+2. Consider unmeasured variables that may affect both social-media use and life satisfaction.
+3. Consider reverse causality as another possible explanation.
+4. Explain why the regression result alone does not establish that social-media use causes higher life satisfaction.","A survey regression finds that predicted life satisfaction increases with weekly social-media use. Explain why this result should not automatically be interpreted as social media causing higher life satisfaction.
+
+Follow the reasoning stages below:
+
+1. Identify the fitted regression result as an association from observational survey data.
+2. Consider unmeasured variables that may affect both social-media use and life satisfaction.
+3. Consider reverse causality as another possible explanation.
+4. Explain why the regression result alone does not establish that social-media use causes higher life satisfaction.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+21,Regression,Social Survey,Hard,Interpretation,ch_regr_mult_and_log_19_4,"Multiple regression fact checking
+
+Determine which of the following statements are
+true and false.
+For each statement that is false, explain why it is false.
+
+Suppose we fit a multiple regression model
+ based on a data set of 472 observations.
+ We also notice that the distribution of the
+ residuals includes some skew but does not
+ include any particularly extreme outliers.
+ Because the residuals are not nearly normal,
+ we should not use this model and require
+ more advanced methods to model these data.","\qt{Multiple regression fact checking\label{mult_regr_facts}}
+Determine which of the following statements are
+true and false.
+For each statement that is false, explain why it is false.
+\begin{parts}
+\item
+    If predictors are collinear, then removing
+    one variable will have no influence on the
+    point estimate of another variable's coefficient.
+\item
+    Suppose a numerical variable $x$ has a coefficient of
+    $b_1 = 2.5$ in the multiple regression model.
+    Suppose also that the first observation has $x_1 = 7.2$,
+    the second observation has a value of $x_1 = 8.2$,
+    and these two observations have the same values
+    for all other predictors.
+    Then the predicted value of the second observation
+    will be 2.5 higher than the prediction of the first
+    observation based on the multiple regression model.
+\item
+    If a regression model's first variable has
+    a coefficient of $b_1 = 5.7$, then if we are
+    able to influence the data so that an observation
+    will have its $x_1$ be 1 larger than it would
+    otherwise, the value $y_1$ for this observation
+    would increase by 5.7.
+\item
+    Suppose we fit a multiple regression model
+    based on a data set of 472 observations.
+    We also notice that the distribution of the
+    residuals includes some skew but does not
+    include any particularly extreme outliers.
+    Because the residuals are not nearly normal,
+    we should not use this model and require
+    more advanced methods to model these data.
+\end{parts}","A multiple regression model predicts support for a policy using age, income, and education. The age coefficient is negative in a simple regression but positive after adding income and education. Interpret this reversal carefully.",,"The sign change suggests confounding or correlation among predictors. After holding income and education fixed, the association between age and policy support is positive, even though the unadjusted relationship was negative.","In multiple regression, each coefficient is a conditional association. It can differ from the simple-regression slope when predictors are related.","A multiple regression model predicts support for a policy using age, income, and education. The age coefficient is negative in a simple regression but positive after adding income and education. Interpret this reversal carefully.","1. Compare the sign of the age coefficient in the simple and multiple regressions.
+2. Recall that the multiple-regression age coefficient is conditional on income and education.
+3. Explain how correlation or confounding among predictors can produce a sign reversal.
+4. Interpret the positive adjusted coefficient carefully without treating it as a causal effect.","A multiple regression model predicts support for a policy using age, income, and education. The age coefficient is negative in a simple regression but positive after adding income and education. Interpret this reversal carefully.
+
+Follow the reasoning stages below:
+
+1. Compare the sign of the age coefficient in the simple and multiple regressions.
+2. Recall that the multiple-regression age coefficient is conditional on income and education.
+3. Explain how correlation or confounding among predictors can produce a sign reversal.
+4. Interpret the positive adjusted coefficient carefully without treating it as a causal effect.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+22,Regression,Social Survey,Hard,Interpretation,ch_regr_mult_and_log_20_3,"Logistic regression fact checking
+
+Determine which of the following statements are
+true and false.
+For each statement that is false, explain why it is false.
+
+Because logistic regression predicts probabilities
+ of outcomes, observations used to build a logistic
+ regression model need not be independent.","\qt{Logistic regression fact checking\label{log_regr_facts}}
+Determine which of the following statements are
+true and false.
+For each statement that is false, explain why it is false.
+\begin{parts}
+\item
+    Suppose we consider the first two observations
+    based on a logistic regression model,
+    where the first variable in observation~1
+    takes a value of $x_1 = 6$ and observation~2
+    has $x_1 = 4$.
+%    Each observation has all the same values for the
+%    other variables used in the model.
+    Suppose we realized we made an error for these
+    two observations, and the first observation
+    was actually $x_1 = 7$ (instead of~6)
+    and the second observation actually had
+    $x_1 = 5$ (instead of~4).
+    Then the predicted probability from the
+    logistic regression model would increase
+    the same amount for each observation after
+    we correct these variables.
+\item
+    When using a logistic regression model,
+    it is impossible for the model to predict
+    a probability that is negative or a probability
+    that is greater than 1.
+\item
+    Because logistic regression predicts probabilities
+    of outcomes, observations used to build a logistic
+    regression model need not be independent.
+\item
+    When fitting logistic regression,
+    we typically complete model selection using
+    adjusted $R^2$.
+\end{parts}",A logistic regression model predicts whether a respondent votes. The model gives p=0.78 for one respondent. Explain what this probability means and what it does not mean.,,"For a respondent with that set of predictor values, the model assigns an estimated voting probability of 0.78. This is not a guarantee that the individual will vote.",Logistic regression outputs probabilities for cases with given characteristics. A probability is not a certain individual outcome.,A logistic regression model predicts whether a respondent votes. The model gives p=0.78 for one respondent. Explain what this probability means and what it does not mean.,"1. Recognize p=0.78 as a model-estimated probability conditional on the respondent's predictor values.
+2. Translate 0.78 into a probabilistic statement for cases with those characteristics.
+3. Distinguish an estimated probability from certainty about a single individual's outcome.
+4. State both what the probability means and what it does not mean.","A logistic regression model predicts whether a respondent votes. The model gives p=0.78 for one respondent. Explain what this probability means and what it does not mean.
+
+Follow the reasoning stages below:
+
+1. Recognize p=0.78 as a model-estimated probability conditional on the respondent's predictor values.
+2. Translate 0.78 into a probabilistic statement for cases with those characteristics.
+3. Distinguish an estimated probability from certainty about a single individual's outcome.
+4. State both what the probability means and what it does not mean.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+23,Regression,General Everyday,Easy,Single Choice,ch_regr_simple_linear_40_1,"Cats, Part II
+
+Exercise~[ref: cat_body_heart_reg] 
+presents regression output from a model for predicting the heart 
+weight (in g) of cats from their body weight (in kg). The coefficients 
+are estimated using a dataset of 144 domestic cat. The model output 
+is also provided below.
+
+Table:
+| Estimate | Std. Error | t value | Pr($>$$|$t$|$) | |
+| --- | --- | --- | --- | --- |
+| (Intercept) | -0.357 | 0.692 | -0.515 | 0.607 |
+| body wt | 4.034 | 0.250 | 16.119 | 0.000 |
+
+\[ s = 1.452 R^2 = 64.66% R^2_adj = 64.41% \]
+
+We see that the point estimate for the slope is positive.
+ What are the hypotheses for evaluating whether body weight is
+ positively associated with heart weight in cats?","\qt{Cats, Part II\label{cat_body_heart_inf}}
+Exercise~\ref{cat_body_heart_reg} 
+presents regression output from a model for predicting the heart 
+weight (in g) of cats from their body weight (in kg). The coefficients 
+are estimated using a dataset of 144 domestic cat. The model output 
+is also provided below.
+\begin{center}
+\begin{tabular}{rrrrr}
+    \hline
+            & Estimate  & Std. Error    & t value   & Pr($>$$|$t$|$) \\ 
+    \hline
+(Intercept) & -0.357    & 0.692         & -0.515    & 0.607 \\ 
+body wt     & 4.034     & 0.250         & 16.119    & 0.000 \\ 
+    \hline
+\end{tabular}
+\[ s = 1.452 \qquad R^2 = 64.66\% \qquad R^2_{adj} = 64.41\% \]
+\end{center}
+\begin{parts}
+\item We see that the point estimate for the slope is positive.
+    What are the hypotheses for evaluating whether body weight is
+    positively associated with heart weight in cats?
+\item State the conclusion of the hypothesis test from part (a) in 
+context of the data.
+\item Calculate a 95\% confidence interval for the slope of body 
+weight, and interpret it in context of the data.
+\item Do your results from the hypothesis test and the confidence 
+interval agree? Explain.
+\end{parts}",A regression line predicts monthly electricity cost from electricity usage. What does a residual measure?,"A. Predicted value minus the sample mean.
+B. Observed value minus predicted value.
+C. The slope of the regression line.
+D. The correlation between the two variables.",B,A residual is observed value minus predicted value.,"A regression line predicts monthly electricity cost from electricity usage. What does a residual measure?
+
+Options:
+A. Predicted value minus the sample mean.
+B. Observed value minus predicted value.
+C. The slope of the regression line.
+D. The correlation between the two variables.","1. Recall the definition of a regression residual.
+2. Compare the observed response with the fitted/predicted response.
+3. Check the sign convention in each option.
+4. Select the correct definition.","A regression line predicts monthly electricity cost from electricity usage. What does a residual measure?
+
+Options:
+A. Predicted value minus the sample mean.
+B. Observed value minus predicted value.
+C. The slope of the regression line.
+D. The correlation between the two variables.
+
+Follow the reasoning stages below:
+
+1. Recall the definition of a regression residual.
+2. Compare the observed response with the fitted/predicted response.
+3. Check the sign convention in each option.
+4. Select the correct definition.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+24,Regression,General Everyday,Easy,Single Choice,ch_regr_simple_linear_39_2,"Husbands and wives, Part III
+
+Exercise~[ref: husbands_wives_height_inf] presents a scatterplot displaying the 
+relationship between husbands' and wives' ages in a random sample of 
+170 married couples in Britain, where both partners' ages are below 65 
+years. Given below is summary output of the least squares fit for 
+predicting wife's age from husband's age.
+
+0.4
+
+ch_regr_simple_linear/figures/eoce/husbands_wives_age_inf/husbands_wives_age
+
+minipage
+minipage[c]0.6
+
+Table:
+| Estimate | Std. Error | t value | Pr($>$$|$t$|$) | |
+| --- | --- | --- | --- | --- |
+| (Intercept) | 1.5740 | 1.1501 | 1.37 | 0.1730 |
+| age_husband | 0.9112 | 0.0259 | 35.25 | 0.0000 |
+| $df = 168$ | | | | |
+
+minipage
+
+Write the equation of the regression line for predicting wife's 
+age from husband's age.","\qt{Husbands and wives, Part III\label{husbands_wives_age_inf}}
+Exercise~\ref{husbands_wives_height_inf} presents a scatterplot displaying the 
+relationship between husbands' and wives' ages in a random sample of 
+170 married couples in Britain, where both partners' ages are below 65 
+years. Given below is summary output of the least squares fit for 
+predicting wife's age from husband's age.
+
+\noindent\begin{minipage}[c]{0.4\textwidth}
+\begin{center}
+\FigureFullPath[A scatterplot is shown with about 150 points. The horizontal axis is for ""Hus, in inches"" and takes values between 8 and 22 inches. The vertical axis is for ""Volume, in cubic feet"" and takes values between 8 and 80 cubic feet. About 15 points with circumferences smaller than 12 inches, volumes range from about 8 to 25 cubic feet. For the approximately ten points with circumferences between 12 and 16 feet, volumes range from 22 to 35 cubic feet. For the 6 points with circumferences larger than 16 inches, volumes range from 40 to 60 cubic feet, with one outlier with a circumference of 22 inches and a volume of about 80 cubic feet.]{}{ch_regr_simple_linear/figures/eoce/husbands_wives_age_inf/husbands_wives_age}
+\end{center}
+\end{minipage}
+\begin{minipage}[c]{0.6\textwidth}
+{\scriptsize
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+                & Estimate  & Std. Error    & t value   & Pr($>$$|$t$|$) \\ 
+  \hline
+(Intercept)     & 1.5740    & 1.1501        & 1.37      & 0.1730 \\ 
+age\_\hspace{0.3mm}husband  & 0.9112    & 0.0259        & 35.25     & 0.0000 \\ 
+   \hline
+\multicolumn{5}{r}{$df = 168$} \\
+\end{tabular}
+\end{center}
+}
+\end{minipage}
+\begin{parts}
+\item We might wonder, is the age difference between husbands and 
+wives consistent across ages? If this were the case, then the slope 
+parameter would be $\beta_1 = 1$. Use the information above to evaluate 
+if there is strong evidence that the difference in husband and wife ages 
+differs for different ages.
+\item Write the equation of the regression line for predicting wife's 
+age from husband's age.
+\item Interpret the slope and intercept in context.
+\item Given that $R^2 = 0.88$, what is the correlation of ages  in 
+this data set?
+\item You meet a married man from Britain who is 55 years old. What 
+would you predict his wife's age to be? How reliable is this prediction?
+\item You meet another married man from Britain who is 85 years old. 
+Would it be wise to use the same linear model to predict his wife's 
+age? Explain.
+\end{parts}","In a simple linear regression model ŷ = a + bx, what does b represent?","A. The predicted value when x is 1.
+B. The residual standard error.
+C. The predicted change in y for a one-unit increase in x.
+D. The total number of observations.",C,The slope b is the predicted change in y for a one-unit increase in x.,"In a simple linear regression model ŷ = a + bx, what does b represent?
+
+Options:
+A. The predicted value when x is 1.
+B. The residual standard error.
+C. The predicted change in y for a one-unit increase in x.
+D. The total number of observations.","1. Identify b as the slope in the simple linear regression equation.
+2. Recall what a slope measures for a one-unit increase in x.
+3. Distinguish the slope from the intercept, residual error, and sample size.
+4. Select the correct interpretation.","In a simple linear regression model ŷ = a + bx, what does b represent?
+
+Options:
+A. The predicted value when x is 1.
+B. The residual standard error.
+C. The predicted change in y for a one-unit increase in x.
+D. The total number of observations.
+
+Follow the reasoning stages below:
+
+1. Identify b as the slope in the simple linear regression equation.
+2. Recall what a slope measures for a one-unit increase in x.
+3. Distinguish the slope from the intercept, residual error, and sample size.
+4. Select the correct interpretation.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
+25,Regression,General Everyday,Easy,Single Choice,ch_regr_mult_and_log_20_2,"Logistic regression fact checking
+
+Determine which of the following statements are
+true and false.
+For each statement that is false, explain why it is false.
+
+When using a logistic regression model,
+ it is impossible for the model to predict
+ a probability that is negative or a probability
+ that is greater than 1.","\qt{Logistic regression fact checking\label{log_regr_facts}}
+Determine which of the following statements are
+true and false.
+For each statement that is false, explain why it is false.
+\begin{parts}
+\item
+    Suppose we consider the first two observations
+    based on a logistic regression model,
+    where the first variable in observation~1
+    takes a value of $x_1 = 6$ and observation~2
+    has $x_1 = 4$.
+%    Each observation has all the same values for the
+%    other variables used in the model.
+    Suppose we realized we made an error for these
+    two observations, and the first observation
+    was actually $x_1 = 7$ (instead of~6)
+    and the second observation actually had
+    $x_1 = 5$ (instead of~4).
+    Then the predicted probability from the
+    logistic regression model would increase
+    the same amount for each observation after
+    we correct these variables.
+\item
+    When using a logistic regression model,
+    it is impossible for the model to predict
+    a probability that is negative or a probability
+    that is greater than 1.
+\item
+    Because logistic regression predicts probabilities
+    of outcomes, observations used to build a logistic
+    regression model need not be independent.
+\item
+    When fitting logistic regression,
+    we typically complete model selection using
+    adjusted $R^2$.
+\end{parts}",Why is logistic regression commonly used when the response variable is yes/no?,"A. It always gives a straight-line prediction for y.
+B. It only works when predictors are categorical.
+C. It removes the need for data.
+D. It models the probability of a binary outcome.",D,Logistic regression models probabilities for binary outcomes and keeps predictions between 0 and 1.,"Why is logistic regression commonly used when the response variable is yes/no?
+
+Options:
+A. It always gives a straight-line prediction for y.
+B. It only works when predictors are categorical.
+C. It removes the need for data.
+D. It models the probability of a binary outcome.","1. Identify the response variable as binary.
+2. Recall the main quantity logistic regression models for a binary response.
+3. Reject options that incorrectly require categorical predictors or claim a straight-line response probability.
+4. Select the option describing a probability model for a binary outcome.","Why is logistic regression commonly used when the response variable is yes/no?
+
+Options:
+A. It always gives a straight-line prediction for y.
+B. It only works when predictors are categorical.
+C. It removes the need for data.
+D. It models the probability of a binary outcome.
+
+Follow the reasoning stages below:
+
+1. Identify the response variable as binary.
+2. Recall the main quantity logistic regression models for a binary response.
+3. Reject options that incorrectly require categorical predictors or claim a straight-line response probability.
+4. Select the option describing a probability model for a binary outcome.
+
+Show the reasoning or calculations necessary for this specific question, then provide the final answer.",Adaptive Multi-Agent Student–Tutor,qwen-plus,3
